@@ -1,0 +1,118 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What EDC system questions come up in clinical data manager interviews?', answer: 'CDM interviews ask heavily about the EDC system specified in the job description. For Medidata Rave: "Walk me through how you build a study in Rave from protocol to database lock", "What is the difference between a Rave study in Draft vs. Released mode?", "How do you configure Rave edit checks and when do you use soft vs. hard queries?". For Oracle Clinical One or Veeva CDMS: similar questions about study build, user provisioning, and query management. Generic EDC questions: "What is the database lock process in EDC?", "How do you handle a protocol amendment mid-study in an EDC system?", "What is a Data Clarification Form (DCF) and when is it used vs. a query?" Most CDM roles require hands-on EDC experience — be prepared to walk through a real study build.' },
+  { question: 'What ALCOA+ questions are asked in CDM interviews?', answer: 'ALCOA+ is always tested in CDM roles: "Define each element of ALCOA+", "How does ALCOA+ apply to EDC data entry?", "Give me an example of an ALCOA+ violation in clinical data and how you would handle it." ALCOA stands for Attributable, Legible, Contemporaneous, Original, Accurate. The "+" adds Complete, Consistent, Enduring, Available. Common interviewer follow-up: "A site enters an AE start date incorrectly. The original paper CRF shows one date, EDC shows another. What is the ALCOA+ principle at risk and how do you resolve it?" Answer: Contemporaneous and Attributable are at risk. Correct via audit trail — never overwrite original entry. Document the correction, who made it, when, and why. Audit trail must be maintained per 21 CFR Part 11 and ICH E6(R3) GCP requirements.' },
+  { question: 'What coding and MedDRA questions appear in CDM interviews?', answer: 'CDM interviews test medical coding for adverse events and prior medications: "Walk me through the MedDRA coding process for adverse events in your EDC system", "What is the difference between verbatim term, Lowest Level Term, and Preferred Term in MedDRA?", "How do you handle a verbatim adverse event term that does not map clearly to a MedDRA PT?", "What is the WHO Drug Dictionary and how is it used for prior medication coding?", "When do you escalate a coding query to medical review vs. resolving it with the site?" For senior CDM roles expect questions on coding conventions (upward coding, unspecified terms), MedDRA version management between studies, and how autocoding functions in your EDC.' },
+  { question: 'What database lock process questions are asked in CDM interviews?', answer: 'Database lock process questions: "Walk me through the steps for a database lock in your most recent study", "What is a data lock readiness checklist?", "How do you handle outstanding queries at the time of database lock?", "What is the difference between a soft lock and a hard lock?", "Who signs off on a database lock and what documentation is required?" Expected answer includes: site data review complete, query resolution rate target met (typically >95% clean queries), medical coding complete and reviewed by medical officer, outstanding SAE reconciliation done, protocol deviation review complete, QC checks run in EDC, data manager sign-off, biostatistician confirmation. Hard lock = no changes possible without change request through QA.' },
+  { question: 'How do I prepare for a clinical data manager proxy interview?', answer: 'Focus on: ALCOA+ principles and 21 CFR Part 11 requirements for electronic clinical data, EDC system-specific knowledge (Medidata Rave, Oracle Clinical One, Veeva CDMS — focus on what the JD specifies), MedDRA and WHO-DD coding conventions, ICH E6(R3) GCP guidance for data management, database lock procedure and DMP (Data Management Plan) structure, data validation plan and edit check logic, CDISC standards (CDASH for data collection, SDTM for submission). Our clinical data management proxy interview support gives you mock sessions with an experienced CDM who has done both CRO and sponsor-side roles. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Clinical Data Manager / EDC — 2026', url: site.url + '/pharma-interviews/real-clinical-data-manager-edc-proxy-interview-questions-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Clinical Data Manager / EDC Interview Questions — 2026',
+    'Real Q&A from clinical data manager and EDC interviews in 2026. ALCOA+, MedDRA coding, Medidata Rave, database lock, CDISC CDASH, ICH E6(R3) GCP data management.',
+    site.url + '/pharma-interviews/real-clinical-data-manager-edc-proxy-interview-questions-2026/',
+    '2026-02-15',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Clinical Data Manager EDC Interview Questions 2026"
+  description="Real Q&A from CDM/EDC interviews 2026. ALCOA+, MedDRA coding, Medidata Rave, database lock, CDISC CDASH. Proxy interview support: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Clinical Data Manager / EDC — 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | Clinical Data Management | EDC | 2026</div>
+      <h1>Real Clinical Data Manager / EDC Proxy Interview Questions — 2026</h1>
+      <p class="hero-tagline">Actual questions from clinical data manager interviews at CROs and pharmaceutical companies in 2026. ALCOA+ principles, EDC system setup and configuration, MedDRA and WHO-DD coding, database lock process, CDISC CDASH standards, ICH E6(R3) GCP — what interviewers actually asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Compiled from CDM interviews at two organisations in 2026: a global CRO with Phase II-IV oncology and rare disease trials, and a mid-size pharma company building an internal CDM capability. Roles: Clinical Data Manager (CRO, lead) and Data Management Associate (Sponsor, entry-level to mid). Both used Medidata Rave as primary EDC. Questions represent the technical round of each interview.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Clinical Data Management Interview Questions</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Walk me through how you build a study in Medidata Rave from protocol receipt to database go-live.</h3>
+            <p><strong>What they wanted to hear:</strong> Protocol review — understand study design, visit schedule, assessments, and data collection requirements. CRF design — annotate the protocol, create the Data Management Plan (DMP). eCRF design in Rave: create folders (visits), forms (assessments), fields (data points), define field properties (data type, coding dictionaries, validation rules). Build edit checks (eChecks) — data consistency rules; categorise as hard checks (data cannot be saved until resolved) vs. soft checks (query generated for site to review). UAT (User Acceptance Testing) — execute validation test scripts covering all edit checks, workflows, and user role permissions. Training materials and site qualification. Go-live — deploy to Production environment in Rave. Ongoing: site query management, data cleaning, protocol amendment handling (requires UAT re-run for affected forms). Interviewer follow-up: "How do you handle a mid-study protocol amendment that requires adding a new visit?" — Answer: raise a change request, update the DMP, modify the Rave study design (add folder/form), regression test affected edit checks, deploy to Production, notify sites via study communication, capture the date of amendment implementation for analysis purposes.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: Explain ALCOA+ and give me a real example of an ALCOA+ violation you have seen or would expect to see at a site.</h3>
+            <p><strong>What they wanted to hear:</strong> ALCOA+: Attributable (data entry must be traceable to the person who entered it — audit trail), Legible (readable, no overwriting without audit trail), Contemporaneous (recorded at the time it happens — not reconstructed later), Original (first recording, not a transcription without reference), Accurate (correct representation of source data). The "+" adds: Complete (all required data captured), Consistent (dates, units, and terminology used consistently), Enduring (data recorded on durable medium, not whiteboard or sticky note), Available (accessible for inspection and audit throughout retention period). Real example of a violation: A site coordinator backdates an AE in the EDC system to a date before the actual observation date because they missed the entry timeline. This violates Contemporaneous and Attributable. Resolution: do not correct via overwrite — open a query, document the discrepancy, site provides explanation in query response. The audit trail in Rave records both the original entry and the correction with timestamps and user IDs. If systematic backdating is found, escalate to clinical operations as a potential GCP finding — this triggers a CAPA, and in serious cases, data verification at source.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: How does a Data Management Plan (DMP) differ from a Data Validation Plan (DVP)? What goes in each?</h3>
+            <p><strong>What they wanted to hear:</strong> Data Management Plan (DMP) — the master document governing how clinical data will be collected, processed, cleaned, coded, locked, and transferred. Contents: study overview, eCRF description, EDC system used, data collection timeline, query management process, medical coding conventions, database lock procedure, data transfer specifications (to biostatistics, safety database, regulatory archive), roles and responsibilities of CDM team, SAE reconciliation plan, protocol deviation tracking. Data Validation Plan (DVP) — the technical document specifying all the programmatic checks (edit checks) that will be applied to data in the EDC. Contents: list of all fields to be validated, edit check logic for each check (hard vs. soft), who must resolve each type of query (site vs. DM vs. medical monitor), expected thresholds for query rates. The DMP is the governance document; the DVP is the technical specification. Both are study-specific and must be approved before database go-live. Interviewer follow-up: "What happens to the DMP if there is a protocol amendment?" — The DMP is a controlled document — it must be versioned, amended, and re-approved. The amendment history is tracked in the document header and maintained in the TMF.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: What is the CDISC CDASH standard and how does it relate to your work as a clinical data manager?</h3>
+            <p><strong>What they wanted to hear:</strong> CDISC CDASH (Clinical Data Acquisition Standards Harmonization) defines standardised field names, formats, and conventions for data collection in CRFs — the form design layer. It sits upstream of SDTM (which is the submission standard). Using CDASH-compliant CRF design in your EDC means: field names match CDASH variable names (e.g., AESTDAT for AE start date, AETERM for verbatim AE term), which makes the mapping to SDTM datasets significantly more efficient because the field names are already aligned. Practical CDM role: when designing a Rave study using CDASH, you select CDASH-standard field names and question text from the CDASH IG. Non-CDASH studies require custom mapping documentation from eCRF field names to SDTM variable names. For a study destined for FDA/EMA regulatory submission, CDASH compliance reduces errors in the define.xml and SDTM mapping package. Interviewer also asked: "What is the relationship between CDASH, SDTM, and ADaM?" — CDASH (collection) → SDTM (standardised submission datasets) → ADaM (analysis datasets derived from SDTM for statistical analysis and TLFs).</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your CDM Interview</h2>
+          <p>
+            CDM interviews require hands-on EDC knowledge, CDISC literacy, and understanding of GCP data management requirements. Be ready to discuss real study build experience.
+          </p>
+          <p>
+            Get domain-specific preparation from a clinical data management specialist. Our <a href="/clinical-data-proxy-interview/">Clinical Data Management Proxy Interview Support</a> is available same-day. WhatsApp: <strong>{site.whatsapp}</strong>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Clinical Data Manager Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="CDM Interview Coming Up?"
+          body="Get real-time preparation from a clinical data management expert who has built Rave studies, managed database locks, and worked both CRO and sponsor-side. Same-day support available."
+          ctaLabel="Get CDM Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

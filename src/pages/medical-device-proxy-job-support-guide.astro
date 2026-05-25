@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is medical device proxy job support?', answer: 'Medical device proxy job support is real-time live guidance from a medical device quality and regulatory specialist who helps you complete your actual medical device QA/RA work tasks. When you are stuck on an ISO 13485 nonconformance, an EU MDR technical file section, a FMEA risk table, a CAPA investigation, or a notified body audit response — a medical device expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the medical device deliverable you need to complete right now.' },
+  { question: 'What medical device tasks do you provide proxy support for?', answer: 'All medical device QA/RA tasks: ISO 13485 QMS documentation (SOPs, work instructions, quality manual sections), EU MDR (2017/745) technical file preparation (design dossier, risk management file, clinical evaluation report summary, SSCP), FDA 510(k) submission sections (predicate comparison, performance testing summary, substantial equivalence arguments), FMEA/risk management per ISO 14971 (hazard identification, risk estimation, risk control measures, residual risk evaluation), design control documentation (DHF content, design input/output/verification/validation), nonconformance reports and CAPA investigations, supplier qualification documentation, and ISO 13485 internal audit support.' },
+  { question: 'What is the ISO 14971 risk management process for medical devices?', answer: 'ISO 14971:2019 is the international standard for risk management for medical devices. Process flow: Risk Management Plan → Hazard Identification → Risk Estimation → Risk Evaluation → Risk Control → Residual Risk Evaluation → Benefit-Risk Analysis → Risk Management Report. Key definitions: Hazard — potential source of harm (e.g., electrical leakage, sharp edge, biological contamination). Hazardous situation — circumstances where people are exposed to a hazard. Harm — physical injury or damage to health. Risk = Probability of occurrence of harm × Severity of harm. Risk control hierarchy (in order): inherently safe design → protective measures in device or manufacturing → information for safety (IFU warnings). Residual risk: after controls, remaining risk must be acceptable per criteria defined in the risk management plan. We help you populate FMEA tables, assess severity/probability ratings, document risk controls, and write the risk management report conclusion.' },
+  { question: 'What is the EU MDR technical file structure?', answer: 'EU MDR (2017/745) Technical File structure for Class I/IIa/IIb devices (not Class III, which requires a Design Dossier). Required sections: (1) Device description and specification — intended purpose, accessories, variants, UDI. (2) Information supplied by manufacturer — labelling, IFU. (3) Design and manufacturing information — design phases, manufacturing controls. (4) General safety and performance requirements — conformity table per Annex I. (5) Benefit-risk analysis and risk management — ISO 14971 risk management file. (6) Product verification and validation — test reports, software validation, biocompatibility (ISO 10993). (7) Post-market clinical follow-up (PMCF) plan — per Annex XIV. (8) Clinical evaluation report (CER) — per Annex XIV/MEDDEV 2.7.1 Rev.4. (9) Post-market surveillance plan — vigilance, PSUR. We help you write and structure each section.' },
+  { question: 'How do I write a CAPA investigation for a medical device nonconformance?', answer: 'Medical device CAPA (Corrective and Preventive Action) under ISO 13485 Clause 8.5.2/8.5.3 requires: (1) Problem statement — clear description of the nonconformance including product, process, lot numbers, detection date, and impact. (2) Containment actions — immediate actions to isolate affected product and prevent use (quarantine, recall assessment). (3) Root cause analysis — use structured tools: 5-Why, Fishbone (Ishikawa), or Fault Tree Analysis. The root cause must be verifiable — "training was insufficient" is not a root cause; "the SOP did not specify the required torque range" is. (4) Corrective action plan — specific actions to address the root cause with owners, completion dates, evidence required. (5) Effectiveness check — defined criteria and timeline to verify the corrective action resolved the root cause. (6) Preventive action — if the root cause could cause the nonconformance elsewhere in the QMS, extend corrective actions to those areas. We help you write all six sections.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Medical Device Proxy Job Support Guide', url: site.url + '/medical-device-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Medical Device Proxy Job Support Guide — ISO 13485, EU MDR, ISO 14971, CAPA',
+    'Complete guide to medical device proxy job support — ISO 13485 QMS, EU MDR technical file, ISO 14971 risk management, FMEA, CAPA investigations, 510(k) submissions.',
+    site.url + '/medical-device-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Medical Device Proxy Job Support Guide | ISO 13485, EU MDR, ISO 14971, CAPA"
+  description="Complete guide to medical device proxy job support — ISO 13485, EU MDR technical file, ISO 14971 risk management FMEA, CAPA investigations, 510(k) submissions. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Medical Device Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Medical Device Guide</div>
+      <h1>Medical Device Proxy Job Support Guide — ISO 13485, EU MDR, ISO 14971 & CAPA</h1>
+      <p class="hero-tagline">Everything you need to know about real-time medical device proxy job support — ISO 13485 QMS documentation, EU MDR technical file preparation, ISO 14971 risk management, FMEA tables, CAPA investigations, and what medical device tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Medical Device QA/RA Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>EU MDR technical file</strong> — CER structure, GSPR conformity table (Annex I), PMCF plan content, SSCP writing</li>
+            <li><strong>ISO 14971 FMEA</strong> — hazard identification, severity/probability scoring, risk control documentation, residual risk acceptability</li>
+            <li><strong>CAPA investigations</strong> — root cause analysis, 5-Why, corrective action plan, effectiveness check criteria</li>
+            <li><strong>ISO 13485 QMS documentation</strong> — SOP writing, quality manual sections, design control DHF content</li>
+            <li><strong>FDA 510(k)</strong> — predicate device selection, substantial equivalence argument, performance testing summary</li>
+            <li><strong>Nonconformance management</strong> — NCR classification, disposition decision, CAPA trigger criteria</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>EU MDR Device Classification Quick Reference</h2>
+          <ul class="feature-list">
+            <li><strong>Class I</strong> — Low risk — self-certified (except Is/Im/Ir which need notified body for sterility/measuring/reuse aspects)</li>
+            <li><strong>Class IIa</strong> — Medium-low risk — notified body required for technical file QMS audit</li>
+            <li><strong>Class IIb</strong> — Medium-high risk — notified body required for design examination + QMS audit</li>
+            <li><strong>Class III</strong> — High risk (e.g., active implantables, drug-device combinations) — notified body full design dossier examination</li>
+            <li>Classification rules: Annex VIII of EU MDR 2017/745 — 22 rules based on invasiveness, duration, active device, special rules</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Medical Device Proxy Job Support Now</h2>
+          <p>Stuck on a technical file section, a FMEA table, or a CAPA investigation? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your specific task and device class, and we match you with a medical device QA/RA specialist within hours.</p>
+          <p>Also see: <a href="/medical-device-proxy-job-support/">Medical Device Proxy Job Support</a> | <a href="/medical-device-proxy-interview/">Medical Device Proxy Interview Support</a> | <a href="/stuck-in-medical-device-qa/">Stuck in Medical Device QA?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Medical Device Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Medical Device Task?"
+          body="ISO 13485 documentation, EU MDR technical file, ISO 14971 FMEA, CAPA investigations, 510(k) sections — real-time guidance from a medical device QA/RA specialist. Same-day help."
+          ctaLabel="Get Medical Device Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Medical device proxy interview support"
+          secondaryHref="/medical-device-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

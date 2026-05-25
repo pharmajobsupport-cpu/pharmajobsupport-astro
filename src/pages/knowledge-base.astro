@@ -1,0 +1,55 @@
+---
+import HubPage from '../components/HubPage.astro';
+import KnowledgeBaseCard from '../components/KnowledgeBaseCard.astro';
+import { allKB } from '../data/knowledgeBase-index';
+import { buildBreadcrumbSchema } from '../utils/schema';
+import { site } from '../data/site';
+
+const categories = [...new Set(allKB.map(k => k.category))];
+
+const schema = buildBreadcrumbSchema([
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Knowledge Base', url: site.url + '/knowledge-base/' },
+]);
+---
+
+<HubPage
+  title="Pharma Knowledge Base"
+  metaTitle="Pharma Knowledge Base — SDTM, ADaM, GMP, PV, CSV, Regulatory Guides"
+  metaDesc="Free pharmaceutical industry knowledge base — SDTM, ADaM, CDISC, 21 CFR Part 11, GAMP 5, pharmacovigilance, regulatory affairs, and GMP guides."
+  h1="Pharmaceutical Industry Knowledge Base"
+  intro="Free in-depth guides for pharma professionals — clinical data management, computer system validation, pharmacovigilance, regulatory affairs, and quality assurance."
+  breadcrumbs={[{ label: 'Knowledge Base' }]}
+  schema={schema}
+>
+  {categories.map((cat) => {
+    const entries = allKB.filter(k => k.category === cat);
+    return (
+      <section class="kb-cat-section">
+        <h2 class="kb-cat-heading">{cat}</h2>
+        <div class="kb-grid">
+          {entries.map((entry) => (
+            <KnowledgeBaseCard entry={entry} />
+          ))}
+        </div>
+      </section>
+    );
+  })}
+</HubPage>
+
+<style>
+  .kb-cat-section { margin-bottom: var(--space-12); }
+  .kb-cat-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--color-primary-light);
+  }
+  .kb-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-5);
+  }
+</style>

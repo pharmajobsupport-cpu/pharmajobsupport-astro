@@ -1,0 +1,80 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I need to write a pharma SOP and have never done it before. Can you help?', answer: 'Yes. Standard Operating Procedures (SOPs) in pharma are controlled documents with specific structure requirements under EU GMP Chapter 4, FDA 21 CFR Part 211.68, and ISO 13485 Clause 4.2. A pharma SOP must include: purpose, scope, responsibilities, definitions, materials/equipment, procedure (step-by-step), references, and document control information (version number, approval signatures, effective date). We help you write the actual content for your specific pharma process — not just give you the template. Tell us what the SOP needs to cover and your regulatory context (GMP, GCP, GxP, ISO).' },
+  { question: 'I have a deviation report due and I do not know what to write. Can you help?', answer: 'Yes. Deviation reports in pharma must document: what deviated from the approved process or specification, when it was detected, what the immediate impact was (product quality, patient safety, data integrity, regulatory compliance), what immediate containment actions were taken, a root cause analysis, and CAPA. We walk you through each section for your specific deviation, help you assess the severity classification (minor/major/critical), and help you structure the root cause analysis using standard tools (5-Why, fishbone diagram). We have supported deviation reports in GMP manufacturing, clinical trial sites, and quality management environments.' },
+  { question: 'I need to complete a risk assessment for a pharma project. Can you help?', answer: 'Yes. Risk assessments in pharma take different forms depending on context: FMEA (Failure Mode and Effects Analysis) for medical device design and process risk, Validation Risk Assessment for determining validation scope and test depth under GAMP 5, Clinical Risk Assessment for CRO project risks (site failure, enrollment delays, data quality), CAPA Risk Assessment for prioritising corrective actions by severity and probability. We help you build the right type of risk assessment for your specific situation, populate it with the relevant failure modes and controls, and calculate the risk priority numbers (RPN) or severity ratings.' },
+  { question: 'I need to write a validation summary report. Can you help?', answer: 'Yes. A Validation Summary Report (VSR) or Validation Summary Report (VAL) is the final document in a computer system validation project. It summarises: the validation scope and objectives, the validation approach (GAMP 5 category, risk assessment results), the qualification activities performed (IQ, OQ, PQ), the test results and any deviations from the test protocols during execution, the overall validation conclusion (the system is validated and acceptable for its intended use), and any post-validation monitoring commitments. We help you write the VSR content from your test evidence and ensure it meets the expectations of your QA and regulatory context.' },
+  { question: 'What pharma documentation tasks can you help me with right now?', answer: 'All pharma documentation: SOPs, work instructions, batch manufacturing records (BMR), deviation reports, CAPA reports, risk assessments (FMEA, validation risk), validation protocols and reports (IQ/OQ/PQ, VSR), technical reports, regulatory dossier sections (CTD modules, IMPD sections), clinical study reports (ICH E3 structure), safety narratives (ICSR narratives), technical transfer documents, change control documentation, supplier qualification documentation, and GMP/GDP quality records. Available 24/7 via WhatsApp — tell us your document type and regulatory context.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Documentation Help', url: site.url + '/pharma-documentation-help/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Pharma Documentation Help | Real-Time Support for SOPs, Deviation Reports & Validation Documents"
+  description="Stuck writing a pharma SOP, deviation report, validation report, or risk assessment? Real-time pharma documentation help. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Documentation Help' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Documentation Support</div>
+      <h1>Pharma Documentation Help — SOPs, Deviations, Validation Reports, Risk Assessments</h1>
+      <p class="hero-tagline">SOP you have never written before. Deviation report due today. Validation summary report you cannot structure. Risk assessment that needs to be completed for QA review tomorrow. Our pharma documentation experts help you write the actual content for your specific document — right now, via WhatsApp.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Pharma Documentation Help — What We Support Right Now</h2>
+          <ul class="feature-list">
+            <li>Standard Operating Procedures (SOPs) — structure, content, GMP/GCP/ISO 13485 compliance</li>
+            <li>Deviation reports — content, root cause analysis, impact assessment, CAPA</li>
+            <li>CAPA documentation — corrective action plan, effectiveness check criteria</li>
+            <li>Risk assessments — FMEA for medical devices, validation risk, clinical risk</li>
+            <li>Validation protocols — IQ, OQ, PQ — test script development and acceptance criteria</li>
+            <li>Validation Summary Reports (VSR) — conclusion, deviation summary, commitments</li>
+            <li>Batch Manufacturing Records (BMR) — structure, content, yield reconciliation</li>
+            <li>Change control documentation — impact assessment, implementation plan</li>
+            <li>Regulatory dossier sections — CTD Module 2/3 summaries, IMPD sections</li>
+            <li>Safety narratives — ICSR narrative structure per ICH E2B</li>
+            <li>Clinical study reports — ICH E3 structure and section content</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong>. Tell us the document type and what you need to write.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/struggling-in-pharma-project/">Struggling in Your Pharma Project?</a> | <a href="/pharma-proxy-job-support/">Pharma Proxy Job Support</a> | <a href="/stuck-in-clinical-sas-project/">Stuck in Clinical SAS Project?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Documentation Help — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Pharma Documentation Due Today?"
+          body="SOPs, deviation reports, validation reports, risk assessments — real-time writing guidance from a pharma domain expert. Same-day help available. Message us with your document type."
+          ctaLabel="Get Pharma Documentation Help"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma proxy job support"
+          secondaryHref="/pharma-proxy-job-support/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

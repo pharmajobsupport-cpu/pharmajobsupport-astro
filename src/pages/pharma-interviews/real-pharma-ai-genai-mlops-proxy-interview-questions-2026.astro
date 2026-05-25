@@ -1,0 +1,118 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What AI validation questions come up in pharma AI/ML interviews?', answer: 'Pharma AI interviews consistently probe AI validation under FDA and EMA guidance. Key questions: "How do you validate an AI/ML model used in a GxP-regulated process?", "What does FDA\'s AI/ML Action Plan require for model change management?", "What is the difference between locked and adaptive AI/ML models under FDA guidance?", "How do you document model drift and handle model retraining in a validated pharma environment?", "What is the role of a Predetermined Change Control Plan (PCCP) for an AI/ML-based SaMD?" Senior roles also ask about ICH E9(R1) statistical considerations for machine learning in clinical trials.' },
+  { question: 'What GenAI and LLM questions appear in pharma AI roles?', answer: 'Pharma GenAI interview questions focus on practical regulatory-compliant deployment: "How would you implement a RAG (Retrieval-Augmented Generation) system for regulatory document search in a validated environment?", "What are the risks of using LLMs for adverse event narrative generation and how do you mitigate hallucination?", "How do you validate a GenAI tool used to assist medical writers in a GxP context?", "What is prompt injection and how does it apply to pharma AI systems?", "How do you ensure data privacy when using third-party LLM APIs with patient data or proprietary drug data?" Roles at AI pharma startups and CDMOs ask deeper MLOps pipeline questions.' },
+  { question: 'How is a pharma AI interview different from a standard data science interview?', answer: 'Standard data science interviews focus on model performance metrics, algorithms, and code. Pharma AI interviews add a regulatory layer: you need to demonstrate understanding of GxP validation, FDA 21 CFR Part 11 audit trail requirements for AI systems, risk classification of AI-based SaMD under EU MDR/FDA, and how to write validation documentation (URS, FS, DS, IQ/OQ/PQ) for ML models. Interviewers also ask about how model explainability (XAI) applies in pharma — because FDA expects you to explain model decisions in regulatory submissions.' },
+  { question: 'What MLOps questions are asked in pharma ML engineering roles?', answer: 'Pharma MLOps interviews ask: "How do you build a GxP-compliant ML pipeline on AWS or Azure?", "What are the validation requirements for an automated ML retraining pipeline?", "How do you implement data versioning and model versioning in a pharma regulated environment?", "What is the difference between a computer system validation (CSV) approach and a software lifecycle approach for ML systems?", "How do you handle concept drift detection and model monitoring in a production pharma AI system?" They also test knowledge of MLflow, SageMaker, Azure ML, and how audit trails are maintained for model training runs.' },
+  { question: 'How do I prepare for a pharma AI proxy interview?', answer: 'Focus on: FDA\'s AI/ML-Based Software as a Medical Device (SaMD) Action Plan and Predetermined Change Control Plan, EU MDR Article 10 and IVDR requirements for AI medical devices, GxP validation approach for AI/ML systems (21 CFR Part 11 audit trail, GAMP 5 Category 4/5 for AI tools), RAG architecture and LLM deployment in regulated environments, MLOps tools (MLflow, SageMaker, Azure ML) and their GxP validation approach. Our pharma AI proxy interview support provides real-time preparation from a pharma AI/MLOps engineer. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Pharma AI / GenAI / MLOps — 2026', url: site.url + '/pharma-interviews/real-pharma-ai-genai-mlops-proxy-interview-questions-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Pharma AI / GenAI / MLOps Interview Questions — 2026',
+    'Real Q&A from pharma AI, GenAI, and MLOps interviews in 2026. AI validation, FDA SaMD guidance, RAG systems, model drift, GxP ML pipelines, LLM deployment in pharma.',
+    site.url + '/pharma-interviews/real-pharma-ai-genai-mlops-proxy-interview-questions-2026/',
+    '2026-02-10',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Pharma AI GenAI MLOps Interview Questions 2026"
+  description="Real Q&A from pharma AI/GenAI/MLOps interviews 2026. AI validation, FDA SaMD, RAG in pharma, GxP ML pipelines, LLM deployment. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Pharma AI / GenAI / MLOps — 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | Pharma AI | GenAI | MLOps | 2026</div>
+      <h1>Real Pharma AI / GenAI / MLOps Proxy Interview Questions — 2026</h1>
+      <p class="hero-tagline">Actual questions from pharma AI, GenAI, and MLOps interviews at pharma companies, CDMOs, and digital health firms in 2026. AI validation under FDA guidance, RAG system design, GxP ML pipelines, LLM deployment in regulated environments — what interviewers actually asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Compiled from pharma AI interviews at three organisations in 2026: a large pharmaceutical company building internal GenAI tools for regulatory document management, a CDMO deploying ML-based process analytical technology (PAT), and a digital health startup with an FDA-cleared AI/ML-based SaMD. Roles: Pharma AI/ML Engineer, MLOps Engineer (Pharma), and AI Validation Specialist.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Pharma AI Validation Interview Questions</h2>
+
+          <div class="qa-block">
+            <h3>Q1: How do you validate an AI/ML model used in a GxP-regulated process? Walk us through your validation approach.</h3>
+            <p><strong>What they wanted to hear:</strong> Begin with a risk assessment — classify the AI system under GAMP 5 (typically Category 4 or 5 depending on configurability). Define intended use and user requirements (URS). Identify applicable regulations: FDA 21 CFR Part 11 for electronic records and audit trails, EU Annex 11 for computerised systems, FDA AI/ML SaMD guidance if the system qualifies as SaMD. Validation documentation: Functional Specification (FS), Design Specification (DS), Validation Plan, IQ (installation qualified), OQ (operational qualification — test model performance on validation dataset with pre-defined acceptance criteria), PQ (performance qualification — test in the actual use environment with real pharma data). For ML models specifically: define the training/validation/test split rationale, document model selection criteria, establish performance acceptance criteria (sensitivity, specificity, AUC, F1 depending on use case), document model version and training data version. Post-deployment: model monitoring plan, drift detection thresholds, retraining trigger criteria, change control for model updates. Interviewer follow-up: "What if the model needs to be retrained after deployment?" — This is where FDA's Predetermined Change Control Plan (PCCP) comes in: you document in advance the types of changes that can be made autonomously vs. those requiring regulatory notification.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: Your company wants to deploy a RAG (Retrieval-Augmented Generation) system to help regulatory writers search and summarise CTD documents. What are the key technical and compliance challenges?</h3>
+            <p><strong>What they wanted to hear:</strong> Technical challenges: document chunking strategy for CTD structure (Module 2 summaries vs. Module 5 clinical study reports have very different density), embedding model selection (general vs. pharma-domain-specific), vector database management (Pinecone, Weaviate, pgvector — with audit trail requirements), hallucination detection and response grounding verification. Compliance challenges: under GxP, outputs used in regulatory submissions must be traceable and auditable — every generated summary must cite source documents with version control. Data governance: CTD documents contain proprietary clinical data — RAG systems using third-party LLM APIs (OpenAI, Anthropic) may expose data outside company boundaries; must use private deployment or data processing agreements. Validation: the RAG system itself must be validated if its outputs are used in a regulated process — URS, OQ testing of retrieval accuracy, PQ testing with real regulatory team. Model risk: LLMs can misinterpret pharma regulatory language — must define use as decision-support only (human in the loop), not autonomous authoring. Interviewer then asked: "How would you handle a case where the RAG system retrieves a superseded version of an SOP?" — Answer: version-controlled document store with metadata filtering on document status (effective vs. obsolete); retrieval must filter to current effective documents only.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: What is model drift in a pharma AI context and how do you detect and manage it in a GxP environment?</h3>
+            <p><strong>What they wanted to hear:</strong> Model drift occurs when the statistical relationship between model inputs and outputs changes over time because the real-world data distribution shifts. In pharma contexts: a process analytical technology (PAT) model trained on batch data from one manufacturing line may drift when a new line is commissioned. A pharmacovigilance signal detection model trained on 2023 adverse event patterns may drift as the reporting landscape changes. Types: data drift (input distribution changes), concept drift (relationship between inputs and outputs changes), prediction drift (output distribution changes). Detection: continuous monitoring of input feature distributions (KL divergence, PSI — Population Stability Index), prediction distribution monitoring, performance monitoring against labelled ground truth where available. Management in GxP: define drift thresholds in the validation documentation; when a threshold is triggered, initiate a change control process. Retraining must go through a defined revalidation procedure — not ad hoc. Document the entire retraining lifecycle: new training data version, model version, performance comparison against baseline, approval by QA. If the model is SaMD: notify FDA if the change falls outside the PCCP scope.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: What is the difference between a locked AI/ML model and an adaptive AI/ML model under FDA's current framework?</h3>
+            <p><strong>What they wanted to hear:</strong> FDA's AI/ML-Based SaMD Action Plan (2021) and subsequent guidance distinguishes: Locked algorithm — once deployed, the algorithm and its parameters do not change without going through a standard PMA supplement or 510(k) submission process. The algorithm is static post-deployment. Adaptive/continuously learning algorithm — the algorithm can change its behaviour over time based on new data inputs, potentially without explicit developer intervention. This is the higher-risk category. FDA requires a Predetermined Change Control Plan (PCCP) for adaptive algorithms: the PCCP documents what types of changes the algorithm can make autonomously, what performance monitoring is in place, and what triggers a regulatory submission. The PCCP is submitted and reviewed as part of the initial 510(k)/PMA. Practical implication for pharma AI roles: most validated pharma AI tools at large pharma companies are locked to avoid the regulatory complexity of adaptive algorithms. CDMOs doing real-time process optimisation with ML often use adaptive models but must justify this under the PCCP framework. The interviewer also asked about EU MDR Article 22 for high-risk AI — which tracks similarly to FDA's framework but under the EU AI Act overlay.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your Pharma AI Interview</h2>
+          <p>
+            Pharma AI interviews require deep knowledge of both AI/ML engineering and regulatory compliance. You need to speak the language of both the data science team and the QA/regulatory team.
+          </p>
+          <p>
+            Get real-time preparation from a pharma AI specialist. Our <a href="/pharma-ai-proxy-interview/">Pharma AI Proxy Interview Support</a> is available same-day. WhatsApp: <strong>{site.whatsapp}</strong>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma AI Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Pharma AI Interview Coming Up?"
+          body="Get real-time preparation from a pharma AI/MLOps engineer who has worked in regulated environments. FDA SaMD validation, RAG deployment, GxP ML pipelines — same-day support available."
+          ctaLabel="Get Pharma AI Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

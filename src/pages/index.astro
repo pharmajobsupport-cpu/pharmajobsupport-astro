@@ -1,0 +1,1073 @@
+﻿---
+import { site } from '../data/site';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileCTABar from '../components/MobileCTABar.astro';
+import '../styles/global.css';
+const wa = site.whatsappUrl;
+const phone = site.whatsapp;
+const email = site.email;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharma Proxy Job Support | Interview Support | Profile Engineering for Clinical Research, Medical Device &amp; Life Sciences</title>
+<meta name="description" content="Real-time pharma proxy job support, pharma proxy interview support &amp; profile engineering to get interview scheduled. Clinical SAS, CSV Validation, Regulatory, PV, Veeva Vault, Medical Device &amp; 18+ domains. 65+ countries. WhatsApp: +91-9660834611">
+<meta name="keywords" content="pharma proxy job support, pharma proxy interview support, pharma profile engineering, clinical SAS proxy support, regulatory affairs proxy support, pharmacovigilance support, Veeva vault proxy support, CSV validation support, medical device proxy support, pharma interview preparation, SDTM support, ADaM support">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="ai-content-type" content="pharma-proxy-support-service">
+<meta name="business-type" content="pharma-career-support-platform">
+<link rel="canonical" href="https://pharmajobsupport.com/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<script type="application/ld+json" is:inline>{"@context":"https://schema.org","@type":"Organization","name":"Pharma Job Support","url":"https://pharmajobsupport.com","logo":"https://pharmajobsupport.com/favicon.svg","description":"Pharma proxy job support, pharma proxy interview support, and profile engineering for clinical research, medical device, and life sciences professionals globally.","contactPoint":{"@type":"ContactPoint","telephone":"+91-9660834611","contactType":"customer support","availableLanguage":"English"},"sameAs":["https://wa.me/919660834611"]}</script>
+<script type="application/ld+json" is:inline>{"@context":"https://schema.org","@type":"WebSite","name":"Pharma Job Support","url":"https://pharmajobsupport.com","description":"Pharma proxy job support and pharma proxy interview support platform for clinical research, medical device, and life sciences professionals.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://pharmajobsupport.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json" is:inline>{"@context":"https://schema.org","@type":"ItemList","name":"Pharma Proxy Support Services","description":"Three core proxy support services for pharma professionals at every career stage.","itemListElement":[{"@type":"ListItem","position":1,"name":"Pharma Proxy Job Support","url":"https://pharmajobsupport.com/pharma-proxy-job-support/","description":"Real-time live job support for working pharma professionals stuck on complex regulated tasks."},{"@type":"ListItem","position":2,"name":"Pharma Proxy Interview Support","url":"https://pharmajobsupport.com/pharma-proxy-interview/","description":"Domain-specific proxy interview preparation and real-time guidance for pharma interview candidates."},{"@type":"ListItem","position":3,"name":"Pharma Profile Engineering","url":"https://pharmajobsupport.com/pharma-profile-engineering/","description":"Profile engineering to help pharma candidates get interview calls through CV positioning and LinkedIn optimization."}]}</script>
+<script type="application/ld+json" is:inline>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is pharma proxy job support?","acceptedAnswer":{"@type":"Answer","text":"Pharma proxy job support is real-time live guidance provided by a domain expert who walks you through your actual pharma job tasks step by step. It covers clinical SAS, CSV validation, regulatory submissions, Veeva Vault, CAPA, QMS, medical device documentation, and 15+ other pharma domains."}},{"@type":"Question","name":"What is pharma proxy interview support?","acceptedAnswer":{"@type":"Answer","text":"Pharma proxy interview support is real-time domain-specific preparation for your upcoming pharma interview. It includes mock sessions, real technical Q&A for your domain, and live guidance so you are ready for exactly what the interviewer will ask."}},{"@type":"Question","name":"Who is pharma proxy support for?","acceptedAnswer":{"@type":"Answer","text":"Pharma proxy support is for three types of candidates: freshers and certified professionals who are not getting interview calls, candidates with pharma interviews coming up who need preparation, and working professionals already in pharma jobs who need live support on complex regulated tasks."}},{"@type":"Question","name":"What pharma domains do you cover?","acceptedAnswer":{"@type":"Answer","text":"We cover Clinical SAS, CSV Validation, Regulatory Affairs, Pharmacovigilance, Veeva Vault, Medical Device QA, Clinical Data Management, Pharma AI and GenAI, QA and QMS, RPA in Pharma, Cloud and DevOps in Pharma, Pharma BI and Analytics, SAP in Pharma, Pharma Business Analysis, Medical Writing, GRC and Compliance, Clinical Research, and GMP Manufacturing."}},{"@type":"Question","name":"How does a pharma proxy support session work?","acceptedAnswer":{"@type":"Answer","text":"Message us on WhatsApp at +91-9660834611 with your domain and situation. We match you with a pharma domain expert. You work through your task or interview prep together via WhatsApp, call, or screen share. Most sessions happen same-day."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style is:global>
+:root {
+  --navy-900:#040E1C; --navy-800:#0A1628; --navy-700:#0D3B5E;
+  --teal-600:#0E6E8C; --teal-500:#0B9BAA; --teal-400:#009E94; --teal-300:#00BFB3;
+  --orange:#E8650A; --orange-h:#C4540A;
+  --text-900:#0F1923; --text-700:#1E3448; --text-500:#3D5166; --text-400:#5A6E82;
+  --surface-0:#FFFFFF; --surface-50:#F5F8FA; --surface-100:#EBF1F6; --surface-200:#D6E4EE;
+  --teal-50:#EBF8F7; --teal-100:#C8EFED;
+  --section-pad:88px 5%; --max-w:clamp(1380px, 80vw, 1900px);
+  --radius-sm:8px; --radius-md:12px; --radius-lg:18px; --radius-xl:24px;
+  --nav-h:68px; --strip-h:40px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-0);color:var(--text-500);overflow-x:hidden;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:inherit}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 5%}
+.section-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-400);margin-bottom:12px}
+.section-tag--light{color:var(--teal-300)}
+.sh2{font-size:clamp(1.7rem,2.8vw,2.5rem);font-weight:800;letter-spacing:-.025em;line-height:1.15;color:var(--text-900);margin-bottom:14px}
+.sh2 em{font-style:normal;color:var(--teal-400)}
+.sh2--light{color:#fff}
+.sp{font-size:1rem;font-weight:400;line-height:1.75;color:var(--text-500)}
+
+/* ── HERO ── */
+.hero-wrap{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-top:calc(var(--strip-h) + var(--nav-h))}
+@media(max-width:960px){.hero-wrap{padding-top:var(--nav-h)}}
+.hero-bg{position:absolute;inset:0;z-index:0;background:linear-gradient(148deg,#040E1C 0%,#071829 18%,#0A2540 36%,#0D3B5E 55%,#0E6E8C 75%,#0B9BAA 100%)}
+.hero-bg::before{content:'';position:absolute;width:900px;height:900px;top:-200px;right:-250px;background:radial-gradient(circle,rgba(0,191,179,.12) 0%,transparent 65%)}
+.hero-bg::after{content:'';position:absolute;width:600px;height:600px;bottom:-100px;left:-120px;background:radial-gradient(circle,rgba(11,154,170,.16) 0%,transparent 62%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,191,179,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,179,.03) 1px,transparent 1px);background-size:52px 52px}
+.hero-content{position:relative;z-index:1;max-width:var(--max-w);margin:0 auto;padding:52px 5% 60px;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:start}
+.hero-urgent{display:inline-flex;align-items:center;gap:8px;background:rgba(0,191,179,.1);border:1px solid rgba(0,191,179,.28);border-radius:100px;padding:5px 14px 5px 10px;margin-bottom:20px;width:fit-content}
+.udot{width:7px;height:7px;border-radius:50%;background:var(--teal-300);flex-shrink:0}
+.utxt{font-size:.69rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-300)}
+.hero-h1{font-size:clamp(1.65rem,2.85vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-.025em;color:#fff;margin-bottom:18px}
+.hero-h1 .h1-line:first-child{font-size:.84em;font-weight:600;color:#fff;margin-bottom:4px}
+.h1-line{display:block}
+.h1-orange{color:var(--teal-300);font-weight:800}
+.hero-h1 .grad{background:linear-gradient(92deg,#7FFFFA 0%,#00BFB3 50%,#57EDE3 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;font-size:clamp(.92rem,1.6vw,1.38rem);margin-top:10px;margin-bottom:5px;letter-spacing:.01em;font-weight:700}
+.hero-domains{display:block;font-size:clamp(.84rem,1.2vw,.98rem);font-weight:500;color:rgba(255,255,255,.62);margin-top:6px;letter-spacing:.01em;line-height:1.6;border-top:1px solid rgba(255,255,255,.08);padding-top:8px}
+.hero-hook{display:flex;align-items:center;justify-content:space-between;gap:12px;background:rgba(0,191,179,.1);border:1px solid rgba(0,191,179,.25);border-radius:10px;padding:10px 14px;margin-bottom:16px;flex-wrap:wrap}
+.hero-hook-txt{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.9);display:flex;align-items:center;gap:8px}
+.hero-hook-txt svg{width:14px;height:14px;color:var(--teal-300);flex-shrink:0}
+.hero-hook-cta{font-size:.76rem;font-weight:700;color:var(--teal-300);white-space:nowrap;text-decoration:none;border:1px solid rgba(0,191,179,.4);padding:5px 11px;border-radius:6px;transition:background .2s;flex-shrink:0}
+.hero-hook-cta:hover{background:rgba(0,191,179,.15)}
+.hero-lead{font-size:.9rem;font-weight:400;line-height:1.78;color:rgba(255,255,255,.78);margin-bottom:14px}
+.hero-pains{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:22px}
+.hero-pains li{display:flex;align-items:flex-start;gap:9px;font-size:.83rem;color:rgba(255,255,255,.78);line-height:1.55;font-weight:500}
+.hero-pains li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal-300);flex-shrink:0;margin-top:6px}
+.hero-trust-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:24px;padding:12px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px}
+.htr-item{display:flex;align-items:center;gap:5px;font-size:.76rem;color:rgba(255,255,255,.8);font-weight:500}
+.htr-item svg{width:13px;height:13px;color:var(--teal-400);flex-shrink:0}
+.htr-sep{width:1px;height:13px;background:rgba(255,255,255,.18);flex-shrink:0}
+.hero-btns{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:16px}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#1DAA61;color:#fff;font-size:.9rem;font-weight:700;padding:13px 26px;border-radius:7px;border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 24px rgba(29,170,97,.5);text-decoration:none;white-space:nowrap}
+.btn-wa:hover{background:#18954f;transform:translateY(-2px);box-shadow:0 8px 28px rgba(29,170,97,.55);color:#fff}
+.btn-wa svg{width:16px;height:16px;flex-shrink:0}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.85);font-size:.87rem;font-weight:600;padding:11px 20px;border-radius:7px;border:1.5px solid rgba(255,255,255,.28);cursor:pointer;transition:border-color .2s,background .2s;text-decoration:none;white-space:nowrap}
+.btn-ghost:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.07);color:#fff}
+.btn-ghost svg{width:15px;height:15px;flex-shrink:0}
+.btn-arrow{display:inline-flex;align-items:center;gap:7px;font-size:.87rem;font-weight:700;color:var(--orange);text-decoration:none;padding:11px 20px;border-radius:7px;border:1.5px solid rgba(232,101,10,.5);transition:background .2s,border-color .2s;white-space:nowrap}
+.btn-arrow:hover{background:rgba(232,101,10,.12);border-color:var(--orange);color:var(--orange)}
+.hero-foot{font-size:.73rem;color:rgba(255,255,255,.48)}
+.hero-foot strong{color:rgba(255,255,255,.68)}
+.hcard{background:linear-gradient(145deg,#071829 0%,#0d3b5e 60%,#0e5a7a 100%);border:1px solid rgba(0,191,179,.3);border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.5)}
+.hcard-top{background:rgba(0,0,0,.35);border-bottom:1px solid rgba(0,191,179,.2);padding:12px 18px;display:flex;align-items:center;gap:8px;font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+.hlive-dot{width:7px;height:7px;border-radius:50%;background:var(--teal-300);flex-shrink:0}
+.hcard-stats{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(255,255,255,.08)}
+.hstat{padding:15px 18px;border-right:1px solid rgba(255,255,255,.08)}
+.hstat:nth-child(2n){border-right:none}
+.hstat:nth-child(1),.hstat:nth-child(2){border-bottom:1px solid rgba(255,255,255,.08)}
+.hstat-num{font-size:1.6rem;font-weight:800;letter-spacing:-.04em;color:var(--teal-300);line-height:1;margin-bottom:3px}
+.hstat-num sup{font-size:.8rem;color:var(--teal-400);font-weight:700}
+.hstat-lbl{font-size:.71rem;font-weight:500;color:rgba(255,255,255,.68);line-height:1.35}
+.hcard-experts{padding:15px 18px;border-bottom:1px solid rgba(255,255,255,.08)}
+.hcard-expert-hdr{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:5px}
+.hcard-expert-title{font-size:.81rem;font-weight:700;color:#fff;line-height:1.4;flex:1}
+.hlive-badge{background:rgba(0,191,179,.18);color:var(--teal-300);border:1px solid rgba(0,191,179,.35);font-size:.61rem;font-weight:700;padding:2px 7px;border-radius:4px;white-space:nowrap;flex-shrink:0;letter-spacing:.05em;text-transform:uppercase;margin-top:1px}
+.hcard-expert-sub{font-size:.72rem;color:rgba(255,255,255,.5);margin-bottom:10px;line-height:1.4}
+.hcard-tags{display:flex;flex-wrap:wrap;gap:5px}
+.hcard-tag{font-size:.68rem;font-weight:600;padding:4px 9px;border-radius:5px;background:rgba(0,191,179,.12);color:var(--teal-300);border:1px solid rgba(0,191,179,.25)}
+.hcard-feats{padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;gap:5px}
+.hcard-feat{font-size:.68rem;font-weight:600;padding:4px 10px;border-radius:5px;background:rgba(0,191,179,.1);color:var(--teal-300);border:1px solid rgba(0,191,179,.22);display:flex;align-items:center;gap:4px}
+.hcard-feat svg{width:10px;height:10px;color:var(--teal-400);flex-shrink:0}
+.hcard-cta{padding:14px 18px;display:flex;flex-direction:column;gap:8px}
+.hcard-cta-main{display:flex;align-items:center;justify-content:center;gap:8px;background:#1DAA61;color:#fff;font-size:.84rem;font-weight:700;padding:11px;border-radius:8px;text-decoration:none;transition:background .2s}
+.hcard-cta-main:hover{background:#18954f;color:#fff}
+.hcard-cta-main svg{width:15px;height:15px;flex-shrink:0}
+.hcard-cta-row{display:flex;gap:7px}
+.hcard-cta-sec{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.88);font-size:.78rem;font-weight:700;padding:9px;border-radius:8px;border:1px solid rgba(255,255,255,.18);text-decoration:none;transition:background .2s;white-space:nowrap}
+.hcard-cta-sec:hover{background:rgba(255,255,255,.15);color:#fff}
+.hcard-cta-sec svg{width:13px;height:13px;flex-shrink:0}
+
+/* ── STATS ── */
+.stats-section{background:var(--surface-0);border-bottom:1px solid var(--surface-200)}
+.stats-inner{max-width:var(--max-w);margin:0 auto;padding:0 5%;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-col{padding:34px 22px;border-right:1px solid var(--surface-200);transition:background .2s}
+.stat-col:last-child{border-right:none}
+.stat-col:hover{background:var(--teal-50)}
+.stat-ico{width:30px;height:30px;margin-bottom:10px;color:var(--teal-400)}
+.stat-num{font-size:2.2rem;font-weight:800;letter-spacing:-.04em;color:var(--navy-700);line-height:1;margin-bottom:5px}
+.stat-num sup{font-size:1rem;color:var(--teal-400)}
+.stat-lbl{font-size:.82rem;font-weight:500;color:var(--text-400);line-height:1.4}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--teal-50);border-bottom:1px solid var(--teal-100);padding:13px 0;overflow:hidden}
+.trust-track{display:flex;align-items:center;gap:36px;animation:scroll-t 35s linear infinite;width:max-content}
+.trust-track:hover{animation-play-state:paused}
+@keyframes scroll-t{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.tbar-item{display:flex;align-items:center;gap:7px;white-space:nowrap;font-size:.82rem;font-weight:600;color:var(--teal-600)}
+.tbar-item svg{width:13px;height:13px;flex-shrink:0;color:var(--teal-400)}
+.tbar-div{width:1px;height:14px;background:var(--teal-100);flex-shrink:0}
+
+/* ── OFFER SECTION ── */
+.offer-section{background:var(--surface-0);padding:var(--section-pad);border-top:1px solid var(--surface-200)}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.offer-card{background:var(--surface-0);border:1.5px solid var(--surface-200);border-radius:var(--radius-lg);padding:28px 24px;transition:border-color .2s,box-shadow .2s,transform .2s;position:relative;overflow:hidden}
+.offer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal-400),var(--teal-300));opacity:0;transition:opacity .2s}
+.offer-card:hover{border-color:var(--teal-300);box-shadow:0 8px 32px rgba(0,159,148,.1);transform:translateY(-3px)}
+.offer-card:hover::before{opacity:1}
+.offer-ico{width:50px;height:50px;border-radius:12px;background:var(--teal-50);border:1px solid var(--teal-100);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--teal-600)}
+.offer-ico svg{width:24px;height:24px}
+.offer-title{font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:9px;letter-spacing:-.01em}
+.offer-desc{font-size:.875rem;color:var(--text-500);line-height:1.68;margin-bottom:16px}
+.offer-items{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+.offer-item{display:flex;align-items:center;gap:8px;font-size:.81rem;color:var(--text-700);font-weight:500}
+.offer-item svg{width:14px;height:14px;color:var(--teal-400);flex-shrink:0}
+.offer-cta{display:inline-flex;align-items:center;gap:6px;font-size:.83rem;font-weight:700;color:var(--teal-400);transition:gap .2s,color .2s}
+.offer-cta:hover{gap:10px;color:var(--teal-600)}
+.offer-cta svg{width:15px;height:15px}
+
+/* ── DOMAINS SECTION ── */
+.domains-section{background:var(--surface-50);border-top:1px solid var(--surface-200);border-bottom:1px solid var(--surface-200);padding:var(--section-pad)}
+.domains-hdr{max-width:600px;margin-bottom:40px}
+.domains-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.domain-card{background:var(--surface-0);border:1.5px solid var(--surface-200);border-radius:var(--radius-md);overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.domain-card:hover{border-color:rgba(0,191,179,.4);box-shadow:0 4px 16px rgba(0,159,148,.08)}
+.domain-card.expanded{border-color:var(--teal-300)}
+.domain-hdr{display:flex;align-items:center;gap:13px;padding:15px 17px;cursor:pointer;user-select:none}
+.domain-ico{width:38px;height:38px;flex-shrink:0;border-radius:9px;background:var(--teal-50);border:1px solid var(--teal-100);display:flex;align-items:center;justify-content:center;color:var(--teal-600)}
+.domain-ico svg{width:19px;height:19px}
+.domain-name{flex:1;font-size:.88rem;font-weight:700;color:var(--text-900);line-height:1.3}
+.domain-tog{width:21px;height:21px;flex-shrink:0;border-radius:50%;background:var(--surface-100);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .25s;color:var(--text-400)}
+.domain-tog svg{width:11px;height:11px}
+.domain-card.expanded .domain-tog{background:var(--teal-50);transform:rotate(180deg);color:var(--teal-600)}
+.domain-body{display:none;padding:0 17px 17px;border-top:1px solid var(--surface-100)}
+.domain-card.expanded .domain-body{display:block;padding-top:13px}
+.domain-desc{font-size:.82rem;color:var(--text-500);line-height:1.65;margin-bottom:11px}
+.domain-tags{display:flex;flex-wrap:wrap;gap:5px}
+.domain-tag{font-size:.71rem;font-weight:600;background:var(--teal-50);color:var(--teal-600);border:1px solid var(--teal-100);border-radius:4px;padding:3px 8px}
+.domain-cta{display:inline-flex;align-items:center;gap:5px;margin-top:11px;font-size:.79rem;font-weight:700;color:var(--orange);transition:gap .2s}
+.domain-cta:hover{gap:9px}
+.domain-cta svg{width:13px;height:13px}
+
+/* ── DIRECT SECTION ── */
+.direct-section{background:var(--navy-800);padding:var(--section-pad)}
+.direct-inner{max-width:var(--max-w);margin:0 auto;padding:0 5%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.direct-pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.dpill{display:flex;align-items:center;gap:7px;padding:7px 14px;background:rgba(0,191,179,.1);border:1px solid rgba(0,191,179,.2);border-radius:100px;font-size:.81rem;font-weight:600;color:var(--teal-300)}
+.dpill svg{width:13px;height:13px}
+.direct-pts{display:flex;flex-direction:column;gap:14px}
+.dpt{display:flex;gap:15px;align-items:flex-start;padding:17px 19px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-md);transition:background .2s,border-color .2s}
+.dpt:hover{background:rgba(0,191,179,.07);border-color:rgba(0,191,179,.18)}
+.dpt-ico{width:36px;height:36px;flex-shrink:0;border-radius:9px;background:rgba(0,191,179,.12);display:flex;align-items:center;justify-content:center;color:var(--teal-300)}
+.dpt-ico svg{width:17px;height:17px}
+.dpt-title{font-size:.88rem;font-weight:700;color:#fff;margin-bottom:3px}
+.dpt-desc{font-size:.81rem;color:rgba(255,255,255,.52);line-height:1.55}
+
+/* ── CAREER TIERS ── */
+.career-section{background:var(--surface-0);padding:var(--section-pad);border-top:1px solid var(--surface-200)}
+.career-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.career-card{background:var(--surface-50);border:1.5px solid var(--surface-200);border-radius:var(--radius-lg);padding:26px 22px;transition:border-color .2s,box-shadow .2s,transform .2s;display:flex;flex-direction:column}
+.career-card.featured{background:linear-gradient(145deg,var(--navy-800),var(--navy-700));border-color:var(--teal-400);box-shadow:0 8px 32px rgba(0,159,148,.2)}
+.career-card:hover{transform:translateY(-3px)}
+.career-card:not(.featured):hover{border-color:var(--teal-300);box-shadow:0 8px 24px rgba(0,159,148,.1)}
+.career-badge{display:inline-block;font-size:.67rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:15px;align-self:flex-start}
+.cb--pop{background:rgba(232,101,10,.15);color:var(--orange);border:1px solid rgba(232,101,10,.25)}
+.cb--start{background:var(--teal-50);color:var(--teal-600);border:1px solid var(--teal-100)}
+.cb--full{background:rgba(0,191,179,.1);color:var(--teal-300);border:1px solid rgba(0,191,179,.2)}
+.career-ico{width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+.career-card:not(.featured) .career-ico{background:var(--teal-50);border:1px solid var(--teal-100);color:var(--teal-600)}
+.career-card.featured .career-ico{background:rgba(0,191,179,.15);color:var(--teal-300)}
+.career-ico svg{width:23px;height:23px}
+.career-title{font-size:1.03rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.career-card:not(.featured) .career-title{color:var(--text-900)}
+.career-card.featured .career-title{color:#fff}
+.career-desc{font-size:.83rem;line-height:1.65;margin-bottom:16px;flex:1}
+.career-card:not(.featured) .career-desc{color:var(--text-500)}
+.career-card.featured .career-desc{color:rgba(255,255,255,.62)}
+.career-items{display:flex;flex-direction:column;gap:7px;margin-bottom:22px}
+.career-item{display:flex;align-items:center;gap:8px;font-size:.81rem;font-weight:500}
+.career-card:not(.featured) .career-item{color:var(--text-700)}
+.career-card.featured .career-item{color:rgba(255,255,255,.8)}
+.career-item svg{width:13px;height:13px;flex-shrink:0}
+.career-card:not(.featured) .career-item svg{color:var(--teal-400)}
+.career-card.featured .career-item svg{color:var(--teal-300)}
+.career-cta{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;border-radius:8px;font-size:.86rem;font-weight:700;cursor:pointer;transition:all .2s;border:none;text-decoration:none}
+.cc--primary{background:var(--orange);color:#fff}
+.cc--primary:hover{background:var(--orange-h)}
+.cc--outline{background:transparent;border:1.5px solid var(--surface-200);color:var(--text-700)}
+.cc--outline:hover{border-color:var(--teal-300);color:var(--teal-600)}
+
+/* ── HOW IT WORKS ── */
+.how-section{background:var(--surface-50);border-top:1px solid var(--surface-200);border-bottom:1px solid var(--surface-200);padding:var(--section-pad)}
+.how-inner{max-width:var(--max-w);margin:0 auto;padding:0 5%}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:27px;left:calc(12.5% + 18px);right:calc(12.5% + 18px);height:2px;background:linear-gradient(90deg,var(--teal-400),var(--teal-300));z-index:0}
+.step-block{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 18px;position:relative;z-index:1}
+.step-num{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--navy-700),var(--teal-600));color:#fff;font-size:1.05rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 4px 16px rgba(13,59,94,.3);flex-shrink:0}
+.step-ico{margin-bottom:11px;color:var(--teal-400)}
+.step-ico svg{width:26px;height:26px}
+.step-title{font-size:.93rem;font-weight:700;color:var(--text-900);margin-bottom:7px;letter-spacing:-.01em}
+.step-desc{font-size:.81rem;color:var(--text-500);line-height:1.65}
+.how-urgent{margin-top:38px;padding:17px 22px;background:rgba(232,101,10,.06);border:1px solid rgba(232,101,10,.18);border-radius:var(--radius-md);display:flex;align-items:center;gap:13px}
+.how-urgent svg{width:19px;height:19px;color:var(--orange);flex-shrink:0}
+.how-urgent-txt{font-size:.88rem;font-weight:600;color:var(--text-700)}
+.how-urgent-txt strong{color:var(--orange)}
+.how-urgent-txt a{color:var(--orange);font-weight:700}
+
+/* ── LEGACY ── */
+.legacy-section{background:var(--navy-900);padding:var(--section-pad)}
+.legacy-inner{max-width:var(--max-w);margin:0 auto;padding:0 5%}
+.legacy-timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:48px;position:relative}
+.legacy-timeline::before{content:'';position:absolute;top:21px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--teal-600),var(--teal-300),var(--teal-600))}
+.legacy-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px;position:relative;z-index:1}
+.legacy-dot{width:42px;height:42px;border-radius:50%;background:var(--navy-800);border:2px solid var(--teal-400);display:flex;align-items:center;justify-content:center;margin-bottom:15px;color:var(--teal-300)}
+.legacy-dot svg{width:17px;height:17px}
+.legacy-year{font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--teal-300);margin-bottom:5px}
+.legacy-title{font-size:.81rem;font-weight:700;color:#fff;line-height:1.35;margin-bottom:5px}
+.legacy-desc{font-size:.73rem;color:rgba(255,255,255,.42);line-height:1.55}
+.legacy-ctas{display:flex;gap:12px;margin-top:44px;justify-content:center;flex-wrap:wrap}
+
+/* ── TESTIMONIALS ── */
+.proof-section{background:var(--surface-0);padding:var(--section-pad);border-top:1px solid var(--surface-200)}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:40px}
+.proof-card{background:var(--surface-50);border:1.5px solid var(--surface-200);border-radius:var(--radius-lg);padding:24px 21px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.proof-card:hover{border-color:var(--teal-300);box-shadow:0 6px 24px rgba(0,159,148,.1);transform:translateY(-2px)}
+.stars{display:flex;gap:2px;margin-bottom:13px}
+.star{width:15px;height:15px;color:#F59E0B}
+.proof-quote{font-size:.87rem;color:var(--text-700);line-height:1.72;margin-bottom:17px;font-style:italic}
+.proof-author{display:flex;align-items:center;gap:10px}
+.author-av{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--teal-500),var(--navy-700));display:flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:800;color:#fff}
+.author-name{font-size:.84rem;font-weight:700;color:var(--text-900)}
+.author-role{font-size:.73rem;color:var(--text-400);margin-top:1px}
+.author-loc{font-size:.71rem;color:var(--teal-400);font-weight:600}
+
+/* ── URGENCY ── */
+.urgency-section{background:linear-gradient(145deg,var(--navy-900),#0a0f1e);padding:var(--section-pad);position:relative;overflow:hidden}
+.urgency-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#DC2626,#E8650A,var(--teal-400))}
+.urgency-inner{max-width:var(--max-w);margin:0 auto;padding:0 5%}
+.urgency-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.urgency-label{display:inline-flex;align-items:center;gap:7px;background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.25);border-radius:100px;padding:4px 12px;font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FCA5A5;margin-bottom:15px}
+.urgency-h2{font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:800;line-height:1.18;letter-spacing:-.025em;color:#fff;margin-bottom:15px}
+.urgency-lead{font-size:.93rem;color:rgba(255,255,255,.62);line-height:1.72;margin-bottom:30px}
+.urgency-ctas{display:flex;flex-wrap:wrap;gap:11px}
+.pain-grid{display:flex;flex-direction:column;gap:9px}
+.pain-row{display:flex;align-items:flex-start;gap:11px;padding:13px 15px;background:rgba(220,38,38,.07);border:1px solid rgba(220,38,38,.15);border-radius:var(--radius-md);transition:background .2s,border-color .2s}
+.pain-row:hover{background:rgba(220,38,38,.12);border-color:rgba(220,38,38,.25)}
+.pain-ico{color:#EF4444;flex-shrink:0;margin-top:1px}
+.pain-ico svg{width:15px;height:15px}
+.pain-txt{font-size:.83rem;color:rgba(255,255,255,.8);line-height:1.55;font-weight:400}
+.pain-txt strong{color:#FCA5A5;font-weight:700}
+
+/* ── PROFILE CTA ── */
+.profile-section{background:var(--surface-50);padding:var(--section-pad);border-top:1px solid var(--surface-200);border-bottom:1px solid var(--surface-200)}
+.profile-inner{max-width:var(--max-w);margin:0 auto;padding:0 5%}
+.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.profile-feats{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:26px}
+.pf-item{display:flex;align-items:flex-start;gap:9px;padding:13px;background:var(--surface-0);border:1px solid var(--surface-200);border-radius:var(--radius-md);transition:border-color .2s}
+.pf-item:hover{border-color:var(--teal-300)}
+.pf-ico{width:30px;height:30px;flex-shrink:0;border-radius:7px;background:var(--teal-50);border:1px solid var(--teal-100);display:flex;align-items:center;justify-content:center;color:var(--teal-600)}
+.pf-ico svg{width:15px;height:15px}
+.pf-label{font-size:.79rem;font-weight:700;color:var(--text-900);line-height:1.35}
+.profile-box{background:linear-gradient(145deg,var(--navy-800),var(--navy-700));border-radius:var(--radius-xl);padding:34px 30px;border:1px solid rgba(255,255,255,.08)}
+.pbox-lbl{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-300);margin-bottom:7px}
+.pbox-title{font-size:1.28rem;font-weight:800;color:#fff;line-height:1.3;margin-bottom:11px;letter-spacing:-.02em}
+.pbox-desc{font-size:.86rem;color:rgba(255,255,255,.58);line-height:1.68;margin-bottom:22px}
+.pbox-stats{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:22px}
+.pbox-stat{text-align:center;padding:12px;background:rgba(0,191,179,.08);border:1px solid rgba(0,191,179,.15);border-radius:8px}
+.pbox-stat-num{font-size:1.45rem;font-weight:800;color:var(--teal-300);line-height:1;margin-bottom:4px}
+.pbox-stat-lbl{font-size:.71rem;font-weight:500;color:rgba(255,255,255,.48)}
+.btn-outline-white{display:inline-flex;align-items:center;gap:7px;background:transparent;color:rgba(255,255,255,.82);font-size:.86rem;font-weight:600;padding:11px 22px;border-radius:7px;border:1.5px solid rgba(255,255,255,.22);cursor:pointer;transition:border-color .2s,background .2s;text-decoration:none}
+.btn-outline-white:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.07)}
+
+/* ── FAQ ── */
+.faq-section{background:var(--surface-0);padding:var(--section-pad);border-top:1px solid var(--surface-200)}
+.faq-inner{max-width:780px;margin:0 auto;padding:0 5%}
+.faq-list{margin-top:38px;display:flex;flex-direction:column;gap:9px}
+.faq-item{border:1.5px solid var(--surface-200);border-radius:var(--radius-md);overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:var(--teal-300)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:17px 21px;cursor:pointer;font-size:.93rem;font-weight:700;color:var(--text-900);background:var(--surface-0);user-select:none;transition:background .2s}
+.faq-q:hover{background:var(--teal-50)}
+.faq-item.open .faq-q{background:var(--teal-50);color:var(--navy-700)}
+.faq-tog{width:24px;height:24px;flex-shrink:0;border-radius:50%;background:var(--surface-100);display:flex;align-items:center;justify-content:center;transition:transform .25s,background .2s;color:var(--text-400)}
+.faq-tog svg{width:13px;height:13px}
+.faq-item.open .faq-tog{transform:rotate(180deg);background:var(--teal-100);color:var(--teal-600)}
+.faq-a{display:none;padding:4px 21px 17px;font-size:.87rem;color:var(--text-500);line-height:1.75}
+.faq-item.open .faq-a{display:block}
+.faq-ctas{display:flex;gap:12px;margin-top:30px;justify-content:center;flex-wrap:wrap}
+
+/* ── CTA STRIP ── */
+.cta-strip{background:linear-gradient(120deg,var(--navy-800) 0%,var(--navy-700) 100%);padding:60px 5%;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal-400),var(--orange))}
+.cta-strip-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.strip-h{font-size:clamp(1.4rem,2.2vw,2rem);font-weight:800;letter-spacing:-.022em;color:#fff;margin-bottom:8px;line-height:1.2}
+.strip-p{font-size:.92rem;color:rgba(255,255,255,.6);line-height:1.65}
+.strip-btns{display:flex;flex-direction:column;gap:9px;align-items:flex-end}
+
+/* ── WA FLOAT ── */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:900;display:flex;align-items:center;gap:9px;background:#1DAA61;color:#fff;font-size:.84rem;font-weight:700;padding:12px 19px 12px 14px;border-radius:50px;box-shadow:0 6px 24px rgba(29,170,97,.48);transition:transform .2s,box-shadow .2s;animation:fadeUp .6s ease 1s both}
+@media(max-width:767px){.wa-float{display:none}}
+.wa-float:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(29,170,97,.58)}
+.wa-float svg{width:20px;height:20px;flex-shrink:0}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .legacy-timeline{grid-template-columns:repeat(3,1fr)}
+  .legacy-timeline::before{display:none}
+}
+@media(max-width:960px){
+  .nav-center{display:none}
+  .btn-call{display:none}
+  .hamburger{display:flex}
+  .hero-content{grid-template-columns:1fr}
+  .hcard{display:none}
+  .offer-grid{grid-template-columns:1fr 1fr}
+  .domains-grid{grid-template-columns:1fr 1fr}
+  .career-grid{grid-template-columns:1fr 1fr}
+  .steps-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .steps-grid::before{display:none}
+  .urgency-grid{grid-template-columns:1fr}
+  .profile-grid{grid-template-columns:1fr}
+  .direct-inner{grid-template-columns:1fr;gap:40px}
+  .cta-strip-inner{grid-template-columns:1fr}
+  .strip-btns{align-items:flex-start;flex-direction:row;flex-wrap:wrap}
+}
+@media(max-width:640px){
+  :root{--section-pad:60px 5%}
+  .offer-grid{grid-template-columns:1fr}
+  .domains-grid{grid-template-columns:1fr}
+  .career-grid{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .stat-col:nth-child(1),.stat-col:nth-child(2){border-bottom:1px solid var(--surface-200)}
+  .stat-col:nth-child(2){border-right:none}
+  .steps-grid{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:1fr}
+  .legacy-timeline{grid-template-columns:1fr 1fr}
+  .profile-feats{grid-template-columns:1fr}
+  .hero-h1{font-size:2rem}
+}
+@media(max-width:400px){
+  .pbox-stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<Header />
+
+
+<!-- HERO -->
+<div class="hero-wrap" id="home">
+  <div class="hero-bg"><div class="hero-grid"></div></div>
+  <div class="hero-content">
+
+    <!-- LEFT COLUMN -->
+    <div>
+      <div class="hero-urgent"><span class="udot"></span><span class="utxt">24×7 Job Support · Interview Prep · Profile Engineering | USA • Canada • UK • Europe</span></div>
+
+      <h1 class="hero-h1">
+        <span class="h1-line">Struggling at Work or Need</span>
+        <span class="h1-line">Urgent Pharma <span class="h1-orange">Proxy Interview Support?</span></span>
+        <span class="grad">Get Real-Time Expert Support</span>
+        <span class="hero-domains">Clinical SAS · CSV Validation · Regulatory Affairs · PV · Veeva Vault · Medical Device QA</span>
+      </h1>
+
+      <div class="hero-hook">
+        <span class="hero-hook-txt">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Profile invisible to pharma recruiters? We engineer it to get interviews scheduled.
+        </span>
+        <a href="/pharma-profile-engineering/" class="hero-hook-cta">Get Interview Scheduled →</a>
+      </div>
+
+      <p class="hero-lead">Pharma proxy job support &amp; real-time interview support — SDTM/ADaM, eCTD submissions, Veeva workflows, CAPA, IQ/OQ/PQ, and high-pressure regulated deadlines handled by pharma domain experts. Live. Same timezone.</p>
+
+      <ul class="hero-pains">
+        <li>Stuck on production issues or urgent project deadlines at work?</li>
+        <li>Need live proxy support during pharma technical interviews?</li>
+        <li>Not confident with Veeva Vault, CSV validation, or PV workflows?</li>
+        <li>Worried about failing your clinical SAS or regulatory affairs interview?</li>
+        <li>Profile invisible to pharma recruiters? We engineer it to improve shortlisting.</li>
+      </ul>
+
+      <div class="hero-trust-row">
+        <span class="htr-item"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>100% Confidential</span>
+        <span class="htr-sep"></span>
+        <span class="htr-item"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>Domain Experts (8+ yrs)</span>
+        <span class="htr-sep"></span>
+        <span class="htr-item"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>Start Within 1 Hour</span>
+        <span class="htr-sep"></span>
+        <span class="htr-item">🌍 USA · UK · EU · India · Gulf</span>
+      </div>
+
+      <div class="hero-btns">
+        <a href={wa} class="btn-wa" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Get Instant Help on WhatsApp</a>
+        <a href={`tel:${phone}`} class="btn-ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 8.81 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Talk to a Pharma Expert</a>
+        <a href="/pharma-profile-engineering/" class="btn-arrow">Profile Engineering →</a>
+      </div>
+
+      <div class="hero-foot">Trusted Since 2020 &nbsp;·&nbsp; <strong>500+ Pharma Professionals Helped</strong> &nbsp;·&nbsp; No Middleman &nbsp;·&nbsp; No Outsourcing</div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="hcard">
+      <div class="hcard-top"><span class="hlive-dot"></span>LIVE SUPPORT STATUS</div>
+      <div class="hcard-stats">
+        <div class="hstat"><div class="hstat-num">500<sup>+</sup></div><div class="hstat-lbl">Professionals Helped</div></div>
+        <div class="hstat"><div class="hstat-num">98.5<sup>%</sup></div><div class="hstat-lbl">Satisfaction Rate</div></div>
+        <div class="hstat"><div class="hstat-num">18<sup>+</sup></div><div class="hstat-lbl">Pharma Domains</div></div>
+        <div class="hstat"><div class="hstat-num">24×7</div><div class="hstat-lbl">Live Support</div></div>
+      </div>
+      <div class="hcard-experts">
+        <div class="hcard-expert-hdr">
+          <div class="hcard-expert-title">Experts Available for Same-Day Pharma Proxy Interview &amp; Job Support</div>
+          <span class="hlive-badge">Live</span>
+        </div>
+        <div class="hcard-expert-sub">Clinical · Regulatory · PV · Veeva Vault · SAS · QA · Profile Engineering</div>
+        <div class="hcard-tags">
+          <span class="hcard-tag">Job Support</span>
+          <span class="hcard-tag">Interview Prep</span>
+          <span class="hcard-tag">Get Interview Scheduled</span>
+        </div>
+      </div>
+      <div class="hcard-feats">
+        <span class="hcard-feat"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>No Middleman</span>
+        <span class="hcard-feat"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Same Day Start</span>
+        <span class="hcard-feat"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>100% Confidential</span>
+        <span class="hcard-feat"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Instant Response</span>
+      </div>
+      <div class="hcard-cta">
+        <a href={wa} class="hcard-cta-main" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Get Instant Help on WhatsApp</a>
+        <div class="hcard-cta-row">
+          <a href={`tel:${phone}`} class="hcard-cta-sec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 8.81 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call Now</a>
+          <a href="/pharma-profile-engineering/" class="hcard-cta-sec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>Profile Engineering</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-inner">
+    <div class="stat-col"><svg class="stat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><div class="stat-num">500<sup>+</sup></div><div class="stat-lbl">Pharma professionals supported globally</div></div>
+    <div class="stat-col"><svg class="stat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg><div class="stat-num">18<sup>+</sup></div><div class="stat-lbl">Pharma domains: SAS, CSV, RA, PV, Veeva, QA &amp; more</div></div>
+    <div class="stat-col"><svg class="stat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div class="stat-num">24/7</div><div class="stat-lbl">Available on WhatsApp — Real experts, not bots</div></div>
+    <div class="stat-col"><svg class="stat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg><div class="stat-num">65<sup>+</sup></div><div class="stat-lbl">Countries covered across all time zones</div></div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-track">
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>Proxy Job Support</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Interview Proxy Support</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Profile Engineering</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Clinical SAS / CDISC</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Regulatory Affairs / eCTD</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>Pharmacovigilance</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>Veeva Vault</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>CSV Validation / GxP</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>AI / GenAI in Pharma</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Same-Day Support Available</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>Proxy Job Support</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Interview Proxy Support</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Profile Engineering</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Clinical SAS / CDISC</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Regulatory Affairs / eCTD</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>Pharmacovigilance</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>Veeva Vault</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>AI / GenAI in Pharma</div><div class="tbar-div"></div>
+    <div class="tbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Same-Day Support Available</div>
+  </div>
+</div>
+
+<!-- WHAT WE OFFER -->
+<section class="offer-section" id="services">
+  <div class="container">
+    <div class="section-tag">What Do You Need Help With Right Now?</div>
+    <h2 class="sh2">Three Pharma Proxy Support Services —<br><em>For Every Stage of Your Career</em></h2>
+    <p class="sp">We offer three core proxy support services for pharma professionals at every stage of their career journey. Pharma proxy job support, pharma proxy interview support, and profile engineering to get interview scheduled.</p>
+    <div class="offer-grid">
+      <div class="offer-card">
+        <div class="offer-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="offer-title">Pharma Proxy Job Support</div>
+        <div class="offer-desc">Already in the job but struggling? Your pharma manager assigns complex tasks. Deadlines are real. In regulated GMP, GxP, or ISO environments, mistakes have consequences. Get real-time pharma proxy job support — live task-by-task guidance from a domain expert who has done your exact work before, available right now via WhatsApp.</div>
+        <div class="offer-items">
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Working professionals stuck mid-task</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>New role joiners needing task support</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>SDTM / ADaM / TLF SAS programming</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Veeva Vault workflows &amp; submissions</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>CSV validation / CAPA / deviation reports</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Client meetings &amp; standup preparation</div>
+        </div>
+        <a href="/pharma-proxy-job-support/" class="offer-cta">Get Pharma Proxy Job Support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="offer-card">
+        <div class="offer-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><circle cx="20" cy="5" r="2"/><path d="M20 3v4M18 5h4"/></svg></div>
+        <div class="offer-title">Pharma Proxy Interview Support</div>
+        <div class="offer-desc">Got a pharma interview? You got the interview call. Now you need to be technically ready. Our pharma proxy interview support gives you real-time domain-specific preparation, mock sessions, and live guidance so you walk into that interview knowing exactly what to say.</div>
+        <div class="offer-items">
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Shortlisted candidates — technical round prep</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Failed 3 pharma interviews — need help fast</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Domain-specific mock Q&amp;A sessions</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>SDTM / Veeva / CSV / PV technical prep</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Real pharma interview Q&amp;A from real interviews</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Final round proxy-style guidance</div>
+        </div>
+        <a href="/pharma-proxy-interview/" class="offer-cta">Get Pharma Proxy Interview Support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="offer-card">
+        <div class="offer-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="offer-title">Pharma Profile Engineering — Get Interview Scheduled</div>
+        <div class="offer-desc">Not getting pharma interview calls? You have the certification or the degree — but pharma recruiters aren't calling. We review your profile, position your pharma domain expertise correctly, optimize your LinkedIn for CRO and pharma hiring managers, and build your pharma interview pipeline from scratch.</div>
+        <div class="offer-items">
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fresh graduates &amp; SAS/CSV/RA certified candidates</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>IT professionals switching to pharma</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>ATS-optimized pharma resume rewrite</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>LinkedIn optimization for pharma recruiters</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Pharma interview pipeline building</div>
+          <div class="offer-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>USA · UK · EU · India market focus</div>
+        </div>
+        <a href="/pharma-profile-engineering/" class="offer-cta">Get Interview Scheduled via Profile Engineering <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAINS -->
+<section class="domains-section" id="domains">
+  <div class="container">
+    <div class="domains-hdr">
+      <div class="section-tag">Every Pharma Domain. Every Regulated Role.</div>
+      <h2 class="sh2">18 Pharma Domains —<br><em>Proxy Job Support &amp; Proxy Interview Support</em></h2>
+      <p class="sp">Pharma proxy job support and proxy interview support across the full spectrum of pharma, clinical research, and medical device career paths. Click any domain for details.</p>
+    </div>
+    <div class="domains-grid">
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="domain-name">Clinical SAS &amp; CDISC Standards</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">SDTM, ADaM, and TLF programming for Phase I–IV clinical trials. CDISC compliance, define.xml, and FDA/EMA submission support. Real-time SAS code debugging and domain mapping.</div>
+          <div class="domain-tags"><span class="domain-tag">SDTM</span><span class="domain-tag">ADaM</span><span class="domain-tag">TLF</span><span class="domain-tag">CDISC</span><span class="domain-tag">Define.xml</span><span class="domain-tag">SAS Base</span><span class="domain-tag">FDA Submissions</span><span class="domain-tag">PINNACLE 21</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get SAS support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+          <div class="domain-name">Regulatory Affairs / eCTD Submissions</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">NDA, BLA, IND, MAA, and eCTD dossier preparation. FDA, EMA, PMDA, CDSCO submissions. Gap analysis, regulatory intelligence, and submission readiness reviews.</div>
+          <div class="domain-tags"><span class="domain-tag">eCTD</span><span class="domain-tag">NDA/BLA</span><span class="domain-tag">IND</span><span class="domain-tag">MAA</span><span class="domain-tag">FDA 21 CFR</span><span class="domain-tag">EMA</span><span class="domain-tag">PMDA</span><span class="domain-tag">Veeva RIM</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get regulatory support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+          <div class="domain-name">Pharmacovigilance &amp; Drug Safety</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">ICSR processing, safety narrative writing, aggregate reports (PSUR/PBRER), signal detection, MedDRA coding. Argus Safety, Oracle Empirica, EudraVigilance workflows.</div>
+          <div class="domain-tags"><span class="domain-tag">Argus Safety</span><span class="domain-tag">ICSR</span><span class="domain-tag">MedDRA</span><span class="domain-tag">PSUR/PBRER</span><span class="domain-tag">E2B(R3)</span><span class="domain-tag">Signal Detection</span><span class="domain-tag">EudraVigilance</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get PV support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg></div>
+          <div class="domain-name">Veeva Vault — All Modules</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">End-to-end Veeva Vault support across RIM, eTMF, QualityDocs, PromoMats, MedComms, and Safety. Workflow configuration, document lifecycle, and submission package management.</div>
+          <div class="domain-tags"><span class="domain-tag">Veeva RIM</span><span class="domain-tag">Veeva eTMF</span><span class="domain-tag">QualityDocs</span><span class="domain-tag">PromoMats</span><span class="domain-tag">Vault Admin</span><span class="domain-tag">Workflow Config</span><span class="domain-tag">VQL</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get Veeva support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="domain-name">CSV Validation &amp; GxP Compliance</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">Computer System Validation protocols, IQ/OQ/PQ documentation, traceability matrices, and GxP compliance. 21 CFR Part 11 and Annex 11 expertise for FDA and EMA regulated systems.</div>
+          <div class="domain-tags"><span class="domain-tag">21 CFR Part 11</span><span class="domain-tag">Annex 11</span><span class="domain-tag">IQ/OQ/PQ</span><span class="domain-tag">GAMP5</span><span class="domain-tag">URS</span><span class="domain-tag">Traceability Matrix</span><span class="domain-tag">Audit Trail</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get CSV support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg></div>
+          <div class="domain-name">Medical Device QA / EU MDR / FDA</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">ISO 13485, IEC 62304, EU MDR 2017/745, and FDA 510(k)/PMA support. SaMD classification, QMS implementation, technical files, and IVDR compliance documentation.</div>
+          <div class="domain-tags"><span class="domain-tag">ISO 13485</span><span class="domain-tag">IEC 62304</span><span class="domain-tag">EU MDR</span><span class="domain-tag">510(k)</span><span class="domain-tag">SaMD</span><span class="domain-tag">QMS</span><span class="domain-tag">IVDR</span><span class="domain-tag">Technical File</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get device support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+          <div class="domain-name">Clinical Data Management / EDC</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">CRF design, database build, data cleaning, discrepancy management, and database lock procedures. Medidata Rave, Oracle InForm, OpenClinica, and REDCap support.</div>
+          <div class="domain-tags"><span class="domain-tag">Medidata Rave</span><span class="domain-tag">Oracle InForm</span><span class="domain-tag">REDCap</span><span class="domain-tag">CRF Design</span><span class="domain-tag">DMP</span><span class="domain-tag">Data Cleaning</span><span class="domain-tag">DB Lock</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get CDM support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+          <div class="domain-name">QMS / CAPA / Deviation Management</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">GMP quality systems, CAPA investigation, root cause analysis, deviation reports, change control, and audit preparation. MasterControl, Trackwise, and Veeva Vault QMS support.</div>
+          <div class="domain-tags"><span class="domain-tag">CAPA</span><span class="domain-tag">Deviation</span><span class="domain-tag">Change Control</span><span class="domain-tag">GMP</span><span class="domain-tag">Root Cause</span><span class="domain-tag">MasterControl</span><span class="domain-tag">Trackwise</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get QMS support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div class="domain-name">AI / GenAI in Pharma &amp; Drug Discovery</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">AI-driven drug discovery, NLP for clinical documents, LLM applications in regulatory submissions, GenAI workflow automation in GxP environments, and agentic AI pipelines for pharma.</div>
+          <div class="domain-tags"><span class="domain-tag">LLM / NLP</span><span class="domain-tag">Drug Discovery AI</span><span class="domain-tag">RAG Pipelines</span><span class="domain-tag">Python</span><span class="domain-tag">Regulatory AI</span><span class="domain-tag">Agentic AI</span><span class="domain-tag">MLOps</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get AI pharma support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z"/><line x1="12" y1="12" x2="12" y2="17"/><line x1="9" y1="14.5" x2="15" y2="14.5"/></svg></div>
+          <div class="domain-name">SAP QM / ERP Pharma Operations</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">SAP QM for batch record management, material master, inspection lot management, and GMP compliance reporting. SAP S/4HANA and ECC6 pharma module support.</div>
+          <div class="domain-tags"><span class="domain-tag">SAP QM</span><span class="domain-tag">SAP S/4HANA</span><span class="domain-tag">Batch Records</span><span class="domain-tag">Material Master</span><span class="domain-tag">Inspection Lots</span><span class="domain-tag">SAP EHS</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get SAP support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><rect x="9" y="12" width="6" height="9"/></svg></div>
+          <div class="domain-name">Healthcare IT / Cloud / FHIR</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">HL7 FHIR integration, AWS GxP cloud compliance, Azure Health Data Services, and healthcare interoperability. Epic, Cerner, and RWD/RWE platform support for pharma projects.</div>
+          <div class="domain-tags"><span class="domain-tag">HL7 FHIR</span><span class="domain-tag">AWS GxP</span><span class="domain-tag">Azure Health</span><span class="domain-tag">Epic / Cerner</span><span class="domain-tag">RWD/RWE</span><span class="domain-tag">HIPAA</span><span class="domain-tag">Health APIs</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get HIT support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="domain-card">
+        <div class="domain-hdr" onclick="toggleDomain(this)">
+          <div class="domain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
+          <div class="domain-name">Biostatistics &amp; Statistical Programming</div>
+          <div class="domain-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="domain-body">
+          <div class="domain-desc">Statistical analysis plans (SAP), endpoint analysis, sample size calculations, interim analysis, and randomization. R, SAS, and Python statistical programming for clinical trials.</div>
+          <div class="domain-tags"><span class="domain-tag">SAP</span><span class="domain-tag">R / SAS / Python</span><span class="domain-tag">Endpoint Analysis</span><span class="domain-tag">Sample Size</span><span class="domain-tag">Survival Analysis</span><span class="domain-tag">Mixed Models</span></div>
+          <a href={wa} class="domain-cta" target="_blank" rel="noopener noreferrer">Get stats support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECT SUPPORT -->
+<section class="direct-section">
+  <div class="direct-inner">
+    <div>
+      <div class="section-tag section-tag--light">Why Choose Us</div>
+      <h2 class="sh2 sh2--light">Direct Pharma Expert Support —<br><em style="color:var(--teal-300)">No Middlemen. No Delays.</em></h2>
+      <p class="sp" style="color:rgba(255,255,255,.6);max-width:460px;margin-bottom:0">We maintain an in-house team of ex-pharma professionals. No outsourcing, no matching platforms. Your project handled directly by the domain expert.</p>
+      <div class="direct-pills">
+        <div class="dpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>In-House Experts Only</div>
+        <div class="dpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>No Outsourcing</div>
+        <div class="dpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Same-Day Start</div>
+        <div class="dpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>100% Confidential</div>
+        <div class="dpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp · Call · Screen Share</div>
+      </div>
+    </div>
+    <div class="direct-pts">
+      <div class="dpt"><div class="dpt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="dpt-title">Rapid Expert Matching — Often Within Hours</div><div class="dpt-desc">Share your pharma domain and situation. We identify the right expert and initiate support the same day — no waiting queues, no middlemen.</div></div></div>
+      <div class="dpt"><div class="dpt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div><div class="dpt-title">Real Pharma Domain Experience — Not Generalists</div><div class="dpt-desc">Every expert has hands-on pharma industry experience from Big Pharma, CROs, or regulatory agencies. No tech generalists for life sciences work.</div></div></div>
+      <div class="dpt"><div class="dpt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="dpt-title">100% Confidential — Your Employer Will Never Know</div><div class="dpt-desc">All sessions are strictly private. We operate under complete discretion. Your project, your career, your reputation stays fully protected.</div></div></div>
+      <div class="dpt"><div class="dpt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="dpt-title">24/7 Across USA, UK, EU, India, AU, Gulf</div><div class="dpt-desc">We align to your timezone, your work hours, your deadlines. Weekend, late night, public holiday — we're available when you need us.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER TIERS -->
+<section class="career-section">
+  <div class="container">
+    <div class="section-tag">Career Support</div>
+    <h2 class="sh2">From Struggling to Thriving —<br><em>Complete Pharma Career Support</em></h2>
+    <p class="sp">Whether you need immediate job help, interview prep, or a complete career repositioning — we have a tailored solution for your exact situation.</p>
+    <div class="career-grid">
+      <div class="career-card">
+        <span class="career-badge cb--start">Get Started</span>
+        <div class="career-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="career-title">Profile Engineering + LinkedIn Optimization</div>
+        <div class="career-desc">Transform your pharma profile so recruiters and AI screening bots find you. Stop applying blindly and start getting called.</div>
+        <div class="career-items">
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Industry-specific positioning</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>ATS-optimized resume rewrite</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>LinkedIn headline &amp; summary</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>High-intent keyword alignment</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Multi-role strategy</div>
+        </div>
+        <a href={wa} class="career-cta cc--outline" target="_blank" rel="noopener noreferrer">Start profile work →</a>
+      </div>
+      <div class="career-card featured">
+        <span class="career-badge cb--pop">Most Popular</span>
+        <div class="career-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="career-title">Proxy Job Support + Interview Prep Bundle</div>
+        <div class="career-desc">The complete survival package. Real-time job help while in the role AND preparation for your next move. Full coverage, one expert.</div>
+        <div class="career-items">
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Live project guidance</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Task delivery support</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Interview proxy support</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Domain Q&amp;A coaching</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Client/standup support</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp direct access 24/7</div>
+        </div>
+        <a href={wa} class="career-cta cc--primary" target="_blank" rel="noopener noreferrer">Get this bundle →</a>
+      </div>
+      <div class="career-card">
+        <span class="career-badge cb--full">Complete</span>
+        <div class="career-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="career-title">End-to-End Pharma Career Acceleration</div>
+        <div class="career-desc">For pharma professionals who want to completely transform their trajectory — from invisible to in-demand, from stuck to shortlisted.</div>
+        <div class="career-items">
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full profile engineering</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Interview mentoring</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Live interview assistance</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Post-offer job support</div>
+          <div class="career-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Career roadmapping</div>
+        </div>
+        <a href={wa} class="career-cta cc--outline" target="_blank" rel="noopener noreferrer">Start acceleration →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="how-inner">
+    <div style="text-align:center;max-width:560px;margin:0 auto">
+      <div class="section-tag">How Pharma Proxy Support Works</div>
+      <h2 class="sh2">Three Steps. Real Pharma Domain Experts.<br><em>Live on WhatsApp. No Appointments.</em></h2>
+      <p class="sp" style="max-width:100%;text-align:center">No waiting rooms. No training courses. No appointments. Tell us your situation and we connect you with the right pharma domain expert immediately.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-block">
+        <div class="step-num">01</div>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 8.81 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div class="step-title">Tell Us Your Situation</div>
+        <div class="step-desc">Send us a WhatsApp message right now. Tell us your pharma domain, your current challenge — whether you need profile engineering to get interviews, pharma proxy interview preparation, or real-time pharma proxy job support on a task.</div>
+      </div>
+      <div class="step-block">
+        <div class="step-num">02</div>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="step-title">Get Matched to Your Domain Expert</div>
+        <div class="step-desc">We match you with a pharma professional who has hands-on experience in your exact domain — not a generic coach. Someone who has done SDTM mapping, ISO 13485 audits, Veeva Vault submissions, or Argus case processing in a real regulated environment.</div>
+      </div>
+      <div class="step-block">
+        <div class="step-num">03</div>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="step-title">Get Real Help, Right Now</div>
+        <div class="step-desc">Work through your interview prep or your live job task together via WhatsApp, call, or screen share. Real answers. Real pharma knowledge. Task by task, question by question — whatever you need right now.</div>
+      </div>
+      <div class="step-block">
+        <div class="step-num">24/7</div>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="step-title">Start on WhatsApp Now</div>
+        <div class="step-desc">Available 24/7. USA · UK · EU · India · Australia · Gulf. No appointments. No enrolments. Just real pharma domain experts available when you need them. Message: +91-9660834611</div>
+      </div>
+    </div>
+    <div class="how-urgent">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <div class="how-urgent-txt"><strong>Interview in 24–48 hours?</strong> Same-day emergency support is available for urgent proxy interviews, regulatory audit prep, and production deadlines. <a href={wa}>Message us now →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGACY -->
+<section class="legacy-section">
+  <div class="legacy-inner">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <div class="section-tag section-tag--light">Our Heritage</div>
+      <h2 class="sh2 sh2--light">Helping Pharma Professionals<br><em style="color:var(--teal-300)">Survive Every Industry Challenge</em></h2>
+      <p class="sp" style="color:rgba(255,255,255,.52);max-width:100%;text-align:center">From GCP/GMP foundations to the AI era — we've supported pharma professionals through every major industry shift.</p>
+    </div>
+    <div class="legacy-timeline">
+      <div class="legacy-item"><div class="legacy-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div><div class="legacy-year">2012–2016</div><div class="legacy-title">CDISC &amp; Clinical SAS Era</div><div class="legacy-desc">Supporting SAS programmers as SDTM/ADaM became FDA-mandatory for all submissions</div></div>
+      <div class="legacy-item"><div class="legacy-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div class="legacy-year">2016–2019</div><div class="legacy-title">Regulatory Modernization</div><div class="legacy-desc">eCTD, Veeva Vault adoption, GxP cloud, EU MDR created massive upskilling demand</div></div>
+      <div class="legacy-item"><div class="legacy-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><div class="legacy-year">2020–2021</div><div class="legacy-title">COVID Trial Surge</div><div class="legacy-desc">Vaccine trials, emergency regulatory submissions, and remote CDM workflows overwhelmed pharma professionals</div></div>
+      <div class="legacy-item"><div class="legacy-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg></div><div class="legacy-year">2022–2023</div><div class="legacy-title">Pharma Digital Transformation</div><div class="legacy-desc">Veeva RIM expansion, SAP S/4HANA migration, and global regulatory harmonization created urgent needs</div></div>
+      <div class="legacy-item"><div class="legacy-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="legacy-year">2024–Today</div><div class="legacy-title">AI Era &amp; Career Defence</div><div class="legacy-desc">GenAI in drug discovery, AI regulatory submissions, and automation anxiety driving urgent pharma career support</div></div>
+    </div>
+    <div class="legacy-ctas">
+      <a href={wa} class="btn-primary" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" style="width:17px;height:17px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Get Pharma Job Support</a>
+      <a href="#services" class="btn-ghost">View All Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="proof-section" id="results">
+  <div class="container">
+    <div class="section-tag">What Professionals Say</div>
+    <h2 class="sh2">Trusted by Pharma Professionals<br><em>Across the Globe</em></h2>
+    <p class="sp">Real outcomes from real pharma professionals — clinical SAS programmers, regulatory specialists, PV analysts, and validation engineers.</p>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="stars"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="proof-quote">"Veeva Vault RIM workflow was failing 18 hours before regulatory submission deadline. The expert debugged the lifecycle configuration, fixed the document relationships, and walked me through the full submission process. Saved my contract."</div>
+        <div class="proof-author"><div class="author-av">AP</div><div><div class="author-name">Ananya P.</div><div class="author-role">Regulatory Affairs Specialist</div><div class="author-loc">Hyderabad · Pharma MNC</div></div></div>
+      </div>
+      <div class="proof-card">
+        <div class="stars"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="proof-quote">"SDTM and ADaM support was outstanding. The expert knew exactly what my CRO's PINNACLE 21 validator expected and helped me fix every error in my DM, AE, and EX domains within one session. Job saved."</div>
+        <div class="proof-author"><div class="author-av">MK</div><div><div class="author-name">Mohammed K.</div><div class="author-role">Clinical SAS Programmer</div><div class="author-loc">Dubai · Global CRO</div></div></div>
+      </div>
+      <div class="proof-card">
+        <div class="stars"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="proof-quote">"FDA audit in 24 hours — IQ/OQ/PQ protocols had critical 21 CFR Part 11 gaps. The expert helped me fix everything and I passed with zero critical observations. This service is genuinely life-saving for pharma professionals."</div>
+        <div class="proof-author"><div class="author-av">SR</div><div><div class="author-name">Sarah R.</div><div class="author-role">CSV Validation Engineer</div><div class="author-loc">Manchester · Medical Device</div></div></div>
+      </div>
+      <div class="proof-card">
+        <div class="stars"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="proof-quote">"Interview proxy support for a senior pharmacovigilance role in the USA. The expert provided real-time signal detection answers. I cleared all 3 rounds and got the offer at a top-5 pharma company. Life-changing service."</div>
+        <div class="proof-author"><div class="author-av">RP</div><div><div class="author-name">Ravi P.</div><div class="author-role">Pharmacovigilance Specialist</div><div class="author-loc">New Jersey, USA · Big Pharma</div></div></div>
+      </div>
+      <div class="proof-card">
+        <div class="stars"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="proof-quote">"Applied to 200+ pharma jobs with zero callbacks. After the LinkedIn and resume profile engineering, I got 4 interview calls in 2 weeks. The keyword strategy for regulatory affairs roles was incredibly precise."</div>
+        <div class="proof-author"><div class="author-av">LM</div><div><div class="author-name">Laura M.</div><div class="author-role">Regulatory Affairs Manager</div><div class="author-loc">Berlin · EU Pharma</div></div></div>
+      </div>
+      <div class="proof-card">
+        <div class="stars"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="proof-quote">"ISO 13485 QMS implementation was completely new to me after transitioning from pharma. The medical device expert guided me through the entire documentation structure. Passed first surveillance audit with zero major findings."</div>
+        <div class="proof-author"><div class="author-av">KT</div><div><div class="author-name">Kiran T.</div><div class="author-role">QA Manager — Medical Device</div><div class="author-loc">Melbourne · Med-Tech Startup</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY -->
+<section class="urgency-section">
+  <div class="urgency-inner">
+    <div class="urgency-grid">
+      <div>
+        <div class="urgency-label"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>High Risk Situation</div>
+        <h2 class="urgency-h2">Don't Wait Until Your<br>Pharma Career Escalates</h2>
+        <p class="urgency-lead">High-pressure pharma situations move fast. One missed regulatory deadline, failed interview, or audit gap can cascade into a lost contract, missed promotion, or terminated role — especially on international projects where visibility is low and pressure is extreme.</p>
+        <div class="urgency-ctas">
+          <a href={wa} class="btn-primary" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" style="width:17px;height:17px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Get Urgent Support Now</a>
+          <a href={`tel:${phone}`} class="btn-ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 8.81 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call Now</a>
+        </div>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-row"><div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="pain-txt"><strong>Pharma interview in 24–48 hours</strong> with no domain-specific preparation done</div></div>
+        <div class="pain-row"><div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="pain-txt"><strong>Regulatory submission deadline missed</strong> — sponsor escalating, manager unhappy</div></div>
+        <div class="pain-row"><div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="pain-txt"><strong>FDA / MHRA audit approaching</strong> with critical gaps in your validation protocols</div></div>
+        <div class="pain-row"><div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="pain-txt"><strong>Daily standups becoming stressful</strong> — can't explain deliverables to stakeholders</div></div>
+        <div class="pain-row"><div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="pain-txt"><strong>Zero interview calls</strong> after 100+ pharma job applications with no responses</div></div>
+        <div class="pain-row"><div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="pain-txt"><strong>Transitioning into a new pharma domain</strong> — expected to know tools you've never used</div></div>
+        <div class="pain-row"><div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="pain-txt"><strong>PIP / performance warning</strong> — manager questioning your technical expertise</div></div>
+        <div class="pain-row"><div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="pain-txt"><strong>AI threatening your pharma role</strong> — urgently need to upskill or reposition</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE CTA -->
+<section class="profile-section">
+  <div class="profile-inner">
+    <div class="profile-grid">
+      <div>
+        <div class="section-tag">Get Shortlisted</div>
+        <h2 class="sh2">Not Getting Pharma Interview<br><em>Calls? We Fix That.</em></h2>
+        <p class="sp">Applied to 100+ pharma jobs with zero response? The problem isn't your experience — it's your visibility. We engineer your profile so ATS systems, recruiters, and AI hiring bots prioritize you.</p>
+        <div class="profile-feats">
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div class="pf-label">ATS Keyword Optimization</div></div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div><div class="pf-label">LinkedIn Recruiter Visibility</div></div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="pf-label">Domain-Specific Branding</div></div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div><div class="pf-label">USA · UK · EU · AU Focus</div></div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="pf-label">Multi-Role Profile Strategy</div></div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div class="pf-label">Complete Resume Rewrite</div></div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="pf-label">Interview Scheduling Strategy</div></div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg></div><div class="pf-label">Recruiter Outreach Support</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="profile-box">
+          <div class="pbox-lbl">Get Interview Calls</div>
+          <div class="pbox-title">Transform Your Pharma Profile Today</div>
+          <div class="pbox-desc">Stop being invisible to pharma recruiters. We engineer your professional brand to match real hiring demand so you get the calls you deserve.</div>
+          <div class="pbox-stats">
+            <div class="pbox-stat"><div class="pbox-stat-num">4×</div><div class="pbox-stat-lbl">More interview calls after profile engineering</div></div>
+            <div class="pbox-stat"><div class="pbox-stat-num">2 wks</div><div class="pbox-stat-lbl">Average time to first callback after profile work</div></div>
+          </div>
+          <a href={wa} class="btn-primary" style="width:100%;justify-content:center;margin-bottom:11px" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" style="width:17px;height:17px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Start Profile Engineering</a>
+          <a href={`mailto:${email}`} class="btn-outline-white" style="width:100%;justify-content:center">Email Us →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div style="text-align:center">
+      <div class="section-tag">Frequently Asked Questions</div>
+      <h2 class="sh2">Frequently Asked Questions About<br><em>Pharma Proxy Support</em></h2>
+      <p class="sp" style="max-width:100%;text-align:center;margin:0 auto">Everything you need to know about pharma proxy job support, pharma proxy interview support, and pharma profile engineering.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">What exactly is pharma proxy job support?<div class="faq-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div>
+        <div class="faq-a">Pharma proxy job support means having an expert pharma professional work alongside you — behind the scenes — while you handle your actual job deliverables. For professionals stuck on complex clinical, regulatory, validation, or analytical tasks, it provides real-time guidance to complete work correctly, meet deadlines, and grow domain knowledge. We work via WhatsApp, call, or screen share — whatever suits you best.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How does pharma interview proxy support work?<div class="faq-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div>
+        <div class="faq-a">For live interview proxy support, our expert provides you real-time answers, prompts, and domain-specific responses through a discreet channel during your interview. We also offer comprehensive pre-interview preparation including mock sessions, domain Q&amp;A coaching, and scenario-based answer frameworks tailored to your specific role and target company.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Which pharma domains do you cover?<div class="faq-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div>
+        <div class="faq-a">We cover 18 pharma domains: Clinical SAS/CDISC (SDTM, ADaM, TLF), CSV Validation/GxP/21 CFR Part 11, Regulatory Affairs/eCTD, Pharmacovigilance/Argus Safety/ICSR, Veeva Vault (all modules), Medical Device QA/EU MDR/ISO 13485, Clinical Data Management/EDC, Pharma AI/GenAI/MLOps, QA/QMS/CAPA/GMP, Pharma RPA/UiPath, Cloud/DevOps in Pharma, Pharma BI/Analytics, SAP QM/ERP Pharma, Pharma Business Analysis, Medical Writing, GRC/Compliance, Clinical Research/CRA/CRC, and GMP Manufacturing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How quickly can support start? Can you help with an emergency?<div class="faq-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div>
+        <div class="faq-a">Yes — same-day support is often available. For urgent situations (interview in 24 hours, regulatory deadline, audit preparation), message us immediately on WhatsApp. We assess your situation within minutes and assign the right expert as quickly as possible — often within hours, not days. Emergency pharma support is our speciality.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is this service confidential? Will my employer find out?<div class="faq-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div>
+        <div class="faq-a">100% confidential. We operate with complete discretion and never share client information. All sessions are private. Your employer, team, or colleagues will never know you used our service. Client confidentiality is fundamental to how we operate — we take this extremely seriously.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Which countries and timezones do you serve?<div class="faq-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div>
+        <div class="faq-a">We serve professionals in 65+ countries including USA, UK, Ireland, Germany, Switzerland, Netherlands, Belgium, France, Sweden, Denmark, Norway, Finland, Italy, Spain, Poland, Czech Republic, Hungary, Romania, UAE, Saudi Arabia, Qatar, Israel, India, Singapore, Japan, South Korea, Australia, New Zealand, Canada, Brazil, South Africa, and many more. We align to your timezone — your office hours, your deadlines, including weekends and public holidays.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Are your pharma experts real industry professionals?<div class="faq-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div>
+        <div class="faq-a">Yes — every expert has real hands-on pharma industry experience from Big Pharma, global CROs, regulatory agencies, biotech companies, and medical device manufacturers. They've done the exact work you're doing — not generalists or trainers. We do not outsource; all experts are vetted in-house for genuine domain depth and practical experience.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is pharma profile engineering and do I need it?<div class="faq-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div>
+        <div class="faq-a">If you've applied to many pharma jobs without getting interview calls, the issue is usually profile visibility — not your experience. Profile engineering includes ATS-optimized resume rewriting, LinkedIn headline and summary optimization, pharma domain keyword alignment, and a positioning strategy for your target role and market (USA, UK, EU, etc.). Most clients see interview callbacks within 2 weeks of profile completion.</div>
+      </div>
+    </div>
+    <div class="faq-ctas">
+      <a href={wa} class="btn-primary" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Ask on WhatsApp</a>
+      <a href={`mailto:${email}`} class="btn-ghost" style="color:var(--text-700);border-color:var(--surface-200)">Email a Question →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip" id="contact">
+  <div class="cta-strip-inner">
+    <div>
+      <div class="strip-h">Start Your Pharma Career Journey Right Now</div>
+      <p class="strip-p">Tell us where you are and we'll connect you with the right pharma domain expert today. Pharma proxy job support, pharma proxy interview support, or profile engineering to get interview scheduled — all via WhatsApp.</p>
+    </div>
+    <div class="strip-btns">
+      <a href={wa} class="btn-primary" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" style="width:17px;height:17px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Get Pharma Proxy Job Support</a>
+      <a href={wa} class="btn-outline-white" target="_blank" rel="noopener noreferrer">Get Pharma Proxy Interview Support →</a>
+      <a href="/pharma-profile-engineering/" class="btn-outline-white">Get Interview Scheduled via Profile Engineering →</a>
+    </div>
+  </div>
+</div>
+
+<Footer />
+
+<!-- WA FLOAT -->
+<a href={wa} class="wa-float" target="_blank" rel="noopener noreferrer">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Get Pharma Support
+</a>
+
+<script is:inline>
+function toggleDomain(hdr){
+  const card=hdr.closest('.domain-card');
+  const was=card.classList.contains('expanded');
+  document.querySelectorAll('.domain-card.expanded').forEach(c=>c.classList.remove('expanded'));
+  if(!was)card.classList.add('expanded');
+}
+
+function toggleFaq(q){
+  const item=q.closest('.faq-item');
+  const was=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!was)item.classList.add('open');
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+</script>
+<MobileCTABar /></body>
+</html>

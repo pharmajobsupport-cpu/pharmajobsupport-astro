@@ -1,0 +1,118 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What ICH E6(R3) GCP questions are asked in CRA interviews?', answer: 'ICH E6(R3) is the updated GCP guideline and every CRA interview now tests it: "What are the key changes in ICH E6(R3) vs. E6(R2)?", "What does ICH E6(R3) say about risk-based monitoring?", "What is proportionate monitoring and how does it change how you plan site visits?", "What are the sponsor\'s responsibilities for oversight of delegated monitoring tasks under E6(R3)?". Key E6(R3) changes: stronger emphasis on quality management systems, risk-based approaches to monitoring, fit-for-purpose processes (not one-size-fits-all), clarity on remote monitoring, updated investigator responsibilities. Interviewers expect you to have read the update, not just know E6(R2). If you know the ICH E6(R3) specific sections on monitoring plans and on-site vs. remote monitoring, you stand out significantly.' },
+  { question: 'What source data verification (SDV) questions come up in CRA interviews?', answer: 'SDV questions: "What is source data verification (SDV) vs. source data review (SDR)?", "When do you perform 100% SDV vs. risk-based SDV?", "Walk me through an SDV visit at a clinical site — what documents do you check?", "What do you do if you find a discrepancy between the source document and the EDC entry?", "What is the definition of source data in ICH E6(R3)?". Expected answer: SDV = comparing EDC/CRF data directly against original source documents (medical records, lab reports, patient diaries). SDR = reviewing data patterns, completeness, and plausibility without direct source comparison. Risk-based monitoring reduces SDV proportion — focus on critical data (primary endpoint, safety data, informed consent) for 100% SDV, use SDR for secondary and exploratory data. Discrepancy: raise a query in EDC, document in the monitoring visit report, escalate if it is a potential protocol deviation.' },
+  { question: 'What protocol deviation and non-compliance questions are asked in CRA interviews?', answer: 'Protocol deviation questions: "What is the difference between a protocol deviation and a protocol violation?", "Give me an example of a major protocol deviation and what you would do", "What is your process when you discover that a site enrolled a patient who was ineligible?", "How do you document a protocol deviation in the TMF?", "When does a protocol deviation require reporting to the IRB/Ethics Committee or regulatory authority?". Eligibility breach example: immediately assess patient safety, notify sponsor medical monitor, place patient on hold for further interventions if risk, notify IRB per protocol, document as deviation, determine if data from this patient is includable or excluded from analysis (biostatistician decision), raise CAPA with the site on consent/eligibility screening procedures.' },
+  { question: 'What eTMF and document management questions come up in CRA interviews?', answer: 'eTMF questions for CRA roles: "What is the Trial Master File and what are the key documents that must be in it?", "What is the difference between an Investigator Site File (ISF) and the Sponsor TMF?", "Have you used Veeva Vault Clinical for eTMF management? Walk me through your site document filing process", "What does ICH E6(R3) say about TMF inspection readiness?", "What is a TMF completeness check and how do you conduct one during a site visit?". Key TMF documents: protocol and amendments, ICF versions, IRB/EC approvals, investigator CVs and licence documents, lab normals and certifications, site signature log, randomisation list (if applicable), monitoring visit reports, all correspondence. Interviewers at CROs using Veeva eTMF ask about document filing workflows and how you handle missing documents from sites.' },
+  { question: 'How do I prepare for a CRA proxy interview?', answer: 'Focus on: ICH E6(R3) GCP guideline (read it — know the changes from R2), risk-based monitoring principles and how they apply to your monitoring plan, source data verification procedure and what to do when you find discrepancies, protocol deviation classification and reporting process, informed consent process and ICH E6(R3) updates on e-consent, eTMF structure (ICH E6(R3) Appendix C TMF reference model), site activation and close-out visit procedures, EDC systems (know the one in the JD — Medidata Rave, Oracle InForm, Veeva CDMS). Our CRA proxy interview support gives you real-time preparation from a CRA who has done site monitoring at global CROs. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Clinical Research Associate (CRA) — 2026', url: site.url + '/pharma-interviews/real-clinical-research-associate-proxy-interview-questions-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Clinical Research Associate (CRA) Interview Questions — 2026',
+    'Real Q&A from CRA interviews in 2026. ICH E6(R3) GCP, source data verification, protocol deviations, eTMF management, risk-based monitoring, site close-out.',
+    site.url + '/pharma-interviews/real-clinical-research-associate-proxy-interview-questions-2026/',
+    '2026-03-20',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real CRA Clinical Research Associate Interview Questions 2026"
+  description="Real Q&A from CRA interviews 2026. ICH E6(R3) GCP, SDV, protocol deviations, eTMF, risk-based monitoring. CRA proxy interview support: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Clinical Research Associate (CRA) — 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | CRA | Clinical Research | GCP | 2026</div>
+      <h1>Real Clinical Research Associate (CRA) Proxy Interview Questions — 2026</h1>
+      <p class="hero-tagline">Actual questions from CRA and clinical research associate interviews at CROs and pharmaceutical companies in 2026. ICH E6(R3) GCP updates, source data verification, protocol deviation management, eTMF compliance, risk-based monitoring — what interviewers actually asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Compiled from CRA interviews at two organisations in 2026: a large global CRO (oncology Phase II/III) and a mid-size European biotech (rare disease Phase I/II). Roles: Clinical Research Associate (field monitoring, CRO) and Senior CRA (sponsor-side oversight). Both positions required Veeva Vault eTMF experience. Questions from the technical GCP panel round.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real CRA Interview Questions</h2>
+
+          <div class="qa-block">
+            <h3>Q1: ICH E6(R3) was implemented. What are the key changes from E6(R2) and how do they affect your day-to-day monitoring activities as a CRA?</h3>
+            <p><strong>What they wanted to hear:</strong> Key E6(R3) changes and their monitoring implications: 1. Risk-based approach formalised: E6(R3) explicitly requires a risk-based quality management approach. For CRAs this means: monitoring plans must be risk-stratified — not all sites get the same frequency or intensity of monitoring. Critical data (primary endpoint, safety) gets more rigorous verification; secondary data uses proportionate approaches. Instead of 100% SDV for all data fields, the monitoring plan documents which fields require SDV vs. SDR (source data review). 2. Proportionate monitoring: monitoring activity must be proportional to the risk profile of the study, site, and patient population. Low-risk sites in well-performing studies may switch from on-site visits to remote monitoring. Risk signals (enrollment problems, high query rates, protocol deviations) trigger increased monitoring intensity. 3. Updated TMF requirements: E6(R3) Appendix C defines the TMF reference model more clearly. TMF must be inspection-ready throughout the trial, not just at the end. CRAs are responsible for timely filing of monitoring visit reports and correspondence in the eTMF. 4. Technology-enabled monitoring: E6(R3) explicitly acknowledges remote monitoring (centralised monitoring) as a valid approach. CRAs may spend more time doing data review in EDC remotely and less time on-site for routine data checks. 5. Investigator oversight: clearer requirements on what the investigator must directly oversee vs. what can be delegated. CRAs must verify the delegation log at site visits is current and complete. Practical day-to-day change: before E6(R3), many CROs defaulted to 100% SDV for most data fields regardless of risk. Post-E6(R3), the monitoring plan specifies exact fields for SDV vs. SDR, and CRAs follow the plan precisely — documenting their rationale for any deviation from the plan.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: You arrive at a clinical site for a routine monitoring visit and discover that 3 patients were enrolled without completing the informed consent process correctly — the ICF was signed but dated after the screening visit. What do you do?</h3>
+            <p><strong>What they wanted to hear:</strong> Immediate actions on-site: do not panic or confront site staff accusatorially. Document exactly what you found: ICF signature date vs. screening visit date from the patient chart for each affected patient. Assess whether this is an isolated procedural error or a systemic site issue. Patient safety: review whether any study procedures performed before consent could have put patients at risk. If any invasive procedure or drug administration happened before consent — immediate escalation to sponsor medical monitor. Protocol deviation classification: consent obtained after screening procedures is typically a major protocol deviation (breach of GCP fundamental principle — consent must be obtained before any study procedures). Three patients = potential systemic site problem. Reporting: notify sponsor CRA manager and sponsor GCP compliance team within 24 hours of discovery. Notify the IRB/Ethics Committee per their requirements (most require reporting of major deviations within a specified timeline — check the protocol and local regulations). Document in the monitoring visit report in detail: patient IDs affected, dates of consent vs. dates of procedures, site explanation for how this occurred. Site actions: work with the PI to: (1) document the deviation formally, (2) obtain post-consent documentation from all 3 patients if they are still in the study (re-consent with current ICF version, noting the retrospective nature), (3) initiate CAPA — re-train site staff on ICF procedures, implement a pre-screening consent check. If consent-related deviations are recurrent at this site: recommend sponsor consider enhanced oversight (increased visit frequency), or in severe cases, consider site suspension pending full audit. Follow-up: verify CAPA implementation at the next monitoring visit. Confirm deviations are reported to regulatory authority if required by local law.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: Walk me through your process for conducting source data verification (SDV) for adverse event data at a clinical site.</h3>
+            <p><strong>What they wanted to hear:</strong> Pre-visit: review the monitoring plan to understand the SDV requirements for AE data. Most plans require 100% SDV for serious adverse events (SAEs) and treatment-emergent AEs for the primary safety analysis. Prepare SDV checklist from the eCRF/EDC system — pull a list of AE records entered for each subject since the last visit. At the site: access the source documents — this may be the electronic medical record (EMR), patient diary (paper or electronic), physician notes, nursing notes, hospital records. For each AE in EDC: verify AETERM (verbatim term) matches what is documented in the source — exact verbatim, not paraphrased. Verify AESTDTC (start date) — the source document (physician note, hospital admission record) should contain the date the AE was first observed. Verify AESER (serious flag) — if the source says the patient was hospitalised, verify AESER = Y in EDC. Verify AESEV (severity) — check that the site's severity rating in the source matches what is in EDC. Verify AEREL (relatedness) — the investigator's causality assessment is a clinical judgement; verify the EDC entry matches what the investigator documented in the patient notes. Common findings: start dates in EDC are wrong (site transcribed incorrectly), seriousness criteria were missed (patient hospitalised but AESER not flagged), ongoing AEs from previous visit not updated with outcome. Documenting discrepancies: raise a query in EDC for each discrepancy found. Document all SDV findings in the monitoring visit report: number of AE records reviewed, number of discrepancies, query status, any escalation required for SAE underreporting.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: How do you manage a clinical site that is consistently behind on data entry, has high query rates, and is not responding to monitoring findings within agreed timelines?</html3>
+            <p><strong>What they wanted to hear:</strong> Escalation ladder approach: Step 1 — Site conversation: during the next monitoring visit (or via phone/email if urgent), have a direct conversation with the site coordinator and PI about the issues. Understand the root cause: is it staff turnover? Site burden (too many studies)? System access issues? Prioritisation? Step 2 — Formal written communication: send a formal letter to the PI documenting the specific issues (data entry lag, query response rate, timeline for monitoring finding responses) and requesting a corrective action plan with specific deadlines. This letter is filed in the TMF. Step 3 — Sponsor escalation: report the site performance issues to the sponsor's clinical operations lead. Trigger a risk flag in the central monitoring system. The sponsor's risk-based monitoring team may increase visit frequency or deploy a different CRA to assess the situation independently. Step 4 — Site for cause visit: if issues persist, the sponsor may initiate a "for cause" monitoring visit — a targeted deep-dive into site compliance, not a routine visit. This is documented formally. Step 5 — Site remediation plan: the sponsor works with the site to develop a formal remediation plan. If the PI is non-responsive, the sponsor medical monitor and clinical operations director may communicate directly with the PI or site director. Step 6 — Site suspension or termination: if the site cannot meet GCP standards despite remediation efforts — recommend site suspension. This is a last resort and requires sponsor approval, IRB notification, and documentation of the transfer or withdrawal of any enrolled patients. All of this is documented in monitoring visit reports and formal correspondence in the TMF — regulators scrutinise the sponsor's oversight of non-performing sites.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your CRA Interview</h2>
+          <p>
+            CRA interviews are scenario-heavy. Interviewers want to see how you would handle real site issues — consent problems, SDV discrepancies, non-compliant investigators. Knowing the regulation is not enough; you must demonstrate judgment.
+          </p>
+          <p>
+            Get real-time preparation from a CRA with global monitoring experience. Our <a href="/clinical-research-proxy-interview/">Clinical Research Proxy Interview Support</a> is available same-day. WhatsApp: <strong>{site.whatsapp}</strong>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="CRA Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="CRA Interview Coming Up?"
+          body="Get real-time preparation from a CRA who has conducted monitoring visits, managed protocol deviations, and worked in ICH E6(R3) compliant environments. Same-day support."
+          ctaLabel="Get CRA Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

@@ -1,0 +1,95 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma RPA automation proxy job support?', answer: 'Pharma RPA automation proxy job support is real-time live guidance from a pharma RPA developer who helps you complete your actual RPA development and automation work tasks in a pharmaceutical or life sciences context. When you are stuck on a UiPath REFramework exception handling issue, a GxP audit trail configuration for your bot, a GAMP 5 validation protocol for an RPA process, a Blue Prism business object, or an automation script for a pharma system — an RPA specialist walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the RPA deliverable you need to complete right now.' },
+  { question: 'What pharma RPA tasks do you provide proxy support for?', answer: 'All pharma RPA tasks: UiPath development (REFramework transaction processing, Orchestrator queue management, selector configuration, exception handling workflows, credential store setup), Blue Prism (business objects, process studio, action stages, exception bubbling), Automation Anywhere (task bots, IQ bots for document processing, control room), GxP bot validation (GAMP 5 Category 4/5 classification for RPA, IQ/OQ/PQ protocols for automated processes), audit trail implementation in RPA bots (21 CFR Part 11 compliance), pharma process automation (LIMS data transfer, regulatory submission form filling, PV case triage, stability data extraction), and RPA change control documentation for validated GxP environments.' },
+  { question: 'How does GAMP 5 apply to RPA bots in pharma?', answer: 'RPA bots in GxP pharmaceutical environments must be validated under GAMP 5 (Good Automated Manufacturing Practice). GAMP 5 classification: UiPath/Blue Prism/Automation Anywhere platforms = Category 4 (configured COTS). Individual bot workflows built in REFramework = Category 4 or 5 depending on complexity. Custom activity libraries or framework extensions = Category 5 (custom software). Validation approach for a GAMP 5 Category 4 RPA bot: Risk Assessment — determine GxP impact of the automated process (Does it generate GxP data? Does it affect product quality decisions?). Supplier Assessment — platform vendor documentation review (UiPath has a GxP validation pack available). IQ — verify the bot is installed correctly on the target machine with the correct version, Orchestrator connected, credential store configured. OQ — test each automation step against the process specifications, exception handling, audit trail entries. PQ — run end-to-end automation with real GxP data and verify output against manual process results. Change Control — any bot modification requires formal change control and re-testing.' },
+  { question: 'How do RPA bots meet 21 CFR Part 11 audit trail requirements?', answer: '21 CFR Part 11 requires audit trails for any electronic records used in FDA-regulated processes. For RPA bots processing GxP electronic records, the audit trail approach depends on where the audit trail lives. Option 1: Audit trail in the regulated system — if the bot enters data into a validated system (e.g., LIMS, EDC, ERP) that already has a 21 CFR Part 11 compliant audit trail, the system itself captures the bot\'s actions with the bot\'s service account identity. The bot validation must verify this. Option 2: Audit trail in the RPA platform — UiPath Orchestrator and Blue Prism Control Room log all job executions, queue transactions, and exceptions. These logs must be protected (admin-only delete, backup and recovery), and if they constitute GxP records, they must be validated. Option 3: Custom logging — for bots processing GxP data outside a validated system, implement a custom audit log (database or file-based) capturing: bot user ID, timestamp, action performed, data processed, outcome. We help you design and implement the right audit trail architecture for your specific pharma RPA process.' },
+  { question: 'What is UiPath REFramework and what are common pharma implementation issues?', answer: 'UiPath REFramework (Robotic Enterprise Framework) is the industry-standard workflow template for building robust, production-grade UiPath automations. State machine structure: Init state (application login, environment setup) → Get Transaction Data (fetch next queue item from Orchestrator) → Process Transaction (execute the business logic for one transaction) → End Process (cleanup, logout). Exception handling: Application Exception → retry the transaction (configurable retry count). Business Rule Exception → mark the transaction failed, move to next. System Exception after max retries → abort the bot run and alert. Common pharma REFramework issues we help with: Init state failures (application not launching, selector timeout — often environment-specific), transaction processing timeouts in heavy pharma applications (LIMS timeout during data retrieval — increase selector timeout, add retry logic), exception handling swallowing important business failures (config retry count set too high for a business rule exception that should fail immediately), credential store configuration in restricted pharma IT environments, and Orchestrator queue configuration for high-volume PV case triage automation.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma RPA Automation Proxy Job Support Guide', url: site.url + '/pharma-rpa-automation-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharma RPA Automation Proxy Job Support Guide — UiPath, GAMP 5, GxP Validation, 21 CFR Part 11',
+    'Complete guide to pharma RPA automation proxy job support — UiPath REFramework, GAMP 5 bot validation, 21 CFR Part 11 audit trail, Blue Prism, GxP RPA change control.',
+    site.url + '/pharma-rpa-automation-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma RPA Automation Proxy Job Support Guide | UiPath, GAMP 5, GxP, 21 CFR Part 11"
+  description="Complete guide to pharma RPA proxy job support — UiPath REFramework, GAMP 5 bot validation, 21 CFR Part 11 audit trail, Blue Prism, GxP RPA. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma RPA Automation Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma RPA & Automation Guide</div>
+      <h1>Pharma RPA Automation Proxy Job Support Guide — UiPath, GAMP 5, GxP Validation & 21 CFR Part 11</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharma RPA proxy job support — UiPath REFramework development, GAMP 5 bot validation protocols, 21 CFR Part 11 audit trail design, GxP change control, and what RPA tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Pharma RPA Developers Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>UiPath REFramework exceptions</strong> — Init state failures, transaction retry logic, Business Rule vs. Application Exception handling</li>
+            <li><strong>GxP audit trail</strong> — 21 CFR Part 11 compliance design for bots entering data into regulated systems</li>
+            <li><strong>GAMP 5 bot validation</strong> — classification (Cat 4 vs Cat 5), IQ/OQ/PQ protocol writing, supplier assessment documentation</li>
+            <li><strong>Selector configuration</strong> — selectors breaking when pharma applications update, dynamic selector design</li>
+            <li><strong>Orchestrator setup</strong> — queue configuration, robot credential store, environment variables, publishing from Studio</li>
+            <li><strong>RPA change control</strong> — documenting bot changes in GxP validated environments, regression test scope definition</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Pharma RPA Use Cases — What We Support</h2>
+          <ul class="feature-list">
+            <li><strong>PV case triage</strong> — automated ICSR intake from email/web forms into Argus Safety queue</li>
+            <li><strong>LIMS data transfer</strong> — extracting analytical results from instruments and posting to LIMS</li>
+            <li><strong>Regulatory submission form filling</strong> — FDA Form 356h, EMA application form automation</li>
+            <li><strong>Stability data extraction</strong> — pulling stability results from instruments into the stability management system</li>
+            <li><strong>GMP document management</strong> — automated periodic review scheduling, document status checking</li>
+            <li><strong>SAP GMP batch release</strong> — automated SAP QM usage decision posting based on QC result rules</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharma RPA Proxy Job Support Now</h2>
+          <p>Stuck on a UiPath REFramework issue, a GxP audit trail design, or a GAMP 5 bot validation protocol? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your RPA platform and specific task, and we match you with a pharma RPA developer within hours.</p>
+          <p>Also see: <a href="/pharma-rpa-proxy-job-support/">Pharma RPA Proxy Job Support</a> | <a href="/pharma-rpa-proxy-interview/">Pharma RPA Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma RPA Automation Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Pharma RPA Task?"
+          body="UiPath REFramework, GAMP 5 bot validation, 21 CFR Part 11 audit trail, GxP change control, Blue Prism — real-time guidance from a pharma RPA specialist. Same-day help."
+          ctaLabel="Get Pharma RPA Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma RPA proxy interview support"
+          secondaryHref="/pharma-rpa-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

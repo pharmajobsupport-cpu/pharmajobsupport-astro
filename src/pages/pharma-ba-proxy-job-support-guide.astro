@@ -1,0 +1,95 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma business analyst proxy job support?', answer: 'Pharma BA proxy job support is real-time live guidance from a pharma business analyst specialist who helps you complete your actual BA work tasks in a pharmaceutical or life sciences project context. When you are stuck on a User Requirements Specification (URS) for a regulated system, a Functional Requirements Specification (FRS), a business process map, a gap analysis for a Veeva Vault implementation, a user story in an Agile sprint for a pharma system, or a requirements traceability matrix — a pharma BA expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the BA deliverable you need to complete right now.' },
+  { question: 'What pharma BA tasks do you provide proxy support for?', answer: 'All pharma BA tasks: User Requirements Specification (URS) writing for GxP systems (LIMS, EDC, ERP/SAP, Veeva Vault, MES), Functional Requirements Specification (FRS) and Functional Specification (FS) development, Business Requirements Document (BRD) for pharma IT projects, business process mapping (current state vs. future state for pharma processes), gap analysis for system implementations and regulatory compliance, requirements traceability matrix (RTM) linking URS to FRS to test protocols, Agile user story writing for pharma system sprints, Sprint planning and backlog refinement in regulated Agile environments, stakeholder requirement elicitation, and process validation support (documenting the business process that the system supports).' },
+  { question: 'What should a URS for a GxP pharma system contain?', answer: 'A User Requirements Specification (URS) for a GxP pharmaceutical system is the foundational regulated document that captures what the system must do from the user\'s perspective. Required content under GAMP 5 and EU GMP Annex 11: Business context — why the system is needed, which business process it supports, which regulatory requirements it must comply with. Functional requirements — what the system must do (user management, workflows, data capture, calculations, outputs). 21 CFR Part 11 / EU Annex 11 requirements — audit trail, electronic signatures, access control — stated as requirements. Performance requirements — response time, concurrent user capacity, data volume. Interface requirements — which other systems the system must integrate with and the data exchanged. Data integrity requirements — ALCOA+ for all GxP data captured by the system. Security requirements — authentication, authorisation, encryption. Format: each requirement must be uniquely numbered (URS-001, URS-002), unambiguous, testable, and assigned to a user category (owner, tester, administrator). We help you write and structure the full URS document.' },
+  { question: 'How does Agile work in a GxP-regulated pharma project?', answer: 'Agile in regulated pharma environments follows a risk-based approach where the documentation and validation evidence is generated iteratively but the regulatory commitment — that the system does what it is supposed to do safely — is never compromised. Key adaptations: User stories replace traditional requirements documents as the primary unit of work, but a URS is still generated (often from the completed stories). Sprints produce potentially shippable increments, but in pharma, a "release" to production requires formal change control and UAT sign-off. Sprint review replaces formal OQ test sign-off — UAT is incorporated into the sprint review process with business SME and QA attendance. Validation evidence: test cases linked to user stories form the OQ evidence. Continuous integration pipelines generate automated test evidence. Traceability: user story → acceptance criteria → test case → test result = the Agile RTM. Regulatory documentation (validation plan, summary report) is written at the end of each release/PI, not at the beginning of the project. We help you navigate Agile BA deliverables in your specific pharma GxP project context.' },
+  { question: 'What is a requirements traceability matrix (RTM) in pharma?', answer: 'A Requirements Traceability Matrix (RTM) in pharma system validation provides bidirectional traceability from business requirements through to test evidence. Structure: URS requirement ID → FRS requirement ID → Test Protocol reference → Test Script ID → Test Result. Purpose: demonstrates that every user requirement has been tested and that every test has a corresponding requirement (no untested requirements, no unnecessary testing). Regulatory requirement: EU GMP Annex 11, FDA 21 CFR Part 11 guidance, and GAMP 5 all require evidence that the system has been tested against its requirements. How to build: start with the URS — every numbered requirement gets a row in the RTM. Map each URS requirement to the FRS section that specifies how it will be implemented. Map each FRS section to the OQ test protocol(s) that test it. After testing, map test results (pass/fail) and defect references. An incomplete RTM (requirements with no test) is a validation deficiency. We help you build and complete your RTM for your specific pharma system.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma BA Proxy Job Support Guide', url: site.url + '/pharma-ba-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharma BA Proxy Job Support Guide — URS, FRS, Agile Regulated, RTM, GxP Requirements',
+    'Complete guide to pharma business analyst proxy job support — URS writing for GxP systems, FRS development, Agile in regulated environments, requirements traceability matrix, gap analysis.',
+    site.url + '/pharma-ba-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma BA Proxy Job Support Guide | URS, FRS, Agile Regulated, RTM"
+  description="Complete guide to pharma BA proxy job support — URS writing for GxP systems, FRS, Agile in regulated environments, requirements traceability matrix, Veeva Vault BA. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma BA Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Business Analyst Guide</div>
+      <h1>Pharma BA Proxy Job Support Guide — URS, FRS, Agile Regulated Environments & RTM</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharma business analyst proxy job support — URS writing for GxP systems, FRS development, Agile in regulated pharma projects, requirements traceability matrices, and what BA deliverables our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Pharma Business Analysts Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>URS writing</strong> — structuring requirements, numbering conventions, 21 CFR Part 11 requirements in URS, testability of requirements</li>
+            <li><strong>FRS development</strong> — translating URS functional requirements into system specification language</li>
+            <li><strong>Agile in GxP</strong> — how to write user stories for validated systems, sprint review as UAT, validation evidence from Agile delivery</li>
+            <li><strong>RTM completion</strong> — mapping URS requirements to test protocols, identifying gaps in test coverage</li>
+            <li><strong>Gap analysis</strong> — comparing current system to target state for a Veeva Vault or LIMS implementation</li>
+            <li><strong>Business process mapping</strong> — documenting current vs. future state pharma processes for system implementation</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Pharma BA Deliverables — What We Support</h2>
+          <ul class="feature-list">
+            <li><strong>URS</strong> — User Requirements Specification for LIMS, EDC, ERP/SAP, Veeva Vault, MES, CTMS</li>
+            <li><strong>FRS/FS</strong> — Functional Requirements / Functional Specification document development</li>
+            <li><strong>BRD</strong> — Business Requirements Document for pharma IT strategy and system selection</li>
+            <li><strong>RTM</strong> — Requirements Traceability Matrix linking URS → FRS → test protocols → results</li>
+            <li><strong>Process maps</strong> — BPMN or swimlane diagrams for pharma business processes</li>
+            <li><strong>User stories</strong> — Agile user story writing for pharma system sprints (Jira, Azure DevOps)</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharma BA Proxy Job Support Now</h2>
+          <p>Stuck on a URS, FRS, RTM, or Agile sprint delivery for a pharma system? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your BA task and the system type, and we match you with a pharma BA specialist within hours.</p>
+          <p>Also see: <a href="/pharma-ba-proxy-job-support/">Pharma BA Proxy Job Support</a> | <a href="/pharma-ba-veeva-proxy-interview/">Pharma BA Veeva Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma BA Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Pharma BA Deliverable?"
+          body="URS for GxP systems, FRS development, Agile user stories, RTM, gap analysis, business process mapping — real-time guidance from a pharma BA specialist. Same-day help."
+          ctaLabel="Get Pharma BA Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma BA proxy interview support"
+          secondaryHref="/pharma-ba-veeva-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

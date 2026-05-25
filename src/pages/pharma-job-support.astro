@@ -1,0 +1,46 @@
+---
+import HubPage from '../components/HubPage.astro';
+import LocationGrid from '../components/LocationGrid.astro';
+import { allLocations } from '../data/locations-index';
+import { buildBreadcrumbSchema } from '../utils/schema';
+import { site } from '../data/site';
+
+const regions = ['North America', 'United Kingdom & Ireland', 'Western Europe', 'APAC', 'Gulf & Middle East', 'India', 'Eastern Europe'];
+
+const schema = buildBreadcrumbSchema([
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Job Support by Location', url: site.url + '/pharma-job-support/' },
+]);
+---
+
+<HubPage
+  title="Pharma Job Support by Location"
+  metaTitle="Pharma Job Support by Location — USA, UK, EU, India, UAE | pharmajobsupport.com"
+  metaDesc="Find pharma proxy job support in your city — New Jersey, London, Zurich, Singapore, Bangalore, Dubai, and 100+ pharma hubs globally."
+  h1="Pharma Job Support by Location"
+  intro="Remote pharma proxy job support delivered to professionals in 100+ pharmaceutical industry hubs worldwide. Select your location to learn about pharma-specific support in your market."
+  breadcrumbs={[{ label: 'Pharma Job Support by Location' }]}
+  schema={schema}
+>
+  {regions.map((region) => {
+    const regionLocations = allLocations.filter(l => l.region === region);
+    return regionLocations.length > 0 ? (
+      <section class="region-section">
+        <h2 class="region-heading">{region}</h2>
+        <LocationGrid locations={regionLocations} />
+      </section>
+    ) : null;
+  })}
+</HubPage>
+
+<style>
+  .region-section { margin-bottom: var(--space-12); }
+  .region-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--color-primary-light);
+  }
+</style>

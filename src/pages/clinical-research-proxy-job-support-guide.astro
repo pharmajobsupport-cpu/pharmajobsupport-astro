@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is clinical research proxy job support?', answer: 'Clinical research proxy job support is real-time live guidance from a clinical research specialist — CRA, CRC, or clinical operations expert — who helps you complete your actual clinical research work tasks. When you are stuck on a monitoring report, an eTMF document classification, a protocol deviation assessment, a site performance conversation, a CTMS data entry, or an ICH E6(R3) compliance question — a clinical research expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the clinical research deliverable you need to complete right now.' },
+  { question: 'What clinical research tasks do you provide proxy support for?', answer: 'All clinical research and clinical operations tasks: CRA monitoring (site initiation visits, periodic monitoring visits, close-out visits, remote monitoring), monitoring reports (SDV findings, source data review, protocol deviation documentation), eTMF management (TMF Reference Model document classification, eTMF completeness review, filing strategy), protocol deviation assessment and classification (major vs. minor, reportable deviations, protocol deviation reporting timelines), CTMS data entry and management (Medidata Rave CTMS, Oracle Siebel, Veeva Vault CTMS), site performance management (site metrics, enrollment tracking, corrective actions for poor-performing sites), ICF review and amendment management, and clinical trial audit support (TMF audits, GCP audits, sponsor audits).' },
+  { question: 'What is ICH E6(R3) and what has changed from ICH E6(R2)?', answer: 'ICH E6(R3) is the current version of the Good Clinical Practice (GCP) guideline, finalized in 2023. Key changes from ICH E6(R2): Risk-Based Quality Management (RBQM) — ICH E6(R3) makes RBQM explicit and mandatory, not just recommended. Sponsors must now implement quality risk management throughout the clinical trial lifecycle. Technology-neutral language — E6(R3) uses technology-neutral language to accommodate new monitoring approaches (remote monitoring, risk-based monitoring, central monitoring) rather than assuming on-site SDV as the default. eTMF expectations — E6(R3) explicitly addresses electronic Trial Master Files, contemporaneous filing, and TMF inspection readiness. Investigational Site File (ISF) requirements — clearer requirements for what sites must maintain and how. Data quality vs. completeness — focus shifts from source data verification (checking everything) to critical data and process assessment. Sponsor oversight — stronger requirements for vendor oversight and oversight of outsourced activities. We help you apply ICH E6(R3) requirements to your specific CRO or sponsor clinical operations context.' },
+  { question: 'How do I write a CRA monitoring report?', answer: 'CRA monitoring reports document the findings from a clinical site visit and are GCP-required records maintained in the TMF. Standard monitoring report structure: Visit header (site name, investigator, visit date, visit type, CRA name, report date). Enrollment status (current enrollment, target, screen failures). Protocol compliance findings (protocol deviations found — list each, classification, site action required). Source document review findings (SDV discrepancies found during the visit — list with resolution status). Regulatory document review (informed consent forms reviewed — any patients without valid ICF?, IRB approvals current?). Investigational product accountability (IP dispensing records match administration records, storage conditions met, expiry dates checked). Outstanding issues from previous visit (status of each open issue). Action items for site (numbered list with owner and target date). Queries raised since last visit (query aging, resolution rate). Common report writing issues we help with: action items not being specific enough (site cannot act on vague items), protocol deviation descriptions not including clinical significance assessment, IP accountability discrepancy resolution not documented. We help you write complete, GCP-compliant monitoring reports.' },
+  { question: 'What is the TMF Reference Model and how does eTMF management work?', answer: 'The TMF Reference Model is a publicly available standard (developed by the TMF Reference Model working group) that defines the zones, sections, and artifacts (document types) that should be present in a Trial Master File. Structure: Zone 1 — Trial management (protocols, amendments, regulatory correspondence). Zone 2 — Site management (site selection, initiation, monitoring). Zone 3 — Investigational Product (IP release, accountability, returns). Zone 4 — IRB/IEC and regulatory (ethics submissions, approvals, safety reporting). Zone 5 — Investigational Sites (site-level documents). Zone 6 — Statistics (SAP, randomisation, unblinding). Zone 7 — Central laboratory and vendor management. eTMF management in practice: documents must be filed in the eTMF contemporaneously (i.e., close to when they are generated — ICH E6(R3) requirement). TMF completeness metrics are tracked by zone/section. eTMF platforms: Veeva Vault Clinical (most common at large CROs), Complion, eTMF Inspect, Trial Interactive. Common eTMF issues we help with: document misclassification, TMF completeness gaps before sponsor review or audit, metadata errors, filing backlog resolution strategies.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Clinical Research Proxy Job Support Guide', url: site.url + '/clinical-research-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Clinical Research Proxy Job Support Guide — CRA, eTMF, ICH E6(R3), Monitoring Reports',
+    'Complete guide to clinical research proxy job support — CRA monitoring reports, eTMF management per TMF Reference Model, ICH E6(R3) GCP, protocol deviations, CTMS, site performance.',
+    site.url + '/clinical-research-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Clinical Research Proxy Job Support Guide | CRA, eTMF, ICH E6(R3), Monitoring"
+  description="Complete guide to clinical research proxy job support — CRA monitoring reports, eTMF management, ICH E6(R3) GCP, protocol deviations, CTMS, site performance management. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Clinical Research Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Clinical Research Guide</div>
+      <h1>Clinical Research Proxy Job Support Guide — CRA Monitoring, eTMF, ICH E6(R3) & Protocol Deviations</h1>
+      <p class="hero-tagline">Everything you need to know about real-time clinical research proxy job support — CRA monitoring report writing, eTMF management per the TMF Reference Model, ICH E6(R3) GCP compliance, protocol deviation assessment, CTMS management, and what clinical research tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Clinical Research Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>Monitoring reports</strong> — SDV finding documentation, protocol deviation classification, action item specificity, report structure</li>
+            <li><strong>eTMF management</strong> — document misclassification in TMF Reference Model, contemporaneous filing, completeness review gaps</li>
+            <li><strong>Protocol deviation assessment</strong> — major vs. minor classification, reportability to IRB/IEC and sponsor, CAPA for site</li>
+            <li><strong>ICH E6(R3) compliance</strong> — RBQM implementation, critical data identification, risk-based monitoring approach</li>
+            <li><strong>Site performance management</strong> — enrollment tracking, metric reporting, corrective action conversations with underperforming sites</li>
+            <li><strong>CTMS data entry</strong> — Veeva Vault CTMS, Medidata Rave CTMS, site visit record management</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Clinical Research Roles — What We Support</h2>
+          <ul class="feature-list">
+            <li><strong>CRA (Clinical Research Associate)</strong> — monitoring visits, monitoring reports, site relationship management, protocol deviation review</li>
+            <li><strong>CRC (Clinical Research Coordinator)</strong> — site-level ICF management, data entry, query resolution, regulatory binder maintenance</li>
+            <li><strong>Clinical Trial Manager</strong> — study startup, site activation timelines, enrollment forecasting, vendor management</li>
+            <li><strong>TMF Specialist</strong> — eTMF filing, completeness metrics, TMF audit preparation, TMF reconciliation</li>
+            <li><strong>Clinical Operations</strong> — study feasibility, site selection, CRO oversight, risk-based monitoring plan design</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Clinical Research Proxy Job Support Now</h2>
+          <p>Stuck on a monitoring report, eTMF issue, or protocol deviation? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your specific clinical research task and role, and we match you with a clinical research specialist within hours.</p>
+          <p>Also see: <a href="/clinical-research-proxy-job-support/">Clinical Research Proxy Job Support</a> | <a href="/clinical-research-proxy-interview/">Clinical Research Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Clinical Research Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Clinical Research Task?"
+          body="CRA monitoring reports, eTMF management, protocol deviations, ICH E6(R3), CTMS, site performance — real-time guidance from a clinical research specialist. Same-day help."
+          ctaLabel="Get Clinical Research Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Clinical research proxy interview support"
+          secondaryHref="/clinical-research-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

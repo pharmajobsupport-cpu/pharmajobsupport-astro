@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FAQ from '../components/FAQ.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Disclaimer from '../components/Disclaimer.astro';
+import StructuredData from '../components/StructuredData.astro';
+import { site } from '../data/site';
+import type { LocationEntry } from '../data/locations-index';
+import { buildFAQSchema, buildBreadcrumbSchema } from '../utils/schema';
+
+interface Props {
+  location: LocationEntry;
+}
+
+const { location } = Astro.props;
+
+const schemas = [
+  buildFAQSchema(location.faqs.map(f => ({ question: f.q, answer: f.a }))),
+  buildBreadcrumbSchema([
+    { name: 'Home', url: site.url + '/' },
+    { name: 'Pharma Job Support by Location', url: site.url + '/pharma-job-support/' },
+    { name: location.city, url: site.url + '/' + location.slug + '/' },
+  ]),
+];
+---
+
+<BaseLayout
+  title={location.metaTitle}
+  description={location.metaDesc}
+  schema={schemas}
+>
+  <div class="location-page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Pharma Job Support by Location', href: '/pharma-job-support/' },
+      { label: location.city },
+    ]} />
+
+    <header class="location-hero">
+      <p class="location-region-label">{location.region} · {location.country}</p>
+      <h1 class="location-h1">{location.h1}</h1>
+      <p class="location-intro">{location.heroIntro}</p>
+      <div class="location-actions">
+        <a
+          href={site.whatsappUrl}
+          class="btn-wa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get {location.city} Pharma Support
+        </a>
+      </div>
+    </header>
+
+    <div class="location-body">
+      <div class="location-main">
+        <!-- Pharma context -->
+        <section aria-labelledby="context-heading">
+          <h2 id="context-heading">Pharma Industry in {location.city}</h2>
+          <p>{location.pharmaContext}</p>
+        </section>
+
+        <!-- Top employers -->
+        {location.topEmployers.length > 0 && (
+          <section aria-labelledby="employers-heading">
+            <h2 id="employers-heading">Major Pharma Employers in {location.city}</h2>
+            <div class="employer-tags">
+              {location.topEmployers.map((emp) => (
+                <span class="employer-tag">{emp}</span>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Dominant domains -->
+        {location.dominantDomains.length > 0 && (
+          <section aria-labelledby="domains-heading">
+            <h2 id="domains-heading">Top Pharma Roles We Support in {location.city}</h2>
+            <div class="domain-tags">
+              {location.dominantDomains.map((domain) => (
+                <span class="domain-tag">{domain}</span>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Internal links to services -->
+        <section aria-labelledby="services-heading">
+          <h2 id="services-heading">Pharma Proxy Job Support Services for {location.city} Professionals</h2>
+          <ul class="location-service-links" role="list">
+            <li><a href="/clinical-data-management-proxy-job-support/">Clinical Data Management Proxy Support</a></li>
+            <li><a href="/pharmacovigilance-proxy-job-support/">Pharmacovigilance Proxy Support</a></li>
+            <li><a href="/regulatory-affairs-proxy-job-support/">Regulatory Affairs Proxy Support</a></li>
+            <li><a href="/pharma-validation-proxy-job-support/">CSV Validation Proxy Support</a></li>
+            <li><a href="/veeva-vault-proxy-job-support/">Veeva Vault Proxy Support</a></li>
+            <li><a href="/clinical-sas-proxy-job-support/">Clinical SAS Programming Proxy Support</a></li>
+            <li><a href="/pharma-qa-proxy-job-support/">QA / GMP Compliance Proxy Support</a></li>
+            <li><a href="/pharma-interview-proxy-support/">Pharma Interview Proxy Support</a></li>
+          </ul>
+        </section>
+
+        <FAQ faqs={location.faqs} heading={`Pharma Job Support in ${location.city} — FAQs`} />
+        <Disclaimer compact />
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="location-sidebar">
+        <div class="location-sidebar-card">
+          <h3>Remote Support for {location.city}</h3>
+          <p>All support is delivered 100% remotely. Connect with our experts wherever you are in {location.city} or {location.country}.</p>
+          <a
+            href={site.whatsappUrl}
+            class="sidebar-wa-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp: {site.whatsapp}
+          </a>
+          <a href={`mailto:${site.email}`} class="sidebar-email-link">{site.email}</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <CTABanner
+    heading={`Pharma Proxy Job Support in ${location.city}`}
+    body={`Expert real-time guidance for pharma professionals based in ${location.city}. All support delivered remotely. Available 24/7.`}
+  />
+</BaseLayout>
+
+<style>
+  .location-page-container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-10);
+  }
+  .location-hero {
+    padding: var(--space-10) 0 var(--space-8);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-8);
+  }
+  .location-region-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+    margin-bottom: var(--space-3);
+  }
+  .location-h1 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+  }
+  .location-intro {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+    max-width: 52rem;
+    margin-bottom: var(--space-6);
+  }
+  .location-actions { display: flex; gap: var(--space-4); }
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25D366;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+  .location-body {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: var(--space-12);
+    align-items: start;
+  }
+  .location-main section {
+    margin-bottom: var(--space-10);
+  }
+  .location-main h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+  }
+  .location-main p { font-size: 1rem; color: var(--color-muted); line-height: 1.7; }
+  .employer-tags, .domain-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .employer-tag {
+    font-size: 0.8125rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-weight: 500;
+  }
+  .domain-tag {
+    font-size: 0.8125rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    background: var(--color-primary-light);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+  .location-service-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  .location-service-links a {
+    display: block;
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: border-color 0.15s;
+  }
+  .location-service-links a:hover { border-color: var(--color-primary); }
+
+  .location-sidebar { position: sticky; top: 5rem; }
+  .location-sidebar-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-6);
+  }
+  .location-sidebar-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: var(--space-2); }
+  .location-sidebar-card p { font-size: 0.875rem; color: var(--color-muted); margin-bottom: var(--space-4); line-height: 1.6; }
+  .sidebar-wa-btn {
+    display: block;
+    background: #25D366;
+    color: #fff;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: var(--space-3);
+  }
+  .sidebar-email-link {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--color-primary);
+    text-align: center;
+    text-decoration: none;
+  }
+  .sidebar-email-link:hover { text-decoration: underline; }
+
+  @media (max-width: 900px) {
+    .location-body { grid-template-columns: 1fr; }
+    .location-sidebar { position: static; }
+  }
+</style>

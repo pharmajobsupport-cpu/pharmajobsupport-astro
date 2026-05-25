@@ -1,0 +1,54 @@
+---
+import HubPage from '../components/HubPage.astro';
+import ServiceGrid from '../components/ServiceGrid.astro';
+import { allServices } from '../data/services-index';
+import { globalFAQs } from '../data/faqs';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+import { site } from '../data/site';
+
+const generalFAQs = globalFAQs.find(c => c.category === 'General Proxy Job Support')?.faqs ?? [];
+const faqsForPage = generalFAQs.map(f => ({ q: f.question, a: f.answer }));
+
+const schemas = [
+  buildBreadcrumbSchema([
+    { name: 'Home', url: site.url + '/' },
+    { name: 'Pharma Proxy Job Support', url: site.url + '/pharma-proxy-job-support/' },
+  ]),
+  buildFAQSchema(faqsForPage.map(f => ({ question: f.q, answer: f.a }))),
+];
+---
+
+<HubPage
+  title="Pharma Proxy Job Support"
+  metaTitle="Pharma Proxy Job Support — All Services | pharmajobsupport.com"
+  metaDesc="Browse all pharma proxy job support services — clinical SAS, pharmacovigilance, regulatory affairs, CSV validation, Veeva Vault, CDM, QA, medical device, and more."
+  h1="Pharma Proxy Job Support — All Services"
+  intro="Expert real-time guidance across every pharmaceutical functional area. Browse our complete service catalog — 150+ specific support services organized by domain."
+  breadcrumbs={[{ label: 'Pharma Proxy Job Support' }]}
+  faqs={faqsForPage}
+  schema={schemas}
+>
+  <div class="services-categories">
+    {['AI & Machine Learning', 'Regulatory Affairs', 'CSV / GxP Validation', 'Medical Device', 'Pharmacovigilance', 'Veeva Platform', 'Clinical Data Management', 'Clinical SAS Programming', 'Business Analysis', 'Quality Assurance', 'RPA / Automation', 'Pharma IT', 'Clinical Research', 'Medical Writing', 'Manufacturing / SAP', 'Compliance & Cybersecurity', 'Profile Engineering', 'Interview Proxy Support'].map((cat) => {
+      const catServices = allServices.filter(s => s.category === cat);
+      return catServices.length > 0 ? (
+        <section class="cat-section">
+          <h2 class="cat-heading">{cat}</h2>
+          <ServiceGrid services={catServices} cols={3} />
+        </section>
+      ) : null;
+    })}
+  </div>
+</HubPage>
+
+<style>
+  .services-categories { display: flex; flex-direction: column; gap: var(--space-14); }
+  .cat-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--color-primary-light);
+  }
+</style>

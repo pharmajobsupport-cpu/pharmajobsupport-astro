@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma manufacturing proxy job support?', answer: 'Pharma manufacturing proxy job support is real-time live guidance from a pharmaceutical manufacturing and process validation specialist who helps you complete your actual manufacturing and production work tasks. When you are stuck on a process validation protocol (PPQ), a Continued Process Verification (CPV) statistical analysis, a GMP batch record discrepancy, a cleaning validation acceptance criteria calculation, an out-of-specification (OOS) investigation, or a technology transfer documentation — a pharma manufacturing expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the manufacturing deliverable you need to complete right now.' },
+  { question: 'What pharma manufacturing tasks do you provide proxy support for?', answer: 'All pharma manufacturing tasks: Process validation — PPQ (Process Performance Qualification) protocol writing, validation batches planning, acceptance criteria derivation. Continued Process Verification (CPV) — control chart setup, Ppk/Cpk calculations, statistical process monitoring reports. GMP batch manufacturing records — batch record review, yield reconciliation, in-process testing documentation. Cleaning validation — acceptance criteria (MACO calculation, swab and rinse recovery studies), cleaning validation protocol writing. OOS (Out-of-Specification) investigation reports — Phase I laboratory investigation, Phase II manufacturing investigation, impact assessment. Technology transfer documentation — from development to commercial manufacturing. Manufacturing deviation reports and CAPA, GMP change control impact assessments for manufacturing changes, and process characterisation studies.' },
+  { question: 'What is process validation (PPQ) and how does it work?', answer: 'Process validation for pharmaceutical manufacturing under FDA guidance (2011) and ICH Q8/Q10: FDA\'s 2011 guidance defines three stages of process validation. Stage 1 — Process Design: develop the manufacturing process based on knowledge gained from development. Identify Critical Quality Attributes (CQAs) and Critical Process Parameters (CPPs). Document the design space and control strategy. Stage 2 — Process Performance Qualification (PPQ): demonstrate that the commercial manufacturing process is capable of consistently producing a product meeting its specifications. PPQ protocol specifies: number of batches (typically minimum 3), sampling plan, CPP monitoring, acceptance criteria for each CQA. Acceptance criteria must be prospectively defined (before batches are manufactured). PPQ report documents results vs. acceptance criteria. Stage 3 — Continued Process Verification (CPV): ongoing programme to collect and analyse data on commercial batches to demonstrate the process remains in a state of control. Uses statistical process control (SPC) — control charts, capability indices (Ppk, Cpk). We help you write PPQ protocols, analyse PPQ batch data, and set up CPV statistical monitoring.' },
+  { question: 'What is a MACO calculation in cleaning validation?', answer: 'MACO (Maximum Allowable Carryover) is the maximum amount of residual product A that can carry over into the next product B manufactured in the same equipment without causing harm to patients taking product B. MACO calculation (health-based approach per ISPE Baseline Guide for Cleaning Validation): MACO = (TTC or HBELs × MBS of product B) / SF. Where: TTC (Threshold of Toxicological Concern) or HBEL (Health-Based Exposure Limit) = the maximum daily dose of residual product A that is considered safe for patients taking product B (typically derived from the ADE — Acceptable Daily Exposure, calculated by a toxicologist from NOAEL/LOAEL). MBS = Minimum Batch Size of product B (to calculate concentration of carryover in the smallest batch). SF = Safety Factor (typically 1, already built into HBEL/ADE). The calculated MACO is then expressed as a surface area limit: MACO / total equipment surface area = limit per cm². Acceptance criteria for swab samples and rinse samples are derived from this limit. We help you perform MACO calculations, write cleaning validation protocols, and calculate acceptance criteria.' },
+  { question: 'How do I write an OOS investigation report?', answer: 'OOS (Out-of-Specification) investigation per FDA guidance (2006) and Ph. Eur. 2.6.30: Phase I — Laboratory Investigation (must be completed before Phase II): Analyst error check — did the analyst follow the SOP? Review the raw data. Was there a calculation error? Was there a sample preparation error? Instrument malfunction check — was the instrument calibrated? Was there an equipment issue during the analysis? Transcription error check — was the result correctly transcribed? Phase I conclusion: assignable cause found → invalidate original result and retest. No assignable cause found → proceed to Phase II. Phase II — Manufacturing Investigation: review the batch manufacturing record — any deviations during manufacturing? Review in-process results — any trends? Review raw material certificates of analysis. Retain sample testing — retest using a different analyst. If an assignable manufacturing cause is found: invalidate the batch (reject). If no manufacturing cause is found: the product may be retested per pre-approved retesting plan — if retests pass, this does NOT invalidate the original OOS result; the investigation must be concluded with the original result unless an assignable cause is found. We help you write the full investigation report.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Manufacturing Proxy Job Support Guide', url: site.url + '/pharma-manufacturing-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharma Manufacturing Proxy Job Support Guide — PPQ, CPV, OOS Investigations, Cleaning Validation',
+    'Complete guide to pharma manufacturing proxy job support — process validation PPQ, CPV statistical monitoring, OOS investigation reports, MACO cleaning validation, batch records, technology transfer.',
+    site.url + '/pharma-manufacturing-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma Manufacturing Proxy Job Support Guide | PPQ, CPV, OOS, Cleaning Validation"
+  description="Complete guide to pharma manufacturing proxy job support — process validation PPQ, CPV monitoring, OOS investigations, MACO cleaning validation, batch records. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Manufacturing Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Manufacturing Guide</div>
+      <h1>Pharma Manufacturing Proxy Job Support Guide — PPQ, CPV, OOS Investigations & Cleaning Validation</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharma manufacturing proxy job support — process validation PPQ protocols, Continued Process Verification CPV statistical analysis, OOS investigation reports, MACO cleaning validation calculations, and what manufacturing tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Pharma Manufacturing Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>PPQ protocol writing</strong> — acceptance criteria derivation, CPP monitoring plan, sampling plan, validation batch planning</li>
+            <li><strong>CPV statistical analysis</strong> — control chart setup (Xbar-R, EWMA), Ppk/Cpk calculation and interpretation, out-of-trend detection</li>
+            <li><strong>OOS investigation reports</strong> — Phase I laboratory investigation, Phase II manufacturing investigation, assignable cause documentation</li>
+            <li><strong>Cleaning validation</strong> — MACO calculation, HBEL/ADE application, acceptance criteria for swab and rinse samples</li>
+            <li><strong>Batch record discrepancies</strong> — yield reconciliation errors, in-process testing documentation, batch record review comments</li>
+            <li><strong>Technology transfer documentation</strong> — manufacturing instructions, process description, site-specific adaptation documentation</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Process Validation Stages — Quick Reference</h2>
+          <ul class="feature-list">
+            <li><strong>Stage 1 — Process Design</strong> — CQA identification, CPP determination, design space, control strategy documentation</li>
+            <li><strong>Stage 2 — PPQ</strong> — commercial-scale batches with enhanced monitoring, prospective acceptance criteria, validation report</li>
+            <li><strong>Stage 3 — CPV</strong> — ongoing commercial batch monitoring, SPC charts, annual product review data, CPV report</li>
+            <li><strong>Concurrent validation</strong> — permitted for legacy products or rare products where prospective validation batches are not feasible</li>
+            <li><strong>Retrospective validation</strong> — no longer accepted by FDA; only prospective or concurrent approaches for new processes</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharma Manufacturing Proxy Job Support Now</h2>
+          <p>Stuck on a PPQ protocol, an OOS investigation, a CPV analysis, or a cleaning validation calculation? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your specific manufacturing task, and we match you with a pharma manufacturing specialist within hours.</p>
+          <p>Also see: <a href="/pharma-manufacturing-proxy-job-support/">Pharma Manufacturing Proxy Job Support</a> | <a href="/pharma-manufacturing-proxy-interview/">Pharma Manufacturing Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Manufacturing Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Manufacturing Task?"
+          body="PPQ protocols, CPV statistical monitoring, OOS investigations, MACO cleaning validation, batch records — real-time guidance from a pharma manufacturing specialist. Same-day help."
+          ctaLabel="Get Pharma Manufacturing Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma manufacturing proxy interview support"
+          secondaryHref="/pharma-manufacturing-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

@@ -1,0 +1,78 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I am stuck on an SDTM mapping I have never done before. Can you help me right now?', answer: 'Yes. Message us on WhatsApp at +91-9660834611 with the specific domain you are mapping (AE, CM, EX, LB, VS, etc.), what the raw CRF data looks like, and what the submission requires. A clinical SAS expert will walk you through the mapping logic, variable derivation, ISO 8601 date handling, and supplemental qualifier domain setup. We also help with Pinnacle 21 validation errors in your SDTM package.' },
+  { question: 'My ADaM dataset has an error I cannot debug. Can you help?', answer: 'Yes. ADaM errors are one of the most common things we help clinical SAS programmers with. Send us the error, the dataset structure, and what the analysis dataset should look like. Common ADaM issues we debug: TRTEMFL derivation logic for treatment-emergent AEs, ADSL variable derivation (TRTSDT, TRTEDT, EOTSTT), ADLB PARAM/PARAMCD structure mismatches, ADTTE event flag derivation, record duplication issues, and WHO Drug Dictionary coding errors.' },
+  { question: 'I have a Pinnacle 21 validation error I cannot fix. Can you help?', answer: 'Yes. Pinnacle 21 Community and Enterprise errors can be cryptic if you have not done CDISC submissions before. Common errors we help resolve: missing or incorrect define.xml 2.0/2.1 structure, SDTM variable not in the controlled terminology list, missing SUPPXX supplemental qualifier linkage, STUDYID/USUBJID format violations, ADaM DTYPE variable missing or incorrectly specified, codelist value not matching define.xml-specified codelist. Tell us the specific error code and we will explain both what it means and how to fix it.' },
+  { question: 'What clinical SAS tasks do you support?', answer: 'All clinical SAS and statistical programming tasks: SDTM domain creation and mapping (AE, CM, EX, LB, VS, MH, DM, SE, SV, TS, SUPPXX), ADaM dataset derivation (ADSL, ADAE, ADLB, ADEFF, ADTTE), TLF production (PROC REPORT, PROC TABULATE, ODS RTF/PDF output), define.xml 2.0/2.1 creation and validation, Pinnacle 21 error resolution, SAS macro development and debugging, database lock preparation, and SAS output formatting for regulatory submission.' },
+  { question: 'I have a TLF submission deadline tomorrow and cannot get the output format right. Can you help?', answer: 'Yes — same-day, urgent support is available. Message us immediately with the table or listing you are stuck on, what the required format is, and the current output. We help with PROC REPORT formatting issues (column spanning, indentation, conditional formatting), ODS RTF style settings, page break control, header/footnote alignment, and RTF vs. PDF output differences for regulatory submissions.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Stuck in Clinical SAS Project', url: site.url + '/stuck-in-clinical-sas-project/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Stuck in Clinical SAS Project? Get Real-Time Clinical SAS Proxy Job Support"
+  description="Stuck on SDTM mapping, ADaM derivation, Pinnacle 21 errors, or TLF production? Real-time clinical SAS proxy job support. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Stuck in Clinical SAS Project' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Clinical SAS Proxy Job Support</div>
+      <h1>Stuck in Your Clinical SAS Project? Get Live Expert Guidance Now.</h1>
+      <p class="hero-tagline">SDTM mapping you have never done before. ADaM derivation errors you cannot debug. Pinnacle 21 validation failures blocking your submission. TLF output that will not format correctly. These are the exact clinical SAS situations our experts help with in real time via WhatsApp.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Clinical SAS Proxy Job Support — What We Help With Right Now</h2>
+          <ul class="feature-list">
+            <li>SDTM domain mapping — AE, CM, EX, LB, VS, MH, DM, SE, SV, TS and all supplemental qualifier domains</li>
+            <li>ADaM dataset derivation — ADSL derivations, ADAE TRTEMFL, ADLB PARAM/PARAMCD structure, ADTTE event derivation</li>
+            <li>Pinnacle 21 Community and Enterprise error resolution — SDTM, ADaM, and define.xml errors</li>
+            <li>define.xml 2.0/2.1 creation, validation, and codelist management</li>
+            <li>TLF production — PROC REPORT, PROC TABULATE, PROC SGPLOT, ODS RTF and PDF formatting</li>
+            <li>SAS macro development and debugging</li>
+            <li>ISO 8601 date handling in SDTM (partial dates, imputation rules)</li>
+            <li>WHO Drug Dictionary and MedDRA coding verification</li>
+            <li>CDISC submission package review before handoff to regulatory</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong>. Tell us your task. We start within hours.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/clinical-sas-proxy-job-support/">Clinical SAS Proxy Job Support</a> | <a href="/clinical-sas-proxy-interview/">Clinical SAS Proxy Interview Support</a> | <a href="/what-is-sdtm/">What is SDTM?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Clinical SAS Project Help — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in Clinical SAS Right Now?"
+          body="SDTM mapping, ADaM derivation, Pinnacle 21 errors, TLF production — real-time guidance from a clinical SAS programmer with submission experience. Same-day help available."
+          ctaLabel="Get Clinical SAS Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Clinical SAS proxy interview support"
+          secondaryHref="/clinical-sas-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

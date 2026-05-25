@@ -1,0 +1,16 @@
+{
+  "name": "PharmaCDM — Pharma Job Support",
+  "short_name": "PharmaCDM",
+  "description": "Expert pharma proxy job support for pharmaceutical professionals — Clinical SAS, CDM, PV, CSV, Regulatory, QA, and more.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0B9BAA",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What Veeva Vault RIM questions do Irish pharma companies ask?', answer: 'Ireland is a major European hub for Big Pharma (Pfizer, MSD, Bristol Myers Squibb, Eli Lilly, AbbVie all have major operations there). Irish Veeva Vault RIM interviews focus on: regulatory submission workflows, product registration lifecycle in Vault, eCTD structure in Vault Submissions, Dossier management, and Ireland-specific HPRA (Health Products Regulatory Authority) submission process. Questions often include EU Centralised Procedure vs. National Authorisation distinctions, lifecycle management of marketing authorisation variations, and Vault RIM integration with global regulatory affairs teams.' },
+  { question: 'What is the difference between Veeva Vault RIM Submissions and RIM Registrations?', answer: 'Veeva Vault RIM Submissions manages the submission workflow — creating, authoring, reviewing, approving, and publishing regulatory submissions (eCTD sequences). It handles the document management, sequence management, and publishing to eCTD format. Veeva Vault RIM Registrations manages the regulatory intelligence side — tracking the status of submissions with regulatory agencies, managing marketing authorisation records, variation types, renewal dates, and approval conditions. Together they form a full regulatory operations platform. Interviewers often ask candidates to describe the document object types in each vault and how they relate.' },
+  { question: 'How is Vault configured for eCTD submissions?', answer: 'Vault RIM Submissions is configured with document type hierarchies mapping to CTD module/section structure (Module 1 regional, Module 2 summary, Modules 3-5 quality/nonclinical/clinical). Lifecycle states control document authoring → review → approval → publishing workflow. Workflows are configured per submission type (IND, NDA, MAA, variation). The eCTD publishing is handled through Vault\'s integrated publisher or external eCTD publishing tools. Interviewers ask about: how you configure a submission lifecycle, what happens when a document needs to be superseded mid-sequence, and how you handle prior approval supplements vs. CBE-30.' },
+  { question: 'What level of Vault configuration is expected for a RIM Specialist role?', answer: 'For a Vault RIM Specialist role (vs. Admin), expect questions on: document type configuration, lifecycle and workflow setup, business role assignments, security profiles, and reporting. For a more senior Vault RIM Admin role: object configuration (product, registration, submission objects), field setup, relationship configuration, and cross-vault integration setup. Ireland pharma roles often expect hands-on configuration experience — not just end-user knowledge.' },
+  { question: 'How do I prepare for a Veeva Vault RIM interview in Ireland?', answer: 'Focus on: Veeva Vault RIM product suite (Submissions, Registrations, Submissions Archive), eCTD module structure (CTD format, NeeS vs. eCTD), EU regulatory procedure types (Centralised, Mutual Recognition, Decentralised, National), EMA submission gateway, Vault lifecycle concepts, and document management in regulated environments. Ireland-specific: HPRA national submissions process. Our pharma proxy interview support gives you mock sessions with a Veeva Vault RIM specialist who has done Irish pharma interviews. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Veeva Vault RIM — Ireland 2026', url: site.url + '/pharma-interviews/real-veeva-vault-rim-proxy-interview-questions-ireland-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Veeva Vault RIM Interview Questions — Pharma Company, Ireland, 2026',
+    'Real Q&A from a Veeva Vault RIM interview at a pharma company in Ireland in 2026. Actual questions — Vault configuration, eCTD submissions, regulatory lifecycle, EU procedures.',
+    site.url + '/pharma-interviews/real-veeva-vault-rim-proxy-interview-questions-ireland-2026/',
+    '2026-02-05',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Veeva Vault RIM Interview Questions Ireland Pharma 2026"
+  description="Real Q&A from a Veeva Vault RIM interview at an Irish pharma company in 2026. Vault configuration, eCTD, EU regulatory procedures, RIM Submissions vs Registrations. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Veeva Vault RIM — Ireland 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | Veeva Vault RIM | Ireland | 2026</div>
+      <h1>Real Veeva Vault RIM Proxy Interview Questions — Pharma Company, Ireland, 2026</h1>
+      <p class="hero-tagline">Actual questions from a Veeva Vault RIM Specialist interview at a multinational pharmaceutical company in Dublin, Ireland in 2026. Vault RIM Submissions, RIM Registrations, eCTD lifecycle, EU regulatory procedures — exactly what the interview panel asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Role: Veeva Vault RIM Specialist. Pharmaceutical company with European headquarters in Dublin, Ireland. Global regulatory affairs team with EU submissions focus. Interview conducted via Teams + in-person (hybrid). Two-stage technical panel: Regulatory Affairs Director + Vault Business Administrator.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Veeva Vault RIM Interview Questions — Ireland Pharma</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Explain the difference between Veeva Vault RIM Submissions and RIM Registrations and how they work together.</h3>
+            <p><strong>What they wanted to hear:</strong> RIM Submissions handles the document and workflow management side of regulatory submissions — creating submission sequences, managing documents through authoring/review/approval lifecycles, and publishing eCTD packages. RIM Registrations tracks the business/intelligence side — marketing authorisation records, regulatory agency contacts, submission status tracking, approval conditions, variation dossier tracking, and renewal calendars. They share a product and registration data model so a submission in RIM Submissions links directly to the marketing authorisation record in RIM Registrations. The interviewer followed up: "How does a document in Vault Submissions relate to a regulatory activity in RIM Registrations?" Answer: Through Vault's relational data model — a submission document is linked to a Regulatory Activity object (e.g., a Variation or Renewal) which links to the Registration object which links to the Product object. This creates the full traceability chain from product → registration → activity → submission → document.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: Walk me through how you would set up a new eCTD submission workflow in Vault RIM Submissions.</h3>
+            <p><strong>What they wanted to hear:</strong> First, confirm the submission type (IND, NDA, MAA, variation) to determine the workflow template to use. In Vault, create a Submission object record — assign product, regulatory activity type, submission type, target agency (EMA, FDA, HPRA), sequence number. Documents are added to the submission via the document type hierarchy (CTD section structure). Configure the document lifecycle for the submission — typically Draft → Review → Approved → Published. Assign workflow participants (regulatory author, reviewer, approver, publisher) to the submission workflow. Initiate the workflow which routes documents through the configured review/approval steps. Once all documents are approved, the publisher generates the eCTD sequence using Vault's publishing functionality or an integrated eCTD publisher. The sequence is then validated (Pinnacle 21 or equivalent) before agency transmission. The interviewer asked a follow-up: "What happens if a document is rejected during the approval workflow?" Answer: Document returns to Draft state with reviewer comments. Author addresses comments, re-submits for review. The submission timeline shows all workflow actions with timestamps and user attribution (full audit trail in Vault).</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: What is a lifecycle in Vault and how is it different from a workflow?</h3>
+            <p><strong>What they wanted to hear:</strong> A lifecycle defines the states a document or object can be in (Draft, In Review, Approved, Superseded, Obsolete) and the transitions between states (rules, conditions, entry criteria, actions). A workflow is a process that executes as part of a lifecycle transition — it routes tasks to specific users, collects signatures, sends notifications, enforces review/approval steps. A document can move through lifecycle states without a workflow (manually by a user with appropriate role), or a lifecycle transition can trigger an automatic workflow. For GxP compliance, lifecycle state transitions should be controlled by workflows with mandatory approvers and electronic signatures (21 CFR Part 11 / EU Annex 11). The interviewer then asked: "Can a document have multiple lifecycles in Vault?" Answer: A document type is assigned one primary lifecycle. However, Vault supports role-based state management and conditional transitions within a single lifecycle — so different user roles can trigger different transitions from the same state. Separate document types can have separate lifecycles.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: How do you handle a regulatory submission variation for an EU Marketing Authorisation in Vault?</h3>
+            <p><strong>What they wanted to hear:</strong> Start in RIM Registrations — identify the existing Marketing Authorisation record. Create a Regulatory Activity of type Variation (Type IA, IB, or II per EU variation guidelines). Link it to the relevant product and registration. In RIM Submissions — create a new submission for this variation, link it to the Regulatory Activity. Identify the CTD modules affected by the variation (e.g., a Type IB change to manufacturing site would affect Module 3, Section 3.2.S.2.1 and potentially Module 1 cover letter). Create/update the required documents in Vault with appropriate lifecycle management. Publish the eCTD variation sequence. Submit to EMA via the EMA eSubmissions portal or CESP gateway. Track the assessment timeline (IB: 30-day assessment, no approval needed unless objection raised; II: full assessment with 60-day clock). The interviewer asked: "What is the difference between a Type IA, IB, and Type II variation?" Answer: Type IA — minor change, no prior approval needed, immediate implementation then notify EMA. Type IB — moderate change, notify EMA, implement after 30 days unless objection. Type II — major change, requires full scientific assessment and EMA opinion before implementation. This distinction determines the submission workflow timing in Vault.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your Veeva Vault RIM Interview</h2>
+          <p>
+            Ireland is one of the most active Veeva Vault RIM hiring markets in Europe. Big Pharma companies there expect deep functional knowledge of RIM Submissions and Registrations, combined with EU regulatory procedure understanding.
+          </p>
+          <p>
+            Get preparation from a Veeva Vault RIM specialist who has done Irish pharma interviews. Our <a href="/veeva-vault-proxy-interview/">Veeva Vault Proxy Interview Support</a> is available same-day.
+          </p>
+          <p>WhatsApp: <strong>{site.whatsapp}</strong></p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Veeva Vault RIM Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Veeva Vault RIM Interview in Ireland?"
+          body="Get real-time preparation from a Veeva Vault RIM specialist who knows EU regulatory procedures and Irish pharma interview expectations. Same-day support available."
+          ctaLabel="Get Veeva Vault Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

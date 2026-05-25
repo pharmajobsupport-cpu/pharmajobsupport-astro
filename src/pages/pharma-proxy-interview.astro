@@ -1,0 +1,173 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma proxy interview support?', answer: 'Pharma proxy interview support is real-time domain-specific preparation for your upcoming pharma interview. We cover the exact technical questions your interviewer will ask for your domain, run mock sessions, and walk you through real pharma interview scenarios. Unlike generic interview coaching, our support is pharma domain-specific and uses real examples from actual pharma interviews across CROs, pharma companies, and medical device manufacturers.' },
+  { question: 'Who is pharma proxy interview support for?', answer: 'It is for candidates who have been shortlisted for a pharma interview and need technical preparation, candidates who have failed pharma interviews and want to understand what went wrong, and professionals re-entering pharma after a career gap who need to refresh their domain knowledge before interviews.' },
+  { question: 'Which pharma domains do you cover for proxy interview support?', answer: 'We cover Clinical SAS/CDISC (SDTM, ADaM, TLF), CSV Validation/GxP/21 CFR Part 11, Regulatory Affairs/eCTD, Pharmacovigilance/Argus Safety/ICSR, Veeva Vault (all modules), Medical Device QA/EU MDR/ISO 13485, Clinical Data Management/EDC, Pharma AI/GenAI, QA/QMS/CAPA/GMP, Pharma RPA/UiPath, Cloud/DevOps in Pharma, Pharma BI/Analytics, SAP QM/ERP, Pharma Business Analysis, Medical Writing, GRC/Compliance, Clinical Research/CRA, and GMP Manufacturing.' },
+  { question: 'How quickly can I get pharma proxy interview support?', answer: 'Same-day support is available. If you have a pharma interview tomorrow, message us on WhatsApp right now at +91-9660834611. We match you with a domain expert within hours. For interviews in 24-48 hours, we prioritize emergency preparation sessions.' },
+  { question: 'What does a pharma proxy interview prep session include?', answer: 'A session includes: review of the job description and role requirements, domain-specific technical Q&A covering what interviewers actually ask, mock interview scenarios with realistic pharma case studies, real example questions from similar pharma interviews in your country and domain, and guidance on how to frame your experience in pharma language the interviewer expects.' },
+  { question: 'Do you support pharma interview preparation for all countries?', answer: 'Yes — we support pharma proxy interview preparation in 65+ countries including USA, UK, Ireland, Germany, Switzerland, Netherlands, Belgium, France, Sweden, Denmark, India, Singapore, Japan, South Korea, Australia, UAE, Saudi Arabia, Canada, and more. We understand the pharma hiring culture and technical expectations in each market.' },
+  { question: 'Is pharma proxy interview support confidential?', answer: 'Completely. All sessions are private. We do not contact your employer or the hiring company. Our experts have no affiliation with any pharma recruiter or hiring manager. Your preparation with us stays 100% confidential.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Proxy Interview Support', url: site.url + '/pharma-proxy-interview/' },
+];
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Pharma Proxy Interview Support',
+    provider: { '@type': 'Organization', name: 'Pharma Job Support', url: 'https://pharmajobsupport.com' },
+    serviceType: 'Pharma Proxy Interview Support',
+    description: 'Real-time domain-specific pharma proxy interview preparation for clinical SAS, regulatory affairs, pharmacovigilance, Veeva Vault, CSV validation, medical device, and 15+ pharma domains.',
+    url: 'https://pharmajobsupport.com/pharma-proxy-interview/',
+    contactPoint: { '@type': 'ContactPoint', telephone: '+91-9660834611', contactType: 'customer support', availableLanguage: 'English' },
+  },
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma Proxy Interview Support | Domain-Specific Interview Preparation"
+  description="Got a pharma interview? Get real-time pharma proxy interview support for clinical SAS, regulatory affairs, pharmacovigilance, Veeva Vault, CSV validation, and 15+ pharma domains. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Proxy Interview Support' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Proxy Interview Support</div>
+      <h1>Pharma Proxy Interview Support</h1>
+      <p class="hero-tagline">Got a pharma interview? Get real-time domain-specific preparation from pharma experts who know exactly what interviewers ask — for clinical SAS, regulatory, PV, Veeva, CSV, medical device, and 15+ pharma domains.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>You Got the Interview Call. Now You Need to Be Ready.</h2>
+          <p>
+            Getting shortlisted for a pharma interview is hard. Clearing the technical round is harder. Pharma interviewers ask highly specific domain questions — SDTM mapping logic, Veeva Vault lifecycle configuration, 21 CFR Part 11 audit trail requirements, ICSR seriousness criteria, ISO 13485 QMS implementation. Generic interview coaching will not prepare you for these.
+          </p>
+          <p>
+            Our pharma proxy interview support gives you real-time preparation from pharma domain experts who have worked in the exact roles you are applying for — at CROs, Big Pharma, regulatory agencies, and medical device companies. They know what interviewers actually ask because they have been on both sides of the interview table.
+          </p>
+          <p>
+            Whether your interview is tomorrow or next week, message us on WhatsApp now at <strong>{site.whatsapp}</strong>.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What Pharma Proxy Interview Support Covers</h2>
+          <ul class="feature-list">
+            <li>Review of the specific job description and role requirements</li>
+            <li>Domain-specific technical Q&amp;A — SDTM, ADaM, Veeva RIM, CAPA, IQ/OQ/PQ, ICSR, eCTD, and more</li>
+            <li>Mock interview sessions with realistic pharma case studies</li>
+            <li>Real pharma interview questions from similar roles in your country</li>
+            <li>How to frame your experience in the exact language pharma interviewers expect</li>
+            <li>HR round preparation — how to answer salary, notice period, and transition questions</li>
+            <li>Final round guidance and confidence building</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Pharma Proxy Interview Support by Domain</h2>
+          <p>We provide pharma proxy interview support across all 18 pharma domains:</p>
+          <div class="domain-links">
+            <a href="/clinical-sas-proxy-interview/" class="domain-link">Clinical SAS Proxy Interview Support</a>
+            <a href="/csv-validation-proxy-interview/" class="domain-link">CSV Validation Proxy Interview Support</a>
+            <a href="/regulatory-affairs-proxy-interview/" class="domain-link">Regulatory Affairs Proxy Interview Support</a>
+            <a href="/pharmacovigilance-proxy-interview/" class="domain-link">Pharmacovigilance Proxy Interview Support</a>
+            <a href="/veeva-vault-proxy-interview/" class="domain-link">Veeva Vault Proxy Interview Support</a>
+            <a href="/medical-device-proxy-interview/" class="domain-link">Medical Device Proxy Interview Support</a>
+            <a href="/clinical-data-proxy-interview/" class="domain-link">Clinical Data Management Proxy Interview Support</a>
+            <a href="/pharma-ai-proxy-interview/" class="domain-link">Pharma AI / GenAI Proxy Interview Support</a>
+            <a href="/pharma-qa-proxy-interview/" class="domain-link">QA / QMS / GMP Proxy Interview Support</a>
+            <a href="/pharma-rpa-proxy-interview/" class="domain-link">Pharma RPA Proxy Interview Support</a>
+            <a href="/pharma-cloud-proxy-interview/" class="domain-link">Cloud / DevOps Pharma Proxy Interview Support</a>
+            <a href="/pharma-bi-proxy-interview/" class="domain-link">Pharma BI / Analytics Proxy Interview Support</a>
+            <a href="/pharma-sap-proxy-interview/" class="domain-link">SAP Pharma Proxy Interview Support</a>
+            <a href="/pharma-ba-proxy-interview/" class="domain-link">Pharma BA Proxy Interview Support</a>
+            <a href="/medical-writing-proxy-interview/" class="domain-link">Medical Writing Proxy Interview Support</a>
+            <a href="/pharma-compliance-proxy-interview/" class="domain-link">Pharma Compliance Proxy Interview Support</a>
+            <a href="/clinical-research-proxy-interview/" class="domain-link">Clinical Research Proxy Interview Support</a>
+            <a href="/pharma-manufacturing-proxy-interview/" class="domain-link">Pharma Manufacturing Proxy Interview Support</a>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Who Is This For?</h2>
+          <ul class="feature-list">
+            <li><strong>Shortlisted candidates</strong> — you have a pharma interview scheduled and need to be technically ready</li>
+            <li><strong>Failed interviewers</strong> — you have failed 3 pharma interviews and need to understand exactly what went wrong</li>
+            <li><strong>Final round candidates</strong> — you need high-stakes preparation for a senior pharma role</li>
+            <li><strong>Career changers</strong> — you are transitioning from IT or another field into a pharma domain role</li>
+          </ul>
+          <p>Don't have an interview yet? Start with <a href="/pharma-profile-engineering/">Pharma Profile Engineering — Get Interview Scheduled</a>.</p>
+          <p>Already landed the pharma job? Get <a href="/pharma-proxy-job-support/">Pharma Proxy Job Support</a> for live task-by-task guidance.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Pharma Proxy Interview Questions</h2>
+          <p>We publish real Q&amp;A from actual pharma interviews across domains and countries. See what interviewers actually ask:</p>
+          <ul class="feature-list">
+            <li><a href="/pharma-interviews/">Real Clinical SAS / SDTM / ADaM Interview Questions — CRO, USA, 2026</a></li>
+            <li><a href="/pharma-interviews/">Real Veeva Vault RIM Interview Questions — Pharma Company, Ireland, 2026</a></li>
+            <li><a href="/pharma-interviews/">Real CSV Validation / GAMP 5 Interview Questions — Medical Device, UK, 2026</a></li>
+            <li><a href="/pharma-interviews/">Real Pharmacovigilance / Argus Interview Questions — 2026</a></li>
+          </ul>
+          <a href="/pharma-interviews/" class="inline-link">View All Real Pharma Proxy Interview Questions →</a>
+        </section>
+
+        <section class="content-section">
+          <h2>Pharma Proxy Interview Support by Country</h2>
+          <div class="domain-links">
+            <a href="/pharma-proxy-interview-usa/" class="domain-link">USA</a>
+            <a href="/pharma-proxy-interview-uk/" class="domain-link">United Kingdom</a>
+            <a href="/pharma-proxy-interview-ireland/" class="domain-link">Ireland</a>
+            <a href="/pharma-proxy-interview-germany/" class="domain-link">Germany</a>
+            <a href="/pharma-proxy-interview-switzerland/" class="domain-link">Switzerland</a>
+            <a href="/pharma-proxy-interview-netherlands/" class="domain-link">Netherlands</a>
+            <a href="/pharma-proxy-interview-india/" class="domain-link">India</a>
+            <a href="/pharma-proxy-interview-singapore/" class="domain-link">Singapore</a>
+            <a href="/pharma-proxy-interview-australia/" class="domain-link">Australia</a>
+            <a href="/pharma-proxy-interview-canada/" class="domain-link">Canada</a>
+            <a href="/pharma-proxy-interview-uae/" class="domain-link">UAE</a>
+            <a href="/pharma-proxy-interview-saudi-arabia/" class="domain-link">Saudi Arabia</a>
+          </div>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Proxy Interview Support — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Got a Pharma Interview Coming Up?"
+          body="Get real-time domain-specific preparation from a pharma expert who has done your exact role. Available same-day. WhatsApp now."
+          ctaLabel="Get Pharma Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Failed a pharma interview?"
+          secondaryHref="/failed-pharma-proxy-interview-help/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.domain-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.domain-link { display: inline-block; background: var(--color-surface-2, #f0f4f8); color: var(--color-text, #1e3448); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; text-decoration: none; transition: background 0.15s; }
+.domain-link:hover { background: var(--color-primary-light, #e0f2f1); }
+.inline-link { color: var(--color-primary, #009e94); font-weight: 600; }
+</style>

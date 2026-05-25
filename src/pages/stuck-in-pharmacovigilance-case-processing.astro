@@ -1,0 +1,79 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I have a complex ICSR that I do not know how to classify. Can you help right now?', answer: 'Yes. ICSR (Individual Case Safety Report) classification requires assessing: seriousness (ICH E2A criteria — death, life-threatening, hospitalisation, disability, congenital anomaly, medically significant event), expectedness (is the adverse event listed in the current SmPC/IB labelling?), causality (is the adverse event at least possibly related to the suspect drug?). We help you work through each criterion for your specific case, determine the correct classification, apply the correct expedited reporting timeline (7-day for fatal/life-threatening unexpected, 15-day for all other serious unexpected), and document the rationale in Argus Safety or your safety database.' },
+  { question: 'I am stuck on MedDRA coding for an adverse event. Can you help?', answer: 'Yes. MedDRA coding requires: finding the verbatim adverse event term in the MedDRA browser, mapping it to the appropriate Lowest Level Term (LLT), which maps to a Preferred Term (PT), which sits within a System Organ Class (SOC). Common issues we help with: verbatim terms that map to multiple PTs (need to select the most clinically appropriate based on reporter intent), terms that are not in MedDRA and require a best-fit PT, multi-axiality decisions (a PT can belong to multiple SOCs — we help select the primary SOC), and ensuring your MedDRA version in the safety database matches what is specified in your submission.' },
+  { question: 'I need to write a safety narrative for an ICSR and have never done it before. Can you help?', answer: 'Yes. Safety narratives summarise a single adverse event case in narrative form for the case report. We help you write narratives following ICH E2B and company-specific style guides: patient demographics, relevant medical history, suspect product information (drug name, indication, dose, start/stop dates), adverse event description (onset, severity, outcome), treatment of the AE, drug withdrawn/restarted/rechallenge information, reporter information and causality assessment. A well-structured narrative is essential for regulatory submissions and aggregate reports.' },
+  { question: 'What pharmacovigilance case processing tasks can you help me with right now?', answer: 'All pharmacovigilance and drug safety tasks: ICSR triage (seriousness, expectedness, causality assessment), Argus Safety case entry workflow (case intake, case processing, medical review, submission), MedDRA adverse event coding, WHO Drug Dictionary coding for suspect medications, safety narrative writing, expedited reporting timelines (7-day, 15-day), EudraVigilance E2B(R3) submission, FDA MedWatch FAERS submission, aggregate report preparation (DSUR, PBRER, PADER), signal detection queries, SUSAR (Suspected Unexpected Serious Adverse Reaction) reporting for clinical trials, and ICSR quality check review.' },
+  { question: 'I missed an expedited reporting deadline. What do I do?', answer: 'First: do not panic or try to hide it. Document the timeline of events accurately. In most regulatory jurisdictions, a late expedited report must still be submitted — contact your Regulatory Affairs team immediately. For FDA (post-marketing 15-day): if the deadline is missed, submit as soon as possible with a cover letter explaining the delay. FDA may follow up — have your timeline documentation ready. For EMA (EudraVigilance): similar approach — submit late report via E2B with the actual submission date, and document the delay in your internal CAPA system. A late report is a compliance deviation — it requires a CAPA to prevent recurrence. We help you structure the late submission and the CAPA documentation.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Stuck in Pharmacovigilance Case Processing', url: site.url + '/stuck-in-pharmacovigilance-case-processing/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Stuck in Pharmacovigilance Case Processing? Get Real-Time PV Proxy Job Support"
+  description="Stuck on ICSR classification, MedDRA coding, Argus Safety workflow, safety narratives, or expedited reporting? PV proxy job support. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Stuck in Pharmacovigilance Case Processing' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharmacovigilance Proxy Job Support</div>
+      <h1>Stuck in Pharmacovigilance Case Processing? Get Live Expert Guidance Now.</h1>
+      <p class="hero-tagline">Complex ICSR you do not know how to classify. MedDRA coding decision you are unsure about. Safety narrative you have never written. Expedited reporting deadline approaching. Our pharmacovigilance experts walk you through the exact case and task in real time via WhatsApp.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Pharmacovigilance Proxy Job Support — What We Help With Right Now</h2>
+          <ul class="feature-list">
+            <li>ICSR triage — seriousness, expectedness, causality assessment (ICH E2A)</li>
+            <li>Argus Safety case processing workflow — intake through submission</li>
+            <li>MedDRA coding — PT selection, SOC determination, LLT mapping</li>
+            <li>WHO Drug Dictionary coding for suspect and concomitant medications</li>
+            <li>Safety narrative writing — ICH E2B structure, company style guides</li>
+            <li>Expedited reporting — 7-day and 15-day timelines, FDA MedWatch, EudraVigilance E2B(R3)</li>
+            <li>SUSAR reporting for clinical trials (IND, CTA, EudraCT)</li>
+            <li>Aggregate reports — DSUR, PBRER, PADER structure and content</li>
+            <li>Signal detection queries and literature search review</li>
+            <li>Late submission handling and CAPA documentation</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong>. Tell us your PV task and the case details.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/pharmacovigilance-proxy-job-support/">Pharmacovigilance Proxy Job Support</a> | <a href="/pharmacovigilance-proxy-interview/">Pharmacovigilance Proxy Interview Support</a> | <a href="/what-is-pharmacovigilance/">What is Pharmacovigilance?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharmacovigilance Case Processing Help — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in PV Case Processing?"
+          body="ICSR classification, MedDRA coding, Argus Safety, safety narratives, expedited reporting — real-time guidance from a PV specialist. Same-day help available."
+          ctaLabel="Get Pharmacovigilance Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharmacovigilance proxy interview support"
+          secondaryHref="/pharmacovigilance-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

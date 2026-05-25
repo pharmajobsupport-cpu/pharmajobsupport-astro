@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma compliance proxy job support?', answer: 'Pharma compliance proxy job support is real-time live guidance from a pharmaceutical compliance specialist who helps you complete your actual regulatory compliance work tasks. When you are stuck on a GxP compliance gap assessment, a data integrity remediation plan, a 21 CFR Part 11 gap analysis, an Annex 11 audit preparation, a compliance audit finding response, or a regulatory inspection readiness checklist — a pharma compliance expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the compliance deliverable you need to complete right now.' },
+  { question: 'What pharma compliance tasks do you provide proxy support for?', answer: 'All pharma compliance tasks: GxP compliance assessments (GMP, GCP, GLP, GDP gap analyses), data integrity programme implementation (ALCOA+ assessment, data lifecycle review, audit trail review procedure), 21 CFR Part 11 gap analysis and remediation plans, EU Annex 11 compliance assessments, inspection readiness preparation (FDA, EMA, MHRA, WHO pre-inspection mock audits), audit finding response writing (CAPA for compliance findings), regulatory intelligence monitoring (tracking FDA guidance, EMA reflection papers, ICH guidelines), SOP development for compliance processes, training programme design for GxP compliance, and CSV/computer system compliance for IT systems in regulated environments.' },
+  { question: 'What is data integrity and how do I assess it in a pharma system?', answer: 'Data integrity in pharmaceuticals refers to the completeness, consistency, and accuracy of data throughout its lifecycle — from creation through processing, use, transmission, storage, retrieval, and retention/destruction. Regulatory basis: FDA Data Integrity guidance (2018), MHRA Data Integrity guidance (2021), WHO Technical Report Series Annex 4, ALCOA+. Data integrity assessment approach: (1) Data lifecycle mapping — identify all data flows: where is data created, how is it processed, where is it transferred, where is it stored, who has access. (2) Critical data identification — which data directly impacts product quality, safety, or regulatory decisions. (3) Vulnerability assessment — for each critical data flow: is there a complete audit trail? Are all users individually identified? Can data be deleted or modified without audit trail? Are there any data integrity controls gaps (direct database access, spreadsheet use for regulated data, shared login accounts)? (4) Remediation plan — prioritised list of controls to implement based on risk. We help you conduct the assessment and write the remediation plan.' },
+  { question: 'How do I prepare for an FDA or EMA GxP inspection?', answer: 'GxP inspection readiness preparation: Pre-inspection (6–12 months before): conduct a mock inspection (internal audit or third-party audit) using FDA/EMA inspection focus areas. Common FDA inspection observations: data integrity, laboratory controls (OOS investigation process), CAPA effectiveness, procedure compliance, change control. Review your FDA inspection history and comparable company observations (FDA Warning Letters are publicly available on FDA.gov). Document room preparation: all SOPs current and within review date, all CAPA and deviation records up to date and closed on time, training records complete for all personnel, equipment calibration and maintenance records current. During inspection: designate a front room team (document retrieval, QA interface) and a back room team (subject matter experts available to respond). Inspection responses: all investigator requests must be responded to factually and promptly. Never speculate or provide information beyond what is asked. Post-inspection: 483 response due within 15 business days — respond to every observation with root cause and CAPA. We help you prepare your site for inspection and write 483 responses.' },
+  { question: 'What is a 21 CFR Part 11 gap analysis and how is it conducted?', answer: '21 CFR Part 11 gap analysis assesses an electronic records and signatures system against the requirements of 21 CFR Part 11. Gap analysis structure: For each 21 CFR Part 11 requirement, document: Current state (what the system currently does), Required state (what the regulation requires), Gap (if current state does not meet required state), Remediation action (how to close the gap). Key requirements to assess: Validation (§11.10(a)) — is the system validated? Is there a current validation summary report? Audit trail (§11.10(e)) — is the audit trail computer-generated? Does it capture user ID, timestamp, record of changes? Can operators disable or modify it? Electronic signatures (§11.50) — are signatures linked to their records? Do they include printed name, date/time, meaning? Access controls (§11.10(d)) — individual user accounts? Password policies enforced? Periodic access reviews? System documentation (§11.10(k)) — are SOPs in place for system use, backup, recovery, and training? Common gaps: shared login accounts (always a critical gap), audit trail that can be deleted or turned off, electronic signatures not meeting §11.100 requirements. We help you conduct the gap analysis and write the remediation plan.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Compliance Proxy Job Support Guide', url: site.url + '/pharma-compliance-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharma Compliance Proxy Job Support Guide — Data Integrity, 21 CFR Part 11, Inspection Readiness',
+    'Complete guide to pharma compliance proxy job support — GxP compliance assessments, data integrity programme, 21 CFR Part 11 gap analysis, FDA/EMA inspection readiness, audit finding responses.',
+    site.url + '/pharma-compliance-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma Compliance Proxy Job Support Guide | Data Integrity, 21 CFR Part 11, Inspections"
+  description="Complete guide to pharma compliance proxy job support — data integrity assessment, 21 CFR Part 11 gap analysis, FDA/EMA inspection readiness, audit responses. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Compliance Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Compliance Guide</div>
+      <h1>Pharma Compliance Proxy Job Support Guide — Data Integrity, 21 CFR Part 11 & Inspection Readiness</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharma compliance proxy job support — GxP compliance assessments, data integrity programme implementation, 21 CFR Part 11 gap analysis, FDA/EMA inspection readiness, and what compliance tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Pharma Compliance Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>Data integrity assessments</strong> — data lifecycle mapping, ALCOA+ gap identification, audit trail coverage review</li>
+            <li><strong>21 CFR Part 11 gap analysis</strong> — audit trail gaps, electronic signature gaps, access control deficiencies, validation status</li>
+            <li><strong>Inspection readiness</strong> — mock audit preparation, document room organisation, FDA 483 history review, SME preparation</li>
+            <li><strong>Audit finding responses</strong> — root cause analysis for compliance findings, CAPA structure, response language</li>
+            <li><strong>GxP compliance assessments</strong> — GMP, GCP, GDP gap analysis against current regulatory requirements</li>
+            <li><strong>Regulatory intelligence</strong> — interpreting new FDA/EMA guidance and assessing impact on current systems and processes</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>GxP Compliance Frameworks — What We Cover</h2>
+          <ul class="feature-list">
+            <li><strong>FDA GMP/GCP</strong> — 21 CFR Parts 210/211, 21 CFR Part 11, 21 CFR Part 820, FDA Warning Letter case studies</li>
+            <li><strong>EU GMP</strong> — EU GMP Annexes 1, 11, 15, 20 — current compliance expectations</li>
+            <li><strong>Data Integrity</strong> — FDA 2018 guidance, MHRA 2021 guidance, WHO TRS Annex 4 — ALCOA+ framework</li>
+            <li><strong>ICH Quality guidelines</strong> — ICH Q7, Q8, Q9, Q10 — pharmaceutical quality system compliance</li>
+            <li><strong>GDP</strong> — EU GDP guidelines, WHO GDP — distribution compliance</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharma Compliance Proxy Job Support Now</h2>
+          <p>Stuck on a data integrity assessment, a 21 CFR Part 11 gap analysis, or inspection readiness preparation? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your compliance task and regulatory context, and we match you with a pharma compliance specialist within hours.</p>
+          <p>Also see: <a href="/pharma-compliance-proxy-job-support/">Pharma Compliance Proxy Job Support</a> | <a href="/pharma-qa-gmp-proxy-job-support-guide/">Pharma QA GMP Proxy Job Support Guide</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Compliance Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Compliance Task?"
+          body="Data integrity assessments, 21 CFR Part 11 gap analysis, inspection readiness, audit finding responses — real-time guidance from a pharma compliance specialist. Same-day help."
+          ctaLabel="Get Pharma Compliance Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma QA GMP proxy job support guide"
+          secondaryHref="/pharma-qa-gmp-proxy-job-support-guide/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

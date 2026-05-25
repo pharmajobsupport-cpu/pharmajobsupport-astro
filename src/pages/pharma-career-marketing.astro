@@ -1,0 +1,305 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma career marketing?', answer: 'Pharma career marketing is the full package of outreach materials and strategy needed to get noticed, interviewed, and hired in the pharmaceutical industry — including your resume, LinkedIn, cover letters, networking strategy, job application targeting, and recruiter outreach templates.' },
+  { question: 'Do you help with job search strategy?', answer: 'Yes. We help you identify the right roles, the right companies, the right geographies, and the right recruiters for your domain and experience level. We also advise on when to approach CROs vs. pharma companies vs. consultancies, and how to prioritize your search.' },
+  { question: 'Do you write cover letters?', answer: 'Yes. Domain-specific cover letters calibrated to the pharma hiring process — focusing on regulatory fit, domain expertise, and cultural alignment rather than generic motivation statements.' },
+  { question: 'Can you help with recruiter outreach?', answer: 'Yes. We provide recruiter outreach templates, advice on which specialist pharma recruiters to approach, and how to position yourself in a cold outreach that gets a response. We know which pharma staffing firms are active in which domains and geographies.' },
+  { question: 'Do you help with networking on LinkedIn?', answer: 'Yes. We advise on connection strategy, engagement tactics, content positioning (what to post, what to comment on), and how to build visibility in the pharma professional community on LinkedIn without feeling like you\'re spamming.' },
+  { question: 'What makes your approach different from a generic career coach?', answer: 'Everything. We know which CROs are hiring for which roles, which pharma companies are freezing headcount, which agencies specialise in CSV or PV roles in specific countries, and what hiring managers in these domains actually want to see. Generic career coaches do not have this knowledge.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Career Marketing', url: site.url + '/pharma-career-marketing/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma Career Marketing | Job Search Strategy & Recruiter Outreach | pharmajobsupport.com"
+  description="Pharma career marketing services — job search strategy, recruiter outreach, cover letters, LinkedIn visibility, and networking for pharma professionals globally."
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Career Marketing' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Career Marketing</div>
+      <h1>Pharma Career Marketing</h1>
+      <p class="hero-tagline">Complete Job Search Strategy, Recruiter Outreach, and LinkedIn Visibility for Pharma Professionals</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Beyond the Resume</h2>
+          <p>
+            Getting a pharma job is not just about having a strong resume. It requires targeting the right roles at the right companies, connecting with the right recruiters, and positioning yourself consistently across every touchpoint — LinkedIn, networking conversations, application materials, and follow-ups.
+          </p>
+          <p>
+            Our career marketing specialists know the pharma hiring landscape: which CROs are growing their CDM teams, which companies have validation backlogs, which agencies dominate PV contractor placements in specific markets. That intelligence shapes everything we do for you.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Career Marketing Services</h2>
+          <div class="service-grid">
+            <div class="service-card">
+              <h3>Job Search Strategy</h3>
+              <p>Role targeting, company prioritisation, geography analysis, CRO vs. pharma vs. consultancy positioning, and a structured search plan based on your domain, experience, and target market.</p>
+            </div>
+            <div class="service-card">
+              <h3>Cover Letters</h3>
+              <p>Domain-specific cover letters for each application type — permanent, contract, CRO, sponsor-side. Focused on regulatory fit and domain expertise rather than generic motivation.</p>
+            </div>
+            <div class="service-card">
+              <h3>Recruiter Outreach</h3>
+              <p>Personalised outreach templates for specialist pharma recruiters. We identify which agencies are active in your domain and geography and help you craft outreach that gets responses.</p>
+            </div>
+            <div class="service-card">
+              <h3>LinkedIn Visibility Strategy</h3>
+              <p>Content strategy, engagement tactics, connection building, and recruiter search optimisation. How to be visible to pharma hiring managers without posting constantly or feeling inauthentic.</p>
+            </div>
+            <div class="service-card">
+              <h3>Networking Strategy</h3>
+              <p>How to leverage pharma conferences, DIA, SCDM, PharmaSUG, LinkedIn groups, and professional associations to build the connections that lead to unadvertised roles.</p>
+            </div>
+            <div class="service-card">
+              <h3>Application Tracking System</h3>
+              <p>A structured approach to managing applications, follow-ups, recruiter relationships, and interview pipelines — so your search is active, not reactive.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Which Pharma Recruiters Matter</h2>
+          <p>
+            The pharma recruitment market is fragmented across specialist agencies by domain, geography, and employment type. We advise on:
+          </p>
+          <ul class="advice-list">
+            <li>Which staffing firms specialise in Clinical SAS, CDM, PV, or CSV roles in your target market</li>
+            <li>Which agencies have preferred-vendor agreements with major CROs and pharma companies</li>
+            <li>Which LinkedIn recruiters are actively posting your domain keywords right now</li>
+            <li>How to approach contract vs. permanent specialist recruiters differently</li>
+            <li>Which job boards generate real pharma leads vs. which are flooded with irrelevant postings</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Job Search Targeting by Region</h2>
+          <div class="region-grid">
+            <div class="region-card">
+              <h3>USA</h3>
+              <p>New Jersey, Boston, San Francisco, Chicago, Research Triangle. Focus: NJ pharma cluster, Boston biotech, West Coast tech-pharma. CROs: IQVIA, Syneos, PPD, Covance.</p>
+            </div>
+            <div class="region-card">
+              <h3>UK & Ireland</h3>
+              <p>London, Cambridge, Oxford, Dublin. Focus: sponsor-side biotech, CRO hubs, EMA regulatory roles post-Brexit, Irish biopharma cluster.</p>
+            </div>
+            <div class="region-card">
+              <h3>Europe</h3>
+              <p>Basel, Zurich, Amsterdam, Munich, Paris. Focus: Roche/Novartis Basel cluster, Dutch regulatory hub, German CDM/CSV market, French pharma.</p>
+            </div>
+            <div class="region-card">
+              <h3>India</h3>
+              <p>Bangalore, Hyderabad, Mumbai, Pune, Chennai. Focus: CRO delivery centres, Indian pharma exporters, remote global roles, USFDA-regulated manufacturers.</p>
+            </div>
+            <div class="region-card">
+              <h3>APAC</h3>
+              <p>Singapore, Tokyo, Sydney, Shanghai. Focus: APAC CRO hubs, Japanese pharma international roles, Australian TGA regulatory market.</p>
+            </div>
+            <div class="region-card">
+              <h3>Gulf & Middle East</h3>
+              <p>Dubai, Abu Dhabi, Riyadh. Focus: GCC pharmaceutical market growth, MOH regulatory roles, regional QA and PV positions.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} />
+        </section>
+
+        <section class="content-section">
+          <h2>Related Services</h2>
+          <div class="related-links">
+            <a href="/pharma-profile-engineering/">Profile Engineering</a>
+            <a href="/pharma-interview-support/">Interview Preparation</a>
+            <a href="/pharma-interview-proxy-support/">Interview Proxy Support</a>
+            <a href="/pharma-job-support/">Job Support by Location</a>
+            <a href="/contact/">Contact Us</a>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="page-sidebar">
+        <div class="sidebar-card sidebar-card--cta">
+          <h3>Start Your Search</h3>
+          <p>Career marketing consultation — WhatsApp us your domain and target market.</p>
+          <a href={site.whatsappUrl} class="sidebar-btn" target="_blank" rel="noopener noreferrer">
+            WhatsApp: {site.whatsapp}
+          </a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Services Included</h3>
+          <ul>
+            <li>Job search strategy</li>
+            <li>Role & company targeting</li>
+            <li>Cover letter writing</li>
+            <li>Recruiter outreach</li>
+            <li>LinkedIn visibility</li>
+            <li>Networking strategy</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Markets Covered</h3>
+          <ul>
+            <li>USA / Canada</li>
+            <li>UK / Ireland</li>
+            <li>EU (CH, NL, DE, FR)</li>
+            <li>India</li>
+            <li>APAC</li>
+            <li>Gulf / Middle East</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-14);
+  }
+  .page-hero {
+    padding: var(--space-10) 0 var(--space-8);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-8);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: var(--space-4);
+  }
+  .page-hero h1 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: var(--space-4); }
+  .hero-tagline { font-size: 1.1rem; color: var(--color-muted); font-style: italic; }
+
+  .page-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  .content-section { margin-bottom: var(--space-10); }
+  .content-section h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-5); color: var(--color-text); }
+  .content-section p { font-size: 0.9375rem; color: var(--color-muted); line-height: 1.75; }
+  .content-section p + p { margin-top: var(--space-3); }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-4);
+  }
+  .service-card {
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+  .service-card h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-2); color: var(--color-primary); }
+  .service-card p { font-size: 0.8125rem; color: var(--color-muted); line-height: 1.6; }
+
+  .advice-list { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  .advice-list li {
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-primary);
+    font-size: 0.875rem;
+    color: var(--color-text);
+  }
+
+  .region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-4);
+  }
+  .region-card {
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+  .region-card h3 { font-size: 0.875rem; font-weight: 700; margin-bottom: var(--space-2); color: var(--color-text); }
+  .region-card p { font-size: 0.8125rem; color: var(--color-muted); line-height: 1.6; }
+
+  .related-links { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .related-links a {
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .related-links a:hover { background: var(--color-primary); color: #fff; }
+
+  .page-sidebar { position: sticky; top: 5rem; display: flex; flex-direction: column; gap: var(--space-4); }
+  .sidebar-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+  }
+  .sidebar-card--cta { background: var(--color-primary); border-color: var(--color-primary); }
+  .sidebar-card--cta h3 { color: #fff; }
+  .sidebar-card--cta p { color: rgba(255,255,255,0.85); font-size: 0.875rem; margin-bottom: var(--space-4); }
+  .sidebar-card h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-3); }
+  .sidebar-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-1); }
+  .sidebar-card li { font-size: 0.8125rem; color: var(--color-muted); }
+  .sidebar-card li::before { content: '✓ '; color: var(--color-primary); font-weight: 700; }
+  .sidebar-card--cta li::before { color: rgba(255,255,255,0.7); }
+  .sidebar-card--cta li { color: rgba(255,255,255,0.9); }
+  .sidebar-btn {
+    display: block;
+    background: #fff;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .page-layout { grid-template-columns: 1fr; }
+    .page-sidebar { position: static; }
+  }
+</style>

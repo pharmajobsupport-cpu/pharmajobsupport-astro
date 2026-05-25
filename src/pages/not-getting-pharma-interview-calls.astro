@@ -1,0 +1,114 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'Why am I not getting pharma interview calls despite having a certification?', answer: 'The most common reasons: your resume does not position your pharma domain expertise with the right keywords that pharma applicant tracking systems and recruiters look for. Your LinkedIn profile is not optimised for pharma hiring — most pharma companies and CROs search LinkedIn before looking at job applications. You are applying to the wrong types of roles or the wrong companies for your current profile level. Your professional headline and summary do not signal which pharma domain you specialise in. We identify the exact reason in a profile review session. WhatsApp: +91-9660834611' },
+  { question: 'How long does pharma profile engineering take to start generating interview calls?', answer: 'Most pharma professionals who complete a full profile engineering session with us start seeing increased recruiter contacts within 2-4 weeks. The speed depends on your pharma domain (clinical SAS and CSV validation tend to get faster responses than newer domains), your country (USA, UK, and Ireland have the most active pharma hiring), and how aggressive your outreach is post-engineering. Profile engineering alone is not enough if you are not actively applying and networking — we work on both the profile and the strategy.' },
+  { question: 'Do I need to have pharma work experience to get an interview call?', answer: 'No. Many pharma freshers and career changers get pharma interview calls through the right profile positioning. If you have a pharma certification (SAS 9.4 Clinical Trials, CSV, regulatory affairs, pharmacovigilance), a relevant pharma degree, or transferable IT/science experience, we can position you for entry-level and junior pharma roles. The profile engineering identifies your genuine transferable experience and presents it in the language pharma recruiters look for. We work with certified candidates, IT professionals switching to pharma, and science graduates targeting CRO positions.' },
+  { question: 'What does pharma profile engineering actually involve?', answer: 'Pharma profile engineering covers: resume review and rewrite (positioning your domain expertise with the right pharma keywords, role-specific terminology, regulatory context), LinkedIn profile optimisation (headline, summary, skills section, experience descriptions for pharma ATS and recruiter search algorithms), role targeting strategy (which specific pharma roles to apply to based on your domain, certification, and geography), pharma recruiter outreach (which specialist pharma staffing firms to approach and how to write a cold outreach that gets a response), application volume and timing strategy. The entire process is tailored to your specific pharma domain and the country you are targeting.' },
+  { question: 'Which countries have the most pharma hiring right now?', answer: 'The highest-volume pharma hiring markets in 2026: USA (New Jersey pharma corridor, Boston biotech, San Diego biosciences, Research Triangle Park NC), Ireland (Dublin, Cork, Galway — MNCs including Pfizer, AbbVie, Johnson & Johnson, Takeda), UK (Cambridge, Oxford, London, Macclesfield), Germany (Biberach — Boehringer Ingelheim, Leverkusen — Bayer), Switzerland (Basel — Novartis, Roche), India (Hyderabad, Bangalore, Mumbai — CROs and Indian pharma), Singapore (Biopolis, MNC Asia-Pacific hubs). We have specific profile engineering expertise for each of these markets.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Not Getting Pharma Interview Calls', url: site.url + '/not-getting-pharma-interview-calls/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Not Getting Pharma Interview Calls? Profile Engineering for Pharma | Pharma Job Support"
+  description="Not getting pharma interview calls despite your certification or degree? Pharma profile engineering fixes your resume, LinkedIn, and targeting strategy. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Not Getting Pharma Interview Calls' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Profile Engineering</div>
+      <h1>Not Getting Pharma Interview Calls? Here Is Why — And How to Fix It.</h1>
+      <p class="hero-tagline">You passed your SAS certification. You finished your clinical research diploma. You have been applying for months and pharma recruiters are not responding. This is not about your qualifications — it is about how your profile is positioned. Pharma profile engineering fixes this.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Why Qualified Pharma Candidates Do Not Get Interview Calls</h2>
+          <p>
+            You have the pharma qualification. You have been applying to CRO and pharma company roles for weeks or months. Nothing. You feel invisible.
+          </p>
+          <p>
+            This happens to thousands of pharma candidates every year. It almost never means you are unqualified. It almost always means your profile is not positioned correctly for the pharma hiring process.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Wrong keywords on your resume</strong> — pharma ATS systems filter by terms like SDTM, ADaM, GAMP 5, eCTD, Argus Safety, ISO 13485. If they are not on your resume with the right context, you are filtered out before a human ever sees you.</li>
+            <li><strong>LinkedIn profile not optimised</strong> — 80% of pharma recruiters search LinkedIn before they search job boards. If your headline says "SAS Professional" instead of "Clinical SAS Programmer | SDTM | ADaM | CDISC | CRO Experience," you are invisible to pharma searches.</li>
+            <li><strong>Wrong roles for your profile level</strong> — applying to Senior Regulatory Affairs Specialist roles with a diploma and no regulatory experience will always fail. Targeting entry-level CRO roles in the right pharma domain with the right positioning works.</li>
+            <li><strong>Not approaching the right pharma recruiters</strong> — generic job portals have low conversion rates for pharma roles. Specialist pharma recruiters (Phaidon, Delphi, Real Staffing, SRG) and direct applications work better. We know which specialist firms are active in which domains and geographies.</li>
+          </ul>
+          <p>
+            Our <a href="/pharma-profile-engineering/">Pharma Profile Engineering</a> service identifies exactly why pharma recruiters are not calling you and fixes it. WhatsApp us now at <strong>{site.whatsapp}</strong>.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What Pharma Profile Engineering Fixes</h2>
+          <ul class="feature-list">
+            <li>Resume rewrite with the exact pharma domain keywords your target roles require</li>
+            <li>LinkedIn headline and summary optimised for pharma recruiter search algorithms</li>
+            <li>Skills section built around the specific tools and regulations of your pharma domain (SAS, SDTM, GAMP 5, Veeva, Argus, ISO 13485)</li>
+            <li>Role targeting strategy — which specific pharma job titles to apply to, which companies, which geographies</li>
+            <li>Pharma recruiter outreach templates — cold messages that get responses from specialist pharma headhunters</li>
+            <li>Application volume and timing strategy</li>
+          </ul>
+          <p>
+            Once you get the interview call, our <a href="/pharma-proxy-interview/">Pharma Proxy Interview Support</a> ensures you are ready for the technical round.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Which Pharma Candidates We Help Get Interview Calls</h2>
+          <ul class="feature-list">
+            <li>SAS certification holders (SAS 9.4, SAS Viya) not getting clinical SAS programmer calls</li>
+            <li>CSV / computer system validation certified professionals not getting validation engineer calls</li>
+            <li>Clinical research diploma / postgrad certificate holders not getting CRO calls</li>
+            <li>Pharmacovigilance diploma graduates not getting drug safety associate calls</li>
+            <li>Regulatory affairs graduates not getting RA specialist calls</li>
+            <li>IT professionals trying to switch into clinical SAS, CSV validation, or pharma BA roles</li>
+            <li>Science graduates (pharmacy, chemistry, biology) targeting pharma QA or QC roles</li>
+            <li>Experienced pharma professionals returning after a gap or relocating internationally</li>
+          </ul>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Interview Calls — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Not Getting Pharma Interview Calls?"
+          body="We review your pharma profile, fix your resume positioning, optimise your LinkedIn, and give you a targeting strategy that starts generating recruiter responses within 2-4 weeks."
+          ctaLabel="Get Pharma Profile Engineering — Get Interview Scheduled"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Learn about pharma proxy interview support"
+          secondaryHref="/pharma-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

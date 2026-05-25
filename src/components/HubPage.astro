@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+
+interface Props {
+  title: string;
+  metaTitle: string;
+  metaDesc: string;
+  h1: string;
+  intro: string;
+  breadcrumbs?: { label: string; href?: string }[];
+  faqs?: { q: string; a: string }[];
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title,
+  metaTitle,
+  metaDesc,
+  h1,
+  intro,
+  breadcrumbs = [],
+  faqs = [],
+  schema,
+} = Astro.props;
+---
+
+<BaseLayout title={metaTitle} description={metaDesc} schema={schema}>
+  <div class="hub-container">
+    {breadcrumbs.length > 0 && <Breadcrumbs crumbs={breadcrumbs} />}
+
+    <header class="hub-hero">
+      <h1 class="hub-h1">{h1}</h1>
+      <p class="hub-intro">{intro}</p>
+      <div class="hub-actions">
+        <a
+          href={site.whatsappUrl}
+          class="btn-wa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get Expert Support Now
+        </a>
+        <a href="/contact/" class="btn-outline">Contact Us</a>
+      </div>
+    </header>
+
+    <!-- Main slot for dynamic content -->
+    <div class="hub-body">
+      <slot />
+    </div>
+
+    {faqs.length > 0 && (
+      <div class="hub-faqs">
+        <FAQ faqs={faqs} />
+      </div>
+    )}
+  </div>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .hub-container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-10);
+  }
+  .hub-hero {
+    padding: var(--space-10) 0 var(--space-8);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-10);
+  }
+  .hub-h1 {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--color-text);
+    margin-bottom: var(--space-5);
+  }
+  .hub-intro {
+    font-size: 1.125rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+    max-width: 52rem;
+    margin-bottom: var(--space-7);
+  }
+  .hub-actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25D366;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+  .btn-wa:hover { filter: brightness(1.1); }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    border: 2px solid var(--color-border);
+    color: var(--color-text);
+  }
+  .btn-outline:hover { border-color: var(--color-primary); color: var(--color-primary); }
+  .hub-body { margin-bottom: var(--space-12); }
+  .hub-faqs { margin-top: var(--space-4); }
+</style>

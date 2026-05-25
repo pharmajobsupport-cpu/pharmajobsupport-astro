@@ -1,0 +1,66 @@
+---
+interface Props {
+  domain: string;
+  keywords?: string[];
+}
+
+const { domain, keywords = [] } = Astro.props;
+
+const defaultKeywords = [
+  `${domain} proxy job support`,
+  `${domain} job support`,
+  `${domain} online job support`,
+  `${domain} real-time support`,
+  `${domain} interview support`,
+  `${domain} proxy interview support`,
+];
+
+const allKeywords = keywords.length ? keywords : defaultKeywords;
+---
+
+<section class="proxy-keywords" aria-label="Related search terms">
+  <h2 class="proxy-keywords-heading">Expert {domain} Proxy Job Support</h2>
+  <p class="proxy-keywords-body">
+    Our {domain} proxy job support covers every scenario — from daily task guidance to complex deliverable support and real-time interview assistance. We match you with a certified {domain} specialist who understands FDA, EMA, and ICH regulatory requirements.
+  </p>
+  <div class="keyword-tags" aria-label="Related services">
+    {allKeywords.map((kw) => (
+      <span class="keyword-tag">{kw}</span>
+    ))}
+  </div>
+</section>
+
+<style>
+  .proxy-keywords {
+    padding: var(--space-10) var(--space-6);
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    margin: var(--space-10) 0;
+  }
+  .proxy-keywords-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+  }
+  .proxy-keywords-body {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-5);
+  }
+  .keyword-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .keyword-tag {
+    font-size: 0.8125rem;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 0.25rem 0.625rem;
+    border-radius: 2rem;
+  }
+</style>

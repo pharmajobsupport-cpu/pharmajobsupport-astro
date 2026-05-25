@@ -1,0 +1,64 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppSticky from '../components/WhatsAppSticky.astro';
+import MobileCTABar from '../components/MobileCTABar.astro';
+import SEOHead from '../components/SEOHead.astro';
+import StructuredData from '../components/StructuredData.astro';
+import { buildOrganizationSchema } from '../utils/schema';
+import type { SEOMeta } from '../utils/seo';
+import '../styles/global.css';
+
+interface Props extends Partial<SEOMeta> {
+  title: string;
+  description: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  noindex?: boolean;
+}
+
+const { title, description, schema, noindex, ...rest } = Astro.props;
+const orgSchema = buildOrganizationSchema();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEOHead
+      title={title}
+      description={description}
+      robots={noindex ? 'noindex, nofollow' : undefined}
+      {...rest}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <StructuredData schema={orgSchema} />
+    {schema && <StructuredData schema={schema} />}
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <Header />
+    <main id="main-content" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <WhatsAppSticky />
+    <MobileCTABar />
+  </body>
+</html>
+
+<style is:global>
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    z-index: 9999;
+  }
+  .skip-link:focus { top: 0; }
+  main#main-content { padding-top: calc(var(--strip-h, 40px) + var(--nav-h, 68px)); }
+  @media(max-width:960px) { main#main-content { padding-top: var(--nav-h, 68px); } }
+</style>

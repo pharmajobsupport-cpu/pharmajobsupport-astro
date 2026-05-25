@@ -1,0 +1,95 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is Veeva Vault proxy job support?', answer: 'Veeva Vault proxy job support is real-time live guidance from a Veeva Vault specialist who helps you complete your actual Vault configuration, administration, and validation work. When you are stuck on a lifecycle configuration, a workflow setup, a Vault RIM submission profile, a PromoMats review cycle, or a Vault QualityDocs controlled document issue — a Veeva Vault expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the Vault deliverable you need to complete right now.' },
+  { question: 'What Veeva Vault tasks do you provide proxy support for?', answer: 'All Veeva Vault tasks across all Vault applications: Vault Clinical (eTMF structure, TMF Reference Model mapping, study site document management), Vault RIM (submission profile configuration, eCTD viewer, dossier publishing), Vault QualityDocs (SOP lifecycle, periodic review workflow, controlled document management, GMP document control), Vault QMS (CAPA configuration, deviation workflow, change control process), Vault PromoMats (medical-legal-regulatory review cycle, claims management, DAM), Vault Safety (ICSR intake, Vault Safety gateway), Vault configuration (object metadata, lifecycle states, workflow steps, user role setup, Vault Loader, Vault Java SDK), and Vault CSV validation (IQ/OQ/PQ protocols for Vault implementations).' },
+  { question: 'How does Veeva Vault lifecycle configuration work?', answer: 'Vault lifecycle controls the states a document or object record passes through and who can perform what actions at each state. Structure: Lifecycle (container) → States → Actions → Roles → Entry criteria. Key configuration elements: States are the stages a document moves through (Draft → In Review → Approved → Superseded → Obsolete). Transitions define which states a document can move between and under what conditions. Entry criteria can require specific field values or security profile conditions before a transition is allowed. User actions (e.g., "Start Review") trigger state transitions. Workflow steps (configurable via Workflow Configuration) can be attached to transitions to route tasks to specific users or groups. Atomic security controls which user roles can view, edit, or reclassify documents in each state. We help you troubleshoot lifecycle configuration errors, design new lifecycles, and configure workflow routing logic.' },
+  { question: 'How does the Vault RIM submission profile work for eCTD submissions?', answer: 'Vault RIM (Regulatory Information Management) manages regulatory submissions from the dossier structure through to eCTD publishing. Key components: Submission Profile — defines the regulatory submission (product, application type, sequence, region, agency). Document Bindings — map Vault documents to eCTD leaf nodes in the TOC structure. Publishing — Vault generates the eCTD XML backbone and sequences documents per the CTD hierarchy. Validation: Vault runs built-in Lorenz validation rules against your submission package. STF (Standardised Transfer Format) — for EU submissions, Vault supports direct dossier management. Common issues: document binding errors (document not found in expected Vault location), leaf operation conflicts (replacing a document that was previously deleted in the sequence), Module 1 regional document mismatches, and STF structure errors. We help you diagnose binding errors, configure publishing profiles, and resolve gateway validation failures.' },
+  { question: 'What is Vault QualityDocs and how is it used for GMP document control?', answer: 'Vault QualityDocs is the Veeva Vault application for GMP-regulated document control — SOPs, work instructions, batch records, validation protocols, and all other controlled documents in a pharmaceutical quality management system. Key functionality: controlled document lifecycle (Draft → Under Review → Approved → Effective → Superseded), electronic signatures that meet 21 CFR Part 11 and EU Annex 11, periodic review scheduling, training assignment on document approval, document hierarchy (policy → SOP → work instruction), cross-referencing and impact assessment for related documents, and audit trail for all document actions. Common configuration tasks we support: creating document types and subtypes, configuring periodic review workflows, setting up training assignment automation on effective date, configuring multi-level approval workflows (author → reviewer → approver → QA), and linking Vault QualityDocs to Vault QMS for CAPA-driven document updates.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Veeva Vault Proxy Job Support Guide', url: site.url + '/veeva-vault-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Veeva Vault Proxy Job Support Guide — Vault Clinical, RIM, QualityDocs, QMS',
+    'Complete guide to Veeva Vault proxy job support — lifecycle configuration, Vault RIM submission profiles, QualityDocs GMP document control, QMS CAPA workflows, PromoMats.',
+    site.url + '/veeva-vault-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Veeva Vault Proxy Job Support Guide | Vault Clinical, RIM, QualityDocs, QMS"
+  description="Complete guide to Veeva Vault proxy job support — lifecycle configuration, Vault RIM eCTD submissions, QualityDocs GMP document control, QMS CAPA, PromoMats. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Veeva Vault Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Veeva Vault Guide</div>
+      <h1>Veeva Vault Proxy Job Support Guide — Vault Clinical, RIM, QualityDocs & QMS</h1>
+      <p class="hero-tagline">Everything you need to know about real-time Veeva Vault proxy job support — lifecycle configuration, Vault RIM submission profiles, QualityDocs GMP document control, QMS CAPA workflows, and what Vault tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Veeva Vault Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>Lifecycle configuration</strong> — state transitions not triggering, entry criteria blocking actions, role-based security not applying correctly</li>
+            <li><strong>Workflow routing</strong> — task assignment not routing to correct users, parallel vs. sequential review steps, approval escalation</li>
+            <li><strong>Vault RIM publishing</strong> — document binding errors, eCTD leaf operation conflicts, gateway validation failures, STF structure errors</li>
+            <li><strong>Vault QualityDocs</strong> — periodic review automation, training assignment on approval, multi-level approval workflow configuration</li>
+            <li><strong>Vault QMS</strong> — CAPA workflow routing, deviation classification configuration, change control impact assessment steps</li>
+            <li><strong>Vault Loader / SDK</strong> — bulk import failures, metadata field mapping errors, cross-object relationship loading</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Veeva Vault Applications — What We Cover</h2>
+          <ul class="feature-list">
+            <li><strong>Vault Clinical</strong> — eTMF structure per TMF Reference Model, study/site document management, investigator portal</li>
+            <li><strong>Vault RIM</strong> — submission profile, eCTD publishing, dossier management, regulatory tracking</li>
+            <li><strong>Vault QualityDocs</strong> — GMP/GxP controlled document lifecycle, periodic review, training matrix</li>
+            <li><strong>Vault QMS</strong> — CAPA, deviations, change control, complaints, audits</li>
+            <li><strong>Vault PromoMats</strong> — MLR review cycle, claims library, digital asset management</li>
+            <li><strong>Vault Safety</strong> — ICSR intake, safety gateway, signal management</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Veeva Vault Proxy Job Support Now</h2>
+          <p>Stuck on a Vault configuration, a submission profile error, or a workflow routing issue? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your Vault application and the specific problem, and we match you with a Vault specialist within hours.</p>
+          <p>Also see: <a href="/veeva-vault-proxy-job-support/">Veeva Vault Proxy Job Support</a> | <a href="/veeva-vault-proxy-interview/">Veeva Vault Proxy Interview Support</a> | <a href="/stuck-in-veeva-vault-project/">Stuck in Veeva Vault Project?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Veeva Vault Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in a Vault Task Right Now?"
+          body="Lifecycle configuration, Vault RIM submissions, QualityDocs workflows, QMS CAPA routing — real-time guidance from a Veeva Vault specialist. Same-day help available."
+          ctaLabel="Get Veeva Vault Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Veeva Vault proxy interview support"
+          secondaryHref="/veeva-vault-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

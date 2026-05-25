@@ -1,0 +1,105 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is clinical SAS proxy job support?', answer: 'Clinical SAS proxy job support is real-time live guidance from a statistical programmer or clinical SAS expert who helps you complete your actual work tasks. When you are stuck on SDTM domain mapping, an ADaM derivation error, a Pinnacle 21 validation failure, or a TLF output issue — a clinical SAS expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the real problem you have right now.' },
+  { question: 'What clinical SAS tasks do you provide proxy support for?', answer: 'All clinical SAS and statistical programming tasks: SDTM domain mapping (AE, CM, EX, LB, VS, MH, DM, and all supplemental qualifier domains), ADaM dataset derivation (ADSL, ADAE with TRTEMFL, ADLB PARAM structure, ADTTE event derivation), TLF production (PROC REPORT, PROC TABULATE, ODS RTF/PDF), define.xml 2.0/2.1 creation and Pinnacle 21 validation, ISO 8601 date handling in SDTM, SAS macro development and debugging, CDISC submission package review, and FDA/EMA submission technical conformance.' },
+  { question: 'How does clinical SAS proxy job support work?', answer: 'You message us on WhatsApp at +91-9660834611 with your specific task — the SDTM domain you are mapping, the ADaM derivation that is not working, the Pinnacle 21 error code you cannot resolve. We match you with a clinical SAS programmer who has done this exact type of work. You work through the solution together via WhatsApp, call, or screen share. Most sessions happen same-day. No appointment. No waiting room.' },
+  { question: 'Do you help with CDISC compliance for FDA submissions?', answer: 'Yes. FDA requires CDISC-compliant SDTM and ADaM datasets for all NDA, BLA, and IND submissions as of May 2017 (Study Data Technical Conformance Guide). We help you ensure your SDTM datasets comply with the SDTMIG, your ADaM datasets comply with the ADaMIG, your define.xml 2.1 is complete and validates against the CDISC schema, and your submission package passes the FDA Technical Rejection Criteria. We also help with Pinnacle 21 Enterprise issues, FDA reviewer feedback, and data-related Complete Response Letter (CRL) queries.' },
+  { question: 'Is clinical SAS proxy job support confidential?', answer: 'Yes, completely. We do not contact your employer or client. Our sessions are between you and the clinical SAS expert. The task you are stuck on, the deliverable you need to complete, and the study you are working on remain confidential.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Clinical SAS Proxy Job Support Guide', url: site.url + '/clinical-sas-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Clinical SAS Proxy Job Support Guide — SDTM, ADaM, TLF, CDISC',
+    'Complete guide to clinical SAS proxy job support — what it covers, how it works, and when to use real-time live support for SDTM mapping, ADaM derivation, Pinnacle 21, and TLF production.',
+    site.url + '/clinical-sas-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Clinical SAS Proxy Job Support Guide | SDTM, ADaM, TLF, CDISC"
+  description="Complete guide to clinical SAS proxy job support — SDTM mapping, ADaM derivation, Pinnacle 21 validation, TLF production, define.xml, CDISC submissions. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Clinical SAS Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Clinical SAS Guide</div>
+      <h1>Clinical SAS Proxy Job Support Guide — SDTM, ADaM, TLF & CDISC</h1>
+      <p class="hero-tagline">Everything you need to know about real-time clinical SAS proxy job support — what it covers, when to use it, how it works, and what clinical SAS tasks our programmers help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Clinical SAS Programmers Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>SDTM domain mapping</strong> — AE, CM, EX, LB, VS, MH, DM and supplemental qualifier domains (SUPPAE, SUPPCM, etc.)</li>
+            <li><strong>ADaM derivation errors</strong> — TRTEMFL logic, ADSL derivations (TRTSDT, TRTEDT, EOTSTT), ADLB PARAM/PARAMCD mismatch, ADTTE event flag</li>
+            <li><strong>Pinnacle 21 validation failures</strong> — define.xml errors, codelist mismatches, missing SUPPXX linkage, controlled terminology violations</li>
+            <li><strong>TLF output formatting</strong> — PROC REPORT column width, spanning headers, page break control, ODS RTF vs. PDF, indentation, conditional formatting</li>
+            <li><strong>ISO 8601 date handling</strong> — partial date imputation rules, AESTDTC formatting, DTC to DT numeric conversion</li>
+            <li><strong>define.xml 2.0/2.1</strong> — structure differences, codelist references, origin and method documentation, WHERE clause definitions</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>SDTM Domain Mapping — What We Cover</h2>
+          <p>SDTM mapping requires understanding the CDISC SDTMIG, the annotated CRF, and how to transform raw CRF data into standardised submission domains. We help with mapping for all SDTM domains:</p>
+          <ul class="feature-list">
+            <li>Events domains: AE (Adverse Events), CM (Concomitant Medications), DV (Protocol Deviations), MH (Medical History), DS (Disposition)</li>
+            <li>Findings domains: LB (Lab Results), VS (Vital Signs), EG (ECG), QS (Questionnaires), PE (Physical Examination)</li>
+            <li>Interventions: EX (Exposure), EC (Exposure as Collected), AG (Procedure Agents)</li>
+            <li>Special purpose: DM (Demographics), CO (Comments), TV (Trial Visits), TS (Trial Summary)</li>
+            <li>Supplemental qualifiers: SUPPAE, SUPPCM, SUPPLB, and all domain-specific SUPPXX datasets</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>ADaM Dataset Derivation — What We Cover</h2>
+          <ul class="feature-list">
+            <li>ADSL (Subject-Level Analysis Dataset) — all subject-level variable derivations (TRTPN, TRTSDT, TRTEDT, RANDFL, SAFFL, PPROTFL)</li>
+            <li>ADAE (Adverse Events Analysis Dataset) — TRTEMFL derivation, ANL01FL, severity flags, serious flags</li>
+            <li>ADLB (Laboratory Analysis Dataset) — PARAM/PARAMCD/PARAMN structure, DTYPE, reference range flags (ANRHI, ANRLO, BNRIND)</li>
+            <li>ADTTE (Time-to-Event Analysis Dataset) — EVNTDESC, CNSDTDESC, STARTDT, ADT, CNSR, AVAL derivation</li>
+            <li>ADEFF (Efficacy Analysis Dataset) — response categories, AVALC, AVAL derivations</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Clinical SAS Proxy Job Support Now</h2>
+          <p>Whatever clinical SAS task you are stuck on — message us immediately on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your task and we match you with a clinical SAS programmer within hours.</p>
+          <p>Also see: <a href="/clinical-sas-proxy-job-support/">Clinical SAS Proxy Job Support</a> | <a href="/clinical-sas-proxy-interview/">Clinical SAS Proxy Interview Support</a> | <a href="/stuck-in-clinical-sas-project/">Stuck in Clinical SAS Project?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Clinical SAS Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in Clinical SAS Right Now?"
+          body="SDTM mapping, ADaM derivation, Pinnacle 21 errors, TLF production — real-time guidance from a clinical SAS programmer with FDA/EMA submission experience. Same-day help."
+          ctaLabel="Get Clinical SAS Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Clinical SAS proxy interview support"
+          secondaryHref="/clinical-sas-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

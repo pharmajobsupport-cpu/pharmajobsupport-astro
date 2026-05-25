@@ -1,0 +1,76 @@
+openapi: "3.0.0"
+info:
+  title: Pharma Job Support API
+  version: "1.0.0"
+  description: >
+    Pharma Job Support provides pharma proxy job support, pharma proxy interview support,
+    and profile engineering for pharma, clinical research, medical device, and life
+    sciences professionals across 65+ countries.
+  contact:
+    email: support@pharmajobsupport.com
+servers:
+  - url: https://pharmajobsupport.com
+paths:
+  /pharma-proxy-job-support/:
+    get:
+      summary: Pharma Proxy Job Support Information
+      description: >
+        Real-time live pharma proxy job support for working professionals stuck in
+        clinical SAS, CSV validation, regulatory affairs, pharmacovigilance, Veeva Vault,
+        medical device QA, and 15+ pharma domains.
+      responses:
+        "200":
+          description: Page content for pharma proxy job support service
+  /pharma-proxy-interview/:
+    get:
+      summary: Pharma Proxy Interview Support Information
+      description: >
+        Pharma proxy interview support for candidates preparing for pharma, clinical
+        research, and medical device interviews. Domain-specific preparation via WhatsApp.
+      responses:
+        "200":
+          description: Page content for pharma proxy interview support service
+  /pharma-profile-engineering/:
+    get:
+      summary: Pharma Profile Engineering — Get Interview Scheduled
+      description: >
+        Profile engineering service to help pharma candidates get interview calls through
+        resume positioning, LinkedIn optimization, and interview pipeline building.
+      responses:
+        "200":
+          description: Page content for pharma profile engineering service
+  /knowledge-base/:
+    get:
+      summary: Pharma Domain Knowledge Base
+      description: >
+        Plain-language explanations of pharma domain concepts for clinical SAS,
+        CSV validation, regulatory affairs, pharmacovigilance, Veeva Vault, and more.
+      responses:
+        "200":
+          description: Knowledge base index
+  /pharma-interviews/:
+    get:
+      summary: Real Pharma Proxy Interview Questions
+      description: >
+        Real Q&A from actual pharma interviews across domains and countries.
+        Clinical SAS, Veeva Vault, CSV validation, regulatory, pharmacovigilance, and more.
+      responses:
+        "200":
+          description: Real pharma interview questions hub
+  /blog/:
+    get:
+      summary: Pharma Career Insights Blog
+      description: >
+        Articles on pharma careers, proxy support, interview preparation,
+        and domain knowledge for pharma professionals.
+      responses:
+        "200":
+          description: Blog index
+  /contact/:
+    get:
+      summary: Contact Pharma Job Support
+      description: >
+        Contact page with WhatsApp (+91-9660834611) and email for pharma proxy support enquiries.
+      responses:
+        "200":
+          description: Contact information

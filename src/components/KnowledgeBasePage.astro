@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FAQ from '../components/FAQ.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { site } from '../data/site';
+import type { KBEntry } from '../data/knowledgeBase-index';
+import { allKB } from '../data/knowledgeBase-index';
+import { buildFAQSchema, buildBreadcrumbSchema, buildArticleSchema } from '../utils/schema';
+
+interface Props {
+  entry: KBEntry;
+}
+
+const { entry } = Astro.props;
+
+const relatedEntries = entry.relatedSlugs
+  .map((slug) => allKB.find((k) => k.slug === slug))
+  .filter(Boolean) as KBEntry[];
+
+const schemas = [
+  buildArticleSchema(entry.title, entry.intro, site.url + '/' + entry.slug + '/'),
+  buildFAQSchema(entry.faqs.map(f => ({ question: f.q, answer: f.a }))),
+  buildBreadcrumbSchema([
+    { name: 'Home', url: site.url + '/' },
+    { name: 'Knowledge Base', url: site.url + '/knowledge-base/' },
+    { name: entry.title, url: site.url + '/' + entry.slug + '/' },
+  ]),
+];
+---
+
+<BaseLayout
+  title={entry.metaTitle}
+  description={entry.metaDesc}
+  schema={schemas}
+>
+  <div class="kb-page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Knowledge Base', href: '/knowledge-base/' },
+      { label: entry.category, href: '/knowledge-base/' },
+      { label: entry.title },
+    ]} />
+
+    <div class="kb-layout">
+      <article class="kb-article">
+        <header class="kb-article-header">
+          <p class="kb-category-label">{entry.category}</p>
+          <h1 class="kb-h1">{entry.h1}</h1>
+          <p class="kb-intro">{entry.intro}</p>
+        </header>
+
+        <!-- Main sections -->
+        {entry.sections.map((section) => (
+          <section class="kb-section">
+            <h2>{section.heading}</h2>
+            <p>{section.body}</p>
+          </section>
+        ))}
+
+        <!-- Key terms glossary -->
+        {entry.keyTerms.length > 0 && (
+          <section class="kb-glossary" aria-labelledby="glossary-heading">
+            <h2 id="glossary-heading">Key Terms</h2>
+            <dl class="glossary-list">
+              {entry.keyTerms.map((kt) => (
+                <div class="glossary-item">
+                  <dt class="glossary-term">{kt.term}</dt>
+                  <dd class="glossary-def">{kt.definition}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
+
+        <!-- FAQs -->
+        <FAQ faqs={entry.faqs} />
+
+        <!-- Proxy support CTA within article -->
+        <div class="kb-support-cta">
+          <h3>Need Expert Help With {entry.category}?</h3>
+          <p>Our domain specialists provide real-time proxy job support for professionals in {entry.category} roles. Get immediate guidance via WhatsApp.</p>
+          <a
+            href={site.whatsappUrl}
+            class="kb-wa-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get {entry.category} Support
+          </a>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="kb-sidebar">
+        {relatedEntries.length > 0 && (
+          <div class="kb-related">
+            <h3 class="kb-related-heading">Related Guides</h3>
+            <ul role="list">
+              {relatedEntries.map((r) => (
+                <li>
+                  <a href={`/${r.slug}/`} class="kb-related-link">
+                    <span class="kb-related-cat">{r.category}</span>
+                    {r.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div class="kb-sidebar-cta">
+          <h3>Pharma Job Support</h3>
+          <p>Struggling with {entry.category} tasks at work? Our experts can help in real time.</p>
+          <a href={site.whatsappUrl} class="sidebar-wa-btn" target="_blank" rel="noopener noreferrer">
+            WhatsApp: {site.whatsapp}
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <CTABanner variant="surface" heading={`Expert ${entry.category} Proxy Job Support`} />
+</BaseLayout>
+
+<style>
+  .kb-page-container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-10);
+  }
+  .kb-layout {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: var(--space-12);
+    align-items: start;
+    margin-top: var(--space-6);
+  }
+  .kb-article-header {
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-8);
+  }
+  .kb-category-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-3);
+  }
+  .kb-h1 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+  }
+  .kb-intro {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+  }
+  .kb-section {
+    margin-bottom: var(--space-10);
+  }
+  .kb-section h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 2px solid var(--color-primary-light);
+  }
+  .kb-section p { font-size: 0.9375rem; color: var(--color-muted); line-height: 1.75; }
+
+  .kb-glossary { margin-bottom: var(--space-10); }
+  .kb-glossary h2 { font-size: 1.25rem; font-weight: 700; color: var(--color-text); margin-bottom: var(--space-5); }
+  .glossary-list { display: flex; flex-direction: column; gap: var(--space-4); }
+  .glossary-item { padding: var(--space-4); background: var(--color-surface); border-radius: var(--radius-sm); border-left: 3px solid var(--color-accent); }
+  .glossary-term { font-weight: 700; color: var(--color-text); font-size: 0.9375rem; margin-bottom: var(--space-1); }
+  .glossary-def { color: var(--color-muted); font-size: 0.875rem; line-height: 1.6; }
+
+  .kb-support-cta {
+    background: var(--color-primary-light);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius);
+    padding: var(--space-6);
+    margin-top: var(--space-10);
+  }
+  .kb-support-cta h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: var(--space-2); }
+  .kb-support-cta p { font-size: 0.875rem; color: var(--color-muted); margin-bottom: var(--space-4); line-height: 1.6; }
+  .kb-wa-btn {
+    display: inline-block;
+    background: #25D366;
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+
+  .kb-sidebar { position: sticky; top: 5rem; }
+  .kb-related {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+    margin-bottom: var(--space-5);
+  }
+  .kb-related-heading { font-size: 0.875rem; font-weight: 700; margin-bottom: var(--space-4); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); }
+  .kb-related ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  .kb-related-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+  }
+  .kb-related-link:hover { background: var(--color-bg); color: var(--color-primary); }
+  .kb-related-cat { font-size: 0.7rem; color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .kb-sidebar-cta {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+  }
+  .kb-sidebar-cta h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-2); }
+  .kb-sidebar-cta p { font-size: 0.8125rem; color: var(--color-muted); margin-bottom: var(--space-4); line-height: 1.6; }
+  .sidebar-wa-btn {
+    display: block;
+    background: #25D366;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .kb-layout { grid-template-columns: 1fr; }
+    .kb-sidebar { position: static; }
+  }
+</style>

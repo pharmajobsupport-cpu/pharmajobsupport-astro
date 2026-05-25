@@ -1,0 +1,79 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I have a pharma project standup in 2 hours and I don\'t know what to report. Can you help?', answer: 'Yes — urgent, same-hour support is available. Tell us your pharma domain, what you have been working on, what your blockers are, and what the team context is. We help you structure your standup update clearly: what you completed since the last standup, what you are working on today, and any blockers that need team or manager attention. We also help you frame blockers in professional pharma language that does not alarm your manager unnecessarily.' },
+  { question: 'What is the right format for a pharma project standup update?', answer: 'Standard standup format (Yesterday / Today / Blockers): Yesterday — summarise what you completed. Be specific about the pharma deliverable: "Completed SDTM AE domain mapping for Study XYZ", not "worked on SAS". Today — what you will work on today. "Writing OQ test scripts for the LIMS validation" is better than "more validation work". Blockers — anything preventing you from completing today\'s task. Be specific: "Waiting for data dictionary approval from client" or "Need access to Argus Safety to continue case processing". In a pharma/CRO environment, blockers often have regulatory implications — state them clearly rather than trying to resolve them alone.' },
+  { question: 'My pharma manager asks me to report progress on tasks I haven\'t started yet. How do I handle this?', answer: 'This is a common pharma project situation — you have been assigned tasks but have not been able to start them due to dependencies, access issues, or workload. In your standup: be honest but professional. "I have been unable to start the [task] yet because [specific reason — system access pending, dependency from CDM team not delivered, waiting on protocol amendment]. I need [specific action] by [date] to proceed." Never fabricate progress. In regulated environments, dishonesty about task progress has serious consequences. We help you frame the situation accurately and escalate the right way.' },
+  { question: 'I have to present my work in a sprint review to the pharma client. How do I prepare?', answer: 'Sprint reviews in pharma Agile environments require presenting completed user stories with evidence. We help you prepare: understand what "done" looks like for your pharma deliverable (validation test scripts with results, SDTM datasets passing Pinnacle 21, a working Veeva Vault workflow), structure your demo or presentation logically, anticipate questions from stakeholders and business owners, and handle the "why is this not done?" question for incomplete stories professionally.' },
+  { question: 'Can you help me prepare for a pharma project status meeting with my manager every week?', answer: 'Yes. Weekly status meetings require you to report on multiple workstreams, flag risks early, and show both what is complete and what is at risk. We help you: build a status update format that works for your pharma role, frame risks and issues at the right level of urgency, prepare for questions about specific deliverable quality or timeline, and develop the communication habits that make you appear confident and in control of your pharma workload — even when some tasks are behind.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Standup Meeting Support', url: site.url + '/pharma-standup-meeting-support/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Pharma Standup Meeting Support | Real-Time Help Before Your Pharma Standup"
+  description="Pharma standup in 2 hours and not prepared? Real-time support for daily standups, sprint reviews, and weekly status meetings in pharma projects. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Standup Meeting Support' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Standup Support</div>
+      <h1>Pharma Standup in 2 Hours? Get Real-Time Preparation Support Right Now.</h1>
+      <p class="hero-tagline">You have not completed what you said you would. You have a blocker you cannot explain clearly. You are being asked for progress on a pharma task you are still figuring out. We help you structure your standup update, frame your blockers professionally, and prepare for your manager's questions — right now, via WhatsApp.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Why Pharma Standups Are Different</h2>
+          <p>In a regulated pharma environment — whether it is a clinical data management project, a CSV validation workstream, a regulatory submission programme, or a GMP manufacturing quality team — standups and status meetings have different stakes. Your updates feed into project timelines, client reporting, and regulatory milestones. Vague updates create confusion. Undisclosed blockers become escalations. We help you communicate clearly and professionally.</p>
+        </section>
+        <section class="content-section">
+          <h2>What We Help With Before Your Standup</h2>
+          <ul class="feature-list">
+            <li>Structuring your Yesterday / Today / Blockers update clearly and professionally</li>
+            <li>Framing pharma-specific technical blockers in language your manager understands</li>
+            <li>Preparing for "why is this not done?" questions without panic</li>
+            <li>Reporting partial task completion accurately in a regulated environment</li>
+            <li>Sprint review preparation — presenting pharma deliverables with evidence</li>
+            <li>Weekly status meeting preparation for multi-workstream pharma projects</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong> right now with your standup context.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/pharma-client-call-preparation/">Pharma Client Call Preparation</a> | <a href="/struggling-in-pharma-project/">Struggling in Your Pharma Project?</a> | <a href="/pharma-proxy-job-support/">Pharma Proxy Job Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Standup Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Pharma Standup in 2 Hours?"
+          body="Get real-time help structuring your standup update, framing your blockers, and preparing for your manager's questions. Same-hour support. Message us now."
+          ctaLabel="Get Pharma Standup Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma client call preparation"
+          secondaryHref="/pharma-client-call-preparation/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

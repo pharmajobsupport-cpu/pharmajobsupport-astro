@@ -1,0 +1,118 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What Argus Safety questions come up in pharmacovigilance interviews?', answer: 'Pharmacovigilance interviews consistently ask about Argus Safety case processing workflow — from case intake to submission. Key questions: "Walk me through the Argus case processing workflow from intake to expedited reporting", "How do you handle a MedWatch 3500A form for a 15-day expedited report?", "What is the difference between an initial report and a follow-up in Argus?", "How do you process a 7-day report in Argus for a fatal unexpected SAE?", "What is the workflow for a literature ICSR in Argus?" The depth of Argus-specific workflow questions depends on role level — coordinator vs. specialist vs. analyst.' },
+  { question: 'What ICSR and seriousness criteria questions are asked in PV interviews?', answer: 'Seriousness criteria are always tested: death, life-threatening, hospitalisation (initial or prolonged), disability/incapacity, congenital anomaly, medically significant event. Questions: "Give me an example of a case that is serious but not severe", "Is a hospitalisation for elective surgery an SAE?", "What is a medically significant event and how do you make that determination?", "When is an ICSR expedited vs. non-expedited?" For experienced roles, expect questions on ICH E2B(R3) format, E2B(R2) vs. R3 differences, and MedDRA coding conventions for adverse events (PT selection, primary SOC assignment).' },
+  { question: 'How is a pharmacovigilance interview different for a CRO vs. pharma company?', answer: 'CRO pharmacovigilance interviews focus more on processing speed, volume handling, regulatory timelines, and multi-client system management. They may ask about SLA management, quality metrics, and how you prioritise when managing high-volume case intake. Pharma company PV interviews go deeper on signal detection, aggregate reporting (DSUR, PBRER, PADER), risk management (EU RMP, FDA REMS), and cross-functional collaboration with medical affairs and regulatory. Both test Argus Safety or Oracle Argus workflow knowledge if it is in the job description.' },
+  { question: 'What signal detection questions are asked in senior PV roles?', answer: 'Senior pharmacovigilance interview questions on signal detection: "What is the difference between a signal, a risk, and a confirmed safety concern?", "How do you calculate a Proportional Reporting Ratio (PRR)?", "What databases do you use for signal detection (VigiBase, FAERS, EudraVigilance)?", "How do you conduct a case series review for a potential signal?", "What triggers a signal management meeting and what is the output?" These are executive/manager-level questions — entry-level roles focus on ICSR processing, not signal detection.' },
+  { question: 'How do I prepare for a pharmacovigilance proxy interview?', answer: 'Focus on: ICH E2A (definitions of serious, unexpected, related), ICH E2B(R3) ICSR reporting format, MedDRA coding (preferred term, SOC, HLT/HLGT), Argus Safety case processing workflow (or Oracle safety if mentioned in JD), 15-day and 7-day expedited reporting timelines, FAERS and EudraVigilance reporting obligations, WHO-DD drug dictionary basics. Our pharma proxy interview support gives you mock sessions with a PV specialist who has done both CRO and pharma company interviews. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Pharmacovigilance / Argus Safety — 2026', url: site.url + '/pharma-interviews/real-pharmacovigilance-argus-proxy-interview-questions-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Pharmacovigilance / Argus Safety Interview Questions — 2026',
+    'Real Q&A from pharmacovigilance/Argus Safety interviews in 2026. ICSR processing, seriousness criteria, MedDRA coding, ICH E2B, expedited reporting, signal detection.',
+    site.url + '/pharma-interviews/real-pharmacovigilance-argus-proxy-interview-questions-2026/',
+    '2026-01-25',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Pharmacovigilance Argus Safety Interview Questions 2026"
+  description="Real Q&A from pharmacovigilance/Argus Safety interviews in 2026. ICSR processing, MedDRA, ICH E2B, seriousness criteria, expedited reporting. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Pharmacovigilance / Argus Safety — 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | Pharmacovigilance | Argus Safety | 2026</div>
+      <h1>Real Pharmacovigilance / Argus Safety Proxy Interview Questions — 2026</h1>
+      <p class="hero-tagline">Actual questions from pharmacovigilance interviews at CROs and pharmaceutical companies in 2026. ICSR processing, Argus Safety workflow, MedDRA coding, seriousness criteria, ICH E2B(R3), expedited reporting timelines — what interviewers actually asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Compiled from pharmacovigilance interviews at two organisations in 2026: a mid-size CRO with global drug safety operations, and a Big Pharma company with EU QPPV office. Roles: PV Associate (CRO) and Drug Safety Specialist (Pharma). Both used Argus Safety. Questions represent the technical panel round (Round 2) of each interview.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Pharmacovigilance ICSR Interview Questions</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Walk me through the pharmacovigilance case processing workflow from intake to regulatory submission in Argus Safety.</h3>
+            <p><strong>What they wanted to hear:</strong> Case intake — source documents received (spontaneous reports, literature, clinical trial SAE reports, solicited reports). Case triage — determine seriousness (ICH E2A criteria), expectedness (per SmPC/IB labelling), relatedness (causality assessment). Create ICSR in Argus — patient data, suspect drug, adverse event (MedDRA coded to preferred term), narrative. If serious, unexpected, and at least possibly related to drug — expedited reporting assessment. For IND SAEs: 7-day report for fatal/life-threatening unexpected events, 15-day for all other serious unexpected. For post-marketing: 15-day expedited to FDA (MedWatch) and EMA (EudraVigilance). Non-expedited — included in periodic reports (PSUR/PBRER, PADER). Quality review — medical review, narrative check, MedDRA code validation. Submission — E2B XML for electronic submissions, paper for some authorities. Interviewer follow-up: "What happens if you discover a data quality issue after submission?" Answer: File a follow-up ICSR with corrected information. Document the error and correction in the case workflow. Notify QA if systemic.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: Give me a scenario: You receive a spontaneous report from a healthcare professional about a patient who was hospitalised after taking your drug. Is this an SAE and what is your timeline for reporting?</h3>
+            <p><strong>What they wanted to hear:</strong> Hospitalisation (initial or prolonged) is one of the six ICH E2A seriousness criteria — yes, this is an SAE. Clock starts from the day the company receives the report (Day 0 = Day 1 in FDA terminology). For post-marketing: if serious, unexpected (not in label), and at least possibly related — 15-day expedited report to FDA via MedWatch (FAERS) and 15-day to EMA via EudraVigilance E2B XML. If the event is fatal or life-threatening AND unexpected — 7-day alert report followed by the full 15-day report. If the event is expected (listed in SmPC) — non-expedited, included in next periodic report (PBRER). Interviewer then asked: "What if the healthcare professional cannot be re-contacted to confirm causality?" Answer: Apply the precautionary principle — if the reporter uses language suggesting a temporal or causal relationship, classify as at least possibly related. Document attempts to obtain follow-up. This is still a valid spontaneous ICSR even without confirmed causality from the reporter.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: What is the difference between a MedDRA Preferred Term and a System Organ Class? How do you select the primary SOC for an adverse event?</h3>
+            <p><strong>What they wanted to hear:</strong> MedDRA hierarchy: System Organ Class (SOC) → High Level Group Term (HLGT) → High Level Term (HLT) → Preferred Term (PT) → Lowest Level Term (LLT). A PT can appear in multiple SOCs (multi-axiality) — the "primary SOC" is designated by MedDRA based on the most clinically relevant classification. When coding an AE, you code to the PT that best represents the verbatim adverse event term. The LLT is what the reporter used, and it maps to the PT. Do NOT change the SOC — always use the MedDRA-designated primary SOC for the PT. Interviewer asked: "If a reporter says 'liver function tests abnormal' — what PT do you code this to?" Answer: "Hepatic function abnormal" or "Liver function test abnormal" (check current MedDRA version). The PT selection depends on whether the reporter means the LFT result itself is abnormal or whether there's a clinical finding. When in doubt, code to the more specific term and document the coding rationale.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: What is the difference between ICH E2B(R2) and E2B(R3) format? What changed?</h3>
+            <p><strong>What they wanted to hear:</strong> E2B(R2) is the older XML-based ICSR format used until EMA's E2B(R3) migration in 2024. E2B(R3) (ISO IDMP-aligned) introduces: structured product information using IDMP (Identification of Medicinal Products) ISO standards — product coding by substance, pharmaceutical product, and regulated product; richer sender/receiver identification; expanded case narrative structure; standardised reaction/event coding with additional fields. For FDA: E2B(R3) is now required for electronic ICSR submissions. For EMA: EudraVigilance migrated to E2B(R3) in January 2024. Key practical implication: Argus Safety version must support E2B(R3) output — a configuration and upgrade task that many companies underwent in 2023-2024. Interviewers at companies that went through E2B(R3) migration ask about the practical change management challenges.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your Pharmacovigilance Interview</h2>
+          <p>
+            PV interviews require deep knowledge of regulatory timelines, MedDRA coding logic, Argus Safety or alternative safety database workflows, and ICH guidelines (E2A, E2B, E2C). Signal detection knowledge is expected for senior roles.
+          </p>
+          <p>
+            Get domain-specific preparation from a pharmacovigilance specialist. Our <a href="/pharmacovigilance-proxy-interview/">Pharmacovigilance Proxy Interview Support</a> is available same-day. WhatsApp: <strong>{site.whatsapp}</strong>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharmacovigilance Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="PV Interview Coming Up?"
+          body="Get real-time pharmacovigilance interview preparation from a drug safety specialist who knows Argus Safety, MedDRA, ICH guidelines, and what PV interviewers actually ask. Same-day support."
+          ctaLabel="Get Pharmacovigilance Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

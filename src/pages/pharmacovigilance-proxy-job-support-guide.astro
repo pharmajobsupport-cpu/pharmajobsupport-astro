@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharmacovigilance proxy job support?', answer: 'Pharmacovigilance proxy job support is real-time live guidance from a PV specialist who helps you complete your actual PV work tasks. When you are stuck on an ICSR narrative, a MedDRA coding decision, an Argus Safety workflow step, an E2B(R3) submission failure, or a PSUR/PBRER section — a pharmacovigilance expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the PV deliverable you have due right now.' },
+  { question: 'What pharmacovigilance tasks do you provide proxy support for?', answer: 'All PV tasks: ICSR case processing (intake, triage, medical review, narratives, causality assessment), MedDRA coding (LLT to PT to HLT to HLGT to SOC hierarchy, coding conventions, drug-event combinations), Argus Safety workflows (case entry, acknowledgement, follow-up, data lock, submission), E2B(R3) XML generation and eGateway submission failures, PSUR/PBRER section writing, signal detection queries, SUSAR reporting and IND safety reports, EMA EVMPD/XEVMPD submissions, and PV system validation for Argus and Empirica Signal.' },
+  { question: 'How does MedDRA coding work in pharmacovigilance case processing?', answer: 'MedDRA (Medical Dictionary for Regulatory Activities) is the ICH-maintained terminology used to code adverse events and medical history in ICSRs. Hierarchy: LLT (Lowest Level Term) → PT (Preferred Term) → HLT (High Level Term) → HLGT (High Level Group Term) → SOC (System Organ Class). Coding rules: always code at LLT level, but report at PT level. Choose the most specific LLT that matches the reporter\'s verbatim term. Each PT belongs to a primary SOC (for aggregate reporting) and may have secondary SOC links. Current version is MedDRA 27.0 (March 2024). Common issues we help with: LLT not found for a verbatim term (use closest specific term or query medical reviewer), coding a combination symptom (code each component separately), coding lab values as adverse events (use the specific MedDRA term for the lab abnormality, not "abnormal lab value").' },
+  { question: 'What is the difference between an ICSR and a SUSAR?', answer: 'ICSR (Individual Case Safety Report): any report of a suspected adverse reaction to a medicinal product in a single patient, regardless of seriousness, expectedness, or whether the product is approved. All ICSRs with at least one serious, unexpected drug-related adverse event must be expedited to regulators (15 calendar days for FDA/EMA). SUSARs (Suspected Unexpected Serious Adverse Reactions): ICSRs from clinical trials where: (1) the reaction is serious, (2) the reaction is unexpected (not in the IB or SmPC), and (3) there is a reasonable causal relationship to the investigational medicinal product. SUSARs must be reported to FDA (7 days for fatal/life-threatening, 15 days for others) and EMA/national CAs per IMP Dossier requirements. We help you determine seriousness criteria (ICH E2A), expectedness assessment against the reference safety document, and causality assessment.' },
+  { question: 'How do I resolve E2B(R3) eGateway submission failures in Argus Safety?', answer: 'Common E2B(R3) eGateway submission failures and resolutions: ACK error code A.1.7.1 (missing or invalid message identifier) — verify ICSR message ID format is UUID-compliant in Argus configuration. ACK error B.1 (ICSR structure error) — validate your E2B(R3) XML against the ICH E2B(R3) implementation guide schema. ACK error C (transmission failure) — check the gateway endpoint configuration in Argus Safety Admin → E2B Configuration. FDA eGateway GATEWAY_AUTHENTICATION_FAILURE — re-submit your ESG digital certificate and verify PKI setup. EMA EudraVigilance EVWEB rejection — check the medicinal product XEVMPD entry is active and the substance matches the reporter country. We diagnose the specific error code you are seeing and walk you through the Argus configuration fix.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharmacovigilance Proxy Job Support Guide', url: site.url + '/pharmacovigilance-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharmacovigilance Proxy Job Support Guide — ICSR, MedDRA, Argus Safety, E2B(R3)',
+    'Complete guide to pharmacovigilance proxy job support — ICSR case processing, MedDRA coding, Argus Safety workflows, E2B(R3) submissions, PSUR/PBRER writing, SUSAR reporting.',
+    site.url + '/pharmacovigilance-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharmacovigilance Proxy Job Support Guide | ICSR, MedDRA, Argus Safety, E2B(R3)"
+  description="Complete guide to pharmacovigilance proxy job support — ICSR processing, MedDRA coding, Argus Safety, E2B(R3) eGateway, PSUR/PBRER, SUSAR reporting. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharmacovigilance Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharmacovigilance Guide</div>
+      <h1>Pharmacovigilance Proxy Job Support Guide — ICSR, MedDRA, Argus Safety & E2B(R3)</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharmacovigilance proxy job support — ICSR case processing, MedDRA coding decisions, Argus Safety workflow issues, E2B(R3) submission errors, and PSUR/PBRER writing support.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What PV Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>ICSR narrative writing</strong> — structuring the case narrative, capturing time course, clinical context, causality language</li>
+            <li><strong>MedDRA coding</strong> — LLT selection for non-standard verbatim terms, combo symptoms, lab abnormalities as AEs</li>
+            <li><strong>Argus Safety workflow</strong> — case lock, unblinding workflow, follow-up processing, duplicate management, submission routing</li>
+            <li><strong>E2B(R3) eGateway failures</strong> — ACK error codes, XML validation failures, FDA/EMA gateway rejections</li>
+            <li><strong>Seriousness/expectedness assessment</strong> — ICH E2A seriousness criteria, reference safety document comparison</li>
+            <li><strong>PSUR/PBRER section writing</strong> — cumulative summary tabulations, signal evaluation, benefit-risk conclusions</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>ICSR Case Processing Workflow</h2>
+          <ul class="feature-list">
+            <li><strong>Intake and triage</strong> — source identification (spontaneous, literature, clinical trial, solicited), validity criteria (identifiable reporter, identifiable patient, suspect drug, adverse event), minimum criteria check</li>
+            <li><strong>Data entry</strong> — patient demographics, drug information (indication, dose, route, dates), event information (verbatim, onset, outcome), reporter information</li>
+            <li><strong>Medical review</strong> — seriousness classification, expectedness assessment against SmPC/IB, causality assessment (WHO-UMC scale or Bradford-Hill), narrative generation</li>
+            <li><strong>MedDRA coding</strong> — event coding at LLT/PT, drug indication coding, medical history coding</li>
+            <li><strong>Submission routing</strong> — 7-day/15-day expedited reporting, periodic line listing, E2B(R3) generation, eGateway submission</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharmacovigilance Proxy Job Support Now</h2>
+          <p>Stuck on an ICSR, a MedDRA coding decision, or an Argus workflow issue? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us the specific task and we match you with a PV expert within hours.</p>
+          <p>Also see: <a href="/pharmacovigilance-proxy-job-support/">Pharmacovigilance Proxy Job Support</a> | <a href="/pharmacovigilance-proxy-interview/">Pharmacovigilance Proxy Interview Support</a> | <a href="/stuck-in-pharmacovigilance-case-processing/">Stuck in PV Case Processing?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharmacovigilance Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in a PV Task Right Now?"
+          body="ICSR narratives, MedDRA coding, Argus Safety workflow, E2B(R3) submission failures, PSUR writing — real-time guidance from a PV specialist with FDA/EMA experience. Same-day help."
+          ctaLabel="Get Pharmacovigilance Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharmacovigilance proxy interview support"
+          secondaryHref="/pharmacovigilance-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

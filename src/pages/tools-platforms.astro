@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema } from '../utils/schema';
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Tools & Platforms', url: site.url + '/tools-platforms/' },
+];
+
+const schema = buildBreadcrumbSchema(breadcrumbItems);
+
+const toolCategories = [
+  {
+    category: 'Clinical Data Management',
+    tools: [
+      { name: 'Medidata Rave', desc: 'Industry-leading EDC platform for clinical trial data collection. CDASH-compliant, Rave Architect configuration, edit check programming, RTSM integration, and database lock procedures.' },
+      { name: 'Oracle InForm', desc: 'Oracle\'s EDC platform for global clinical trials. Form design, rule configuration, discrepancy management, and InForm Architect. Used widely at large pharma sponsors.' },
+      { name: 'Veeva Vault EDC', desc: 'Veeva\'s cloud-native EDC. Integration with Vault eTMF and CTMS. Growing adoption in mid-size biotech and CRO environments.' },
+      { name: 'IBM Clinical Development', desc: 'Formerly OpenClinica / Cognizant platform. Data management and clinical operations workflows for global trials.' },
+    ],
+  },
+  {
+    category: 'Clinical SAS & Statistics',
+    tools: [
+      { name: 'SAS Base / SAS Advanced', desc: 'Core statistical programming language for pharmaceutical clinical data. PROC SQL, PROC TRANSPOSE, DATA step, macro facility, PROC REPORT, ODS output, and PROC MIXED.' },
+      { name: 'SAS Enterprise Guide', desc: 'GUI-based SAS for clinical programmers. Workflow creation, project management, and code generation with full underlying SAS access.' },
+      { name: 'Pinnacle 21', desc: 'CDISC conformance validator for SDTM and ADaM datasets. FDA submission validation, Define-XML generation, Issue Report review, and validation rule set management.' },
+      { name: 'R / RStudio', desc: 'Open-source statistical computing growing in pharma. Tidyverse, ggplot2, survival analysis, Shiny clinical dashboards, and pilot FDA submissions using R.' },
+    ],
+  },
+  {
+    category: 'Pharmacovigilance',
+    tools: [
+      { name: 'Argus Safety', desc: 'Oracle\'s global safety database for ICSR management. Case processing, MedDRA coding, report generation, EudraVigilance gateway integration, FDA E2B submission.' },
+      { name: 'Oracle AERS / FAERS', desc: 'FDA Adverse Event Reporting System and Oracle\'s historical AERS database. Used for signal detection and aggregate reporting research.' },
+      { name: 'Veeva Vault Safety', desc: 'Cloud-native safety platform with ICSR processing, aggregate reporting, and integrated regulatory submissions. Increasingly adopted at mid-size sponsors.' },
+      { name: 'ARISg', desc: 'ArisGlobal\'s drug safety platform for ICSR and aggregate report management. Signal detection, literature review workflow, and global submission capabilities.' },
+      { name: 'MedDRA', desc: 'Medical Dictionary for Regulatory Activities. Coding AEs, indications, and medical history. Hierarchy levels (SOC, HLGT, HLT, PT, LLT), MedDRA MSSO, and coding best practices.' },
+    ],
+  },
+  {
+    category: 'Computer System Validation',
+    tools: [
+      { name: 'HP ALM / Quality Center', desc: 'Micro Focus test management platform. Requirements traceability, test plan design, defect tracking, and validation lifecycle management for GxP systems.' },
+      { name: 'Kneat Gx', desc: 'Purpose-built pharmaceutical validation platform. Electronic validation protocols, execution, review, and approval with 21 CFR Part 11 compliance.' },
+      { name: 'MasterControl', desc: 'Document and quality management system. SOP control, training records, CAPA, and validation module used across pharma and medical device companies.' },
+      { name: 'JIRA / Confluence', desc: 'Widely used in pharma IT and CSV environments for defect management, validation project tracking, and documentation in GAMP 5 compliant workflows.' },
+    ],
+  },
+  {
+    category: 'Regulatory Affairs',
+    tools: [
+      { name: 'Veeva Vault RIM', desc: 'Regulatory information management platform. Submission planning, content authoring, eCTD publishing, health authority correspondence tracking, and registration management.' },
+      { name: 'LORENZ docuBridge', desc: 'eCTD publishing and submission management software. Module assembly, validation, PDF bookmarking, and FDA/EMA gateway submission.' },
+      { name: 'Liquent InSight', desc: 'Regulatory submission and lifecycle management. Common at large pharma companies for global registration tracking and dossier management.' },
+      { name: 'ISI Toolbox', desc: 'Document formatting and PDF processing for regulatory submissions. Widely used for CTD document preparation and eCTD compliance.' },
+    ],
+  },
+  {
+    category: 'Quality Management',
+    tools: [
+      { name: 'Veeva Vault QMS', desc: 'Cloud QMS for CAPA, deviations, change control, training, document management, and audit management. Used by 80%+ of new pharma QMS implementations.' },
+      { name: 'TrackWise', desc: 'Sparta Systems\' QMS for CAPA, complaints, deviations, and change control. Widely deployed at large pharma manufacturers and CMOs.' },
+      { name: 'MasterControl QMS', desc: 'Document control, training management, CAPA, and audit workflows. Common in mid-size pharma and medical device companies.' },
+      { name: 'ComplianceQuest', desc: 'Salesforce-native QMS platform. Quality events, documents, training, supplier quality, and audit management with CRM integration.' },
+    ],
+  },
+  {
+    category: 'Veeva Vault Platform',
+    tools: [
+      { name: 'Vault QMS', desc: 'Quality management — CAPA, deviations, change control, documents, training, and audits in a unified platform.' },
+      { name: 'Vault eTMF', desc: 'Electronic trial master file. TMF Reference Model compliance, document classification, inspection-readiness metrics, and site monitoring integration.' },
+      { name: 'Vault RIM', desc: 'Regulatory information management — submissions, registrations, correspondence, and health authority interactions.' },
+      { name: 'Vault Safety', desc: 'Drug safety and pharmacovigilance — ICSR processing, aggregate reports, signal management, and regulatory submissions.' },
+      { name: 'Vault EDC', desc: 'Electronic data capture for clinical trials. Study build, edit checks, subject management, and seamless Vault ecosystem integration.' },
+    ],
+  },
+  {
+    category: 'AI, ML & Automation',
+    tools: [
+      { name: 'Python / R (Pharma ML)', desc: 'Machine learning for drug discovery, PV signal detection, clinical NLP, patient stratification, and real-world evidence analysis.' },
+      { name: 'UiPath', desc: 'RPA platform for pharma process automation — regulatory submissions, ICSR intake, batch record processing, GMP documentation workflows.' },
+      { name: 'Automation Anywhere', desc: 'Enterprise RPA for pharma operations. Used for PV case intake, regulatory tracking, and quality event pre-population.' },
+      { name: 'Blue Prism', desc: 'RPA used in large pharma IT environments for back-office automation with strong GxP audit trail and security model.' },
+      { name: 'Databricks / Azure ML', desc: 'Cloud ML platforms used in pharma for real-world data analytics, clinical prediction models, and drug candidate screening.' },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Pharma Tools & Platforms | Medidata, Argus, Veeva, SAS, Pinnacle 21 | pharmajobsupport.com"
+  description="Pharma tools and platforms we support — Medidata Rave, Argus Safety, Veeva Vault, SAS, Pinnacle 21, 21 CFR Part 11, Oracle InForm, GAMP 5, and more. Real-time expert support."
+  schema={schema}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Tools & Platforms' }]} />
+
+    <header class="page-hero">
+      <h1>Pharma Tools & Platforms We Support</h1>
+      <p class="hero-tagline">Real-Time Expert Support for Every Major Pharmaceutical Industry Platform</p>
+    </header>
+
+    <div class="page-intro">
+      <p>
+        Our domain specialists have hands-on experience with the tools and platforms used in pharmaceutical clinical development, regulatory affairs, pharmacovigilance, quality assurance, and computer system validation. Find your platform below — each entry links to the relevant support service.
+      </p>
+    </div>
+
+    <div class="tool-categories">
+      {toolCategories.map((cat) => (
+        <section class="tool-category">
+          <h2 class="cat-heading">{cat.category}</h2>
+          <div class="tool-grid">
+            {cat.tools.map((tool) => (
+              <div class="tool-card">
+                <h3>{tool.name}</h3>
+                <p>{tool.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <section class="cta-section">
+      <h2>Need Support on a Specific Tool?</h2>
+      <p>Contact us via WhatsApp with the platform and task you need help with. We'll match you with a specialist within hours.</p>
+      <div class="cta-btns">
+        <a href={site.whatsappUrl} class="btn btn--wa" target="_blank" rel="noopener noreferrer">
+          WhatsApp: {site.whatsapp}
+        </a>
+        <a href="/pharma-proxy-job-support/" class="btn btn--secondary">View All Services</a>
+      </div>
+    </section>
+  </div>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-14);
+  }
+  .page-hero {
+    padding: var(--space-10) 0 var(--space-6);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-8);
+  }
+  .page-hero h1 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: var(--space-4); }
+  .hero-tagline { font-size: 1.1rem; color: var(--color-muted); font-style: italic; }
+
+  .page-intro { margin-bottom: var(--space-10); }
+  .page-intro p { font-size: 1rem; color: var(--color-muted); line-height: 1.75; max-width: 72ch; }
+
+  .tool-categories { display: flex; flex-direction: column; gap: var(--space-12); }
+
+  .tool-category { }
+  .cat-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--color-primary-light);
+  }
+
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-4);
+  }
+  .tool-card {
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+  .tool-card h3 {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+  }
+  .tool-card p { font-size: 0.8125rem; color: var(--color-muted); line-height: 1.65; }
+
+  .cta-section {
+    margin-top: var(--space-14);
+    padding: var(--space-8);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    text-align: center;
+  }
+  .cta-section h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-3); }
+  .cta-section p { font-size: 0.9375rem; color: var(--color-muted); margin-bottom: var(--space-6); }
+  .cta-btns { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    font-weight: 700;
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+  .btn--wa { background: #25D366; color: #fff; }
+  .btn--secondary { background: var(--color-primary-light); color: var(--color-primary); }
+</style>

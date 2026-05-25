@@ -1,0 +1,80 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I am a new Veeva Vault admin and stuck on a document lifecycle configuration. Can you help?', answer: 'Yes. Veeva Vault lifecycle configuration is one of the most common areas we support. We help with: creating and modifying document lifecycles (states, transitions, actions), configuring entry criteria and state actions (auto-versioning, auto-naming, auto-filing), setting up user role matrix permissions per lifecycle state, configuring workflow triggers from lifecycle transitions, and troubleshooting why documents are not moving through the lifecycle as expected. Tell us the module (QualityDocs, RIM, Clinical, eTMF) and the specific lifecycle issue.' },
+  { question: 'I need to configure a workflow in Veeva Vault and have never done it before. Can you help?', answer: 'Yes. Veeva Vault workflows (approval workflows, review workflows, co-authoring workflows) are configured through the Admin panel. We walk you through: creating workflow types, defining participant roles, setting step types (parallel vs. sequential, mandatory vs. optional), configuring due date rules, setting completion criteria, linking workflows to document lifecycles, and testing the workflow in a development vault before deploying to production. We also help debug workflow failures and explain why a workflow step is not completing as expected.' },
+  { question: 'My Veeva Vault RIM submission is not working correctly. Can you help?', answer: 'Yes. Veeva Vault RIM (Regulatory Information Management) issues we support: submission authoring workflow setup, dossier structure and binder configuration, eCTD sequence management in Vault, cross-module references, submission export to eCTD format, regulatory correspondence tracking, and health authority management. We also help with the transition between Veeva RIM and legacy eCTD publishing systems.' },
+  { question: 'What Veeva Vault tasks can you help me with?', answer: 'All Veeva Vault modules: QualityDocs (document management, SOP lifecycle, CAPA integration, training records), RIM (regulatory submissions, dossier authoring, variation tracking), Clinical (study setup, site activation, investigator records), eTMF (TMF structure, document filing workflows, completeness tracking), CTMS (clinical trial management, milestone tracking, site payments), Vault CRM (customer interaction tracking in pharma commercial). Admin tasks: user provisioning, role setup, picklist management, object field configuration, report and dashboard creation, integration with SAP or other systems via Vault API.' },
+  { question: 'I have a Veeva Vault validation project and need help with the IQ/OQ/PQ. Can you help?', answer: 'Yes. Veeva Vault is a GAMP Category 4 (configured COTS) system. Validation scope covers configuration — not the underlying Vault platform itself (Veeva provides platform IQ documentation). We help with: defining the validation scope for your specific Vault module configuration, writing IQ test scripts for your configured Vault instance, writing OQ test scripts covering lifecycle states, workflow routing, user role permissions, and document type configurations, and PQ test scripts for production deployment verification. We also help with change control documentation when a Vault configuration is updated post-validation.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Stuck in Veeva Vault Project', url: site.url + '/stuck-in-veeva-vault-project/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Stuck in Veeva Vault Project? Get Real-Time Veeva Vault Proxy Job Support"
+  description="Stuck on Veeva Vault lifecycle configuration, workflow setup, RIM submission, or eTMF filing? Real-time Veeva Vault proxy job support. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Stuck in Veeva Vault Project' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Veeva Vault Proxy Job Support</div>
+      <h1>Stuck in Your Veeva Vault Project? Get Live Expert Guidance Now.</h1>
+      <p class="hero-tagline">Lifecycle configuration that is not working. Workflow routing that is broken. RIM submission issues. eTMF filing that will not validate. New Veeva Vault admin tasks with no one to ask. Our Veeva Vault experts walk you through the exact configuration or task you are stuck on — via WhatsApp, right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Veeva Vault Proxy Job Support — What We Help With Right Now</h2>
+          <ul class="feature-list">
+            <li>Document lifecycle configuration — states, transitions, entry criteria, state actions</li>
+            <li>Workflow design and setup — approval workflows, review workflows, co-authoring workflows</li>
+            <li>User role matrix — permissions per lifecycle state, vault user role setup</li>
+            <li>Document type and document subtype configuration</li>
+            <li>eTMF document filing workflows and completeness tracking</li>
+            <li>Veeva Vault RIM — dossier structure, eCTD sequence management, submission export</li>
+            <li>Veeva Vault QualityDocs — SOP lifecycle, CAPA integration, training assignment</li>
+            <li>Veeva Vault Clinical and CTMS — study setup, site activation, investigator records</li>
+            <li>Picklist management, object field configuration, dynamic filters</li>
+            <li>Report and dashboard creation in Vault</li>
+            <li>Validation — IQ/OQ/PQ for Veeva Vault configuration</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong>. Tell us your Vault module and task.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/veeva-vault-proxy-job-support/">Veeva Vault Proxy Job Support</a> | <a href="/veeva-vault-proxy-interview/">Veeva Vault Proxy Interview Support</a> | <a href="/what-is-veeva-vault/">What is Veeva Vault?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Veeva Vault Project Help — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in Veeva Vault Right Now?"
+          body="Lifecycle configuration, workflow setup, RIM, eTMF — real-time guidance from a Veeva Vault specialist with QualityDocs, RIM, and Clinical experience. Same-day help."
+          ctaLabel="Get Veeva Vault Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Veeva Vault proxy interview support"
+          secondaryHref="/veeva-vault-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

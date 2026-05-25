@@ -1,0 +1,128 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What GAMP 5 questions do UK medical device interviewers ask?', answer: 'UK medical device interviewers ask about GAMP 5 Category classification (1-5), the distinction between Category 3 (non-configured), Category 4 (configured), and Category 5 (custom) software, and how IQ/OQ/PQ protocols differ by category. They frequently ask: "How do you validate a Category 4 LIMS system?", "What documentation do you need for a GAMP 5 compliant validation?", "What is the difference between a validation plan and a validation master plan?" MHRA expectations around data integrity (ALCOA+) are always tested.' },
+  { question: 'What 21 CFR Part 11 questions come up in UK pharma interviews?', answer: 'Even for UK roles, 21 CFR Part 11 is tested because most UK pharma companies export to the US market and their computerised systems must comply with FDA requirements. Questions: "What are the three main requirements of 21 CFR Part 11?", "How do you ensure audit trail integrity under Part 11?", "What is the difference between 21 CFR Part 11 and EU Annex 11?" The EU Annex 11 comparison question is very common for UK/EU roles.' },
+  { question: 'How is a UK medical device CSV interview different from a pharma CSV interview?', answer: 'Medical device CSV interviews focus heavily on IEC 62304 (software lifecycle for medical devices), ISO 13485 requirements for software, EU MDR Annex I GSPR requirements related to software, and SaMD (Software as a Medical Device) classification. Pharma CSV interviews focus more on GAMP 5 across all systems (not just medical device software), 21 CFR Part 11, EU Annex 11, and validation of ERP/LIMS/MES/DMS systems.' },
+  { question: 'What is the typical UK CSV validation interview process?', answer: 'Typically 2-3 rounds for contract or permanent roles: phone screening with recruiter (basic GAMP/CSV knowledge), technical interview (1-2 validation specialists asking scenario-based questions for 45-60 minutes), and sometimes a practical task (writing an IQ/OQ test script or reviewing a validation document for errors). MHRA-specific knowledge is expected for UK roles, including the MHRA GxP data integrity guidance.' },
+  { question: 'How do I prepare for a CSV validation proxy interview in the UK?', answer: 'Focus on GAMP 5 (Second Edition, 2022), EU Annex 11 vs. 21 CFR Part 11 comparison, MHRA GxP data integrity guidance, IQ/OQ/PQ protocol structure, risk assessment (FMEA, risk matrix) for computerised systems, and user requirement specification (URS) writing. For medical device roles, add ISO 13485 Section 7.5.6 and IEC 62304. Our pharma proxy interview support gives you mock sessions with a CSV/GAMP validation specialist who knows UK interview expectations. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'CSV Validation / GAMP 5 — UK 2026', url: site.url + '/pharma-interviews/real-csv-validation-gamp5-proxy-interview-questions-uk-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real CSV Validation / GAMP 5 Interview Questions — Medical Device, UK, 2026',
+    'Real Q&A from a CSV validation/GAMP 5 interview at a medical device company in the UK in 2026. Actual questions asked by interviewers — IQ/OQ/PQ, 21 CFR Part 11, EU Annex 11.',
+    site.url + '/pharma-interviews/real-csv-validation-gamp5-proxy-interview-questions-uk-2026/',
+    '2026-01-20',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real CSV Validation GAMP 5 Interview Questions Medical Device UK 2026"
+  description="Real Q&A from a CSV validation/GAMP 5 interview at a UK medical device company in 2026. IQ/OQ/PQ, 21 CFR Part 11, EU Annex 11, MHRA. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'CSV Validation / GAMP 5 — UK 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | CSV Validation | UK Medical Device | 2026</div>
+      <h1>Real CSV Validation / GAMP 5 Proxy Interview Questions — Medical Device, UK, 2026</h1>
+      <p class="hero-tagline">Actual questions from a Computer System Validation (CSV) interview at a medical device manufacturer in the UK in 2026. GAMP 5, IQ/OQ/PQ, 21 CFR Part 11, EU Annex 11, data integrity, and risk-based validation — what the technical panel actually asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Role: CSV Validation Specialist / Computer System Validation Engineer. Medical device manufacturer based in Cambridge, UK. Systems in scope: LIMS, QMS software, MES, ERP (SAP). Interview conducted on-site (2026). Technical panel: Head of IT Validation + Quality Systems Manager.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real GAMP 5 Interview Questions — UK Medical Device</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Explain the GAMP 5 software category classification and give an example of each category relevant to a medical device QMS.</h3>
+            <p><strong>What they wanted to hear:</strong> GAMP 5 (Second Edition, 2022) classifies software into: Category 1 — Infrastructure software (operating systems, databases like Oracle, Microsoft SQL — no validation required, just qualification); Category 3 — Non-configured products (standard COTS software used as-is, e.g., Microsoft Office — minimal testing); Category 4 — Configured products (COTS software configured for GxP use, e.g., SAP QM with configured workflows, Veeva QualityDocs — full IQ/OQ/PQ required); Category 5 — Custom/bespoke software (purpose-built for the company, e.g., custom LIMS — full SDLC validation including design specification review). The interviewer followed up: "Where does a cloud-based QMS like MasterControl or ETQ Reliance sit?" Answer: Category 4 — configured product, with additional SaaS/cloud considerations around vendor audit, data residency, and backup validation.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: What is the difference between IQ, OQ, and PQ? Give me examples of what you would test in each for a LIMS implementation.</h3>
+            <p><strong>What they wanted to hear:</strong> IQ (Installation Qualification) — verifies the system is installed correctly as specified. For LIMS: server hardware installed to specification, software version confirmed, network connectivity, user account setup, security roles configured. OQ (Operational Qualification) — verifies the system operates as designed within defined parameters. For LIMS: each functional requirement tested (sample login, test result entry, approval workflows, notifications, instrument interfaces). Tests run by validation team, not end users. PQ (Performance Qualification) — verifies the system performs consistently in the operational environment under realistic conditions. For LIMS: end users running representative business processes, integration with instruments confirmed, concurrent user load tested, backup/restore validated. Interviewer follow-up: "Does every system need all three phases?" Answer: Risk-based approach per GAMP 5 — low-risk systems may combine IQ/OQ, some infrastructure may only require IQ. Always document the rationale.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: How do you approach a risk assessment for a computerised system validation project?</h3>
+            <p><strong>What they wanted to hear:</strong> Start with a risk categorisation of the system based on its GxP impact (direct, indirect, or no GxP impact) and business criticality. Use a risk matrix (likelihood × severity) to score identified risks. For each risk, identify the control (test case, SOP, access control, audit trail). Higher-risk functions get more rigorous testing (more test cases, more scenarios, more reviewers). Document in a System Risk Assessment or Validation Plan. For medical device systems: also consider patient safety risk per ISO 14971 framework. Interviewer asked: "What is an example of a high-risk function in a QMS system?" Answer: Electronic approval of production batch records — if this function fails silently, non-conforming batches could be approved and released. Requires positive testing, negative testing (what happens if approval is attempted with wrong role), and audit trail verification.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: What is the difference between 21 CFR Part 11 and EU Annex 11? Which applies to your role here?</h3>
+            <p><strong>What they wanted to hear:</strong> 21 CFR Part 11 is the US FDA regulation covering electronic records and electronic signatures in regulated environments. It applies to systems used in FDA-regulated activities. EU Annex 11 is the EU GMP guideline covering computerised systems. Both require audit trails, access controls, electronic signatures, and backup/recovery. Key differences: Annex 11 has broader scope (covers the full computer system lifecycle, vendor audits, change control), while Part 11 is specifically focused on electronic records/signatures. Annex 11 Clause 9 (data storage) and Clause 7.1 (data integrity) are important additions vs. Part 11. For a UK medical device company with US exports: both apply. The interviewer then asked specifically about MHRA's GxP data integrity guidance — expect to discuss ALCOA+ (Attributable, Legible, Contemporaneous, Original, Accurate + Complete, Consistent, Enduring, Available).</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Data Integrity Questions — Same UK Interview</h2>
+
+          <div class="qa-block">
+            <h3>Q5: We had an audit finding where operators were logging in with shared credentials. How do you remediate this from a CSV perspective?</h3>
+            <p><strong>What they wanted to hear:</strong> This is a critical data integrity violation. Remediation steps: Immediate — disable shared accounts, issue a deviation/CAPA. Systematic — review all audit trail records created under shared accounts (assess impact on data integrity), create individual user accounts for all operators, configure role-based access controls correctly, enforce strong password policies, conduct training on 21 CFR Part 11 / Annex 11 requirements for unique user credentials. Validation impact — if the system was validated with shared accounts, the validation must be re-assessed. Update the system's validation documentation and perform supplemental OQ tests for user authentication. The CAPA must include a root cause analysis (was the system configured without individual accounts from the start? Was training insufficient?), corrective actions, and preventive actions (monitoring of login patterns, periodic access review).</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your CSV Validation Interview</h2>
+          <p>
+            UK CSV validation interviews go deep on GAMP 5, data integrity, EU Annex 11, and practical scenario handling. For medical device roles, add ISO 13485, EU MDR software requirements, and IEC 62304.
+          </p>
+          <p>
+            Get domain-specific preparation from a CSV validation expert who knows UK and EU regulatory expectations. Our <a href="/csv-validation-proxy-interview/">CSV Validation Proxy Interview Support</a> is available same-day.
+          </p>
+          <p>WhatsApp: <strong>{site.whatsapp}</strong></p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="CSV Validation Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="CSV Validation Interview Coming Up?"
+          body="Get real-time preparation from a CSV/GAMP validation specialist who knows UK medical device and pharma interview expectations. GAMP 5, IQ/OQ/PQ, EU Annex 11, data integrity. Same-day."
+          ctaLabel="Get CSV Validation Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

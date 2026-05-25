@@ -1,0 +1,98 @@
+---
+const testimonials = [
+  {
+    quote: "Got domain-specific guidance on SDTM mapping and Pinnacle 21 validation within 2 hours of messaging. The expert knew exactly what FDA reviewers look for. My submission went through without issues.",
+    role: "Clinical Data Manager",
+    location: "New Jersey, USA",
+  },
+  {
+    quote: "Was placed in an Argus Safety role with limited PV experience. PharmaCDM's expert walked me through ICSR processing, MedDRA coding, and E2B reporting — I handled every task with confidence.",
+    role: "Drug Safety Associate",
+    location: "London, UK",
+  },
+  {
+    quote: "Needed urgent CSV validation help for a Veeva Vault QMS IQ/OQ/PQ. Support was available same day. The GAMP 5 protocols they helped me draft passed QA review with zero comments.",
+    role: "Validation Specialist",
+    location: "Dublin, Ireland",
+  },
+  {
+    quote: "My regulatory affairs interview required deep eCTD and Veeva Vault RIM knowledge I didn't fully have. Prep sessions covered every question asked. I got the job at a top 10 pharma company.",
+    role: "Regulatory Affairs Specialist",
+    location: "Basel, Switzerland",
+  },
+];
+---
+
+<section class="social-proof" aria-labelledby="social-proof-heading">
+  <h2 id="social-proof-heading" class="social-proof-heading">
+    Pharma Professionals Who Trusted PharmaCDM
+  </h2>
+  <div class="testimonials-grid">
+    {testimonials.map((t) => (
+      <blockquote class="testimonial">
+        <p class="testimonial-quote">"{t.quote}"</p>
+        <footer class="testimonial-footer">
+          <cite>
+            <span class="testimonial-role">{t.role}</span>
+            <span class="testimonial-location">{t.location}</span>
+          </cite>
+        </footer>
+      </blockquote>
+    ))}
+  </div>
+</section>
+
+<style>
+  .social-proof {
+    padding: var(--space-14) var(--space-4);
+    background: var(--color-surface);
+  }
+  .social-proof-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--space-10);
+    color: var(--color-text);
+    max-width: var(--max-w);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .testimonials-grid {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+  .testimonial {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-6);
+    margin: 0;
+    border-left: 4px solid var(--color-primary);
+  }
+  .testimonial-quote {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: var(--space-4);
+  }
+  .testimonial-footer { display: flex; flex-direction: column; gap: 0.15rem; }
+  .testimonial-role {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    display: block;
+  }
+  .testimonial-location {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+</style>

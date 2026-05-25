@@ -1,0 +1,111 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'Why do pharma candidates keep failing technical interviews even when they know the domain?', answer: 'Knowing the domain and performing in a pharma interview are two different skills. Pharma interviewers ask layered scenario questions that require you to apply your knowledge in real-time — not just recall definitions. "Walk me through how you would handle an OOS result mid-batch" or "Explain your SDTM mapping approach for the AE domain" require structured, confident verbal delivery under pressure. Many candidates know the answer but cannot articulate it clearly under interview conditions. Pharma proxy interview support trains you to deliver the right answer in the right format for the interviewer — with mock sessions that replicate the actual interview experience.' },
+  { question: 'What does pharma proxy interview support cover?', answer: 'Our pharma proxy interview support covers: domain-specific technical question preparation tailored to your job description (SDTM/ADaM for clinical SAS roles, GAMP 5/IQ/OQ/PQ for CSV validation, eCTD/IDMP for regulatory, Argus Safety for PV, etc.), mock interview sessions that replicate the real technical panel format, guidance on how to structure your answers for maximum interviewer impact, scenario-based practice (the type of question where they give you a situation and ask what you would do), and real Q&A from interviews in your domain that we have seen recently. All delivered via WhatsApp, call, or screen share.' },
+  { question: 'How quickly can you prepare me for a pharma interview that is tomorrow?', answer: 'Yes — same-day and next-morning support is available. Message us on WhatsApp immediately with: your pharma domain, the role you are interviewing for (copy the job description if possible), and what round you are facing (HR/technical/final). We match you with a domain expert and begin preparation within hours. Most candidates who message us the evening before their interview are significantly better prepared by interview morning.' },
+  { question: 'I have failed 3 pharma interviews. What was I doing wrong?', answer: 'Without seeing your specific cases, the most common patterns for pharma interview failure: surface-level answers — saying "I know SDTM" without demonstrating actual mapping experience; inability to handle follow-up questions (interviewers probe deeper after your first answer — if you cannot go deeper, they assume you lack real experience); wrong framing — answering regulatory questions from a generic perspective rather than the specific regulatory framework the employer operates in (FDA vs. EMA vs. MHRA); nervousness causing knowledge gaps to surface — you knew the answer but could not retrieve it under pressure; no real-world scenarios — pharma interviewers want to know what you did, not what you know in theory. Our proxy interview mock sessions address all of these.' },
+  { question: 'Do you prepare candidates for both HR and technical rounds?', answer: 'Yes. We prepare for both. The HR round for pharma roles tests your understanding of GxP culture, professional behaviours in a regulated environment, and why you are targeting this specific domain. The technical round tests deep domain knowledge — SDTM mapping, validation protocols, PV case processing, eCTD submission workflows, and more. We run mock sessions for both rounds, tailored to the specific company and role you are interviewing for.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Failed Pharma Interview Help', url: site.url + '/failed-pharma-proxy-interview-help/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Failed Pharma Interview? Pharma Proxy Interview Support | Pharma Job Support"
+  description="Failed a pharma interview? Get pharma proxy interview support — domain-specific mock sessions, real Q&A, same-day preparation. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Failed Pharma Interview Help' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Proxy Interview Support</div>
+      <h1>Failed a Pharma Interview? Get Proxy Interview Support Before Your Next One.</h1>
+      <p class="hero-tagline">You know the domain. You prepared. But you failed the technical round again. This is not about your knowledge — it is about how pharma interviewers ask questions and what they are really looking for when they probe deeper. Pharma proxy interview support trains you to answer the way pharma interviewers need to hear it.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Why Pharma Technical Interviews Are Different</h2>
+          <p>
+            Pharma interviewers are domain experts. They have done your job. They know when an answer is superficial. They probe — and if you cannot go three levels deep on SDTM mapping, GAMP 5 validation logic, Argus Safety case processing, or ISO 13485 CAPA procedures, they know immediately that you have never actually done it.
+          </p>
+          <p>
+            Generic interview coaching does not fix this. You need pharma-specific mock sessions with someone who has done the job and knows what the interviewer is about to ask next.
+          </p>
+          <ul class="feature-list">
+            <li>Failed clinical SAS interview? You need to practice "walk me through your SDTM AE domain mapping" with real follow-up probing</li>
+            <li>Failed CSV validation interview? You need to practice "explain the difference between GAMP 5 Category 4 and 5" with scenario-based extensions</li>
+            <li>Failed regulatory affairs interview? You need to practice "how do you handle a Type II variation in the EU?" with real eCTD context</li>
+            <li>Failed pharmacovigilance interview? You need to practice "walk me through Argus case processing from intake to submission" with expedited reporting timelines</li>
+            <li>Failed Veeva Vault interview? You need to practice "how do you configure a document lifecycle in QualityDocs?" with real admin scenario questions</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>What Pharma Proxy Interview Support Gives You</h2>
+          <ul class="feature-list">
+            <li><strong>Domain-specific mock sessions</strong> with a pharma expert who has done your exact role</li>
+            <li><strong>Real Q&A from actual pharma interviews</strong> in your domain — what interviewers are currently asking in 2026</li>
+            <li><strong>Scenario-based practice</strong> — the "what would you do if..." questions that trip up most candidates</li>
+            <li><strong>Answer structuring guidance</strong> — how to frame technical answers for maximum interviewer impact</li>
+            <li><strong>Follow-up question preparation</strong> — the probing questions after your first answer</li>
+            <li><strong>Same-day support</strong> — if your interview is tomorrow, message us tonight</li>
+          </ul>
+          <p>
+            Message us on WhatsApp now at <strong>{site.whatsapp}</strong> with your domain and interview details. We begin preparation the same day.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Which Pharma Interview Domains We Cover</h2>
+          <ul class="feature-list">
+            <li><a href="/clinical-sas-proxy-interview/">Clinical SAS Proxy Interview Support</a> — SDTM, ADaM, TLF, CDISC, Pinnacle 21</li>
+            <li><a href="/csv-validation-proxy-interview/">CSV Validation Proxy Interview Support</a> — GAMP 5, IQ/OQ/PQ, 21 CFR Part 11, Annex 11</li>
+            <li><a href="/regulatory-affairs-proxy-interview/">Regulatory Affairs Proxy Interview Support</a> — eCTD, IDMP, variations, submissions</li>
+            <li><a href="/pharmacovigilance-proxy-interview/">Pharmacovigilance Proxy Interview Support</a> — Argus Safety, ICSR, MedDRA, ICH E2B</li>
+            <li><a href="/veeva-vault-proxy-interview/">Veeva Vault Proxy Interview Support</a> — QualityDocs, RIM, Clinical, eTMF</li>
+            <li><a href="/medical-device-proxy-interview/">Medical Device QA Proxy Interview Support</a> — ISO 13485, EU MDR, 510(k), IEC 62304</li>
+            <li><a href="/pharma-qa-proxy-interview/">QA / QMS / GMP Proxy Interview Support</a> — CAPA, deviation, change control, inspections</li>
+          </ul>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Failed Pharma Interview — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Failed a Pharma Interview?"
+          body="Get same-day proxy interview support from a pharma domain expert. Real mock sessions, real Q&A, real scenario practice. If your interview is tomorrow, message us tonight."
+          ctaLabel="Get Pharma Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Not getting interview calls yet?"
+          secondaryHref="/pharma-profile-engineering/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

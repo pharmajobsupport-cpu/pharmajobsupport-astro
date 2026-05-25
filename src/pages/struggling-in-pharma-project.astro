@@ -1,0 +1,120 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma proxy job support and how does it help when I am stuck in a project?', answer: 'Pharma proxy job support is real-time live guidance from a domain expert who has done your exact type of pharma work. When you are stuck on a task — an SDTM mapping you have never done before, a deviation report you are not sure how to structure, a Veeva Vault configuration change you cannot figure out, a CAPA that your manager is waiting on — you message us on WhatsApp and we connect you with an expert in that specific area. They walk you through the task step by step, in real time, until it is done. It is not a training course. It is live help for your specific task, right now.' },
+  { question: 'I am afraid my manager will find out I am struggling. Is this confidential?', answer: 'Yes, completely confidential. We do not contact your employer, your manager, or your company. Our sessions are between you and your domain expert. Thousands of pharma professionals use proxy job support to navigate tasks that are beyond their current experience — it is a professional service, not an admission of incompetence. Every pharma professional gets assigned tasks they have not done before. The difference is having access to someone who has done it and can guide you through.' },
+  { question: 'What pharma tasks can you help me with right now?', answer: 'We cover any task in any of our 18 pharma domains: SDTM dataset mapping and deviation reports, ADaM derivation and TLF production, CSV validation protocols (URS, FS, IQ/OQ/PQ), regulatory submission workflows (eCTD, Module 2 summaries, variations), Veeva Vault configuration and lifecycle management, CAPA investigation and root cause analysis, deviation reports and batch release decisions, pharmacovigilance case processing (Argus Safety, ICSR, MedDRA coding), ISO 13485 audit preparation, SAP QM batch release, RPA bot debugging, clinical data management in EDC, and much more. If you are working in a pharma environment and stuck, message us.' },
+  { question: 'How quickly can I get help?', answer: 'Most requests are matched with a domain expert within 1-2 hours. For urgent tasks — a deadline today, a manager review tomorrow morning — message us immediately and we prioritise. We are available 24/7. No appointments. No waiting rooms. WhatsApp +91-9660834611 and describe your domain and your task. We get you connected.' },
+  { question: 'What if my task is highly technical and domain-specific?', answer: 'That is exactly what we handle. Our domain experts are practitioners — working or recently working pharma professionals who have done the same tasks in real CROs, pharmaceutical companies, and medical device manufacturers. They know SDTM define.xml validation errors, specific Veeva Vault configuration scenarios, Argus Safety case management edge cases, ISO 13485 CAPA documentation requirements, and real pharmaceutical manufacturing GMP documentation standards. The more specific your task, the more valuable our support is.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Struggling in Pharma Project', url: site.url + '/struggling-in-pharma-project/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Struggling in Your Pharma Project? Get Real-Time Pharma Proxy Job Support"
+  description="Stuck on a pharma task your manager is waiting for? Real-time pharma proxy job support from a domain expert — live task-by-task guidance. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Struggling in Pharma Project' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Proxy Job Support</div>
+      <h1>Struggling in Your Pharma Project? Get Real-Time Support Right Now.</h1>
+      <p class="hero-tagline">You are in a GMP, GxP, or regulated pharma environment. Your manager has assigned you a complex task. The deadline is real. You cannot ask colleagues. You need someone who has done this exact work before — right now. That is pharma proxy job support.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>The Reality of Working in a Regulated Pharma Environment</h2>
+          <p>
+            In a pharma, clinical research, or medical device environment, you cannot ask "how do I do this?" to the wrong person. In a GMP facility, a deviation report completed incorrectly has consequences. An SDTM mapping error means the dataset will fail Pinnacle 21 validation in the submission package. A Veeva Vault lifecycle configured wrong creates a compliance gap that shows up in the next audit. The stakes are real.
+          </p>
+          <p>
+            Most pharma professionals who get stuck either:
+          </p>
+          <ul class="feature-list">
+            <li>Spend hours searching online for answers that do not exist or are outdated</li>
+            <li>Ask a colleague who does not know either, leading to more confusion</li>
+            <li>Attempt the task without full confidence, creating a quality risk</li>
+            <li>Miss the deadline and have to explain to their manager why</li>
+          </ul>
+          <p>
+            Our <a href="/pharma-proxy-job-support/">Pharma Proxy Job Support</a> eliminates all of this. You get a real pharma expert on the task with you, right now, via WhatsApp.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Pharma Tasks We Help With Right Now</h2>
+          <ul class="feature-list">
+            <li>SDTM domain mapping — AE, CM, EX, LB, VS, DM — done correctly with define.xml</li>
+            <li>ADaM derivation — ADSL, ADAE TRTEMFL, ADLB PARAM structure, ADTTE</li>
+            <li>CSV validation protocols — URS, FS, DS, IQ/OQ/PQ — writing and reviewing</li>
+            <li>Deviation reports and CAPA in GMP — root cause analysis, corrective actions</li>
+            <li>Regulatory submissions — eCTD Module 2 summaries, variation types, submission packages</li>
+            <li>Veeva Vault configuration — document lifecycle, workflow routing, document type setup</li>
+            <li>Argus Safety case processing — ICSR entry, seriousness assessment, MedDRA coding</li>
+            <li>ISO 13485 documentation — NCRs, CAPAs, design controls, audit preparation</li>
+            <li>Batch Manufacturing Record review — GMP documentation, yield reconciliation</li>
+            <li>SAP QM — batch release, inspection lots, usage decision, quality notifications</li>
+            <li>EDC data management — query resolution, ALCOA+, database lock preparation</li>
+            <li>Medical writing — deviation reports, regulatory narratives, SOP sections</li>
+          </ul>
+          <p>
+            Whatever your task — message us on WhatsApp at <strong>{site.whatsapp}</strong> right now. Tell us your domain and your task. We get you connected with an expert within hours.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Who Pharma Proxy Job Support Is For</h2>
+          <ul class="feature-list">
+            <li>Professionals new to a pharma role getting complex tasks assigned before they feel ready</li>
+            <li>Pharma professionals in solo positions with no senior colleague to escalate to</li>
+            <li>Contract/freelance pharma workers who do not have an internal support network</li>
+            <li>Professionals working across multiple pharma domains and stuck in an unfamiliar area</li>
+            <li>Anyone in a GMP, GxP, or ISO-regulated environment facing a deadline right now</li>
+          </ul>
+          <p>
+            Also see: <a href="/pharma-proxy-job-support/">Pharma Proxy Job Support — all domains</a> | <a href="/pharma-project-onboarding-help/">Pharma Project Onboarding Help</a>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Struggling in Pharma Project — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Pharma Task Right Now?"
+          body="Real-time live guidance from a pharma domain expert. Task-by-task. Via WhatsApp. Available now. No appointment needed — just message us your domain and task."
+          ctaLabel="Get Pharma Proxy Job Support Now"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Preparing for a pharma interview?"
+          secondaryHref="/pharma-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

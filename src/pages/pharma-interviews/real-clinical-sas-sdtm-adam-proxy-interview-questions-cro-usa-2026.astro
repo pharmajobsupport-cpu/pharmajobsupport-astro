@@ -1,0 +1,145 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What SDTM questions do CROs ask in USA interviews?', answer: 'US CRO interviewers focus heavily on SDTM IG compliance, Pinnacle 21 validation checks, define.xml structure, and CDISC controlled terminology application. Common questions: "How do you handle AEDECOD when the verbatim term has no MedDRA match?", "What is the difference between SUPPAE and the AE domain?", "How do you map lab data to LB domain when the lab has non-standard unit names?" These are real questions from CRO interviews in NJ, Boston, and Research Triangle Park.' },
+  { question: 'What ADaM questions come up in clinical SAS interviews?', answer: 'ADaM questions focus on ADSL derivation logic, ADAE analysis dataset population rules, and ADLB DTYPE and AVAL derivation. Real questions asked: "How do you derive TRTEMFL in ADAE?", "What is the difference between ADSL TRTSDTM and ADEX EXSTDTM?", "How do you handle missing baseline values in ADLB for the BNRIND variable?" Interviewers also ask about ADaM traceability — linking back to SDTM source datasets.' },
+  { question: 'How deep are TLF questions in clinical SAS interviews?', answer: 'Very deep for experienced roles. Interviewers ask: "How do you handle a by-group summary table where the denominator changes across subgroups?", "How do you produce a waterfall plot for tumor response data using PROC SGPLOT?", "What macros would you build for standardizing adverse event summary tables across studies?" For fresher-level roles, expect questions on PROC REPORT basics, WHERE clause vs. subset dataset approach, and ODS formatting.' },
+  { question: 'What is the USA CRO pharma interview process like for clinical SAS?', answer: 'Typically 2-3 rounds: HR screening (background, availability, rate), technical panel (1-2 SAS programmers, sometimes a biostatistician), and manager/team fit. Technical panel lasts 45-90 minutes and covers SDTM, ADaM, TLF, and sometimes a coding exercise or dataset problem. Some CROs send a take-home SAS programming test. Pinnacle 21, define.xml, and FDA reviewer guide understanding are always tested at mid-senior level.' },
+  { question: 'How do I prepare for a clinical SAS proxy interview in the USA?', answer: 'Focus on SDTM IG 3.3+, ADaM IG 1.3, CDISC controlled terminology (current version), Pinnacle 21 Community validation checks, and define.xml 2.0. Know your FDA Study Data Technical Conformance Guide. Practice explaining how you would approach a specific SDTM mapping problem — pick 3 complex domains (AE, LB, EX) and be able to walk through the logic. Our pharma proxy interview support gives you a mock session with a real clinical SAS programmer who has done USA CRO interviews before. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Clinical SAS / SDTM / ADaM — CRO USA 2026', url: site.url + '/pharma-interviews/real-clinical-sas-sdtm-adam-proxy-interview-questions-cro-usa-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Clinical SAS / SDTM / ADaM Interview Questions — CRO, USA, 2026',
+    'Real Q&A from a clinical SAS/SDTM/ADaM interview at a CRO in USA in 2026. Actual questions asked by pharma interviewers with domain-specific answers for clinical SAS programmers.',
+    site.url + '/pharma-interviews/real-clinical-sas-sdtm-adam-proxy-interview-questions-cro-usa-2026/',
+    '2026-01-15',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Clinical SAS SDTM ADaM Interview Questions CRO USA 2026"
+  description="Real Q&A from a clinical SAS/SDTM/ADaM interview at a US CRO in 2026. Actual questions interviewers asked — SDTM mapping, ADaM derivation, TLF, Pinnacle 21. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Clinical SAS / SDTM / ADaM — CRO USA 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | Clinical SAS | USA CRO | 2026</div>
+      <h1>Real Clinical SAS / SDTM / ADaM Proxy Interview Questions — CRO, USA, 2026</h1>
+      <p class="hero-tagline">Actual questions from a clinical SAS programmer interview at a contract research organisation (CRO) in New Jersey, USA in 2026. SDTM mapping, ADaM derivation, TLF production, Pinnacle 21, and define.xml — exactly what the interviewer asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Role: Clinical SAS Programmer / Statistical Programmer. CRO based in New Jersey, supporting Phase II-III oncology and cardiovascular trials for Big Pharma sponsors. Interview conducted via Teams. Three rounds: HR screening, technical panel (2 senior programmers + biostatistician), hiring manager round.
+          </p>
+          <p>This is the technical panel Q&A from Round 2.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real SDTM Interview Questions — Asked by CRO Interviewer</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Walk me through how you would create the AE domain from raw adverse event data.</h3>
+            <p><strong>What they wanted to hear:</strong> They expected you to start with the raw AE CRF data, identify AETERM (verbatim term), apply MedDRA coding to get AEDECOD (preferred term), AEBODSYS (system organ class), AEHLT, AEHLGT. Then map AESTDTC and AEENDTC from the raw date fields, derive AESTDY and AEENDY relative to RFSTDTC from ADSL. Set AEACN (action taken), AEREL (causality), AEOUT (outcome). Assign STUDYID, USUBJID, DOMAIN='AE', AESEQ (sequence number). They then asked a follow-up: "What if a subject has an ongoing AE at the time of data cut — how do you handle AEENDTC?" Answer: leave AEENDTC blank, set AEOUT to 'NOT RECOVERED/NOT RESOLVED'.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: What is the purpose of the SUPPAE dataset and when would you create one?</h3>
+            <p><strong>What they wanted to hear:</strong> SUPPAE (Supplemental Qualifiers for AE) is used when additional CRF variables related to AEs cannot be mapped to standard SDTM AE variables. For example, if the sponsor collects a custom severity grading scale that is not CTCAE grade, or a protocol-specific attribution field. SUPPAE uses QNAM (variable name), QLABEL (label), QVAL (value), IDVAR='AESEQ', IDVARVAL (the sequence number of the parent AE record). They then asked: "Can you put AESOC in SUPPAE?" Answer: No — AESOC is a required SDTM AE variable; it must be in the main AE domain. SUPPAE is for non-standard additional variables only.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: How do you handle Pinnacle 21 ERROR vs. WARNING vs. NOTE validation checks?</h3>
+            <p><strong>What they wanted to hear:</strong> Errors must be resolved before FDA submission — they indicate non-conformance with SDTMIG or ADaMIG. Warnings should be reviewed and either resolved or documented with justification in the reviewer's guide. Notes are informational and typically do not require action. The interviewer then gave a specific scenario: "You have a Pinnacle 21 error on AE — 'AEDECOD is not a valid MedDRA Preferred Term.' What do you do?" Answer: Check if MedDRA version used in coding matches the CT version referenced in define.xml. Coordinate with the medical coder to recode the term against the correct MedDRA version. Update define.xml with the correct CT version reference.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: Explain the structure of define.xml and what goes into it for the AE domain.</h3>
+            <p><strong>What they wanted to hear:</strong> define.xml 2.0 (now define-xml 2.1 for newer submissions) contains the dataset metadata — variable names, labels, data types, origins (CRF, DERIVED, ASSIGNED), codelist references, SDTM IG version. For AE domain: the ItemGroupDef for AE with attributes (OID, Name, Repeating='Yes', IsReferenceData='No', Domain='AE'). Each variable as ItemDef with DataType, Length, Origin. Codelist references for AESER (NY), AESEV (SEVERITY), AEREL (CAUSALITY). The interviewer followed up: "What tool do you use to generate define.xml?" Answer: Most CROs use Pinnacle 21 Define-XML Generator, DefineSA, or in-house SAS macros based on metadata stored in EXCEL or SAS datasets.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Real ADaM Interview Questions — Same CRO Panel</h2>
+
+          <div class="qa-block">
+            <h3>Q5: How do you derive TRTEMFL (Treatment-Emergent Flag) in ADAE?</h3>
+            <p><strong>What they wanted to hear:</strong> TRTEMFL = 'Y' when the AE start date (ASTDT) is on or after the first treatment date (TRTSDT from ADSL) AND on or before the last treatment date + offset (TRTEDT + protocol-specified window, often 30 days post last dose for oncology). For AEs with missing start date, apply the handling defined in the SAP (some studies flag as TRTEMFL='Y' if any part of the AE overlaps the treatment-emergent window). If AEENDTC is missing (ongoing), the AE is always treatment-emergent if it started after TRTSDT. Follow-up: "What if ASTDT is missing entirely?" Answer: Per SAP — typically treated conservatively as potentially treatment-emergent and flagged, with a footnote in the TLF. Must align with SAP specification before coding.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q6: What is the difference between ADSL and ADEX and when does a date in one take priority over the other?</h3>
+            <p><strong>What they wanted to hear:</strong> ADSL contains study-level summary treatment dates — TRTSDT (first actual treatment start date) and TRTEDT (last actual treatment end date). These are derived from ADEX (exposure analysis dataset) which has one record per dose/administration. ADSL TRTSDT = MIN(ADEX.EXSTDT) for the subject. If a subject has dose records in ADEX with different treatment arms (e.g., crossover study), ADSL may contain period-specific variables (TRTS1DT, TRTS2DT). The interviewer asked: "In a crossover study, how do you handle treatment-emergent AEs for Period 2 when deriving TRTEMFL?" Answer: Use period-specific treatment start dates from ADSL — TRTS2DT not TRTSDT — to determine the treatment-emergent window for Period 2 AEs.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Real TLF / Output Questions — Same Interview</h2>
+
+          <div class="qa-block">
+            <h3>Q7: How would you produce a treatment-emergent adverse events summary table showing incidence by system organ class and preferred term?</h3>
+            <p><strong>What they wanted to hear:</strong> Use ADAE filtered to TRTEMFL='Y' and SAFFL='Y' (safety population). Count unique subjects (USUBJID) with at least one occurrence of each SOC and PT combination per treatment arm. Use the denominator from ADSL (total subjects in safety population per arm). PROC FREQ or PROC SQL for counts, then merge with denominators for percentages. Use PROC REPORT for output with nested SOC > PT hierarchy, sorting by descending frequency in the reference arm. Interviewers often follow up: "How do you sort PTs within each SOC — alphabetically or by frequency?" Answer: Typically by descending frequency within SOC for the reference/treatment arm, as specified in the SAP. Alphabetical fallback for ties.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your Clinical SAS Interview</h2>
+          <p>
+            These are real questions from a single interview. Your interview will have different specific questions depending on the sponsor therapeutic area, the CRO's internal standards, and your claimed experience level. The underlying domains — SDTM mapping, ADaM derivation logic, TLF production, define.xml, Pinnacle 21 — remain consistent.
+          </p>
+          <p>
+            Get domain-specific preparation from a clinical SAS expert who has done CRO interviews in your target country. Our <a href="/pharma-proxy-interview/">pharma proxy interview support</a> is available same-day.
+          </p>
+          <p>
+            WhatsApp now: <strong>{site.whatsapp}</strong>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Clinical SAS Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Clinical SAS Interview Coming Up?"
+          body="Get real-time preparation from a clinical SAS expert who has been on both sides of the CRO interview table. SDTM, ADaM, TLF, Pinnacle 21, define.xml. Same-day support available."
+          ctaLabel="Get Clinical SAS Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

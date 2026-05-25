@@ -1,0 +1,85 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I just started a new pharma job and I have no idea what I am doing. Can you help?', answer: 'Yes — and this is one of the most common situations we help pharma professionals navigate. Starting a new pharma role means reading a mountain of SOPs, learning unfamiliar systems, understanding the team structure, and being expected to contribute from day one. We help you: understand the key regulatory framework your new role operates in (GMP, GCP, GxP, ISO 13485), prioritise which SOPs to read first and what to look for, understand your role in the broader team workflow, and handle the first real tasks assigned to you — step by step.' },
+  { question: 'My manager expects me to know things I have never been trained on. Can you help?', answer: 'Yes. This is the most common pain point in pharma. You were hired for your domain knowledge but your first assignment requires specific system knowledge (Veeva Vault, Argus Safety, Medidata Rave, SAP QM, SDTM mapping in a specific study design) that was not in the job description. We provide the specific technical guidance for whatever task has been assigned — not general training, but help with the exact task in front of you right now.' },
+  { question: 'I need to understand my company\'s pharma systems quickly. Can you help?', answer: 'Yes. When you join a new pharma organisation, you inherit their specific implementations of industry-standard systems. Our experts help you understand the standard system (how Veeva Vault QualityDocs works in general, how Argus Safety case processing flows, how SDTM mapping is typically done) and then help you interpret the company-specific customisations and SOPs you are reading. This significantly shortens your effective onboarding time.' },
+  { question: 'I am joining a CRO and I have never worked in clinical research before. Can you help?', answer: 'Yes. CRO onboarding is particularly demanding — you go from zero to client-facing work very quickly. We help new CRO joiners with: understanding the clinical trial lifecycle (IND/CTA through Phase I-IV to submission), your specific role in it (SAS programmer, CDM, CRA, regulatory coordinator), the regulatory frameworks your clients operate under (FDA, EMA, MHRA, HPRA), the systems you will be using (EDC, CTMS, eTMF, SAP, Veeva), and how to handle your first deliverable professionally.' },
+  { question: 'What pharma onboarding help can you provide right now?', answer: 'All pharma onboarding tasks: understanding your regulatory framework (GMP, GCP, GxP, ISO 13485), reading and interpreting company SOPs in your domain, first-task guidance (your first SDTM dataset, your first CAPA, your first eCTD submission, your first validation protocol), system onboarding support (Veeva Vault, Argus Safety, Medidata Rave, SAP QM, UiPath), understanding the team structure and your role in it, and meeting preparation — what to say in your first project standup or client call. Available 24/7 via WhatsApp.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Project Onboarding Help', url: site.url + '/pharma-project-onboarding-help/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Pharma Project Onboarding Help | Real-Time Support for New Pharma Joiners"
+  description="Just started a new pharma role and struggling? Real-time onboarding support for clinical SAS, CSV validation, regulatory, PV, Veeva Vault, and all pharma domains. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Project Onboarding Help' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Onboarding Support</div>
+      <h1>Pharma Project Onboarding Help — Real-Time Support When You Just Started</h1>
+      <p class="hero-tagline">You just started a new pharma role. Day one, your manager is already assigning tasks. The SOPs are overwhelming. The systems are unfamiliar. The team expects you to know things you have never been trained on. You cannot ask too many questions without looking incompetent. We fix this — task by task, system by system, right now via WhatsApp.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Who Needs Pharma Onboarding Support</h2>
+          <ul class="feature-list">
+            <li>Professionals new to a CRO or pharmaceutical company for the first time</li>
+            <li>Experienced professionals starting a role in a new pharma domain or system</li>
+            <li>Career changers from IT or science entering pharma for the first time</li>
+            <li>Contractors starting a new pharma engagement with no internal support</li>
+            <li>Professionals relocating to a new country and navigating a different regulatory environment</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>What We Help New Joiners With</h2>
+          <ul class="feature-list">
+            <li>Understanding your regulatory framework — what GMP, GCP, GxP, or ISO 13485 means for your specific role</li>
+            <li>SOP reading guidance — what to focus on, what to memorise, what to reference when needed</li>
+            <li>First-task execution — your first SDTM mapping, first CAPA, first eCTD submission, first IQ protocol</li>
+            <li>System navigation — Veeva Vault, Argus Safety, Medidata Rave, SAP QM, UiPath</li>
+            <li>First standup and client meeting preparation — what to say, what not to say</li>
+            <li>Stakeholder navigation — understanding team dynamics in a regulated environment</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong>. Tell us your role, your pharma domain, and what you are facing on day one.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/struggling-in-pharma-project/">Struggling in Your Pharma Project?</a> | <a href="/pharma-proxy-job-support/">Pharma Proxy Job Support</a> | <a href="/pharma-standup-meeting-support/">Pharma Standup Meeting Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Onboarding Help — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Just Started a Pharma Role?"
+          body="Real-time onboarding support — understanding your systems, executing your first tasks, navigating your first week. Available 24/7 via WhatsApp. No training courses. Just real help."
+          ctaLabel="Get Pharma Onboarding Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma proxy job support"
+          secondaryHref="/pharma-proxy-job-support/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

@@ -1,0 +1,118 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What CAPA questions come up in pharma QA interviews?', answer: 'CAPA questions are asked in virtually every pharma QA interview: "Walk me through your CAPA process from root cause to effectiveness check", "What root cause analysis tools do you use — fishbone diagram, 5-Why, fault tree?", "How do you determine if a CAPA is closed vs. effective?", "What is the difference between a CAPA and a deviation?", "What constitutes a major vs. critical CAPA in your QMS?", "How long do you have to complete a CAPA after a regulatory inspection finding?" Interviewers expect you to describe a specific CAPA scenario from your experience — they are checking whether you understand the difference between corrective action (fixing the current problem) and preventive action (preventing recurrence).' },
+  { question: 'What GMP deviation questions are asked in QA interviews?', answer: 'GMP deviation interview questions: "What is the difference between a planned deviation and an unplanned deviation?", "How do you classify a deviation as minor, major, or critical?", "What is the impact assessment process for a GMP deviation?", "Give me an example of a GMP deviation you investigated. What was the root cause and what was your CAPA?", "What is the relationship between a deviation and a batch disposition decision?", "How do you handle a deviation discovered retrospectively after batch release?" For roles involving batch manufacture: "If a process parameter goes out of specification mid-batch, what is your immediate response?" Interviewers in Ireland and UK often reference the Eudralex GMP Annex 11 and Chapter 4 (Documentation).' },
+  { question: 'What change control questions appear in QA/QMS interviews?', answer: 'Change control questions: "Walk me through your site\'s change control process from initiation to closure", "What is the impact assessment for a change to a critical process parameter?", "How do you determine if a change requires regulatory notification vs. internal change control only?", "What is a Type IA vs. Type II variation in EU regulatory context?", "How do you manage change control across multiple sites?", "What is a CCDS (Company Core Data Sheet) and how does a labelling change go through change control?" Senior QA roles also ask about change control workflows in electronic QMS (eQMS) platforms — Veeva Vault QualityDocs, MasterControl, TrackWise. Know the difference between emergency change control and standard change control procedures.' },
+  { question: 'What audit and inspection questions are asked in pharmaceutical QA interviews?', answer: 'Audit and inspection questions: "Have you hosted an FDA or MHRA inspection? Walk me through your preparation process", "What is a 483 observation and what do you do when one is issued?", "What is the difference between an internal audit, a supplier audit, and a regulatory inspection?", "How do you prepare a CAPA response to a regulatory inspection finding?", "What is a Warning Letter and how does your QMS handle post-Warning Letter commitments?", "What is an in-process audit and at what stage of manufacture do you conduct it?" For roles at Ireland-based companies: HPRA inspection readiness is frequently discussed. UK roles ask about MHRA GMP inspection frameworks. Interviewers also ask about audit trail integrity and data integrity in QMS documentation — connecting to EU GMP Chapter 4 and FDA 21 CFR Part 211.' },
+  { question: 'How do I prepare for a pharma QA/QMS proxy interview?', answer: 'Focus on: ICH Q10 Pharmaceutical Quality System, EU GMP Eudralex Volume 4 (Chapters 1-9, Annexes 11 and 15), FDA 21 CFR Part 211 for manufacturing, the CAPA cycle (deviation → investigation → root cause → CA → PA → effectiveness check), change control process and regulatory variation types (EU Type IA/IB/II, FDA Prior Approval Supplement/Annual Report), batch disposition process and Authorised Person (AP/QP) role, GMP documentation principles (ALCOA+, CGMP). Our pharma QA proxy interview support provides real-time preparation from a QA specialist who has handled inspections and CAPAs at manufacturing sites. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'QMS / CAPA / GMP Quality — 2026', url: site.url + '/pharma-interviews/real-qms-capa-gmp-quality-proxy-interview-questions-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real QMS / CAPA / GMP Quality Interview Questions — 2026',
+    'Real Q&A from pharma QA and QMS interviews in 2026. CAPA root cause, GMP deviations, change control, audit and inspection preparation, Eudralex, FDA 21 CFR Part 211.',
+    site.url + '/pharma-interviews/real-qms-capa-gmp-quality-proxy-interview-questions-2026/',
+    '2026-02-20',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real QMS CAPA GMP Quality Interview Questions 2026"
+  description="Real Q&A from pharma QA/QMS interviews 2026. CAPA, GMP deviations, change control, audit inspection, Eudralex, FDA 21 CFR Part 211. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'QMS / CAPA / GMP Quality — 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | QMS | CAPA | GMP | 2026</div>
+      <h1>Real QMS / CAPA / GMP Quality Proxy Interview Questions — 2026</h1>
+      <p class="hero-tagline">Actual questions from pharmaceutical QA and quality management system interviews at manufacturing sites and CROs in 2026. CAPA root cause analysis, GMP deviation management, change control process, regulatory inspection preparation — what pharma QA interviewers actually asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Compiled from QA interviews at two organisations in 2026: an Irish pharmaceutical manufacturing site (oral solid dosage, GMP-regulated) and a UK-based CDMO (biologics, both GMP and GCP functions). Roles: QA Specialist (Manufacturing) and Quality Systems Manager. Both sites had hosted regulatory inspections within the prior 24 months. Questions represent the technical panel round.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real QA / QMS Interview Questions</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Walk me through your CAPA process from the point of a deviation being raised to the CAPA being closed as effective.</h3>
+            <p><strong>What they wanted to hear:</strong> Step 1 — Deviation raised: unplanned event identified during manufacturing, lab, or quality review. Initial classification (minor/major/critical) by QA. Immediate containment action if required (hold batch, quarantine product, isolate equipment). Step 2 — Investigation: gather data, review batch records, logbooks, equipment calibration records, operator training records. Perform root cause analysis using structured tools: Fishbone (Ishikawa) diagram for identifying all potential contributing factors (Materials, Methods, Measurement, Machine, Man, Environment); 5-Why analysis to drill down to root cause; fault tree for complex events. Document the most probable root cause with evidence. Step 3 — Corrective Action (CA): address the identified root cause directly. Preventive Action (PA): broaden the fix to prevent recurrence in related processes, equipment, or products. Step 4 — CAPA plan: assign actions, owners, target completion dates. Risk-classify: critical CAPAs typically require completion within 30 days of regulatory commitment. Step 5 — Effectiveness check: after CAPA implementation, monitor for a defined period (typically 3-6 months) to confirm the root cause event has not recurred. Collect evidence (monitoring data, audit results, repeat deviation rates). Step 6 — CAPA closure: QA review and sign-off, approved in QMS system. Interviewer follow-up: "What if your effectiveness check shows the CAPA did not work?" — Answer: do not close; initiate a new root cause investigation. The original root cause hypothesis was incorrect or the corrective action was insufficient. Document the failure and the new investigation — this is itself a quality system learning.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: A batch is in final packaging when an out-of-specification (OOS) result is found for a dissolution test. What is your process?</h3>
+            <p><strong>What they wanted to hear:</strong> Immediate action: place the batch on hold. Do not release or destroy — this is a Quality decision that requires investigation. Phase 1 Investigation (Laboratory investigation): assess whether the OOS result is due to a laboratory error (incorrect calculation, instrument malfunction, analyst error during testing). Review all raw lab data. If laboratory error confirmed: invalidate the OOS result, document the assignable cause, retest per protocol. If no laboratory error confirmed: the OOS result is a genuine product failure — move to Phase 2. Phase 2 Investigation (Full-scale investigation): review batch manufacturing records for process deviations during the batch. Review equipment cleaning, calibration, and maintenance records. Review raw material CoA and release records. Expand testing: retest the original sample (if still available and stability maintained), test additional units. Involve QA, production, and laboratory management. Document all findings. Conclusion: if the investigation confirms a confirmed OOS — the batch fails release. If an assignable root cause is found AND it is limited to a specific sub-lot or unit — consider limited release with justification (QA and Regulatory Affairs sign-off required). Notify Qualified Person (QP/AP) for batch disposition decision. Report to regulatory authorities if required (e.g., field alert report in US). Raise CAPA. Interviewer then asked: "Is there a timeline requirement for OOS investigation?" — FDA 21 CFR Part 211.192 does not specify a numerical timeline, but the investigation must be timely, documented, and completed before batch disposition. EU GMP Chapter 6 requires written procedures for OOS investigations.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: What is the difference between a Type IA, Type IB, and Type II variation in the EU regulatory context? How does your change control process interface with variation management?</h3>
+            <p><strong>What they wanted to hear:</strong> EU post-authorisation variations (Variation Regulation EC No 1234/2008): Type IA — minor change with minimal or no impact on quality, safety, or efficacy. Annual notification only (submitted within 12 months of implementation). Can typically be implemented before submission. Example: minor editorial changes to the Summary of Product Characteristics (SmPC). Type IB — minor change with a potentially moderate impact. Notification required before implementation — waiting period of 30 days. If no objection from EMA or national competent authority, the change can proceed. Example: widening of a non-critical process parameter specification within validated range. Type II — major change with a significant impact on quality, safety, or efficacy. Prior approval required — full assessment by regulatory authority, timeline typically 60-90 days for standard, up to 90 days for complex. Example: change of manufacturing site, new indication, significant manufacturing process change. Change control interface: before raising a change control internally, RA assesses the variation category. The change control cannot be closed until the relevant regulatory variation is approved (for Type II) or the notification window has passed without objection (Type IB). This is a critical QA/RA interface point — premature implementation of a Type II change is a GMP non-compliance.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: You are preparing your site for an MHRA or FDA GMP inspection. Walk me through your inspection readiness approach.</h3>
+            <p><strong>What they wanted to hear:</strong> Advance preparation (ongoing, not just pre-inspection): maintain a always-inspection-ready state through robust QMS — clean CAPA backlog, no overdue deviations, training records complete and current, SOPs reviewed on schedule. Document management: ensure all current SOPs are in place, superseded versions archived correctly, version control maintained in eQMS. Mock inspections: conduct internal mock inspections using a pre-agreed inspection route (front room, production floor, laboratories, warehouse). Front room preparation: designate subject matter experts for each functional area who can present and answer questions. Prepare facility overview presentation, site master file (SMF) current and approved. Back room: establish a back room team to respond rapidly to document requests from inspectors. Establish a document retrieval SOP with 30-minute SLA for document production. Data integrity: verify audit trail completeness for all computerised systems, confirm no blank or incomplete data fields in batch records. CAPA backlog: target zero overdue CAPAs before inspection. For previous regulatory commitments: ensure all committed CAPAs from prior inspections are implemented and effectiveness-checked. Trend analysis: prepare quality metrics trends (deviation rate, CAPA cycle time, OOS rate, complaint rate) to demonstrate quality system performance. Post-notification (if the inspection is announced): review the inspector's recent 483 observation history for that type of facility from FDA inspection database to anticipate focus areas.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your Pharma QA Interview</h2>
+          <p>
+            QA interviews are highly scenario-based. Interviewers test whether you can think through a GMP problem in real time — not just recite regulations.
+          </p>
+          <p>
+            Get preparation from a QA specialist with real inspection and CAPA experience. Our <a href="/pharma-qa-proxy-interview/">Pharma QA Proxy Interview Support</a> is available same-day. WhatsApp: <strong>{site.whatsapp}</strong>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma QA Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="QA Interview Coming Up?"
+          body="Get real-time preparation from a pharma QA specialist who has managed CAPAs, hosted inspections, and worked in GMP manufacturing environments. Same-day support available."
+          ctaLabel="Get Pharma QA Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

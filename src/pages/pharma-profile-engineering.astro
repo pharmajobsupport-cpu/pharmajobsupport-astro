@@ -1,0 +1,284 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma profile engineering?', answer: 'Profile engineering is the process of strategically rewriting your resume, LinkedIn profile, and online presence to accurately and compellingly represent your pharma domain expertise, regulatory experience, and tool proficiency — in the language that recruiters and hiring managers actually use when filling roles.' },
+  { question: 'Is this the same as resume writing?', answer: 'No. Generic resume writers do not know the difference between SDTM and ADaM, or why your Argus Safety experience matters more than your general database experience. Our specialists rewrite your profile using precise pharma domain vocabulary, regulatory context, and achievement framing that resonates with pharmaceutical hiring managers.' },
+  { question: 'Do you optimize for ATS systems?', answer: 'Yes. We structure your resume for common ATS platforms used by pharma companies and CROs (Taleo, Workday, Greenhouse, iCIMS). This includes keyword density calibration, section formatting, and file format guidance.' },
+  { question: 'What does LinkedIn optimization include?', answer: 'We rewrite your headline, About section, Experience entries, Skills section, and Featured section. We also advise on your profile completeness score, connection strategy, and how to position yourself for pharma recruiter searches.' },
+  { question: 'Can you help me transition into pharma from a related field?', answer: 'Yes. We have helped professionals from IT, data science, life sciences, nursing, and chemistry successfully position their transferable skills for pharma CDM, CSV, PV, regulatory, and QA roles. We identify the regulatory and domain bridges that make your background relevant.' },
+  { question: 'How long does the profile engineering process take?', answer: 'Typically 3-5 business days for a full resume and LinkedIn rewrite, with a review round included. Rush turnarounds (24-48 hours) are available via WhatsApp request.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Profile Engineering', url: site.url + '/pharma-profile-engineering/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma Profile Engineering | Resume & LinkedIn Optimization | pharmajobsupport.com"
+  description="Expert pharma resume and LinkedIn profile engineering for SAS programmers, CDM, PV, CSV, regulatory, and QA professionals. Domain-specific rewriting, ATS optimization, and career positioning."
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Profile Engineering' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Profile Engineering</div>
+      <h1>Pharma Profile Engineering</h1>
+      <p class="hero-tagline">Resume & LinkedIn Optimization by Pharma Domain Experts — Not Generic Career Coaches</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Why Generic Resume Writers Fail in Pharma</h2>
+          <p>
+            Pharmaceutical industry roles require precise regulatory vocabulary, domain-specific tool knowledge, and achievement framing that non-pharma writers cannot replicate. A resume that says "managed data quality processes" when it should say "implemented edit check logic in Medidata Rave per CDASH standards" will not get past a pharma recruiter who knows the difference.
+          </p>
+          <p>
+            Our specialists rewrite your resume and LinkedIn in the language that pharma hiring managers and ATS systems are looking for — precise, regulatory-grounded, and achievement-oriented.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What Profile Engineering Includes</h2>
+          <div class="service-grid">
+            <div class="service-card">
+              <div class="service-icon">📄</div>
+              <h3>Resume Rewrite</h3>
+              <p>Complete restructuring using pharma industry vocabulary, quantified achievements, domain-specific keywords, ATS-friendly formatting, and regulatory context that resonates with hiring managers.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🔗</div>
+              <h3>LinkedIn Optimization</h3>
+              <p>Headline, About, Experience, Skills, and Featured section rewriting. Recruiter search optimization, completeness score improvement, and positioning for pharma industry visibility.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🎯</div>
+              <h3>ATS Keyword Calibration</h3>
+              <p>Keyword strategy aligned with real pharma job descriptions — SDTM, ADaM, Argus Safety, 21 CFR Part 11, GAMP 5, eCTD, MedDRA, and 200+ domain terms mapped to your experience.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">📊</div>
+              <h3>Achievement Framing</h3>
+              <p>Converting job duties into quantified, impact-focused achievements. "Processed ICSRs" becomes "Processed 300+ ICSRs per month with 99.8% on-time submission rate to FDA MedWatch and EudraVigilance."</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🌐</div>
+              <h3>Career Narrative</h3>
+              <p>Positioning strategy for your target roles — whether you're advancing within your domain, transitioning to a new area, or re-entering pharma after a gap.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">✓</div>
+              <h3>Review Round</h3>
+              <p>One full revision cycle after initial delivery. We incorporate your feedback and refine the language until you're confident in how your profile presents your expertise.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Domains We Engineer Profiles For</h2>
+          <ul class="domain-list">
+            <li>Clinical SAS Programming — SDTM, ADaM, TLF, Pinnacle 21, SAS Base/Advanced, macro development</li>
+            <li>Clinical Data Management — Medidata Rave, Oracle InForm, CDASH, CDISC, DMP, database lock</li>
+            <li>Pharmacovigilance — Argus Safety, Oracle AERS, ICSR, MedDRA, EudraVigilance, aggregate reports</li>
+            <li>Computer System Validation — 21 CFR Part 11, GAMP 5, IQ/OQ/PQ, EU Annex 11, ALCOA+</li>
+            <li>Regulatory Affairs — eCTD, NDA, BLA, MAA, Veeva Vault RIM, FDA/EMA submissions</li>
+            <li>Quality Assurance / GMP — CAPA, deviation management, GMP audits, ICH Q10, SOPs</li>
+            <li>Medical Device QA — ISO 13485, EU MDR, FDA 510(k), ISO 14971, PMA, UDI</li>
+            <li>Veeva Vault — QMS, eTMF, RIM, Safety, EDC module configuration and validation</li>
+            <li>Pharma AI / ML — drug discovery, PV automation, clinical NLP, regulatory AI</li>
+            <li>RPA / Automation — UiPath, Automation Anywhere, Blue Prism in pharma GxP contexts</li>
+            <li>Medical Writing — CSR, IB, IMPD, regulatory submissions, publications strategy</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Career Transition Support</h2>
+          <p>
+            Transitioning from IT, data science, nursing, chemistry, or another life sciences field into pharma? We identify the regulatory bridges, transferable skills, and domain vocabulary that make your non-pharma background relevant to pharmaceutical employers.
+          </p>
+          <p>
+            Common transitions we support: IT → CSV/Validation, Data Science → Clinical SAS or Pharma AI, Nursing → Clinical Research or PV, Chemistry → QC or Regulatory, Biology → Medical Writing or Regulatory.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} />
+        </section>
+
+        <section class="content-section">
+          <h2>Related Services</h2>
+          <div class="related-links">
+            <a href="/pharma-career-marketing/">Career Marketing</a>
+            <a href="/pharma-interview-support/">Interview Preparation</a>
+            <a href="/pharma-interview-proxy-support/">Interview Proxy Support</a>
+            <a href="/contact/">Get Started</a>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="page-sidebar">
+        <div class="sidebar-card sidebar-card--cta">
+          <h3>Start Your Profile</h3>
+          <p>3-5 day turnaround. Rush available. Message us your current resume to begin.</p>
+          <a href={site.whatsappUrl} class="sidebar-btn" target="_blank" rel="noopener noreferrer">
+            WhatsApp: {site.whatsapp}
+          </a>
+        </div>
+        <div class="sidebar-card">
+          <h3>What You Receive</h3>
+          <ul>
+            <li>Rewritten resume (Word + PDF)</li>
+            <li>LinkedIn full optimization</li>
+            <li>ATS keyword analysis</li>
+            <li>Career narrative document</li>
+            <li>One revision round</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Turnaround</h3>
+          <ul>
+            <li>Standard — 3-5 business days</li>
+            <li>Rush — 24-48 hours</li>
+            <li>Revision — 2 business days</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Delivery Formats</h3>
+          <ul>
+            <li>Word (.docx) — ATS-ready</li>
+            <li>PDF — visual version</li>
+            <li>LinkedIn text — ready to paste</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-14);
+  }
+  .page-hero {
+    padding: var(--space-10) 0 var(--space-8);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-8);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: var(--space-4);
+  }
+  .page-hero h1 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: var(--space-4); }
+  .hero-tagline { font-size: 1.1rem; color: var(--color-muted); font-style: italic; }
+
+  .page-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  .content-section { margin-bottom: var(--space-10); }
+  .content-section h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-5); color: var(--color-text); }
+  .content-section p { font-size: 0.9375rem; color: var(--color-muted); line-height: 1.75; }
+  .content-section p + p { margin-top: var(--space-3); }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-4);
+  }
+  .service-card {
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+  .service-icon { font-size: 1.5rem; margin-bottom: var(--space-3); }
+  .service-card h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-2); color: var(--color-text); }
+  .service-card p { font-size: 0.8125rem; color: var(--color-muted); line-height: 1.6; }
+
+  .domain-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  .domain-list li {
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-primary);
+    font-size: 0.875rem;
+    color: var(--color-text);
+  }
+
+  .related-links { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .related-links a {
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .related-links a:hover { background: var(--color-primary); color: #fff; }
+
+  .page-sidebar { position: sticky; top: 5rem; display: flex; flex-direction: column; gap: var(--space-4); }
+  .sidebar-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+  }
+  .sidebar-card--cta { background: var(--color-primary); border-color: var(--color-primary); }
+  .sidebar-card--cta h3 { color: #fff; }
+  .sidebar-card--cta p { color: rgba(255,255,255,0.85); font-size: 0.875rem; margin-bottom: var(--space-4); }
+  .sidebar-card h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-3); }
+  .sidebar-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-1); }
+  .sidebar-card li { font-size: 0.8125rem; color: var(--color-muted); }
+  .sidebar-card li::before { content: '✓ '; color: var(--color-primary); font-weight: 700; }
+  .sidebar-card--cta li::before { color: rgba(255,255,255,0.7); }
+  .sidebar-card--cta li { color: rgba(255,255,255,0.9); }
+  .sidebar-btn {
+    display: block;
+    background: #fff;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .page-layout { grid-template-columns: 1fr; }
+    .page-sidebar { position: static; }
+  }
+</style>

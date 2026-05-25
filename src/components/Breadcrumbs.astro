@@ -1,0 +1,68 @@
+---
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  crumbs: Crumb[];
+}
+
+const { crumbs } = Astro.props;
+---
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li
+      itemprop="itemListElement"
+      itemscope
+      itemtype="https://schema.org/ListItem"
+    >
+      <a href="/" itemprop="item">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+    {crumbs.map((crumb, i) => (
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem"
+        aria-current={!crumb.href ? 'page' : undefined}
+      >
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        {crumb.href ? (
+          <a href={crumb.href} itemprop="item">
+            <span itemprop="name">{crumb.label}</span>
+          </a>
+        ) : (
+          <span class="breadcrumb-current" itemprop="name">{crumb.label}</span>
+        )}
+        <meta itemprop="position" content={String(i + 2)} />
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumbs {
+    padding: var(--space-3) 0;
+    font-size: 0.8125rem;
+  }
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .breadcrumbs a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  .breadcrumbs a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: var(--color-muted); margin: 0 0.25rem; }
+  .breadcrumb-current { color: var(--color-muted); }
+</style>

@@ -1,0 +1,49 @@
+---
+const stats = [
+  { value: '500+', label: 'Pharma Professionals Supported' },
+  { value: '18', label: 'Specialized Pharma Domains' },
+  { value: '30+', label: 'Countries Served' },
+  { value: '24/7', label: 'Support Availability' },
+];
+---
+
+<section class="stats-bar" aria-label="Service statistics">
+  <div class="stats-inner">
+    {stats.map((s) => (
+      <div class="stat">
+        <p class="stat-value">{s.value}</p>
+        <p class="stat-label">{s.label}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .stats-bar {
+    background: var(--color-primary);
+    color: #fff;
+    padding: var(--space-10) var(--space-4);
+  }
+  .stats-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: var(--space-1);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    line-height: 1.4;
+  }
+  @media (max-width: 640px) {
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

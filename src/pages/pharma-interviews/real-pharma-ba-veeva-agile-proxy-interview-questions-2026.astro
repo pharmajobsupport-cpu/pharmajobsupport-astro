@@ -1,0 +1,118 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What Veeva Vault questions are asked in pharma BA interviews?', answer: 'Pharma BA interviews for Veeva roles ask: "What Veeva Vault modules have you worked with — QualityDocs, RIM, Clinical, eTMF, CTMS?", "How do you gather requirements for a Veeva Vault configuration change?", "What is a lifecycle in Veeva Vault and how does it relate to document workflows?", "How do you map a business process to a Veeva Vault workflow and document type configuration?", "What is the difference between a Veeva Vault Admin task and a Veeva Vault Business Admin task?". For RIM-specific BA roles: "How does a regulatory submission workflow in Veeva RIM differ from a QualityDocs workflow?", "How do you handle multi-region regulatory submissions in Veeva RIM?" Be prepared to discuss specific configuration changes you have gathered requirements for.' },
+  { question: 'What Agile methodology questions are asked in pharma BA roles?', answer: 'Pharma BA interviews test Agile in the context of regulated environments: "How do you write a user story for a pharma system change?", "What is the Definition of Done for a user story in a validated pharma system implementation?", "How do you handle regulatory compliance requirements in an Agile sprint?", "What is the difference between a product backlog and a sprint backlog, and who owns each?", "How do you prioritise features in a pharma system implementation when both regulatory compliance and user experience requirements are in scope?", "Have you worked in a hybrid Agile-Waterfall model? How did you handle validation documentation in that model?" Most pharma BA roles use either Scaled Agile (SAFe) or project-specific hybrid models — know both.' },
+  { question: 'What business requirements document (BRD) and user requirements specification (URS) questions come up?', answer: 'Documentation questions: "What is the difference between a Business Requirements Document (BRD), a User Requirements Specification (URS), and a Functional Requirements Specification (FRS)?", "Walk me through how you gather requirements from stakeholders for a pharma system implementation", "How do you handle conflicting requirements from different stakeholders?", "What traceability matrix do you maintain for a regulated system?", "How do you ensure completeness of requirements for a CSV validation project?". In pharma: URS = the GxP validation equivalent of BRD — it becomes a controlled document. Interviewers test whether you understand that in a validated environment, requirements must be traceable from URS through FS/DS to test scripts and qualification reports (IQ/OQ/PQ).' },
+  { question: 'What process mapping and gap analysis questions appear in pharma BA interviews?', answer: 'Process analysis questions: "How do you conduct an AS-IS and TO-BE process mapping for a pharma system implementation?", "Give me an example of a gap analysis you conducted for a regulatory system implementation", "How do you facilitate a requirements workshop with stakeholders from QA, IT, regulatory, and clinical operations?", "What tools do you use for process mapping — Visio, Lucidchart, Miro?", "How do you validate that your process map accurately represents what happens on the manufacturing floor vs. what is in the SOP?" Pharma-specific twist: process maps for validated systems become controlled documents in the TMF or QMS — they cannot be informally maintained.' },
+  { question: 'How do I prepare for a pharma BA proxy interview?', answer: 'Focus on: Veeva Vault platform structure (lifecycles, workflows, document types, roles — QualityDocs and RIM most commonly tested), Agile in regulated pharma (user stories for GxP systems, Definition of Done including validation documentation, SAFe framework basics), requirements documentation (URS vs. BRD, requirements traceability matrix, use case documentation), CSV validation lifecycle (URS → FS → DS → IQ → OQ → PQ → VR), JIRA for pharma project management (epics, stories, test management). Our pharma BA proxy interview support gives you mock sessions with a pharma BA who has delivered Veeva Vault and pharma system implementations at CROs and sponsors. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Pharma BA / Veeva / Agile — 2026', url: site.url + '/pharma-interviews/real-pharma-ba-veeva-agile-proxy-interview-questions-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Pharma BA / Veeva / Agile Interview Questions — 2026',
+    'Real Q&A from pharma business analyst interviews in 2026. Veeva Vault configuration, Agile in regulated environments, URS/BRD/FRS documentation, requirements gathering, process mapping.',
+    site.url + '/pharma-interviews/real-pharma-ba-veeva-agile-proxy-interview-questions-2026/',
+    '2026-03-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Pharma BA Veeva Agile Interview Questions 2026"
+  description="Real Q&A from pharma BA interviews 2026. Veeva Vault, Agile in pharma, URS/BRD, requirements gathering, process mapping. Proxy interview support: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Pharma BA / Veeva / Agile — 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | Pharma BA | Veeva Vault | Agile | 2026</div>
+      <h1>Real Pharma BA / Veeva / Agile Proxy Interview Questions — 2026</h1>
+      <p class="hero-tagline">Actual questions from pharma business analyst interviews at CROs, pharmaceutical companies, and system integrators in 2026. Veeva Vault configuration requirements, Agile methodology in validated environments, requirements documentation (URS/BRD/FRS), stakeholder management — what BA interviewers actually asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Compiled from pharma BA interviews at two organisations in 2026: a global pharma company implementing Veeva Vault QualityDocs across 12 sites, and a CRO implementing Veeva Vault Clinical and eTMF. Roles: Pharma Business Analyst (Veeva Vault) and Senior Clinical Systems BA. Both used Agile methodology with SAFe. Questions from the technical-functional panel round.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Pharma BA Interview Questions</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Walk me through how you would gather requirements for a new Veeva Vault QualityDocs configuration — specifically adding a new document type for a new site that has joined the network.</h3>
+            <p><strong>What they wanted to hear:</strong> Discovery phase: meet with the new site's QA lead, document management administrator, and end users. Understand: what document types the site manages (SOPs, batch records, validation reports, deviation reports), what the current workflow for review and approval looks like (who reviews, who approves, what approval sequence), how documents are currently classified and retained (retention schedule, access control), what regulatory requirements apply (EU GMP, FDA, local competent authority). Gap analysis: compare the new site's requirements against existing Vault configuration. Identify: which document types already exist in Vault and can be mapped, which require new document types or sub-types, which workflows match existing configured workflows vs. requiring new configurations. Requirements documentation: write a URS section for the new site's document type additions. In a validated Vault environment, this URS becomes a controlled document — it must be approved before configuration begins. Configuration design: work with the Vault Admin to design the document type hierarchy (document type → document subtype), lifecycle (Draft → Under Review → Approved → Superseded → Retired), workflow (automated routing to reviewer and approver roles based on document type), and roles/permissions (who can create, view, edit, approve each document type). UAT: write test scripts that verify each new document type moves through the lifecycle correctly, approval routing works, and access controls are enforced. Training: write site-specific training materials for new document types. Interviewer follow-up: "What if the new site has a document type that conflicts with an existing configuration across the network?" — Answer: escalate to the Vault governance steering committee. In multi-site Vault deployments, document type harmonisation is a governance decision, not a unilateral configuration change. Document the conflict and proposed resolution, get approval before proceeding.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: How do you handle regulatory compliance requirements in an Agile sprint? Give me a specific example.</h3>
+            <p><strong>What they wanted to hear:</strong> Challenge: Agile sprints are iterative and incremental; regulated system implementations require formal documentation (URS, FS, test scripts, qualification reports) that do not fit neatly into sprint deliverables. Approach in pharma: treat validation documentation as sprint deliverables alongside features. For each user story that adds functionality to a validated system, the Definition of Done includes: user story acceptance criteria met and tested, validation impact assessment completed, test script written and reviewed, traceability matrix updated (linking user story → URS requirement → test script → test result). Example: In a Veeva Vault CTMS implementation, a sprint added the "Site Activation" workflow. The DoD for that sprint included: workflow configuration tested and confirmed working, IQ/OQ test scripts written for that workflow, UAT sign-off from the clinical operations business owner, traceability updated in the validation matrix, QA sign-off on the test evidence. Common mistake candidates make: saying "we do Agile so we don't have traditional validation." Wrong answer in pharma — Agile changes how you sequence the work, not whether validation documentation is required. The Qualification Report still needs to capture all test evidence for the full system. Interviewer also asked: "How do you handle a sprint velocity issue when validation documentation is taking longer than expected?" — Reduce scope of the sprint by moving lower-priority user stories to the next sprint. Never skip validation documentation to meet a sprint deadline in a GxP system.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: What is the difference between a URS, a Functional Specification, and a Design Specification in the context of a pharma system validation project?</h3>
+            <p><strong>What they wanted to hear:</strong> User Requirements Specification (URS): written from the business perspective. What does the system need to do? Captures business processes, user needs, and regulatory requirements in non-technical language. "The system shall allow a QA reviewer to electronically approve a document with an audit trail recording their identity and the timestamp." Owned by: the business (QA, clinical operations, regulatory). Functional Specification (FS): translates business requirements into system functions. What does the system do to meet the URS? More technical — describes workflows, data fields, system responses. "When the user clicks Approve, the system shall create an audit trail entry with the user ID (from SSO), timestamp (server time, UTC), and the document version number." Owned by: BA working with IT/system owner. Design Specification (DS): the technical implementation detail. How is the function built? Configuration settings, database schema, API calls, Vault configuration settings. "Audit trail entry will be captured in the document_audit_trail table with fields: user_id (FK to users), action_type = 'APPROVE', doc_version_id (FK to document_versions), timestamp (UTC, ISO 8601)." Owned by: system developers/Vault Admins. Validation traceability: URS requirement → FS function → DS configuration → test script → test result. Each level is controlled and requires formal approval before the next is started. In Agile pharma: URS is written early and approved; FS and DS evolve per sprint but are version-controlled; traceability matrix is updated incrementally.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: Describe a situation where you had conflicting requirements from QA, IT, and clinical operations stakeholders. How did you resolve it?</h3>
+            <p><strong>What they wanted to hear:</strong> Scenario (real example acceptable): Implementing an electronic TMF (eTMF) in Veeva Vault Clinical. QA wanted all TMF documents to require a mandatory QA review step before filing. Clinical Operations said this would delay trial timelines by 5-7 days per document cycle. IT said a mandatory QA review workflow was technically possible but would require significant Vault configuration effort. Approach: do not try to resolve it yourself — facilitate a structured requirements workshop. Bring all three stakeholders together. Frame the discussion around the regulatory requirement: ICH E6(R3) GCP requires inspection-readiness of TMF at all times, but it does not mandate a QA review step for every document filing. Present options with trade-offs: Option A — mandatory QA review for all documents (fully QA-controlled, timeline risk). Option B — risk-based QA review: QA review required for critical documents (protocols, consent forms, regulatory correspondence) but not routine documents (site visit reports, monitoring logs). Option C — QA audit function: no mandatory review gate, but QA audits TMF completeness and quality on a quarterly basis. Document the discussion and the decision in a requirements decision log with stakeholder sign-offs. Outcome: Option B was selected. Documented in URS as a compromise with regulatory rationale. Interviewer follow-up: "What if QA refuses to accept Option B?" — Escalate to the project governance committee. The BA's role is to facilitate and document, not to unilaterally decide regulatory compliance approaches.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your Pharma BA Interview</h2>
+          <p>
+            Pharma BA interviews combine business analysis skills with regulatory knowledge. You need to demonstrate both requirements expertise and understanding of how validation and compliance shape system delivery.
+          </p>
+          <p>
+            Get real-time preparation from a pharma BA with Veeva Vault implementation experience. Our <a href="/pharma-ba-proxy-interview/">Pharma BA Proxy Interview Support</a> is available same-day. WhatsApp: <strong>{site.whatsapp}</strong>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma BA Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Pharma BA Interview Coming Up?"
+          body="Get real-time preparation from a pharma BA who has delivered Veeva Vault implementations at CROs and sponsors using Agile. Same-day support available via WhatsApp."
+          ctaLabel="Get Pharma BA Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

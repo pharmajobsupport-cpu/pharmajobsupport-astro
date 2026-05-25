@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is medical writing proxy job support?', answer: 'Medical writing proxy job support is real-time live guidance from an experienced medical writer who helps you complete your actual medical writing tasks in a pharmaceutical or CRO context. When you are stuck on a Clinical Study Report (CSR) section, a safety narrative for a pharmacovigilance case, a Clinical Overview (Module 2.5) structure, a protocol synopsis, or a regulatory submission document — a medical writing specialist walks you through the content, structure, and regulatory requirements step by step via WhatsApp. It is not training. It is direct, task-specific help for the medical writing deliverable you need to complete right now.' },
+  { question: 'What medical writing tasks do you provide proxy support for?', answer: 'All medical writing tasks: Clinical Study Reports (CSR) per ICH E3 (all sections — synopsis, methods, results, discussion, appendices), Clinical Overviews (Module 2.5 of CTD), Clinical Summaries (Module 2.7 — 2.7.1 to 2.7.6), Investigator\'s Brochure (IB) writing and updates, protocol and protocol amendment writing, Informed Consent Form (ICF) writing and review, safety narratives for ICSRs (individual case narratives, literature case narratives), PSUR/PBRER cumulative summary sections, SUSAR narratives, regulatory query responses (clinical queries from FDA/EMA), label (SmPC/PIL/USPI) development and updates, patient-facing materials, and scientific publications (journal manuscript writing and peer review response).' },
+  { question: 'What is the ICH E3 Clinical Study Report structure?', answer: 'ICH E3 (Structure and Content of Clinical Study Reports) defines the required structure for CSRs submitted to regulatory authorities. Section structure: Title page and synopsis (concise summary of study design, patients, results). Section 1: Introduction. Section 2: Study objectives. Section 3: Investigational plan (study design, protocol amendments, study population, treatments). Section 4: Patient disposition (enrolled, randomised, completed, discontinued with reasons). Section 5: Efficacy evaluation (primary, secondary endpoints, statistical analysis). Section 6: Safety evaluation (adverse events by system organ class, deaths, SAEs, discontinuations, laboratory data, vital signs). Section 7: Discussion and overall conclusions. Section 8–16: Various appendices (protocol, statistical methods, patient data listings, case narratives for deaths/SAEs, clinical laboratory normals). Key medical writing requirements: all tables, figures, and listings (TFLs) must be cross-referenced precisely. The statistical analysis must match the SAP exactly. We help you write, structure, and technically edit CSR sections.' },
+  { question: 'How do I write a safety narrative for a pharmacovigilance ICSR?', answer: 'ICSR safety narratives (case narratives) are written descriptions of the individual patient case that appear in ICSRs, PSURs, and regulatory submissions. ICH E2B(R3) narrative format requirements: Patient demographics (age, sex, weight, relevant medical history). Suspect drug(s) — name, indication, dose, route, start date, stop date. Event(s) — onset date, description, time course, treatment given for the event, outcome. Causality assessment — reporter\'s assessment and company assessment. Relevant test results — laboratory data, imaging, pathology supporting the case. Source and case classification. Style requirements: past tense throughout, third person ("the patient"), objective language (no speculation beyond what data supports), chronological time course, medical terminology with lay explanations where needed, specific dates or relative time references ("Day 1", "3 days later"). Common errors: narrative does not match the E2B structured data fields, outcome stated differently in narrative vs. structured data, causality assessment language is ambiguous. We help you write narratives that satisfy FDA/EMA reviewer expectations.' },
+  { question: 'What is the Clinical Overview (Module 2.5) and how is it structured?', answer: 'The Clinical Overview (Module 2.5 of the CTD) is a critical appraisal of the clinical program — not a summary of data but a scientific interpretation and conclusion from the entire clinical dossier. It must be written by a clinical expert. Structure per CTD guidance: 2.5.1 Product development rationale — why the product was developed, mechanism of action, target population. 2.5.2 Overview of biopharmaceutics — PK properties, bioavailability, food effect, drug-drug interactions. 2.5.3 Overview of clinical pharmacology — dose-response, exposure-response, special populations (renal/hepatic impairment, paediatrics, elderly). 2.5.4 Overview of efficacy — interpretation of clinical efficacy evidence, clinical meaningfulness of primary endpoints. 2.5.5 Overview of safety — safety profile summary, risk management approach. 2.5.6 Benefits and risks conclusions — the integrated benefit-risk assessment that supports the proposed indication and posology. 2.5.7 Literature references. The Clinical Overview is typically 30–60 pages and must be consistent with Module 2.7 (clinical summaries) and Module 5 (CSRs). We help you write and structure Module 2.5 sections.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Medical Writing Proxy Job Support Guide', url: site.url + '/medical-writing-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Medical Writing Proxy Job Support Guide — CSR, ICH E3, Safety Narratives, CTD Module 2.5',
+    'Complete guide to medical writing proxy job support — Clinical Study Reports per ICH E3, safety narratives, CTD Module 2.5 Clinical Overview, PSUR/PBRER writing, IB, protocol writing.',
+    site.url + '/medical-writing-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Medical Writing Proxy Job Support Guide | CSR, ICH E3, Safety Narratives, CTD"
+  description="Complete guide to medical writing proxy job support — Clinical Study Reports ICH E3, safety narratives, CTD Module 2.5 Clinical Overview, PSUR/PBRER, IB, protocols. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Medical Writing Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Medical Writing Guide</div>
+      <h1>Medical Writing Proxy Job Support Guide — CSR, ICH E3, Safety Narratives & CTD Module 2.5</h1>
+      <p class="hero-tagline">Everything you need to know about real-time medical writing proxy job support — Clinical Study Report sections per ICH E3, safety narratives for PV cases, CTD Module 2.5 Clinical Overview, PSUR writing, and what medical writing tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Medical Writers Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>CSR section writing</strong> — ICH E3 structure, patient disposition table narrative, safety section language, discussion and conclusions</li>
+            <li><strong>Safety narratives</strong> — ICSR narrative format, E2B field consistency, causality language, chronological time course</li>
+            <li><strong>CTD Module 2.5</strong> — Clinical Overview structure, benefit-risk integration, regulatory submission quality</li>
+            <li><strong>PSUR/PBRER sections</strong> — cumulative summary tabulation narrative, new safety information evaluation, benefit-risk conclusion</li>
+            <li><strong>Protocol writing</strong> — ICH E6(R3) protocol format, eligibility criteria writing, endpoint definition language</li>
+            <li><strong>Label development</strong> — SmPC Section 4 (clinical particulars), USPI clinical pharmacology section, PIL patient language</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Medical Writing Deliverables — What We Support</h2>
+          <ul class="feature-list">
+            <li><strong>Clinical Study Reports</strong> — full CSR sections per ICH E3: synopsis, methods, patient disposition, efficacy, safety, discussion</li>
+            <li><strong>Safety documents</strong> — ICSR safety narratives, SUSAR narratives, PSUR/PBRER sections, aggregate safety summaries</li>
+            <li><strong>CTD documents</strong> — Module 2.5 Clinical Overview, Module 2.7 Clinical Summaries (2.7.1–2.7.6)</li>
+            <li><strong>Investigator documents</strong> — Investigator's Brochure (IB), protocol synopses, protocol amendments</li>
+            <li><strong>Regulatory documents</strong> — agency query responses, label negotiations, IMPD clinical sections</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Medical Writing Proxy Job Support Now</h2>
+          <p>Stuck on a CSR section, a safety narrative, or a CTD Module 2 document? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us the document type and your specific challenge, and we match you with a medical writing specialist within hours.</p>
+          <p>Also see: <a href="/medical-writing-proxy-job-support/">Medical Writing Proxy Job Support</a> | <a href="/medical-writing-proxy-interview/">Medical Writing Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Medical Writing Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Medical Writing Task?"
+          body="CSR sections, ICH E3, safety narratives, CTD Module 2.5, PSUR/PBRER writing, protocol writing — real-time guidance from an experienced medical writer. Same-day help."
+          ctaLabel="Get Medical Writing Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Medical writing proxy interview support"
+          secondaryHref="/medical-writing-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

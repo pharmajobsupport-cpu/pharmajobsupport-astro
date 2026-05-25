@@ -1,0 +1,102 @@
+---
+import type { LocationEntry } from '../data/locations-index';
+
+interface Props {
+  locations: LocationEntry[];
+  heading?: string;
+  region?: string;
+}
+
+const { locations, heading, region } = Astro.props;
+const filtered = region ? locations.filter((l) => l.region === region) : locations;
+---
+
+{heading && <h2 class="location-grid-heading">{heading}</h2>}
+
+<ul class="location-grid" role="list">
+  {filtered.map((loc) => (
+    <li class="location-card">
+      <a href={`/${loc.slug}/`} class="location-card-link">
+        <div class="location-card-flag">
+          {loc.countryCode === 'US' && '🇺🇸'}
+          {loc.countryCode === 'CA' && '🇨🇦'}
+          {loc.countryCode === 'GB' && '🇬🇧'}
+          {loc.countryCode === 'IE' && '🇮🇪'}
+          {loc.countryCode === 'DE' && '🇩🇪'}
+          {loc.countryCode === 'CH' && '🇨🇭'}
+          {loc.countryCode === 'NL' && '🇳🇱'}
+          {loc.countryCode === 'FR' && '🇫🇷'}
+          {loc.countryCode === 'BE' && '🇧🇪'}
+          {loc.countryCode === 'SE' && '🇸🇪'}
+          {loc.countryCode === 'DK' && '🇩🇰'}
+          {loc.countryCode === 'IT' && '🇮🇹'}
+          {loc.countryCode === 'ES' && '🇪🇸'}
+          {loc.countryCode === 'AT' && '🇦🇹'}
+          {loc.countryCode === 'SG' && '🇸🇬'}
+          {loc.countryCode === 'JP' && '🇯🇵'}
+          {loc.countryCode === 'AU' && '🇦🇺'}
+          {loc.countryCode === 'IN' && '🇮🇳'}
+          {loc.countryCode === 'AE' && '🇦🇪'}
+          {loc.countryCode === 'SA' && '🇸🇦'}
+          {!['US','CA','GB','IE','DE','CH','NL','FR','BE','SE','DK','IT','ES','AT','SG','JP','AU','IN','AE','SA'].includes(loc.countryCode) && '🌍'}
+        </div>
+        <div class="location-card-body">
+          <h3 class="location-card-city">{loc.city}</h3>
+          <p class="location-card-state">{loc.country}</p>
+          <p class="location-card-domains">
+            {loc.dominantDomains.slice(0, 2).join(' · ')}
+          </p>
+        </div>
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .location-grid-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+  }
+  .location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .location-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .location-card:hover { box-shadow: 0 4px 16px rgb(0 0 0 / 0.08); transform: translateY(-1px); }
+  .location-card-link {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    text-decoration: none;
+    color: inherit;
+  }
+  .location-card-flag { font-size: 1.5rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+  .location-card-city {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.15rem;
+  }
+  .location-card-state {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    margin-bottom: var(--space-2);
+  }
+  .location-card-domains {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+</style>

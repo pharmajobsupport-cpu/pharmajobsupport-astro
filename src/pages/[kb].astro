@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+import { allKB } from '../data/knowledgeBase-index';
+
+export function getStaticPaths() {
+  return allKB.map((entry) => ({
+    params: { kb: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Knowledge Base', url: site.url + '/knowledge-base/' },
+  { name: entry.title, url: site.url + '/' + entry.slug + '/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    entry.title,
+    entry.metaDesc,
+    site.url + '/' + entry.slug + '/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(entry.faqs.map(f => ({ question: f.q, answer: f.a }))),
+];
+---
+
+<BaseLayout
+  title={entry.metaTitle}
+  description={entry.metaDesc}
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Knowledge Base', href: '/knowledge-base/' },
+      { label: entry.title }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">{entry.category}</div>
+      <h1>{entry.h1}</h1>
+      <p class="hero-tagline">{entry.intro}</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        {entry.sections.map(section => (
+          <section class="content-section">
+            <h2>{section.heading}</h2>
+            <p>{section.body}</p>
+          </section>
+        ))}
+
+        {entry.keyTerms && entry.keyTerms.length > 0 && (
+          <section class="content-section">
+            <h2>Key Terms</h2>
+            <dl class="key-terms-list">
+              {entry.keyTerms.map(kt => (
+                <div class="key-term-item">
+                  <dt>{kt.term}</dt>
+                  <dd>{kt.definition}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
+
+        {entry.relatedSlugs && entry.relatedSlugs.length > 0 && (
+          <section class="content-section">
+            <h2>Related Topics</h2>
+            <div class="related-links">
+              {entry.relatedSlugs.map(slug => (
+                <a href={`/${slug}/`} class="related-link">{slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <FAQ faqs={entry.faqs} heading={`${entry.title} — FAQ`} />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Need Pharma Career Support?"
+          body={`Get expert guidance for ${entry.category} roles. Interview preparation, job support, and profile engineering available.`}
+          ctaLabel="Get Pharma Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma proxy services"
+          secondaryHref="/pharma-proxy-job-support/"
+        />
+      </aside>
+    </div>
+
+    <footer class="page-disclaimer">
+      <p>Pharma Job Support provides professional guidance, proxy-style job support, interview preparation, profile positioning, and domain learning support. We do not guarantee jobs, interview outcomes, or claim affiliation with any employer, pharma company, regulator, or certification body.</p>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+.key-terms-list { margin: 12px 0; display: flex; flex-direction: column; gap: 12px; }
+.key-term-item { padding: 10px 14px; background: var(--color-surface-2, #f8fafc); border-radius: 6px; border-left: 3px solid var(--color-primary, #1a7a6e); }
+.key-term-item dt { font-weight: 600; font-size: 0.95rem; color: var(--color-primary, #1a7a6e); margin-bottom: 4px; }
+.key-term-item dd { font-size: 0.9rem; color: var(--color-text, #1e3448); line-height: 1.6; margin: 0; }
+.related-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.related-link { display: inline-block; background: var(--color-surface-2, #f0f4f8); color: var(--color-text, #1e3448); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; text-decoration: none; }
+.related-link:hover { background: var(--color-primary-light, #e0f2f1); }
+.page-disclaimer { margin-top: 40px; padding: 16px; background: var(--color-surface-2, #f8fafc); border-radius: 8px; font-size: 0.8rem; color: var(--color-text-muted, #666); }
+</style>

@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is clinical data management proxy job support?', answer: 'Clinical data management proxy job support is real-time live guidance from a CDM specialist who helps you complete your actual clinical data management work tasks. When you are stuck on an EDC database build in Medidata Rave, an Oracle InForm CRF design issue, a data query that is not resolving, a MedDRA/WHODrug coding review, or a database lock preparation — a CDM expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the CDM deliverable you need to complete right now.' },
+  { question: 'What clinical data management tasks do you provide proxy support for?', answer: 'All CDM tasks: EDC system setup and configuration (Medidata Rave, Oracle InForm, Oracle Clinical, OpenClinica, REDCap), CRF design and field configuration, edit check programming and validation, query management (raising, responding, and resolving queries), data cleaning and discrepancy management, MedDRA coding for adverse events and medical history, WHODrug coding for concomitant medications, SAE reconciliation with pharmacovigilance, database lock preparation and lock procedures, CDASH standards compliance, data management plan (DMP) writing, and data transfer specification preparation for statistical analysis.' },
+  { question: 'What is ALCOA+ and how does it apply to clinical data management?', answer: 'ALCOA+ is the FDA and ICH E6(R3) data integrity framework for clinical trial data. ALCOA: Attributable (who created the data and when — audit trail), Legible (readable and permanent), Contemporaneous (recorded at the time the event occurred), Original (first recorded value, not a transcribed copy), Accurate (correct and truthful). The "+" adds: Complete (all data is present, including any corrections), Consistent (matches across all related records), Enduring (data is preserved for the required retention period), Available (accessible for review throughout the record retention period). In CDM application: ALCOA+ governs edit check design (changes must be in audit trail — attributable), query management (queries document the resolution — complete), database lock (locks prevent post-lock changes without audit trail — enduring), and transfer procedures (transferred data must match source — accurate). We help you apply ALCOA+ principles to your specific CDM task and system.' },
+  { question: 'How does Medidata Rave EDC work and what are common configuration issues?', answer: 'Medidata Rave is the leading EDC platform for Phase II/III clinical trials. Key components: Study (top level) → Sites → Subjects → CRFs (Case Report Forms) → Fields. Configuration elements: CRF Builder — builds forms, fields, and field properties (field type, data format, required/optional, dictionary coding). Edit checks (Programming) — validate data within fields (range checks) and across fields/CRFs (cross-form edit checks). Roles and User Permissions — site users, CDM monitors, data managers. Randomisation: RTSM integration for treatment assignment. Common issues we help with: edit check logic errors (check fires when it should not, or does not fire when it should), field configuration errors (field type mismatch, wrong dictionary assignment), workflow routing issues (CRF not routing to expected status), audit trail discrepancies, and Medidata iMedidata user access configuration.' },
+  { question: 'What is the database lock process in clinical data management?', answer: 'Database lock is the formal process of closing a clinical trial database to further data entry following data cleaning completion. Database lock checklist includes: all outstanding queries resolved and closed, all CRFs in final status (no pending data), SAE reconciliation completed with PV database, coding review complete (MedDRA/WHODrug), protocol deviation list finalised and reviewed, edit check deviation list reviewed, data management report generated and signed off, all data review flags cleared, final data transfer specifications confirmed, and lock access permissions restricted to read-only. Post-lock: the database is transferred to statistics for analysis. Any post-lock changes require a formal data amendment procedure with QA approval and re-lock. We help you work through the database lock preparation checklist and resolve any outstanding issues blocking lock.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Clinical Data Management Proxy Job Support Guide', url: site.url + '/clinical-data-management-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Clinical Data Management Proxy Job Support Guide — EDC, ALCOA+, Medidata Rave, Database Lock',
+    'Complete guide to clinical data management proxy job support — Medidata Rave EDC, ALCOA+ data integrity, query management, MedDRA/WHODrug coding, database lock procedures, CDASH.',
+    site.url + '/clinical-data-management-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Clinical Data Management Proxy Job Support Guide | EDC, ALCOA+, Medidata Rave"
+  description="Complete guide to clinical data management proxy job support — Medidata Rave, ALCOA+ data integrity, query management, MedDRA/WHODrug coding, database lock. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Clinical Data Management Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Clinical Data Management Guide</div>
+      <h1>Clinical Data Management Proxy Job Support Guide — EDC, ALCOA+, Medidata Rave & Database Lock</h1>
+      <p class="hero-tagline">Everything you need to know about real-time clinical data management proxy job support — EDC configuration, query management, MedDRA/WHODrug coding, ALCOA+ data integrity, database lock preparation, and what CDM tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What CDM Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>EDC configuration errors</strong> — Medidata Rave edit check logic, field configuration, CRF routing, Oracle InForm form design issues</li>
+            <li><strong>Query management</strong> — queries not resolving, queries firing incorrectly, query text writing, site response follow-up</li>
+            <li><strong>MedDRA/WHODrug coding</strong> — LLT selection, coding conventions, auto-coding review, coding discrepancy resolution</li>
+            <li><strong>SAE reconciliation</strong> — matching CDM database SAE records to pharmacovigilance ICSR records, discrepancy resolution</li>
+            <li><strong>Database lock preparation</strong> — outstanding query resolution, CRF status review, protocol deviation list finalisation</li>
+            <li><strong>CDASH compliance</strong> — mapping CRF fields to CDASH domain variables, completing the CDASH aCRF annotations</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>EDC Platforms — What We Support</h2>
+          <ul class="feature-list">
+            <li><strong>Medidata Rave</strong> — CRF Builder, edit check programming, RAVE Architect, iMedidata user management, Rave RTSM</li>
+            <li><strong>Oracle InForm</strong> — form design, rule configuration, query management console, InForm Architect</li>
+            <li><strong>Oracle Clinical</strong> — DCIs, DCMs, batch data load, query generation, global library</li>
+            <li><strong>REDCap</strong> — instrument design, branching logic, data validation, repeating instruments, API export</li>
+            <li><strong>OpenClinica</strong> — CRF library, rule designer, study event definitions, data import/export</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Clinical Data Management Proxy Job Support Now</h2>
+          <p>Stuck on an EDC configuration, a query management issue, or database lock preparation? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your EDC platform and specific task, and we match you with a CDM specialist within hours.</p>
+          <p>Also see: <a href="/clinical-data-management-proxy-job-support/">Clinical Data Management Proxy Job Support</a> | <a href="/clinical-data-management-proxy-interview/">CDM Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Clinical Data Management Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in a CDM Task Right Now?"
+          body="Medidata Rave, Oracle InForm, query management, MedDRA coding, database lock preparation — real-time guidance from a CDM specialist with EDC configuration experience. Same-day help."
+          ctaLabel="Get Clinical Data Management Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="CDM proxy interview support"
+          secondaryHref="/clinical-data-management-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

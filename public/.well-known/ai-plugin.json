@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Pharma Job Support",
+  "name_for_model": "pharma_job_support",
+  "description_for_human": "Pharma proxy job support, pharma proxy interview support, and profile engineering for clinical research, medical device, and life sciences professionals.",
+  "description_for_model": "Use this to find information about pharma proxy job support, pharma proxy interview support for clinical SAS, CSV validation, regulatory affairs, pharmacovigilance, Veeva Vault, medical device QA, and 15+ pharma domains. Also provides profile engineering services to help pharma professionals get interview calls.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://pharmajobsupport.com/openapi.yaml"
+  },
+  "logo_url": "https://pharmajobsupport.com/favicon.svg",
+  "contact_email": "support@pharmajobsupport.com",
+  "legal_info_url": "https://pharmajobsupport.com/terms/"
+}

@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+import { allServices } from '../data/services-index';
+import { allLocations } from '../data/locations-index';
+
+export function getStaticPaths() {
+  const servicePaths = allServices.map((s) => ({
+    params: { service: s.slug },
+    props: { entry: s, pageType: 'service' as const },
+  }));
+  const locationPaths = allLocations.map((l) => ({
+    params: { service: l.slug },
+    props: { entry: l, pageType: 'location' as const },
+  }));
+  return [...servicePaths, ...locationPaths];
+}
+
+const { pageType } = Astro.props;
+const entry = Astro.props.entry as any;
+const isService = pageType === 'service';
+
+const pageTitle = isService ? entry.title : entry.h1;
+const badgeText = isService ? entry.category : entry.region;
+const faqHeading = isService
+  ? `${entry.title} — FAQ`
+  : `Pharma Proxy Job Support in ${entry.city} — FAQ`;
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Proxy Job Support', url: site.url + '/pharma-proxy-job-support/' },
+  { name: pageTitle, url: site.url + '/' + entry.slug + '/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    pageTitle,
+    entry.metaDesc,
+    site.url + '/' + entry.slug + '/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(entry.faqs.map((f: any) => ({ question: f.q, answer: f.a }))),
+];
+---
+
+<BaseLayout
+  title={entry.metaTitle}
+  description={entry.metaDesc}
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Pharma Proxy Job Support', href: '/pharma-proxy-job-support/' },
+      { label: pageTitle }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">{badgeText}</div>
+      <h1>{entry.h1}</h1>
+      <p class="hero-tagline">{entry.heroIntro}</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        {isService ? (
+          <>
+            <section class="content-section">
+              <h2>The Problem We Solve</h2>
+              <p>{entry.problemSection}</p>
+            </section>
+
+            <section class="content-section">
+              <h2>What This Service Covers</h2>
+              <ul class="feature-list">
+                {entry.whatCovered.map((item: string) => <li>{item}</li>)}
+              </ul>
+            </section>
+
+            <section class="content-section">
+              <h2>Roles We Support</h2>
+              <ul class="feature-list">
+                {entry.roleExamples.map((role: string) => <li>{role}</li>)}
+              </ul>
+            </section>
+
+            <section class="content-section">
+              <h2>Tools &amp; Platforms</h2>
+              <p>{entry.tools.join(' | ')}</p>
+            </section>
+          </>
+        ) : (
+          <>
+            <section class="content-section">
+              <h2>Pharma Industry in {entry.city}</h2>
+              <p>{entry.pharmaContext}</p>
+            </section>
+
+            <section class="content-section">
+              <h2>Top Pharma Employers in {entry.city}</h2>
+              <ul class="feature-list">
+                {entry.topEmployers.map((employer: string) => <li>{employer}</li>)}
+              </ul>
+            </section>
+
+            <section class="content-section">
+              <h2>Dominant Pharma Domains in {entry.city}</h2>
+              <ul class="feature-list">
+                {entry.dominantDomains.map((domain: string) => <li>{domain}</li>)}
+              </ul>
+            </section>
+          </>
+        )}
+
+        {entry.relatedSlugs && entry.relatedSlugs.length > 0 && (
+          <section class="content-section">
+            <h2>Related Services</h2>
+            <div class="related-links">
+              {entry.relatedSlugs.map((slug: string) => (
+                <a href={`/${slug}/`} class="related-link">{slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}</a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <FAQ faqs={entry.faqs} heading={faqHeading} />
+
+      </main>
+
+      <aside class="page-sidebar">
+        {isService ? (
+          <CTABanner
+            heading="Need Help Right Now?"
+            body={`Get real-time expert guidance for ${entry.title.toLowerCase()}. Same-day support available.`}
+            ctaLabel={`Get ${entry.category} Support`}
+            ctaHref={site.whatsappUrl}
+            secondaryLabel="View all pharma proxy services"
+            secondaryHref="/pharma-proxy-job-support/"
+          />
+        ) : (
+          <CTABanner
+            heading={`Pharma Job Support in ${entry.city}`}
+            body={`Get real-time expert pharma proxy support for ${entry.city}-based roles — clinical SAS, regulatory affairs, QA, PV, Veeva, medical device, and more.`}
+            ctaLabel="Get Pharma Proxy Job Support"
+            ctaHref={site.whatsappUrl}
+            secondaryLabel="View all pharma proxy services"
+            secondaryHref="/pharma-proxy-job-support/"
+          />
+        )}
+      </aside>
+    </div>
+
+    <footer class="page-disclaimer">
+      <p>Pharma Job Support provides professional guidance, proxy-style job support, interview preparation, profile positioning, and domain learning support. We do not guarantee jobs, interview outcomes, or claim affiliation with any employer, pharma company, regulator, or certification body.</p>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+.related-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.related-link { display: inline-block; background: var(--surface-50, #f0f4f8); color: var(--text-700, #1e3448); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; text-decoration: none; }
+.related-link:hover { background: var(--teal-50, #e0f2f1); }
+.page-disclaimer { margin-top: 40px; padding: 16px; background: var(--surface-50, #f8fafc); border-radius: 8px; font-size: 0.8rem; color: var(--text-400, #666); }
+</style>

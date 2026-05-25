@@ -1,0 +1,186 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, collectionPageSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'Are these real pharma interview questions?', answer: 'Yes. Every Q&A on this page comes from actual pharma interviews conducted at CROs, pharmaceutical companies, and medical device manufacturers in 2025-2026. Candidates who went through pharma proxy interview preparation with us shared the actual questions asked and the answers that worked. We publish them with domain context so you can prepare for the same types of questions in your next pharma interview.' },
+  { question: 'Which pharma domains have real interview Q&A?', answer: 'We publish real pharma interview Q&A for Clinical SAS/SDTM/ADaM, CSV Validation/GAMP 5, Regulatory Affairs/eCTD, Veeva Vault RIM/QualityDocs, Pharmacovigilance/Argus Safety, Medical Device QA/ISO 13485, Pharma AI/GenAI/MLOps, Clinical Data Management/EDC, QMS/CAPA/GMP, Pharma Business Analysis, Cloud/DevOps in Pharma, Pharma RPA/UiPath, Statistical Programming, Clinical Research/CRA, and Pharma Manufacturing/SAP. All 15 domains covered.' },
+  { question: 'How current are these pharma interview questions?', answer: 'All questions are from 2025-2026 pharma interviews. Pharma interview patterns do evolve as regulations change (new EU MDR requirements, updated CDISC standards, Veeva Vault new modules, ICH guidelines updates). We update our Q&A database regularly to reflect the current state of pharma hiring in each domain.' },
+  { question: 'Can I get live pharma proxy interview support too?', answer: 'Yes — reading real Q&A is a start, but real preparation requires mock sessions, domain-specific practice, and guidance on how to frame your specific experience. Our pharma proxy interview support service gives you real-time preparation from a domain expert before your actual interview. Message us on WhatsApp at +91-9660834611 for same-day support.' },
+  { question: 'Do interviewers ask different questions in different countries?', answer: 'Yes, significantly. US pharma interviewers focus heavily on FDA 21 CFR Part 11, clinical trial phases, and Pinnacle 21 compliance. UK and EU interviewers emphasize EU MDR, GDPR in pharma, and EMA submission requirements. Ireland pharma interviews often cover Veeva Vault and GMP batch release in detail. Indian CRO interviews go deeper on SDTM programming specifics and ADaM datasets. We have country-specific Q&A for the major pharma hiring markets.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+];
+
+const interviewPages = [
+  { slug: 'real-clinical-sas-sdtm-adam-proxy-interview-questions-cro-usa-2026', label: 'Real Clinical SAS / SDTM / ADaM Interview Questions — CRO, USA, 2026', domain: 'Clinical SAS', country: 'USA' },
+  { slug: 'real-csv-validation-gamp5-proxy-interview-questions-uk-2026', label: 'Real CSV Validation / GAMP 5 Interview Questions — Medical Device, UK, 2026', domain: 'CSV Validation', country: 'UK' },
+  { slug: 'real-regulatory-affairs-ectd-proxy-interview-questions-2026', label: 'Real Regulatory Affairs / eCTD Interview Questions — Pharma Company, 2026', domain: 'Regulatory Affairs', country: 'Global' },
+  { slug: 'real-veeva-vault-rim-proxy-interview-questions-ireland-2026', label: 'Real Veeva Vault RIM Interview Questions — Pharma Company, Ireland, 2026', domain: 'Veeva Vault', country: 'Ireland' },
+  { slug: 'real-pharmacovigilance-argus-proxy-interview-questions-2026', label: 'Real Pharmacovigilance / Argus Safety Interview Questions — 2026', domain: 'Pharmacovigilance', country: 'Global' },
+  { slug: 'real-medical-device-qa-iso13485-proxy-interview-questions-2026', label: 'Real Medical Device QA / ISO 13485 Interview Questions — 2026', domain: 'Medical Device QA', country: 'Global' },
+  { slug: 'real-pharma-ai-genai-mlops-proxy-interview-questions-2026', label: 'Real Pharma AI / GenAI / MLOps Interview Questions — 2026', domain: 'Pharma AI', country: 'Global' },
+  { slug: 'real-clinical-data-manager-edc-proxy-interview-questions-2026', label: 'Real Clinical Data Manager / EDC Interview Questions — 2026', domain: 'Clinical Data Management', country: 'Global' },
+  { slug: 'real-qms-capa-gmp-quality-proxy-interview-questions-2026', label: 'Real QMS / CAPA / GMP Quality Interview Questions — 2026', domain: 'QA / QMS / GMP', country: 'Global' },
+  { slug: 'real-pharma-ba-veeva-agile-proxy-interview-questions-2026', label: 'Real Pharma BA / Veeva / Agile Interview Questions — 2026', domain: 'Pharma BA', country: 'Global' },
+  { slug: 'real-pharma-devops-cloud-proxy-interview-questions-2026', label: 'Real Pharma DevOps / Cloud Interview Questions — 2026', domain: 'Pharma Cloud / DevOps', country: 'Global' },
+  { slug: 'real-pharma-rpa-uipath-proxy-interview-questions-2026', label: 'Real Pharma RPA / UiPath Interview Questions — 2026', domain: 'Pharma RPA', country: 'Global' },
+  { slug: 'real-sdtm-adam-programmer-proxy-interview-questions-2026', label: 'Real SDTM / ADaM Statistical Programmer Interview Questions — 2026', domain: 'Statistical Programming', country: 'Global' },
+  { slug: 'real-clinical-research-associate-proxy-interview-questions-2026', label: 'Real Clinical Research Associate (CRA) Interview Questions — 2026', domain: 'Clinical Research', country: 'Global' },
+  { slug: 'real-pharma-manufacturing-sap-proxy-interview-questions-2026', label: 'Real Pharma Manufacturing / SAP Interview Questions — 2026', domain: 'Pharma Manufacturing', country: 'Global' },
+];
+
+const schemas = [
+  collectionPageSchema({
+    name: 'Real Pharma Proxy Interview Questions — From Actual Pharma Interviews',
+    description: 'Real Q&A from actual pharma interviews across clinical SAS, CSV validation, regulatory affairs, Veeva Vault, pharmacovigilance, medical device QA, and 15+ pharma domains. 2025-2026.',
+    url: site.url + '/pharma-interviews/',
+  }),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Pharma Interview Questions 2026 | Actual Q&A From Pharma Interviews"
+  description="Real Q&A from actual pharma interviews — clinical SAS, CSV validation, regulatory affairs, Veeva Vault, pharmacovigilance, medical device. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Real Pharma Interview Questions' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Pharma Interview Q&A</div>
+      <h1>Real Pharma Proxy Interview Questions — From Actual Pharma Interviews</h1>
+      <p class="hero-tagline">Not generic prep. Real questions asked by real pharma interviewers at CROs, Big Pharma, and medical device companies in 2025-2026 — across clinical SAS, regulatory affairs, Veeva Vault, CSV validation, pharmacovigilance, and 15 pharma domains.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>What Pharma Interviewers Actually Ask</h2>
+          <p>
+            Most pharma interview prep gives you generic questions. Pharma interviewers ask highly specific domain questions — SDTM define.xml validation errors, Veeva Vault lifecycle configuration steps, GAMP 5 Category 4 vs 5 distinctions, ICSR seriousness criteria under ICH E2A, IQ/OQ/PQ protocol differences for computerised systems, or EU MDR Article 10 obligations for a QMS.
+          </p>
+          <p>
+            We publish real Q&A from candidates who prepared for their pharma interviews with our <a href="/pharma-proxy-interview/">Pharma Proxy Interview Support</a>. These are the actual questions interviewers asked — and the answers that got them through.
+          </p>
+          <p>
+            Need preparation for an upcoming interview? Message us on WhatsApp now at <strong>{site.whatsapp}</strong>.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Pharma Interview Q&A by Domain — 2026</h2>
+          <p>Browse actual interview questions from pharma interviews across all 15 domains:</p>
+          <ul class="interview-list">
+            {interviewPages.map(page => (
+              <li>
+                <a href={`/pharma-interviews/${page.slug}/`} class="interview-link">
+                  {page.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>What These Pharma Interview Q&A Pages Cover</h2>
+          <ul class="feature-list">
+            <li><strong>Actual questions asked</strong> — verbatim from real pharma interviews, not paraphrased</li>
+            <li><strong>Domain-specific technical depth</strong> — SDTM mapping, Veeva Vault configuration, CAPA root cause analysis, 21 CFR Part 11 audit trail requirements</li>
+            <li><strong>Country context</strong> — US FDA vs. EU EMA regulatory expectations, Ireland GMP practices, UK MHRA requirements</li>
+            <li><strong>Role level</strong> — fresher vs. experienced professional pharma interview expectations</li>
+            <li><strong>Interview format</strong> — technical panel, HR round, case study, practical test formats</li>
+            <li><strong>How to frame answers</strong> — exact language pharma interviewers want to hear</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Why Generic Interview Prep Fails Pharma Candidates</h2>
+          <p>Pharma interviewers are domain experts themselves. They ask:</p>
+          <ul class="feature-list">
+            <li>"Walk me through how you would map AE domain to SDTM AEDECOD using MedDRA coding" — not "tell me about your SAS experience"</li>
+            <li>"How do you handle a Veeva Vault eTMF document that has been superseded during a live trial?" — not "what is document management?"</li>
+            <li>"What is the difference between a CAPA and a deviation in a GMP environment?" — not "tell me about quality management"</li>
+            <li>"How would you validate a CSV system against GAMP 5 Category 4 requirements?" — not "what is validation?"</li>
+          </ul>
+          <p>
+            Our <a href="/pharma-proxy-interview/">pharma proxy interview support</a> gives you real-time domain preparation for these exact questions. Available same-day. WhatsApp <strong>{site.whatsapp}</strong>.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Pharma Proxy Interview Support — When Reading Q&A Is Not Enough</h2>
+          <p>
+            Reading real pharma interview questions helps you understand what to expect. But clearing the technical round requires being able to answer follow-up questions, discuss your specific experience, and respond to scenario-based probing.
+          </p>
+          <p>
+            Our <a href="/pharma-proxy-interview/">pharma proxy interview support</a> gives you mock interview sessions with a domain expert who has done your exact role — at a CRO, Big Pharma, or medical device company. They know which follow-up questions come after "tell me about SDTM mapping" because they have asked them.
+          </p>
+          <ul class="feature-list">
+            <li>Same-day support available — message WhatsApp now if your interview is tomorrow</li>
+            <li>Domain-specific Q&A tailored to your exact role and job description</li>
+            <li>Mock sessions with realistic pharma interview scenarios</li>
+            <li>Guidance on framing your experience in pharma interview language</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Pharma Proxy Interview Support by Domain</h2>
+          <div class="domain-links">
+            <a href="/clinical-sas-proxy-interview/" class="domain-link">Clinical SAS Proxy Interview Support</a>
+            <a href="/csv-validation-proxy-interview/" class="domain-link">CSV Validation Proxy Interview Support</a>
+            <a href="/regulatory-affairs-proxy-interview/" class="domain-link">Regulatory Affairs Proxy Interview Support</a>
+            <a href="/pharmacovigilance-proxy-interview/" class="domain-link">Pharmacovigilance Proxy Interview Support</a>
+            <a href="/veeva-vault-proxy-interview/" class="domain-link">Veeva Vault Proxy Interview Support</a>
+            <a href="/medical-device-proxy-interview/" class="domain-link">Medical Device Proxy Interview Support</a>
+            <a href="/clinical-data-proxy-interview/" class="domain-link">Clinical Data Management Proxy Interview Support</a>
+            <a href="/pharma-ai-proxy-interview/" class="domain-link">Pharma AI / GenAI Proxy Interview Support</a>
+            <a href="/pharma-qa-proxy-interview/" class="domain-link">QA / QMS / GMP Proxy Interview Support</a>
+            <a href="/pharma-rpa-proxy-interview/" class="domain-link">Pharma RPA Proxy Interview Support</a>
+            <a href="/pharma-cloud-proxy-interview/" class="domain-link">Cloud / DevOps Pharma Proxy Interview Support</a>
+            <a href="/pharma-bi-proxy-interview/" class="domain-link">Pharma BI / Analytics Proxy Interview Support</a>
+            <a href="/pharma-sap-proxy-interview/" class="domain-link">SAP Pharma Proxy Interview Support</a>
+            <a href="/pharma-ba-proxy-interview/" class="domain-link">Pharma BA Proxy Interview Support</a>
+            <a href="/medical-writing-proxy-interview/" class="domain-link">Medical Writing Proxy Interview Support</a>
+            <a href="/pharma-compliance-proxy-interview/" class="domain-link">Pharma Compliance Proxy Interview Support</a>
+            <a href="/clinical-research-proxy-interview/" class="domain-link">Clinical Research Proxy Interview Support</a>
+            <a href="/pharma-manufacturing-proxy-interview/" class="domain-link">Pharma Manufacturing Proxy Interview Support</a>
+          </div>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Real Pharma Interview Q&A — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Got a Pharma Interview Coming Up?"
+          body="Get real-time domain-specific preparation from a pharma expert who has done your exact role. Available same-day. Reading Q&A is a start — live preparation is what clears technical rounds."
+          ctaLabel="Get Pharma Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Not getting interview calls?"
+          secondaryHref="/pharma-profile-engineering/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.interview-list { list-style: none; padding: 0; margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+.interview-link { color: var(--color-primary, #009e94); font-weight: 500; text-decoration: none; font-size: 0.95rem; }
+.interview-link:hover { text-decoration: underline; }
+.domain-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.domain-link { display: inline-block; background: var(--color-surface-2, #f0f4f8); color: var(--color-text, #1e3448); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; text-decoration: none; transition: background 0.15s; }
+.domain-link:hover { background: var(--color-primary-light, #e0f2f1); }
+</style>

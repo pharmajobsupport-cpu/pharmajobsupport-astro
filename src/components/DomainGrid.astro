@@ -1,0 +1,65 @@
+---
+interface Domain {
+  title: string;
+  href: string;
+  icon?: string;
+  desc?: string;
+}
+
+interface Props {
+  domains: Domain[];
+  heading?: string;
+}
+
+const { domains, heading } = Astro.props;
+---
+
+{heading && <h2 class="domain-grid-heading">{heading}</h2>}
+
+<ul class="domain-grid" role="list">
+  {domains.map((d) => (
+    <li class="domain-card">
+      <a href={d.href} class="domain-card-link">
+        {d.icon && <span class="domain-icon" aria-hidden="true">{d.icon}</span>}
+        <span class="domain-title">{d.title}</span>
+        {d.desc && <span class="domain-desc">{d.desc}</span>}
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .domain-grid-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    color: var(--color-text);
+  }
+  .domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .domain-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .domain-card:hover { border-color: var(--color-primary); box-shadow: 0 4px 12px rgb(0 0 0 / 0.07); }
+  .domain-card-link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
+  .domain-icon { font-size: 1.75rem; }
+  .domain-title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); }
+  .domain-desc { font-size: 0.8125rem; color: var(--color-muted); line-height: 1.5; }
+</style>

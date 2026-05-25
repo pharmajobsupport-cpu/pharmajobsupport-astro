@@ -1,0 +1,75 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I have a client call tomorrow about my pharma project status and I am not prepared. Can you help?', answer: 'Yes — same-day, urgent preparation is available. Tell us: your pharma domain and project type, what the call is about (status update, technical review, issue escalation, milestone sign-off), and what you are most concerned about being asked. We help you organise your talking points, prepare clear status updates, anticipate the client\'s likely questions, and practice your responses. We also help you understand how to present problems or delays professionally in a CRO/sponsor client relationship without creating alarm.' },
+  { question: 'I need to present technical pharma work to a non-technical client. Can you help?', answer: 'Yes. Presenting complex pharma domain work (SDTM delivery status, validation protocol progress, regulatory submission timelines, CAPA status) to non-technical stakeholders or client sponsors requires translating technical language into business impact language. We help you structure your presentation: lead with the status (green/amber/red), explain the key milestones in plain language, present any issues with context and resolution plan, and close with next steps and timeline. We also help you prepare for the "what does this mean for our filing date?" or "why did this take longer than planned?" questions.' },
+  { question: 'I have a project review call with a pharma sponsor and I am worried they will ask about a quality issue. Can you help?', answer: 'Yes. Quality issue discussions with pharma sponsors are among the most sensitive client conversations in a CRO environment. We help you prepare: understand the full scope of the issue (what happened, what the regulatory impact is, what the corrective action is), structure your disclosure clearly (state the issue, state what you have done, state what you will do next), anticipate the sponsor\'s questions about regulatory risk, timeline impact, and precedence, and practice delivering the information confidently without inadvertently creating bigger concerns than the situation warrants.' },
+  { question: 'What pharma client call types do you help prepare for?', answer: 'All pharma client and project call types: CRO-to-sponsor status calls (project delivery, milestones, data deliverables), technical review calls (SDTM delivery, validation protocol walkthrough, eCTD submission package review), issue escalation calls (quality event disclosure, timeline risk, resource change), regulatory agency meeting preparation (pre-IND, Type A/B/C FDA meetings, PDMA), internal management calls (project steering committee, program management review), and team standup preparation (daily/weekly standups in agile pharma project environments).' },
+  { question: 'How do you help me prepare for an FDA or EMA regulatory meeting?', answer: 'Pre-IND meetings, Type B FDA meetings (end-of-Phase II, pre-NDA), and EMA scientific advice procedures are high-stakes regulatory interactions. We help you: understand the purpose and expected format of your specific meeting type, organise your briefing document clearly (FDA requires a meeting package to be submitted 30 days before the meeting), anticipate the agency\'s questions based on your product and programme status, prepare clear and concise responses to likely regulatory questions, and understand the difference between binding FDA commitments and guidance. This is senior regulatory strategy support — appropriate for regulatory affairs professionals preparing for a critical regulatory interaction.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Client Call Preparation', url: site.url + '/pharma-client-call-preparation/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Pharma Client Call Preparation | Real-Time Support Before Your Pharma Meeting"
+  description="Client call tomorrow about your pharma project? Real-time preparation support for CRO status calls, sponsor meetings, and regulatory agency meetings. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Client Call Preparation' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Client Call Support</div>
+      <h1>Pharma Client Call Tomorrow? Get Real-Time Preparation Support Right Now.</h1>
+      <p class="hero-tagline">Your pharma sponsor is calling tomorrow for a project status review. You have a quality issue to disclose. You need to present technical work to a non-technical client. You are unprepared for the questions they will ask. We prepare you — tonight, right now, same day — via WhatsApp.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Why Pharma Client Calls Are High Stakes</h2>
+          <p>In a CRO or pharma consulting environment, how you present yourself on client calls directly impacts your credibility, your project relationship, and sometimes your contract. A poorly handled disclosure of a quality event can escalate a manageable issue. An unclear status update can create doubt about your project's progress. Getting it right requires both pharma domain knowledge and client communication strategy.</p>
+          <ul class="feature-list">
+            <li>Status calls — presenting project health clearly and confidently</li>
+            <li>Technical reviews — explaining SDTM delivery, validation status, regulatory timelines in client language</li>
+            <li>Issue escalations — disclosing problems professionally without creating alarm</li>
+            <li>Milestone sign-offs — presenting deliverable evidence confidently</li>
+            <li>Regulatory agency meetings — FDA pre-IND, Type B meetings, EMA scientific advice</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong> with your call details. We begin preparation immediately.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/pharma-standup-meeting-support/">Pharma Standup Meeting Support</a> | <a href="/struggling-in-pharma-project/">Struggling in Your Pharma Project?</a> | <a href="/pharma-proxy-job-support/">Pharma Proxy Job Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Client Call Preparation — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Pharma Client Call Tomorrow?"
+          body="Real-time preparation for CRO status calls, sponsor meetings, technical reviews, and FDA/EMA meetings. Same-day support. Message us tonight with your call details."
+          ctaLabel="Get Pharma Client Call Preparation Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma standup meeting support"
+          secondaryHref="/pharma-standup-meeting-support/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

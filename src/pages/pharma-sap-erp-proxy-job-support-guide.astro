@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma SAP/ERP proxy job support?', answer: 'Pharma SAP/ERP proxy job support is real-time live guidance from a pharma SAP specialist who helps you complete your actual SAP configuration, testing, and validation work tasks in a GxP pharmaceutical manufacturing context. When you are stuck on an SAP QM batch release configuration, an SAP WM goods movement issue, an SAP PP production order problem, a GxP SAP validation test script, or an SAP change transport management question — an SAP pharma expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the SAP/ERP task you need to complete right now.' },
+  { question: 'What pharma SAP/ERP tasks do you provide proxy support for?', answer: 'All pharma SAP tasks: SAP QM (Quality Management) — inspection lot management, usage decision posting, certificate of analysis configuration, batch classification, sampling procedure configuration, results recording, quality notification management. SAP MM (Materials Management) — batch management, GR/GI processing for pharma materials, vendor evaluation, procurement for regulated materials. SAP WM/EWM — warehouse management for controlled substances, FIFO/FEFO batch determination, temperature-controlled storage configuration. SAP PP (Production Planning) — production order management, batch traceability, process order for pharmaceutical manufacturing. SAP validation — IQ/OQ/PQ test script development for SAP GxP systems, change transport documentation, SAP SolMan validation documentation, 21 CFR Part 11 compliance in SAP (audit trail configuration, electronic signature setup).' },
+  { question: 'How does SAP QM batch release work in GMP pharmaceutical manufacturing?', answer: 'SAP QM (Quality Management) batch release in GMP manufacturing: When a production order completes, goods receipt creates an inspection lot in SAP QM automatically. The QC analyst records results in the inspection lot (MIGO/QA32). Inspection lot has a usage decision stock (restricted-use stock until QC releases). If all inspection characteristics are within specification, the QA officer posts the usage decision (QA11/QA32) with decision code "Accepted" — this moves the batch from restricted stock to unrestricted use stock and triggers automatic batch status update. GMP requirements: the usage decision posting must be by an authorised user (role-based access control in SAP), the posting creates a system-generated audit trail (GxP compliance), and a Certificate of Analysis (CoA) can be generated automatically from the inspection results. Batch rejection: usage decision "Rejected" moves stock to blocked stock and triggers SAP QM quality notification for investigation. We help you troubleshoot inspection lot configuration errors, usage decision posting problems, and QM master data setup.' },
+  { question: 'How does 21 CFR Part 11 compliance work in SAP for pharma?', answer: 'SAP 21 CFR Part 11 compliance covers electronic records and electronic signatures in FDA-regulated pharmaceutical manufacturing. Key configuration elements: Audit Trail — SAP system log (transaction SLG1) and change documents capture all data changes with user ID, timestamp, old value, new value. For process-critical fields, configure additional change document logging. Electronic Signatures — SAP DS (Digital Signatures) framework allows configuration of signature requirements for critical transactions (usage decision posting, production order close, master data change). Users must re-enter password + provide reason at the transaction step. Access Control — SAP role-based access control (PFCG) with principle of least privilege, individual accounts (no shared logins), password policies (SU01 password rules). Audit readiness: transaction SM20 (security audit log), SUIM (user information system) for access reviews. Validation: the SAP system supporting GxP processes must be validated per GAMP 5 Category 4. We help you configure SAP DS signatures, review access control gaps, and write OQ test scripts for 21 CFR Part 11 controls.' },
+  { question: 'What is the SAP validation approach under GAMP 5?', answer: 'SAP validation under GAMP 5: SAP ERP/S4HANA = Category 4 (configured COTS). Custom ABAP developments within SAP = Category 5. Validation approach: Supplier Assessment — SAP AG supplier qualification, SAP quality management documentation review. System Validation Plan — defines scope (which SAP modules, which business processes are GxP), approach, responsibilities. IQ — verify SAP system version, transport landscape (DEV/QA/PROD), security configuration, backup procedures, user access management setup. OQ — test all GxP-critical business processes end-to-end: batch release workflow, usage decision posting, electronic signature on critical transactions, audit trail capture. PQ — performance qualification with representative users running actual GxP processes on realistic data volumes. Change control: all SAP transport requests to production GxP systems must go through formal change control with impact assessment and regression testing. We help you write all validation documentation for your SAP implementation.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma SAP ERP Proxy Job Support Guide', url: site.url + '/pharma-sap-erp-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharma SAP ERP Proxy Job Support Guide — SAP QM, Batch Release, 21 CFR Part 11, GAMP 5',
+    'Complete guide to pharma SAP/ERP proxy job support — SAP QM batch release, 21 CFR Part 11 compliance in SAP, GAMP 5 SAP validation, SAP MM/PP/WM for GMP manufacturing.',
+    site.url + '/pharma-sap-erp-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma SAP ERP Proxy Job Support Guide | SAP QM, Batch Release, 21 CFR Part 11, GAMP 5"
+  description="Complete guide to pharma SAP/ERP proxy job support — SAP QM batch release, 21 CFR Part 11 in SAP, GAMP 5 SAP validation, SAP MM/PP/WM GMP manufacturing. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma SAP ERP Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma SAP & ERP Guide</div>
+      <h1>Pharma SAP ERP Proxy Job Support Guide — SAP QM, Batch Release, 21 CFR Part 11 & GAMP 5</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharma SAP/ERP proxy job support — SAP QM batch release workflows, 21 CFR Part 11 electronic signatures in SAP, GAMP 5 SAP validation protocols, and what SAP pharma tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Pharma SAP Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>SAP QM inspection lots</strong> — inspection lot not creating on GR, usage decision configuration errors, results recording access issues</li>
+            <li><strong>Batch release workflow</strong> — usage decision posting blocked, batch status not moving from restricted to unrestricted</li>
+            <li><strong>21 CFR Part 11 in SAP</strong> — electronic signature configuration (SAP DS), audit trail coverage gaps, change document logging setup</li>
+            <li><strong>SAP validation protocols</strong> — IQ/OQ test script writing for SAP GxP modules, transport documentation, SolMan integration</li>
+            <li><strong>SAP batch management</strong> — batch classification configuration, batch search strategy, FEFO/FIFO determination</li>
+            <li><strong>Change transport management</strong> — transport request documentation, production promotion approval, regression testing scope</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>SAP Modules for Pharma — What We Cover</h2>
+          <ul class="feature-list">
+            <li><strong>SAP QM</strong> — Quality Management: inspection lots, usage decision, results recording, certificates of analysis, quality notifications</li>
+            <li><strong>SAP MM</strong> — Materials Management: batch management, GR/GI, procurement for regulated materials, vendor evaluation</li>
+            <li><strong>SAP PP/PI</strong> — Production/Process Industry: production orders, process orders, batch traceability, recipe management</li>
+            <li><strong>SAP WM/EWM</strong> — Warehouse Management: temperature-controlled storage, FEFO batch determination, goods movement</li>
+            <li><strong>SAP S/4HANA</strong> — migration considerations for GxP validated SAP systems, new UI validation</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharma SAP/ERP Proxy Job Support Now</h2>
+          <p>Stuck on an SAP QM configuration, a 21 CFR Part 11 setup, or a GAMP 5 SAP validation protocol? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us the SAP module and specific task, and we match you with a pharma SAP specialist within hours.</p>
+          <p>Also see: <a href="/pharma-sap-erp-proxy-job-support/">Pharma SAP ERP Proxy Job Support</a> | <a href="/pharma-sap-erp-proxy-interview/">Pharma SAP ERP Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma SAP ERP Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Pharma SAP Task?"
+          body="SAP QM batch release, 21 CFR Part 11 electronic signatures, GAMP 5 SAP validation, transport management — real-time guidance from a pharma SAP specialist. Same-day help."
+          ctaLabel="Get Pharma SAP ERP Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma SAP ERP proxy interview support"
+          secondaryHref="/pharma-sap-erp-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

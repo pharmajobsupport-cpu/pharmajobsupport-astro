@@ -1,0 +1,249 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema } from '../utils/schema';
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Domains', url: site.url + '/pharma-domains/' },
+];
+
+const schema = buildBreadcrumbSchema(breadcrumbItems);
+
+const domains = [
+  {
+    title: 'Clinical SAS Programming',
+    slug: 'clinical-sas-programming-support',
+    description: 'SDTM mapping, ADaM dataset derivations, TLF generation, Pinnacle 21 validation, FDA/PMDA submission programming, macro development, and SAS Base/Advanced skills for clinical trials.',
+    tools: ['SAS Base/Advanced', 'SAS EG', 'Pinnacle 21', 'SDTM IG', 'ADaM IG', 'CDISC Define-XML'],
+    roles: ['Clinical SAS Programmer', 'Statistical Programmer', 'Biostatistician', 'SAS Analyst'],
+    regs: ['CDISC SDTM', 'CDISC ADaM', 'FDA eCTD', 'ICH E3/E9'],
+  },
+  {
+    title: 'Clinical Data Management',
+    slug: 'clinical-data-management-support',
+    description: 'EDC system management, CDASH data collection standards, data cleaning and discrepancy management, database lock procedures, data management plans, and CRF design.',
+    tools: ['Medidata Rave', 'Oracle InForm', 'Oracle Siebel CTMS', 'Veeva Vault EDC', 'IBM Clinical Development'],
+    roles: ['Clinical Data Manager', 'Data Coordinator', 'CDM Lead', 'Database Programmer'],
+    regs: ['CDASH', 'CDISC', 'ICH E6 GCP', 'FDA 21 CFR Part 11'],
+  },
+  {
+    title: 'Pharmacovigilance',
+    slug: 'pharmacovigilance-support',
+    description: 'ICSR processing, adverse event reporting, aggregate report preparation (PSUR/PBRER/DSUR), signal detection, MedDRA coding, EudraVigilance, and drug safety database management.',
+    tools: ['Argus Safety', 'Oracle AERS', 'Veeva Vault Safety', 'ARISg', 'Empirica Signal'],
+    roles: ['Drug Safety Associate', 'Pharmacovigilance Specialist', 'ICSR Processor', 'PV Medical Reviewer'],
+    regs: ['ICH E2A-E2F', 'FDA 21 CFR 312.32', 'EMA GVP Modules', 'EudraVigilance'],
+  },
+  {
+    title: 'Computer System Validation',
+    slug: 'computer-system-validation-support',
+    description: 'GxP-compliant system validation across pharma IT environments — URS, FS, DS, IQ/OQ/PQ protocols, validation master plans, user acceptance testing, and change control documentation.',
+    tools: ['JIRA', 'HP ALM/Quality Center', 'Kneat', 'MasterControl', 'Documentum', 'Veeva Vault QMS'],
+    roles: ['CSV Analyst', 'Validation Engineer', 'Quality Systems Specialist', 'IT Compliance Manager'],
+    regs: ['21 CFR Part 11', 'EU Annex 11', 'GAMP 5', 'ICH Q9', 'ALCOA+'],
+  },
+  {
+    title: 'Regulatory Affairs',
+    slug: 'regulatory-affairs-support',
+    description: 'eCTD submission preparation, NDA/BLA/MAA module assembly, FDA/EMA strategy, labelling review, post-approval commitments, and regulatory intelligence for global markets.',
+    tools: ['Veeva Vault RIM', 'LORENZ docuBridge', 'ISI Toolbox', 'Liquent InSight', 'Regulatory Tracking Systems'],
+    roles: ['Regulatory Affairs Specialist', 'Regulatory Submissions Manager', 'Regulatory Intelligence Analyst', 'CMC Regulatory Specialist'],
+    regs: ['ICH CTD', 'FDA 21 CFR 312/314', 'EMA CHMP', 'eCTD Spec v4.0'],
+  },
+  {
+    title: 'Quality Assurance / GMP',
+    slug: 'quality-assurance-support',
+    description: 'CAPA management, deviation investigation, GMP audit readiness, quality management systems, SOP authoring and review, change control, and supplier qualification.',
+    tools: ['Veeva Vault QMS', 'MasterControl', 'TrackWise', 'Pilgrim SmartSolve', 'ComplianceQuest'],
+    roles: ['QA Specialist', 'GMP Auditor', 'Quality Systems Manager', 'Compliance Manager'],
+    regs: ['ICH Q10', 'GMP/GLP/GCP', '21 CFR Part 211', 'EU GMP Annex 1-20', 'ISO 9001'],
+  },
+  {
+    title: 'Medical Device QA',
+    slug: 'medical-device-qa-support',
+    description: 'ISO 13485 QMS implementation, EU MDR technical file preparation, FDA 510(k) and PMA submissions, ISO 14971 risk management, FMEA, design controls, and post-market surveillance.',
+    tools: ['Greenlight Guru', 'Qualio', 'Veeva Vault QMS', 'MasterControl', 'ETQ Reliance'],
+    roles: ['Medical Device QA Engineer', 'Regulatory Affairs Specialist (Devices)', 'Quality System Manager', 'Risk Manager'],
+    regs: ['ISO 13485', 'EU MDR 2017/745', 'FDA 21 CFR Part 820', 'ISO 14971', 'IEC 62304'],
+  },
+  {
+    title: 'Veeva Vault',
+    slug: 'veeva-vault-support',
+    description: 'Configuration, validation, and operational support for all Veeva Vault modules — QMS, eTMF, RIM, Safety, and EDC. Vault migration, lifecycle configuration, and user acceptance testing.',
+    tools: ['Veeva Vault QMS', 'Veeva Vault eTMF', 'Veeva Vault RIM', 'Veeva Vault Safety', 'Veeva Vault EDC'],
+    roles: ['Veeva Vault Administrator', 'Vault Configuration Specialist', 'eTMF Manager', 'Vault Validation Analyst'],
+    regs: ['21 CFR Part 11', 'ICH E6 TMF Reference Model', 'GAMP 5', 'GxP Annex 11'],
+  },
+  {
+    title: 'Pharma AI / ML',
+    slug: 'pharma-ai-ml-support',
+    description: 'AI/ML applications across the pharmaceutical value chain — drug discovery, clinical trial optimisation, pharmacovigilance automation, regulatory intelligence, and clinical NLP.',
+    tools: ['Python/R', 'TensorFlow', 'PyTorch', 'AWS SageMaker', 'Azure ML', 'Databricks'],
+    roles: ['Pharma Data Scientist', 'AI/ML Engineer (Pharma)', 'Computational Biologist', 'Clinical NLP Specialist'],
+    regs: ['FDA AI/ML Guidance', 'ICH E9(R1)', 'SaMD Framework', 'GxP AI validation principles'],
+  },
+  {
+    title: 'RPA / Automation',
+    slug: 'rpa-automation-pharma-support',
+    description: 'Robotic process automation for pharma operational workflows — regulatory submissions, PV automation, GMP batch record processing, quality event management, and clinical data pipelines.',
+    tools: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Microsoft Power Automate', 'Alteryx'],
+    roles: ['RPA Developer (Pharma)', 'Automation Engineer', 'Process Improvement Specialist', 'Digital Transformation Analyst'],
+    regs: ['GAMP 5 (RPA)', '21 CFR Part 11', 'GxP automation validation principles'],
+  },
+  {
+    title: 'Medical Writing',
+    slug: 'medical-writing-support',
+    description: 'Regulatory medical writing for clinical study reports, investigator brochures, IMPDs, NDA/BLA modules, labelling, and scientific publications. GCP-compliant, ICH E3-aligned.',
+    tools: ['Adobe FrameMaker', 'Microsoft Word', 'eCTD authoring tools', 'Reference Manager', 'EndNote'],
+    roles: ['Medical Writer', 'Senior Medical Writer', 'Regulatory Medical Writer', 'Publications Manager'],
+    regs: ['ICH E3 (CSR)', 'ICH E6 (GCP)', 'ICH M4 (CTD)', 'GPP3 (Good Publication Practice)'],
+  },
+];
+---
+
+<BaseLayout
+  title="Pharma Domains | All Pharmaceutical Job Support Areas | pharmajobsupport.com"
+  description="All pharma domains covered by PharmaCDM job support — Clinical SAS, CDM, Pharmacovigilance, CSV, Regulatory Affairs, QA, Medical Device, Veeva Vault, AI/ML, and Medical Writing."
+  schema={schema}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Domains' }]} />
+
+    <header class="page-hero">
+      <h1>Pharma Domains We Support</h1>
+      <p class="hero-tagline">Expert Real-Time Job Support Across Every Major Pharmaceutical Discipline</p>
+    </header>
+
+    <div class="domains-intro">
+      <p>
+        PharmaCDM provides specialist job support across all major pharmaceutical industry domains. Each area is staffed by professionals with hands-on, recent industry experience — not generalist tutors. Select your domain below to learn about the specific support available.
+      </p>
+    </div>
+
+    <div class="domain-list">
+      {domains.map((domain) => (
+        <div class="domain-block">
+          <div class="domain-header">
+            <h2><a href={`/${domain.slug}/`}>{domain.title}</a></h2>
+          </div>
+          <p class="domain-desc">{domain.description}</p>
+          <div class="domain-meta">
+            <div class="meta-group">
+              <h3>Tools & Platforms</h3>
+              <div class="tag-row">
+                {domain.tools.map(t => <span class="tag tag--tool">{t}</span>)}
+              </div>
+            </div>
+            <div class="meta-group">
+              <h3>Roles Supported</h3>
+              <div class="tag-row">
+                {domain.roles.map(r => <span class="tag tag--role">{r}</span>)}
+              </div>
+            </div>
+            <div class="meta-group">
+              <h3>Regulations & Standards</h3>
+              <div class="tag-row">
+                {domain.regs.map(r => <span class="tag tag--reg">{r}</span>)}
+              </div>
+            </div>
+          </div>
+          <a href={`/${domain.slug}/`} class="domain-cta">View {domain.title} Support &rarr;</a>
+        </div>
+      ))}
+    </div>
+
+    <section class="contact-section">
+      <h2>Not Sure Which Domain?</h2>
+      <p>
+        Contact us on WhatsApp and describe your role or task. We'll identify the right specialist and get you connected within hours.
+      </p>
+      <a href={site.whatsappUrl} class="contact-btn" target="_blank" rel="noopener noreferrer">
+        WhatsApp: {site.whatsapp}
+      </a>
+    </section>
+  </div>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-14);
+  }
+  .page-hero {
+    padding: var(--space-10) 0 var(--space-6);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-8);
+  }
+  .page-hero h1 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: var(--space-4); }
+  .hero-tagline { font-size: 1.1rem; color: var(--color-muted); font-style: italic; }
+
+  .domains-intro {
+    margin-bottom: var(--space-10);
+  }
+  .domains-intro p { font-size: 1rem; color: var(--color-muted); line-height: 1.75; max-width: 72ch; }
+
+  .domain-list { display: flex; flex-direction: column; gap: var(--space-8); }
+
+  .domain-block {
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    border-left: 4px solid var(--color-primary);
+  }
+  .domain-header { margin-bottom: var(--space-3); }
+  .domain-header h2 { font-size: 1.25rem; font-weight: 700; }
+  .domain-header h2 a { color: var(--color-text); text-decoration: none; }
+  .domain-header h2 a:hover { color: var(--color-primary); }
+  .domain-desc { font-size: 0.9375rem; color: var(--color-muted); line-height: 1.7; margin-bottom: var(--space-5); }
+
+  .domain-meta { display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-5); }
+  .meta-group h3 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin-bottom: var(--space-2); }
+  .tag-row { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  .tag--tool { background: var(--color-primary-light); color: var(--color-primary); }
+  .tag--role { background: #FEF3C7; color: #92400E; }
+  .tag--reg { background: #F1F5F9; color: #334155; border: 1px solid var(--color-border); }
+
+  .domain-cta {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  .domain-cta:hover { text-decoration: underline; }
+
+  .contact-section {
+    margin-top: var(--space-14);
+    padding: var(--space-8);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    text-align: center;
+  }
+  .contact-section h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-3); }
+  .contact-section p { font-size: 0.9375rem; color: var(--color-muted); margin-bottom: var(--space-6); }
+  .contact-btn {
+    display: inline-block;
+    background: #25D366;
+    color: #fff;
+    font-weight: 700;
+    padding: var(--space-3) var(--space-8);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+</style>

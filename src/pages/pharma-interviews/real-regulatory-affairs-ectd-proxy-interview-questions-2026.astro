@@ -1,0 +1,118 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What eCTD questions do regulatory affairs interviewers ask?', answer: 'Common eCTD questions in regulatory affairs interviews: "What is the CTD structure and which modules contain what?", "What is the difference between an eCTD sequence and a leaf file?", "How do you submit an eCTD amendment vs. a new sequence?", "What is a backbone file in eCTD and why is it important?", "How do you handle a validation error from FDA\'s eCTD validator on a submitted sequence?" The depth increases for senior roles — they expect hands-on experience with eCTD publishing tools (Lorenz docuBridge, ISI toolbox, Veeva Vault RIM Submissions Publisher).' },
+  { question: 'What is the difference between a Type II variation and a line extension in EU regulatory?', answer: 'A Type II variation is a major change to an existing Marketing Authorisation that requires full EMA scientific assessment — e.g., adding a new indication, new dosing regimen, or significant manufacturing change. A line extension (also called Article 8(3) application or extension of indication) is a new marketing authorisation application for a new form, route, or dosage of an already-approved product — it references the originator\'s dossier (Abridged application). The key distinction: a variation modifies an existing MA; a line extension creates a new MA. Both require scientific assessment but follow different application procedures and assessment timelines.' },
+  { question: 'What does a regulatory affairs specialist do day-to-day?', answer: 'Day-to-day regulatory affairs work includes: preparing and submitting regulatory variations (Type IA, IB, II), managing the marketing authorisation lifecycle (renewals, labelling updates, PSUR obligations), compiling eCTD modules for new submissions, coordinating with medical writing for clinical summaries and overview documents, reviewing CMC changes for regulatory impact, tracking assessment timelines and agency correspondence, maintaining the regulatory information management system (Veeva Vault RIM or equivalent), and providing regulatory guidance to product development teams.' },
+  { question: 'How is a regulatory affairs interview in Germany different from UK or Ireland?', answer: 'German regulatory affairs interviews (for roles at Bayer, Boehringer Ingelheim, Merck KGaA, etc.) place heavy emphasis on EU centralised procedure knowledge, CHMP guideline awareness, and often expect German language ability for national submissions. UK interviews post-Brexit focus on MHRA processes and the Innovative Licensing and Access Pathway (ILAP). Ireland interviews focus on EMA centralised procedure and HPRA national dossiers. All test CTD/eCTD structure and EU regulatory procedure types.' },
+  { question: 'How do I prepare for a regulatory affairs proxy interview?', answer: 'Focus on: CTD Module structure (1-5), eCTD submission format, EU regulatory procedure types (Centralised, MRP, DCP, National), variation types and timelines (IA/IB/II), NDA/BLA/MAA differences for FDA vs. EMA, IDMP and SPOR database requirements, and Veeva Vault RIM or equivalent regulatory information management. For EU roles: EMA product lifecycle management, EPAR structure, and SmPC labelling requirements. Our pharma proxy interview support gives you mock sessions with a regulatory affairs specialist. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Regulatory Affairs / eCTD — 2026', url: site.url + '/pharma-interviews/real-regulatory-affairs-ectd-proxy-interview-questions-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Regulatory Affairs / eCTD Interview Questions — Pharma Company, 2026',
+    'Real Q&A from regulatory affairs/eCTD interviews in 2026. CTD structure, EU variations, NDA/MAA submissions, eCTD format, Veeva Vault RIM, IDMP — what interviewers actually ask.',
+    site.url + '/pharma-interviews/real-regulatory-affairs-ectd-proxy-interview-questions-2026/',
+    '2026-02-10',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Regulatory Affairs eCTD Interview Questions 2026 | Pharma Interviews"
+  description="Real Q&A from regulatory affairs/eCTD interviews in 2026. CTD modules, EU variation types, eCTD publishing, NDA/MAA, Veeva Vault RIM. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Regulatory Affairs / eCTD — 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | Regulatory Affairs | eCTD | 2026</div>
+      <h1>Real Regulatory Affairs / eCTD Proxy Interview Questions — Pharma Company, 2026</h1>
+      <p class="hero-tagline">Actual questions from regulatory affairs specialist interviews at pharmaceutical companies in 2026. CTD module structure, eCTD submission format, EU variation types, NDA/MAA processes, Veeva Vault RIM — what regulatory affairs interviewers actually ask candidates.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Compiled from regulatory affairs interviews at a European pharmaceutical company (EU MAA focus) and a US-EU dual-submission company (NDA + MAA portfolio). Roles: Regulatory Affairs Specialist and Regulatory Submissions Manager. Both interviews covered eCTD, EU regulatory procedures, and regulatory information management systems.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Regulatory Affairs eCTD Interview Questions</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Describe the CTD module structure. What does each module contain?</h3>
+            <p><strong>What they wanted to hear:</strong> Module 1 — Regional/Administrative documents (product information, application forms, labelling — varies by region: FDA, EMA, etc.). Module 2 — Quality, Nonclinical, and Clinical Summaries and Overviews (written by regulatory/medical writing, not raw data). Module 3 — Quality (Chemistry, Manufacturing, and Controls — drug substance, drug product, excipients, container closure, stability). Module 4 — Nonclinical study reports (pharmacology, pharmacokinetics, toxicology). Module 5 — Clinical study reports (Phase I, II, III trial reports, literature references, integrated summaries). In eCTD format, Modules 2-5 are the same for all regions (hence "Common Technical Document"). Module 1 is region-specific. Interviewer follow-up: "If I give you a CMC change — a new manufacturing site — which CTD sections would be affected?" Answer: Module 1 (updated application form, labelling if needed), Module 3 Section 3.2.S.2.1 (Manufacturers), 3.2.S.2.2 (Description of Manufacturing Process and Process Controls), 3.2.S.2.5 (Process Validation), 3.2.P.3.1 (Manufacturers). This maps to a Type IB or Type II variation depending on the significance of the change.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: What is the difference between the EU Centralised Procedure, Mutual Recognition Procedure, and Decentralised Procedure?</h3>
+            <p><strong>What they wanted to hear:</strong> Centralised Procedure (CP) — mandatory for certain product types (biotech, orphan drugs, HIV/cancer/diabetes medicines) and optional for others. Application submitted directly to EMA. Results in a single EU-wide marketing authorisation valid in all EU/EEA member states. Committee: CHMP. Timeline: 210 days (plus clock stops). Mutual Recognition Procedure (MRP) — used when the product is already nationally authorised in one EU member state (the Reference Member State, RMS). Applicant requests mutual recognition by Concerned Member States (CMS). RMS conducts the assessment, CMS agree (or raise objections). Timeline: 90 days. Decentralised Procedure (DCP) — used for products NOT yet nationally authorised in any EU member state. Application submitted simultaneously to RMS and all CMS. RMS leads the assessment, CMS participate. Timeline: 210 days. Key distinction from MRP: DCP is for first authorisation in EU; MRP is when at least one national MA already exists. Interviewer asked: "When would a company choose DCP over CP even if CP is available?" Answer: Cost (EMA CP fees are higher than DCP), strategic speed considerations, and when only a subset of EU markets is targeted. Not all products qualify for CP — it is mandatory only for specified categories.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: How do you build an eCTD submission? What tools and steps are involved?</h3>
+            <p><strong>What they wanted to hear:</strong> Source documents authored by regulatory/medical writing/CMC teams, formatted as PDFs per CTD specifications. Documents placed in the CTD folder structure (Module 3 quality, Module 4 nonclinical, Module 5 clinical). eCTD XML backbone files generated to index the submission — using tools like Lorenz docuBridge, ISI toolbox, Veeva Vault RIM Submissions Publisher, or Liquent InSight. Sequence number assigned (initial application = 0000, first amendment = 0001, etc.). Submission validated using FDA validation tool (CDER or CBER) or EMA validation tool before final submission. Transmitted via FDA Electronic Submissions Gateway (ESG) for FDA or CESP for EMA. Interviewer asked: "What does a validation error vs. a validation warning mean in eCTD?" Answer: Validation errors — the submission does not conform to the eCTD specification and may be rejected for technical reasons. Must be resolved before submission. Validation warnings — technical issues that do not prevent submission but should be reviewed and justified. The agency may query on warnings during the assessment. Always document and justify warnings in the submission cover letter.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: What is IDMP and how does it relate to regulatory submissions?</h3>
+            <p><strong>What they wanted to hear:</strong> IDMP (Identification of Medicinal Products) is a set of ISO standards (ISO 11615, 11616, 11238, 11239, 11240) for identifying medicinal products consistently across regulatory agencies and healthcare systems. EMA requires IDMP-compliant product data to be submitted via the SPOR (Substances, Products, Organisations, Referentials) system. IDMP data includes: substance information, pharmaceutical product information, packaged medicinal product details. From a regulatory affairs perspective: companies must maintain their product data in the EMA SPOR database (via XEVMPD submissions). This data feeds into EudraVigilance for safety reporting and regulatory product information management. Practical impact: regulatory affairs teams must ensure their IDMP data in SPOR is current and accurate — it affects how ICSRs are filed and how product information is retrieved by regulators. Vault RIM Registrations increasingly integrates with SPOR for automated IDMP data management.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your Regulatory Affairs Interview</h2>
+          <p>
+            Regulatory affairs interviews require technical depth on CTD/eCTD, EU and FDA regulatory procedures, and practical knowledge of submission tools. Senior roles add IDMP, SPOR, and lifecycle management expertise.
+          </p>
+          <p>
+            Get preparation from a regulatory affairs specialist who has done these interviews. Our <a href="/regulatory-affairs-proxy-interview/">Regulatory Affairs Proxy Interview Support</a> is available same-day. WhatsApp: <strong>{site.whatsapp}</strong>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Regulatory Affairs Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Regulatory Affairs Interview Coming Up?"
+          body="Get real-time preparation from a regulatory affairs specialist who knows EU and FDA submission requirements and what RA interviewers actually ask. Same-day support available."
+          ctaLabel="Get Regulatory Affairs Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

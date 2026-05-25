@@ -1,0 +1,104 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What ISO 13485 questions come up in medical device QA interviews?', answer: 'ISO 13485:2016 is the primary QMS standard for medical devices. Interview questions: "What are the key differences between ISO 13485:2016 and ISO 9001:2015?", "Walk me through a CAPA process under ISO 13485", "What is the scope of ISO 13485 Section 7.5 (production and service provision)?", "How do you handle a supplier audit under ISO 13485?", "What records are required under ISO 13485 Section 4.2.4?" Senior roles also test EU MDR Annex IX and Annex XI (conformity assessment procedures) and IVDR knowledge.' },
+  { question: 'What EU MDR questions are asked in medical device QA interviews?', answer: 'EU MDR (Medical Device Regulation 2017/745) interview questions: "What is the risk classification system for medical devices under EU MDR (Class I, IIa, IIb, III)?", "What is a Technical File vs. a Design Dossier under EU MDR?", "What changed from MDD (93/42/EEC) to EU MDR for Class IIb devices?", "What are the Post-Market Surveillance requirements under EU MDR Article 83-86?", "What is a PMCF study and when is it required?" The EU MDR transition (deadline May 2024 for new devices, May 2026 for legacy devices) is a hot topic — interviewers ask about the transition process.' },
+  { question: 'What does a medical device quality engineer do in day-to-day work?', answer: 'Day-to-day medical device QA work: CAPA management (investigation, root cause analysis, effectiveness checks), deviation handling, change control review, supplier quality management (audits, qualification, monitoring), batch record review for Class II/III devices, SOP authoring and review, internal audits per ISO 13485, notified body audit preparation, complaint handling and trend analysis, DHF/DMR maintenance, and post-market surveillance data review.' },
+  { question: 'How is a 510(k) vs. PMA medical device interview question different?', answer: 'For US FDA submissions: a 510(k) interview tests substantial equivalence reasoning (predicate device selection, technological characteristics comparison, performance testing), FDA 21 CFR Part 820 QSR/QMS requirements, and the 510(k) submission content. A PMA (PreMarket Approval) interview tests the full clinical evidence requirement for Class III devices, IDE (Investigational Device Exemption) study conduct, PMA supplement types, and more rigorous bench and clinical testing expectations. Roles at companies with PMA products expect much deeper regulatory and clinical evidence knowledge.' },
+  { question: 'How do I prepare for a medical device QA proxy interview?', answer: 'Focus on: ISO 13485:2016 (all sections), EU MDR 2017/745 (risk classification, conformity assessment, PMS requirements), FDA 21 CFR Part 820 (QSR), IEC 62304 (software), CAPA methodology (root cause analysis — 5-Why, Fishbone, FMEA), DHF/DMR structure, internal audit techniques, and CE marking process for EU MDR. Our pharma proxy interview support gives you mock sessions with a medical device QA specialist. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Medical Device QA / ISO 13485 — 2026', url: site.url + '/pharma-interviews/real-medical-device-qa-iso13485-proxy-interview-questions-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Medical Device QA / ISO 13485 Interview Questions — 2026',
+    'Real Q&A from medical device QA / ISO 13485 interviews in 2026. CAPA, EU MDR, 510(k), PMS, DHF, conformity assessment — actual questions from medical device quality interviews.',
+    site.url + '/pharma-interviews/real-medical-device-qa-iso13485-proxy-interview-questions-2026/',
+    '2026-02-15',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Medical Device QA ISO 13485 Interview Questions 2026"
+  description="Real Q&A from medical device QA / ISO 13485 interviews in 2026. EU MDR, CAPA, DHF, conformity assessment, 510(k), PMS. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Medical Device QA / ISO 13485 — 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | Medical Device QA | ISO 13485 | EU MDR | 2026</div>
+      <h1>Real Medical Device QA / ISO 13485 Proxy Interview Questions — 2026</h1>
+      <p class="hero-tagline">Actual questions from medical device quality assurance interviews in 2026. ISO 13485 QMS requirements, EU MDR conformity assessment, CAPA processes, DHF/DMR, post-market surveillance — what medical device QA interviewers actually asked candidates.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Real Medical Device QA Interview Questions — ISO 13485 and EU MDR</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Walk me through a CAPA process you have managed from identification to closure.</h3>
+            <p><strong>What they wanted to hear:</strong> CAPA initiation — source (customer complaint, internal audit finding, deviation, trend analysis). Document in CAPA system (MasterControl, ETQ, Veeva Vault QualityDocs, SAP QM). Problem description — be specific and measurable. Root cause analysis — 5-Why analysis, Fishbone (Ishikawa) diagram, FMEA. Containment actions — immediate actions to prevent further impact. Corrective actions — address root cause. Preventive actions — systemic changes to prevent recurrence across similar processes/products. Implementation — assign owners, set due dates. Effectiveness check — defined criteria (e.g., zero recurrence within 90 days, audit verification). CAPA closure — verified effectiveness, documentation complete. Reviewer asked: "What if your root cause analysis concludes the CAPA is not feasible to address within the current system?" Answer: Escalate through quality management — may require a change control, risk management update (ISO 14971), or design change. Document the risk acceptance decision if the CAPA cannot be fully implemented. Residual risk must be acceptable per the risk management process.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: What are the key requirements of ISO 13485:2016 Section 7 and how do they apply to a Class IIb medical device manufacturer?</h3>
+            <p><strong>What they wanted to hear:</strong> Section 7 covers Product Realisation. Key subsections: 7.1 Planning of product realisation (quality plans, risk management per ISO 14971). 7.2 Customer-related processes (requirements determination, review, communication). 7.3 Design and development (design inputs, outputs, review, verification, validation, transfer, changes — including DHF documentation). 7.4 Purchasing (supplier evaluation, purchasing data, incoming inspection). 7.5 Production and service provision (production controls, cleanliness, installation, special processes — sterile device manufacturing). 7.6 Control of monitoring and measuring equipment (calibration, traceability). For a Class IIb device: design and development controls under 7.3 are critical — full DHF (Design History File) required, clinical evaluation under EU MDR required, and Notified Body involvement in conformity assessment (Annex IX or XI). Interviewer follow-up: "What records does Section 7.5.7 require for implantable medical devices?" Answer: Unique Device Identification (UDI) data, lot/serial number traceability, name and address of shipping destination, and name and contact of person authorising release.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: A competitor's similar device has just received an EU MDR safety recall. What actions does your quality team take under Post-Market Surveillance obligations?</h3>
+            <p><strong>What they wanted to hear:</strong> Under EU MDR Articles 83-86, Post-Market Surveillance is an ongoing, systematic process. On receiving a competitor recall signal: review your own PMS plan to see if the failure mode is covered. Assess whether your device shares the same failure mode risk. If yes — initiate a risk management review (ISO 14971). Assess whether a FSCA (Field Safety Corrective Action) for your device is warranted. Check your post-market surveillance data (complaints, vigilance reports, literature) for any similar signals. If the risk is confirmed for your device: notify your Notified Body, submit a Serious Incident report to competent authority (EUDAMED for EU), issue FSCA. If not confirmed: document the review in your PMCF/PMSF report. Reviewer asked: "What is the difference between a PMS Plan, PMSR, and PMCF?" Answer: PMS Plan — proactive plan defining how you will collect and analyse post-market data. PMSR (Post-Market Surveillance Report — Class I/IIa) — periodic report summarising PMS data. PSUR (Periodic Safety Update Report — Class IIb/III) — more extensive, submitted to competent authority. PMCF (Post-Market Clinical Follow-up) — clinical data collection to confirm device performance and safety. All required under EU MDR.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your Medical Device QA Interview</h2>
+          <p>
+            Get domain-specific preparation from a medical device QA specialist who knows ISO 13485, EU MDR, and what QA interviewers actually probe. Our <a href="/medical-device-proxy-interview/">Medical Device Proxy Interview Support</a> is available same-day.
+          </p>
+          <p>WhatsApp: <strong>{site.whatsapp}</strong></p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Medical Device QA Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Medical Device QA Interview Coming Up?"
+          body="Get real-time preparation from a medical device QA specialist who knows ISO 13485, EU MDR, CAPA, and what QA interviewers probe. Same-day support available."
+          ctaLabel="Get Medical Device Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

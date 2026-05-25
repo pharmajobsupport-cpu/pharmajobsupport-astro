@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema } from '../utils/schema';
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Terms of Service', url: site.url + '/terms/' },
+];
+
+const schema = buildBreadcrumbSchema(breadcrumbItems);
+const lastUpdated = '2025-01-01';
+---
+
+<BaseLayout
+  title="Terms of Service | pharmajobsupport.com"
+  description="Terms of service for pharmajobsupport.com — conditions governing use of PharmaCDM's proxy job support, interview support, and career services."
+  schema={schema}
+>
+  <div class="policy-container">
+    <Breadcrumbs crumbs={[{ label: 'Terms of Service' }]} />
+
+    <header class="policy-hero">
+      <h1>Terms of Service</h1>
+      <p class="policy-meta">Last updated: {lastUpdated} &middot; pharmajobsupport.com</p>
+    </header>
+
+    <div class="policy-body">
+
+      <section>
+        <h2>1. Acceptance of Terms</h2>
+        <p>
+          By accessing pharmajobsupport.com or engaging PharmaCDM's services via any channel (website, WhatsApp, email), you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, do not use this website or our services.
+        </p>
+        <p>
+          These terms apply to all services provided by PharmaCDM, including proxy job support, interview support, profile engineering, career marketing, and knowledge base content.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Description of Services</h2>
+        <p>PharmaCDM provides the following services to pharmaceutical industry professionals:</p>
+        <ul>
+          <li><strong>Proxy Job Support:</strong> Real-time expert assistance with job tasks, deliverables, and workflows during employment.</li>
+          <li><strong>Interview Proxy Support:</strong> Real-time domain expert assistance during job interviews.</li>
+          <li><strong>Interview Preparation:</strong> Coaching, mock interviews, and technical preparation for pharma roles.</li>
+          <li><strong>Profile Engineering:</strong> Resume and LinkedIn profile rewriting and optimisation.</li>
+          <li><strong>Career Marketing:</strong> Job search strategy, recruiter outreach, and cover letter services.</li>
+          <li><strong>Knowledge Base:</strong> Free informational content about pharmaceutical industry topics.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Client Responsibilities</h2>
+        <p>By using our services, you agree that:</p>
+        <ul>
+          <li>You are an adult (18+) and have the legal capacity to enter into agreements.</li>
+          <li>You will use our services in compliance with applicable laws in your jurisdiction.</li>
+          <li>You will provide accurate information about your background, role, and support needs.</li>
+          <li>You understand that the nature of the services you engage may have implications under your employment contract, non-disclosure agreements, or applicable regulations in your jurisdiction, and you take full responsibility for those implications.</li>
+          <li>You will not use our services for any illegal purpose or in violation of any third party's rights.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Disclaimer of Employment Responsibility</h2>
+        <p>
+          PharmaCDM provides advisory and expert guidance services. We do not become your employer, co-worker, or agent. Any work product, deliverable, or output used in your employment is used under your sole responsibility and discretion.
+        </p>
+        <p>
+          We make no representation that engaging our services is compliant with any specific employer's policies, employment contract terms, or professional regulatory requirements in your jurisdiction. You are responsible for understanding and complying with your own obligations.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Payment and Refunds</h2>
+        <p>
+          Service pricing is communicated directly via WhatsApp or email prior to engagement. Payment is due as agreed prior to or at the time of service delivery. Specific refund terms, if any, are communicated at the time of booking.
+        </p>
+        <p>
+          In general, once a support session has been delivered, fees are non-refundable. If a session could not be delivered due to our failure to provide a qualified specialist, we will offer a full refund or reschedule at no additional charge.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Confidentiality</h2>
+        <p>
+          We maintain strict confidentiality over all client information and session content. Our specialists do not share, publish, or disclose any details of client engagements. All specialists sign non-disclosure agreements.
+        </p>
+        <p>
+          Similarly, we ask that you maintain confidentiality regarding the identities of our specialists and any proprietary aspects of our service delivery methods.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Intellectual Property</h2>
+        <p>
+          All content on pharmajobsupport.com — including text, knowledge base articles, blog posts, and service descriptions — is the intellectual property of PharmaCDM and is protected by applicable copyright law.
+        </p>
+        <p>
+          You may not reproduce, republish, distribute, or commercially exploit our content without prior written consent. Quoting brief excerpts with attribution and a link to the source is permitted for non-commercial purposes.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Limitation of Liability</h2>
+        <p>
+          To the maximum extent permitted by applicable law, PharmaCDM and its specialists shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services, including but not limited to employment termination, regulatory action, professional consequences, or loss of income.
+        </p>
+        <p>
+          Our total liability to you for any claims arising from these terms or our services shall not exceed the amount you paid us for the specific service giving rise to the claim.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Disclaimers</h2>
+        <p>
+          Our services are provided "as is" without warranties of any kind. We do not guarantee specific outcomes, including but not limited to: job retention, interview success, salary outcomes, regulatory compliance outcomes, or career advancement.
+        </p>
+        <p>
+          Knowledge base and blog content is provided for informational purposes only and does not constitute legal, regulatory, or professional advice. Always consult qualified professionals for compliance decisions.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Modifications to Terms</h2>
+        <p>
+          We reserve the right to modify these Terms of Service at any time. Changes will be posted on this page with an updated date. Continued use of our services after changes constitutes your acceptance of the revised terms.
+        </p>
+      </section>
+
+      <section>
+        <h2>11. Governing Law</h2>
+        <p>
+          These terms shall be governed by and construed in accordance with applicable law. Any disputes shall be resolved through good-faith negotiation in the first instance. Where negotiation fails, disputes shall be submitted to binding arbitration.
+        </p>
+      </section>
+
+      <section>
+        <h2>12. Contact</h2>
+        <p>For questions regarding these Terms of Service:</p>
+        <ul>
+          <li>Email: <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li>WhatsApp: <a href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.whatsapp}</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .policy-container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-14);
+  }
+  .policy-hero {
+    padding: var(--space-10) 0 var(--space-6);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-10);
+  }
+  .policy-hero h1 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); font-weight: 800; margin-bottom: var(--space-3); }
+  .policy-meta { font-size: 0.875rem; color: var(--color-muted); }
+
+  .policy-body { display: flex; flex-direction: column; gap: var(--space-8); }
+  .policy-body section h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .policy-body p { font-size: 0.9375rem; color: var(--color-muted); line-height: 1.8; }
+  .policy-body p + p { margin-top: var(--space-3); }
+  .policy-body ul {
+    margin: var(--space-3) 0;
+    padding-left: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  .policy-body li { font-size: 0.9375rem; color: var(--color-muted); line-height: 1.7; }
+  .policy-body a { color: var(--color-primary); }
+  .policy-body strong { color: var(--color-text); font-weight: 600; }
+</style>

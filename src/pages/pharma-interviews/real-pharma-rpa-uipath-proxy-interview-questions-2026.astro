@@ -1,0 +1,118 @@
+﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import FAQ from '../../components/FAQ.astro';
+import { site } from '../../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../../utils/schema';
+
+const faqs = [
+  { question: 'What UiPath questions come up in pharma RPA interviews?', answer: 'Pharma RPA interviews test UiPath fundamentals with a GxP twist: "Walk me through a UiPath workflow you have built for a pharma use case", "What is the difference between UiPath Orchestrator, Studio, and Robot?", "How do you handle exceptions in a UiPath workflow — business exceptions vs. application exceptions?", "What are Selectors in UiPath and how do you handle dynamic selectors in web applications that change between sessions?", "How do you implement logging in a UiPath workflow for audit trail purposes?", "What is the REFramework (Robotic Enterprise Framework) and when do you use it?" Pharma-specific: "How do you validate a UiPath automation that performs GxP-regulated tasks?", "What evidence do you capture for IQ/OQ/PQ of a UiPath bot?" Be prepared to discuss a real bot you built with specific UiPath activities (Screen Scraping, Data Scraping, HTTP Request, Excel Application Scope).' },
+  { question: 'What pharma RPA use case questions are asked in interviews?', answer: 'Pharma RPA interviews ask about specific use cases: "What pharma processes have you automated — regulatory submissions, adverse event data entry, batch record data extraction?", "How would you automate the extraction of adverse event data from a PDF report and entry into Argus Safety?", "What is the validation approach for an RPA bot that enters data into a GxP system?", "How do you automate an FDA FAERS submission workflow using RPA?", "How would you use RPA to automate clinical site payment reconciliation from multiple EDC and financial systems?" Be ready to discuss which processes are good RPA candidates in pharma: high volume, rule-based, repetitive, data transfer between systems that have no API integration. Poor RPA candidates: processes requiring judgment calls, unstructured data, complex decision trees.' },
+  { question: 'What exception handling and error management questions are asked in pharma RPA roles?', answer: 'Exception handling is critical in pharma RPA: "How do you differentiate between a business exception and an application exception in your UiPath workflow?", "What happens if your RPA bot encounters an unexpected pop-up window in the middle of a regulated data entry task?", "How do you implement retry logic for transient errors without causing duplicate data entry in a pharma system?", "What is your approach to bot failure notification and escalation in a production pharma environment?", "How do you ensure data integrity if an RPA bot fails mid-transaction in a GxP system?" Interviewers look for: understanding of atomic transactions (all-or-nothing data entry), rollback procedures for failed bot runs, human-in-the-loop escalation workflows, and audit trail capture even on failure events.' },
+  { question: 'What RPA validation and GAMP 5 questions appear in pharma RPA interviews?', answer: 'GAMP 5 and RPA validation: "What GAMP 5 category does a UiPath RPA bot fall under?", "What is the validation approach for an attended vs. unattended UiPath bot in a GxP environment?", "What documentation is required for a validated RPA bot — URS, FS, DS, IQ/OQ/PQ?", "How do you version-control your UiPath workflows in a validated environment?", "What is the change control process for updating a validated RPA automation?". GAMP 5 category for UiPath: typically Category 4 (configured product) — UiPath itself is the COTS software, and the workflow configuration is the validation scope. IQ: verify UiPath Robot is correctly installed and configured. OQ: test each workflow against specified test cases. PQ: run in production environment to confirm performance. Change control: any change to a validated workflow requires a change request, impact assessment, re-testing, and QA approval before deployment.' },
+  { question: 'How do I prepare for a pharma RPA proxy interview?', answer: 'Focus on: UiPath Studio workflow development (sequences, flowcharts, state machines, REFramework), UiPath Orchestrator (job scheduling, asset management, queue management, monitoring), GAMP 5 validation approach for RPA (Category 4, IQ/OQ/PQ documentation), GxP-compliant audit trail implementation in RPA (logging activities, Orchestrator job logs, custom log message activity), pharma-specific RPA use cases (adverse event data entry, regulatory submission data extraction, clinical site payment, batch record verification), exception handling (try/catch, retry scope, escalation workflow). Our pharma RPA proxy interview support gives you real-time preparation from an RPA developer who has built and validated bots for pharma GxP processes. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Real Pharma Interview Questions', url: site.url + '/pharma-interviews/' },
+  { name: 'Pharma RPA / UiPath — 2026', url: site.url + '/pharma-interviews/real-pharma-rpa-uipath-proxy-interview-questions-2026/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Real Pharma RPA / UiPath Interview Questions — 2026',
+    'Real Q&A from pharma RPA and UiPath interviews in 2026. RPA validation, GAMP 5, UiPath workflow design, exception handling, GxP audit trail, pharma RPA use cases.',
+    site.url + '/pharma-interviews/real-pharma-rpa-uipath-proxy-interview-questions-2026/',
+    '2026-03-10',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Real Pharma RPA UiPath Interview Questions 2026"
+  description="Real Q&A from pharma RPA/UiPath interviews 2026. RPA validation, GAMP 5, UiPath workflow, exception handling, GxP audit trail. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[
+      { label: 'Real Pharma Interview Questions', href: '/pharma-interviews/' },
+      { label: 'Pharma RPA / UiPath — 2026' }
+    ]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Real Interview Q&A | Pharma RPA | UiPath | 2026</div>
+      <h1>Real Pharma RPA / UiPath Proxy Interview Questions — 2026</h1>
+      <p class="hero-tagline">Actual questions from pharma RPA and UiPath interviews at pharmaceutical companies and CROs in 2026. UiPath workflow development, GAMP 5 RPA validation, GxP audit trail implementation, pharma-specific automation use cases — what interviewers actually asked.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Interview Context</h2>
+          <p>
+            Compiled from pharma RPA interviews at two organisations in 2026: a large pharmaceutical company implementing UiPath for regulatory submissions and adverse event reporting workflows, and a CRO using UiPath Orchestrator for clinical site payment reconciliation. Roles: Pharma RPA Developer (UiPath) and RPA Business Analyst. Questions from the technical and functional panel round.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Real Pharma RPA / UiPath Interview Questions</h2>
+
+          <div class="qa-block">
+            <h3>Q1: Walk me through how you built a UiPath automation for a GxP-regulated pharma process. What was the use case, what activities did you use, and how did you validate it?</h3>
+            <p><strong>What they wanted to hear:</strong> Use case example (adapt to your own): Automated adverse event data extraction and entry. The process: extract AE data from incoming PDF safety reports, match to the correct patient record in the Argus Safety database, enter the AE data, and generate a case intake confirmation log. UiPath workflow structure: using REFramework for robustness. Dispatcher process: reads PDF safety reports from a monitored folder, extracts structured data using Document Understanding (invoice extractor or custom model trained on AE report templates), enqueues extracted data as a UiPath Orchestrator queue item. Performer process: reads from the queue, opens Argus Safety web application, navigates to new case intake, enters all required fields (product, AE term, seriousness criteria, patient demographics), submits, captures the case number for confirmation. Exception handling: business exception if a required field is missing from the source document (escalate to human reviewer via email with queue item ID). Application exception if Argus Safety is unresponsive (retry up to 3 times with 30-second delay; if still failing, send alert to Orchestrator channel and exit gracefully). Audit trail: every queue item has a status update (In Progress, Successful, Business Exception, Application Exception) in Orchestrator. A custom log message activity captures the Argus case number and the robot identity for each successful entry. Validation approach (GAMP 5 Category 4): URS documenting the business requirements for the automation, FS specifying the workflow logic, IQ confirming UiPath Studio and Orchestrator installed and configured correctly, OQ running test cases from a pre-defined test data set through the bot (all positive and negative scenarios), PQ confirming the bot performs correctly on production data for a defined observation period. All test evidence documented and approved by QA before go-live.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q2: How do you implement GxP-compliant audit trail logging in a UiPath bot? What are the requirements and how do you meet them in practice?</h3>
+            <p><strong>What they wanted to hear:</strong> FDA 21 CFR Part 11 audit trail requirements for computer-created records: time-stamped, capturing operator identification, recording old and new values when records are modified. For a UiPath bot acting on GxP systems: The Orchestrator job log is the first layer of audit trail — Orchestrator records: robot identity (machine name, UiPath user executing the job), job start time and end time, job status (successful/failed), any business or application exceptions. However, Orchestrator logs alone are not sufficient as a GxP audit trail because they are too coarse — you need record-level evidence. Application-level audit trail: after each data entry action in the target system (Argus Safety, Veeva Vault, EDC), the bot reads back the confirmation (e.g., case number created) and logs it via the Log Message activity at Information level with structured data: "AE case [CASE-NUMBER] created in Argus Safety for patient [PATIENT-ID] at [TIMESTAMP] by Robot [ROBOT-NAME] / Job [ORCHESTRATOR-JOB-ID]". These log messages are captured in Orchestrator and can be exported to a SIEM (Splunk, Azure Sentinel) for immutable storage. Additional audit evidence: screenshots of the completed data entry captured via Take Screenshot activity, stored to a SharePoint document library with the queue item ID as the filename. Document index maintained for each job run. For EU Annex 11 compliance: the computerised system (target system like Argus) also maintains its own audit trail of the bot's actions — since the bot logs in as a dedicated service account (never a shared user account), Argus's own audit trail records which system account made each entry and at what time. The combination of Orchestrator logs, custom log messages, screenshots, and target system audit trail provides defensible GxP audit documentation.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q3: What is the REFramework and when do you use it vs. a simple sequence workflow in pharma RPA?</h3>
+            <p><strong>What they wanted to hear:</strong> REFramework (Robotic Enterprise Framework): UiPath's production-grade workflow template designed for transactional processing with Orchestrator queues. Components: InitAllSettings — reads config from a configuration file and Orchestrator assets, initialises the application. GetTransactionData — reads the next queue item from the Orchestrator queue. Process — executes the business logic for that transaction. SetTransactionStatus — updates the queue item status (Successful / Business Exception / Application Exception). Three states: Init, Get Transaction Data, and End Process. Built-in retry logic: Application Exceptions trigger retry (up to a configurable retry limit) because they may be transient. Business Exceptions do not retry — the human data issue must be resolved first. When to use REFramework: any automation that processes a variable number of work items (rows from a database, items from a queue, files from a folder), needs retry logic, requires separate Dispatcher/Performer roles, or requires restart-from-failure capability (if the bot crashes mid-run, it picks up from the last unprocessed queue item). When NOT to use REFramework: simple, single-run automations with a fixed workflow (e.g., generate a weekly report and email it) — a sequence or flowchart is simpler and easier to maintain. For pharma use: REFramework is the standard for any GxP data entry automation because the built-in transaction status tracking provides Orchestrator-level audit trail for each individual data record processed — critical for validation evidence.</p>
+          </div>
+
+          <div class="qa-block">
+            <h3>Q4: How do you handle a scenario where a UiPath bot fails mid-transaction while entering data into Argus Safety? What is your rollback and recovery procedure?</h3>
+            <p><strong>What they wanted to hear:</strong> The challenge: Argus Safety may not have a native undo function accessible via RPA. If the bot enters partial data and fails before submitting, the risk is leaving an incomplete ICSR record in Draft status. Prevention — transactional design: design the bot to treat each complete AE case entry as an atomic unit. The bot only clicks Submit after all required fields are entered. If any field entry fails before Submit, the bot must abandon the incomplete case. Recovery procedure: before the bot starts processing a queue item, check if a Draft case already exists in Argus for the same patient/product/AE combination (from a previous incomplete run). If yes: a human reviewer must decide whether to complete the existing draft or delete it and start fresh. The bot raises this as a business exception in Orchestrator with the queue item details, triggering an alert to the pharmacovigilance team. Post-failure cleanup: after any Application Exception during data entry, the bot executes a cleanup sequence: attempts to close any open Argus forms without saving, logs the failure with a screenshot, updates the Orchestrator queue item status. The incomplete case record in Argus must be reviewed and handled by a human — the bot must not attempt to delete records in Argus (deletion in a GxP system requires documented authorization). This scenario must be documented in the validation test scripts as a negative test case — the OQ must include: "What happens if the application crashes mid-entry?" — and the expected behaviour must be defined and confirmed in testing before go-live.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Prepare for Your Pharma RPA Interview</h2>
+          <p>
+            Pharma RPA interviews require deep UiPath technical knowledge combined with GxP validation experience. You need to demonstrate both automation skill and regulatory understanding.
+          </p>
+          <p>
+            Get real-time preparation from a pharma RPA developer. Our <a href="/pharma-rpa-proxy-interview/">Pharma RPA Proxy Interview Support</a> is available same-day. WhatsApp: <strong>{site.whatsapp}</strong>
+          </p>
+        </section>
+
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma RPA Interview Preparation — FAQ" />
+
+      </main>
+
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Pharma RPA Interview Coming Up?"
+          body="Get real-time preparation from a pharma RPA developer who has built and validated UiPath bots for GxP-regulated pharma processes. Same-day support available via WhatsApp."
+          ctaLabel="Get Pharma RPA Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="View all pharma interview Q&A"
+          secondaryHref="/pharma-interviews/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.qa-block { background: var(--color-surface-2, #f8fafc); border-left: 3px solid var(--color-primary, #009e94); padding: 16px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+.qa-block h3 { font-size: 1rem; color: var(--color-text, #1e3448); margin-bottom: 10px; }
+.qa-block p { font-size: 0.95rem; line-height: 1.7; margin: 0; }
+</style>

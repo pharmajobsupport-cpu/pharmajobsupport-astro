@@ -1,0 +1,65 @@
+---
+const domains = [
+  'Clinical SAS / SDTM / ADaM',
+  'Pharmacovigilance / Argus Safety',
+  'Regulatory Affairs / eCTD',
+  'CSV / 21 CFR Part 11 / GAMP 5',
+  'Veeva Vault QMS / eTMF / RIM',
+  'Medical Device / ISO 13485',
+  'Clinical Data Management / EDC',
+  'QA / GMP / CAPA',
+];
+---
+
+<div class="trust-bar" aria-label="Supported pharmaceutical domains">
+  <div class="trust-bar-inner">
+    <p class="trust-label">Expert Support In:</p>
+    <ul class="trust-tags" role="list">
+      {domains.map((d) => (
+        <li>{d}</li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .trust-bar {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-4) var(--space-4);
+  }
+  .trust-bar-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    flex-wrap: wrap;
+  }
+  .trust-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-muted);
+    white-space: nowrap;
+  }
+  .trust-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .trust-tags li {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 0.25rem 0.625rem;
+    border-radius: 2rem;
+  }
+</style>

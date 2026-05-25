@@ -1,0 +1,38 @@
+---
+import HubPage from '../components/HubPage.astro';
+import BlogCard from '../components/BlogCard.astro';
+import { allBlogs } from '../data/blogs-index';
+import { buildBreadcrumbSchema } from '../utils/schema';
+import { site } from '../data/site';
+
+const sortedBlogs = [...allBlogs].sort((a, b) => b.publishDate.localeCompare(a.publishDate));
+
+const schema = buildBreadcrumbSchema([
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Blog', url: site.url + '/blog/' },
+]);
+---
+
+<HubPage
+  title="Pharma Career & Industry Blog"
+  metaTitle="Pharma Job Support Blog — Career Guides, Industry Knowledge, Interview Tips"
+  metaDesc="Expert pharma career guides — SDTM mapping tips, SAS programming careers, pharmacovigilance reporting, regulatory affairs, GCP inspection readiness, and more."
+  h1="Pharma Career & Industry Knowledge Blog"
+  intro="In-depth guides for pharmaceutical professionals — career development, technical domain knowledge, regulatory updates, and industry insights."
+  breadcrumbs={[{ label: 'Blog' }]}
+  schema={schema}
+>
+  <div class="blog-grid">
+    {sortedBlogs.map((blog) => (
+      <BlogCard blog={blog} />
+    ))}
+  </div>
+</HubPage>
+
+<style>
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--space-6);
+  }
+</style>

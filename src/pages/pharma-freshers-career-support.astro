@@ -1,0 +1,85 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I am a pharma fresher with a clinical research diploma but cannot get a CRO interview. What do I do?', answer: 'Clinical research diploma holders struggle to get CRO interview calls for one main reason: your profile looks the same as thousands of other diploma holders. To stand out: your resume must use the exact clinical research terminology CRO recruiters search for (ICH GCP, ICH E6(R3), eTMF, CTMS, site management, SDV, source data review, protocol deviations, informed consent process). Your LinkedIn headline must say "Clinical Research Associate | ICH GCP | eTMF | Site Management | Seeking CRO Role" — not "Clinical Research Graduate". Your skills section must list specific systems (Medidata Rave, Veeva Vault Clinical, Oracle InForm). We fix your profile and targeting strategy to generate recruiter responses.' },
+  { question: 'I just passed my SAS 9.4 certification but am not getting clinical SAS programmer calls. What is wrong?', answer: 'The SAS certification alone is not enough to get clinical SAS programmer calls from CROs. What is missing: clinical trial context — your profile must show that you understand CDISC standards (SDTM, ADaM, define.xml), not just SAS programming syntax. CRO recruiters search for "SDTM", "ADaM", "TLF", "CDISC", "Pinnacle 21" — not "SAS certified". We rewrite your resume and LinkedIn to position your SAS certification in the clinical programming context, even if your SAS experience so far is not from a CRO. We also help you build a portfolio of sample SDTM datasets that demonstrates clinical programming knowledge.' },
+  { question: 'How do pharma freshers build experience when every pharma job requires experience?', answer: 'This is the classic entry-level pharma catch-22. The way around it: first, look for junior titles — not senior titles. "Junior Clinical SAS Programmer", "CRO Trainee", "Data Entry Associate (Clinical Trials)", "Regulatory Affairs Assistant" — these exist and hire freshers. Second, target smaller CROs — they often hire freshers more readily than large organisations because they need people willing to learn. Third, pharma staffing agencies and contract positions are easier entry points than direct permanent roles — agencies like Manpower Pharma, SGS, and Syneos Health often place freshers in junior contract positions. Fourth, relevant internships or placements during your diploma programme are critical to mention on your resume even if unpaid. We help you find the right roles, write the right applications, and target the right companies for your level.' },
+  { question: 'Which pharma domains are most accessible for freshers in 2026?', answer: 'Most accessible pharma domains for freshers in 2026: Clinical SAS Programming (strong demand for junior programmers with CDISC knowledge at Indian CROs and globally), CSV Validation (very high demand — freshers with GAMP 5 training and CSV certification are in high demand at pharma IT and LIMS companies), Pharmacovigilance Case Processing (many entry-level roles at mid-size CROs — PV data entry, ICSR triage, case intake), Clinical Data Management (data entry and query resolution roles — high volume at CROs), Regulatory Affairs Assistant (entry-level submission support roles at pharma companies in EU and India), Medical Device QA (growing demand — freshers with ISO 13485 knowledge are hired by MDMs expanding in Ireland, UK, and Germany).' },
+  { question: 'What pharma fresher support can you provide right now?', answer: 'All pharma fresher support: profile engineering (resume and LinkedIn rewrite for pharma recruiter visibility), role targeting strategy (which specific pharma job titles to apply for at your level), pharma recruiter outreach (which specialist pharma agencies to approach and how), interview preparation for entry-level pharma technical rounds (what freshers are actually asked), domain knowledge support (understanding SDTM, GAMP 5, CAPA, GCP, eCTD — the fundamentals you need to demonstrate in interviews), and career path planning (which pharma domain to target first and how to progress from there). Available 24/7 via WhatsApp.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Freshers Career Support', url: site.url + '/pharma-freshers-career-support/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Pharma Freshers Career Support | Getting Your First Pharma Job in 2026"
+  description="Pharma fresher not getting interview calls? Clinical research diploma holder, SAS certified, or pharma graduate looking for first pharma role. Real-time career support. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Freshers Career Support' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Freshers Support</div>
+      <h1>Pharma Freshers Career Support — Getting Your First Pharma Job in 2026</h1>
+      <p class="hero-tagline">You have the pharma certification. You have the diploma. You have the degree. But pharma recruiters are not calling. You do not know which roles to target, which companies hire freshers, or why your profile is being filtered out before anyone reads it. We fix all of this — profile, targeting, strategy, interview preparation.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Why Pharma Freshers Do Not Get Interview Calls</h2>
+          <ul class="feature-list">
+            <li>Your resume uses your qualification's language — not the specific pharma industry terminology recruiters search for</li>
+            <li>You are applying to senior roles when entry-level roles are your target — a common mistake</li>
+            <li>Your LinkedIn profile has no pharma-specific keywords in the headline, summary, or skills section</li>
+            <li>You are applying to the wrong companies for entry-level hiring — large pharma companies rarely hire freshers directly; smaller CROs and specialist consultancies do</li>
+            <li>You have not approached specialist pharma recruiters — most pharma entry-level jobs are filled by specialist pharma staffing agencies, not job portals</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>What Pharma Freshers Career Support Covers</h2>
+          <ul class="feature-list">
+            <li>Profile engineering — resume and LinkedIn rewrite for the pharma entry-level market</li>
+            <li>Domain selection — identifying which pharma domain fits your background and has the most hiring at entry-level</li>
+            <li>Role targeting — which specific junior pharma titles to apply to at which type of companies</li>
+            <li>Pharma recruiter outreach — how to approach specialist pharma staffing agencies</li>
+            <li>Entry-level pharma interview preparation — what freshers are actually asked and how to answer confidently</li>
+            <li>Domain fundamentals — understanding the key concepts of your target pharma domain before interviews</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong> with your qualifications and target pharma domain.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/pharma-profile-engineering/">Pharma Profile Engineering — Get Interview Scheduled</a> | <a href="/not-getting-pharma-interview-calls/">Not Getting Pharma Interview Calls?</a> | <a href="/pharma-career-transition-help/">Pharma Career Transition Help</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Freshers Career Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Pharma Fresher Not Getting Calls?"
+          body="Profile engineering for pharma entry-level candidates — resume, LinkedIn, role targeting, recruiter outreach, interview preparation. We get your first pharma interview scheduled."
+          ctaLabel="Get Pharma Freshers Career Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma profile engineering"
+          secondaryHref="/pharma-profile-engineering/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

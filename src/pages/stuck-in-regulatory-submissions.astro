@@ -1,0 +1,79 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I have never put together an eCTD submission before. Can you help?', answer: 'Yes. An eCTD (electronic Common Technical Document) submission follows the ICH M4 CTD structure: Module 1 (regional administrative), Module 2 (summaries), Module 3 (quality), Module 4 (nonclinical), Module 5 (clinical). We walk you through the structure of the submission, how to prepare your eCTD sequence using publishers like Lorenz docuBridge, ISI Toolbox, or Veeva Vault RIM, how to build the submission backbone XML, and how to validate your eCTD package against FDA and EMA technical requirements. We also help you understand which Module 2 summary document goes where and what each must contain.' },
+  { question: 'I am stuck on a regulatory variation and do not know what type it is. Can you help?', answer: 'Yes. EU post-authorisation variations: Type IA (minor, notify within 12 months), Type IB (minor, 30-day notification before implementation), Type II (major, prior approval required). Deciding which category a change falls into requires: reading the Variation Regulation EC No 1234/2008, checking the Classification Guideline published by EMA, and assessing the impact of the proposed change on quality, safety, and efficacy. We walk you through the classification for your specific change and what the submission package for that variation type must include.' },
+  { question: 'I need help with Module 2 summaries for an NDA. Can you help?', answer: 'Yes. Module 2 summaries are among the most complex documents in a regulatory submission. We help with: Module 2.3 (Quality Overall Summary — QOS), Module 2.4 (Nonclinical Overview), Module 2.5 (Clinical Overview), Module 2.6 (Nonclinical Written and Tabulated Summaries), Module 2.7 (Clinical Summary). Each has a specific structure and content requirement defined in ICH M4E, M4Q, and M4S. We review your draft, identify gaps, and help you structure the arguments correctly for the regulatory authority.' },
+  { question: 'What regulatory submission tasks can you help me with right now?', answer: 'All regulatory submissions tasks: eCTD structure and sequence preparation, Module 2 summary writing and review, variation type classification (Type IA/IB/II in EU, Prior Approval Supplement/Annual Report in US), FDA 505(b)(1) vs. 505(b)(2) vs. 505(j) strategy, IND annual report preparation, IMPD (Investigational Medicinal Product Dossier), drug master file (DMF) preparation and updates, IDMP (Identification of Medicinal Products) compliance, XEVMPD submissions, submission validation (FDA Validator, EMA eCTD Validation Criteria), response to Health Authority questions (Day 120, Day 150 for EU).' },
+  { question: 'I received questions from a health authority and do not know how to respond. Can you help?', answer: 'Yes. Health authority questions (HAQ or List of Outstanding Issues) during regulatory review require structured, precise responses. We help you: understand what the authority is actually asking (often questions require interpretation), structure the technical response with appropriate supporting data, reference the correct sections of the CTD in your response, and ensure the response addresses the question without creating new ones. This is a specialised regulatory writing and strategy task — we provide guidance tailored to your specific submission and the authority asking.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Stuck in Regulatory Submissions', url: site.url + '/stuck-in-regulatory-submissions/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Stuck in Regulatory Submissions? Get Real-Time Regulatory Affairs Proxy Job Support"
+  description="Stuck on eCTD structure, Module 2 summaries, EU variation types, or health authority questions? Real-time regulatory affairs proxy job support. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Stuck in Regulatory Submissions' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Regulatory Affairs Proxy Job Support</div>
+      <h1>Stuck in Regulatory Submissions? Get Live Expert Guidance Now.</h1>
+      <p class="hero-tagline">First eCTD submission you have ever prepared. Variation type classification you are unsure about. Module 2 summaries with content requirements you cannot find clearly documented. Health authority questions you do not know how to respond to. Our regulatory affairs experts guide you through each of these tasks in real time.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Regulatory Affairs Proxy Job Support — What We Help With Right Now</h2>
+          <ul class="feature-list">
+            <li>eCTD structure — ICH M4 CTD module layout, sequence preparation, backbone XML</li>
+            <li>Module 2 summaries — QOS, Clinical Overview, Clinical Summary, Nonclinical summaries</li>
+            <li>EU variations — Type IA/IB/II classification and submission package preparation</li>
+            <li>FDA submissions — NDA/BLA/IND structure, Prior Approval Supplement, Annual Report</li>
+            <li>IDMP compliance — substance identification, pharmaceutical product data</li>
+            <li>IMPD (Investigational Medicinal Product Dossier) for clinical trials</li>
+            <li>Drug Master File (DMF) preparation and updates</li>
+            <li>Health authority question responses — EU Day 120/150 responses, FDA Complete Response Letters</li>
+            <li>eCTD validation — FDA Validator, EMA validation criteria, technical rejections</li>
+            <li>Submission publishing tools — Lorenz docuBridge, ISI Toolbox, Veeva RIM</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong>. Tell us your regulatory task and submission context.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/regulatory-affairs-proxy-job-support/">Regulatory Affairs Proxy Job Support</a> | <a href="/regulatory-affairs-proxy-interview/">Regulatory Affairs Proxy Interview Support</a> | <a href="/what-is-ectd/">What is eCTD?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Regulatory Submissions Help — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in Regulatory Submissions?"
+          body="eCTD structure, Module 2 summaries, EU variations, health authority questions — real-time guidance from a regulatory affairs specialist with FDA and EMA submission experience."
+          ctaLabel="Get Regulatory Affairs Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Regulatory affairs proxy interview support"
+          secondaryHref="/regulatory-affairs-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

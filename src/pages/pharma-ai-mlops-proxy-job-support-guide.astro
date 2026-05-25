@@ -1,0 +1,95 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma AI/MLOps proxy job support?', answer: 'Pharma AI/MLOps proxy job support is real-time live guidance from a pharma AI and machine learning specialist who helps you complete your actual AI/ML work tasks in a pharmaceutical or life sciences context. When you are stuck on a GxP model validation protocol, a RAG pipeline architecture issue, an MLflow experiment tracking setup, an FDA SaMD submission question, or a GenAI prompt engineering task for pharma content — a pharma AI specialist walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the AI/ML deliverable you need to complete right now.' },
+  { question: 'What pharma AI/MLOps tasks do you provide proxy support for?', answer: 'All pharma AI/MLOps tasks: AI model validation under GxP (validation protocol design, model performance documentation, change control for model updates), FDA SaMD (Software as a Medical Device) regulatory pathway questions (predetermined change control plan, AI/ML action plan), RAG (Retrieval-Augmented Generation) pipeline development for pharma knowledge bases, MLflow/MLOps pipeline setup (experiment tracking, model registry, deployment workflows), Python/scikit-learn/PyTorch/TensorFlow model development and debugging, pharma-specific LLM application development (adverse event detection, clinical trial protocol analysis, literature mining), and AI ethics/bias assessment documentation for regulated applications.' },
+  { question: 'How does GxP AI model validation work?', answer: 'GxP AI model validation applies the principles of computer system validation (GAMP 5) to AI/ML models used in regulated pharmaceutical processes. Key elements: Intended Use Statement — precisely defines what the model does, what inputs it accepts, what outputs it produces, and what business decisions it supports. Risk Assessment — determines the GxP impact level (direct patient safety impact = highest validation rigour). Model Performance Requirements — defines acceptance criteria for accuracy, precision, recall, AUC-ROC before the model is validated. Training/Validation/Test Split documentation — reproducible data splits with documented rationale. Algorithm Selection Rationale — justification for the chosen ML approach over alternatives. IQ/OQ/PQ equivalent: IQ = model installation and environment validation; OQ = model performance on validation dataset meets acceptance criteria; PQ = model performance in production with real pharma data meets requirements. Change control: any retraining requires formal change control and re-validation protocol. We help you design and write GxP AI validation protocols.' },
+  { question: 'What is a pharma RAG pipeline and how is it built?', answer: 'A pharma RAG (Retrieval-Augmented Generation) pipeline combines a vector database of pharma domain documents with a large language model to answer domain-specific questions grounded in your actual documents. Architecture: Document ingestion → chunking (e.g., 512-token chunks with overlap) → embedding generation (e.g., text-embedding-ada-002 or a fine-tuned pharma embedding model) → vector store (Pinecone, Weaviate, Chroma, pgvector). Query pipeline: user query → query embedding → similarity search in vector store → top-k retrieved chunks → prompt assembly with retrieved context → LLM generation → response. Pharma use cases: regulatory intelligence (search across FDA guidance documents, ICH guidelines), clinical trial protocol Q&A, safety database query assistance, pharmacopoeia reference. GxP considerations: RAG outputs supporting regulated decisions require validation of the retrieval accuracy and hallucination rate. We help you build, debug, and document pharma RAG pipelines.' },
+  { question: 'What is the FDA SaMD regulatory pathway for an AI pharma application?', answer: 'FDA SaMD (Software as a Medical Device) regulation for AI/ML: FDA\'s 2021 AI/ML-Based SaMD Action Plan introduced the concept of a Predetermined Change Control Plan (PCCP) — allowing manufacturers to pre-specify expected model changes and the validation that will occur, avoiding a new 510(k) for every model update. Classification: SaMD risk level depends on the significance of the information provided and the condition\'s severity (critical → serious → non-serious). AI tools that only support clinical workflow decisions (non-binding suggestions) vs. those that directly drive treatment decisions face different regulatory requirements. FDA Digital Health Center of Excellence (DHCoE) pre-submission meetings are strongly recommended for novel AI SaMD. For pharma internal AI tools (not SaMD — i.e., not used for diagnosis/treatment decisions): GxP validation applies per GAMP 5 Category 5 (custom software). We advise on which regulatory pathway applies to your specific AI application.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma AI MLOps Proxy Job Support Guide', url: site.url + '/pharma-ai-mlops-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharma AI MLOps Proxy Job Support Guide — GxP Validation, RAG, SaMD, MLflow',
+    'Complete guide to pharma AI/MLOps proxy job support — GxP AI model validation, FDA SaMD regulatory pathway, RAG pipeline development, MLflow/MLOps setup, GenAI in pharma.',
+    site.url + '/pharma-ai-mlops-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma AI MLOps Proxy Job Support Guide | GxP Validation, RAG, SaMD, MLflow"
+  description="Complete guide to pharma AI/MLOps proxy job support — GxP AI model validation, FDA SaMD, RAG pipeline development, MLflow, GenAI for pharma. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma AI MLOps Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma AI & MLOps Guide</div>
+      <h1>Pharma AI MLOps Proxy Job Support Guide — GxP Validation, RAG Pipelines, FDA SaMD & MLflow</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharma AI and MLOps proxy job support — GxP AI model validation protocols, FDA SaMD regulatory pathways, RAG pipeline architecture for pharma knowledge bases, and MLflow/MLOps setup support.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Pharma AI/MLOps Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>GxP AI model validation</strong> — writing validation protocols for ML models used in regulated pharma processes</li>
+            <li><strong>RAG pipeline development</strong> — vector database setup, chunking strategy, embedding model selection, retrieval accuracy evaluation</li>
+            <li><strong>FDA SaMD pathway</strong> — determining whether your AI application is SaMD, PCCP design, DHCoE pre-submission preparation</li>
+            <li><strong>MLflow/MLOps setup</strong> — experiment tracking, model registry, deployment pipelines, model versioning in regulated environments</li>
+            <li><strong>GenAI prompt engineering</strong> — system prompt design for pharma tasks, guardrails, hallucination reduction, output validation</li>
+            <li><strong>Pharma AI change control</strong> — documenting model updates, retraining triggers, performance monitoring criteria</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Pharma AI Use Cases — What We Support</h2>
+          <ul class="feature-list">
+            <li><strong>Adverse event signal detection</strong> — NLP models for spontaneous report mining, disproportionality analysis automation</li>
+            <li><strong>Clinical trial protocol analysis</strong> — LLM-based protocol deviation detection, eligibility criteria extraction</li>
+            <li><strong>Regulatory intelligence RAG</strong> — FDA guidance, ICH guidelines, EMA assessment reports searchable via natural language</li>
+            <li><strong>Drug interaction prediction</strong> — ML models for PK/PD modelling and DDI flag generation</li>
+            <li><strong>Manufacturing quality ML</strong> — predictive maintenance, process analytical technology (PAT), OOS prediction models</li>
+            <li><strong>Medical writing AI assistance</strong> — GenAI-assisted CSR sections, PSUR narrative generation with human review</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharma AI/MLOps Proxy Job Support Now</h2>
+          <p>Stuck on a GxP AI validation protocol, a RAG pipeline issue, or a pharma GenAI application? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your AI task and pharma context, and we match you with a pharma AI specialist within hours.</p>
+          <p>Also see: <a href="/pharma-ai-proxy-job-support/">Pharma AI Proxy Job Support</a> | <a href="/pharma-ai-proxy-interview/">Pharma AI Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma AI MLOps Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Pharma AI Task?"
+          body="GxP AI model validation, RAG pipeline development, FDA SaMD questions, MLflow setup, GenAI pharma applications — real-time guidance from a pharma AI/MLOps specialist. Same-day help."
+          ctaLabel="Get Pharma AI MLOps Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma AI proxy interview support"
+          secondaryHref="/pharma-ai-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

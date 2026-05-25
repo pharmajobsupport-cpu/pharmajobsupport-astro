@@ -1,0 +1,93 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma cloud/DevOps proxy job support?', answer: 'Pharma cloud/DevOps proxy job support is real-time live guidance from a pharma cloud and DevOps specialist who helps you complete your actual cloud infrastructure and DevOps work tasks in a pharmaceutical or life sciences GxP context. When you are stuck on an AWS GxP architecture question, a CI/CD pipeline validation approach, a Terraform IaC validation issue, a container validation protocol, or a GCP life sciences configuration — a pharma cloud/DevOps expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the cloud/DevOps deliverable you need to complete right now.' },
+  { question: 'What pharma cloud/DevOps tasks do you provide proxy support for?', answer: 'All pharma cloud and DevOps tasks: AWS GxP architecture design (compliant VPC design, CloudTrail audit logging, AWS Config for configuration compliance, GxP-qualified AWS services), Azure Life Sciences and Azure for GxP (Azure Policy, Azure Monitor, Azure DevTest Labs validation), GCP Life Sciences API (genomics pipelines, BigQuery for clinical data), CI/CD pipeline design for validated pharma systems (Jenkins, GitLab CI, GitHub Actions in regulated environments), infrastructure as code validation (Terraform, CloudFormation for GxP environments), container validation (Docker, Kubernetes validation under GAMP 5), DevSecOps for pharma (SAST/DAST in a validated SDLC), and cloud system validation protocols (IQ/OQ/PQ for cloud-hosted GxP systems).' },
+  { question: 'How does AWS GxP compliance work for pharmaceutical systems?', answer: 'AWS GxP compliance framework: AWS operates under the Shared Responsibility Model — AWS is responsible for security OF the cloud (physical infrastructure, hypervisor, managed service security), pharma companies are responsible for security IN the cloud (data, applications, access management, encryption, validation). AWS GxP-qualified services: AWS publishes a GxP Systems on AWS whitepaper listing which managed services have been independently assessed as appropriate for GxP workloads. Key GxP-relevant AWS services: CloudTrail (immutable API audit log — critical for 21 CFR Part 11 audit trail), AWS Config (configuration change tracking), CloudWatch (monitoring and alerting), IAM (access control — least privilege, MFA), KMS (encryption key management), S3 with Object Lock (WORM storage for GxP records). CSV validation of AWS-hosted systems: the pharma company validates the application layer; the IQ validates the cloud environment configuration against specifications; OQ tests the application functions on the validated infrastructure. We help you design GxP-compliant AWS architectures and write IQ/OQ protocols for cloud-hosted pharma systems.' },
+  { question: 'How do you validate a CI/CD pipeline for a GxP pharma system?', answer: 'CI/CD pipeline validation in GxP environments applies SDLC controls to the pipeline itself, since the pipeline deploys changes to validated systems. Key validation approach: The CI/CD pipeline for a GxP system is itself a GAMP 5 Category 4 (configured COTS — Jenkins/GitLab CI) or Category 5 (custom pipeline scripts) system. Validation requirements: Pipeline-as-code stored in version control (Git) with branch protection and pull request approvals. Automated testing gates in the pipeline must include: unit tests, integration tests, security scan (SAST), and the pipeline must not allow deployment to production until all gates pass. Environment separation: development → UAT/staging → production promotions must be gated with documented approval (change control). Deployment audit trail: every deployment must be logged with: commit hash, deploying user, timestamp, environment, test results. We help you design and document the CI/CD validation approach and write the pipeline validation protocol.' },
+  { question: 'What is container validation under GAMP 5 for pharma systems?', answer: 'Container validation (Docker, Kubernetes) in GxP pharma environments applies GAMP 5 principles to containerised application deployments. GAMP 5 classification: Docker/Kubernetes platform = Category 1 (infrastructure) or Category 3 (COTS with no configuration). Containerised application = Category 4 or 5 depending on configuration/customisation. Container image validation requirements: Base image qualification (approved base images from trusted registries, vulnerability-scanned, version-locked), Dockerfile review (reproducible builds, no secrets in layers, minimal attack surface), Image immutability (production images must not be modified — any change creates a new validated image), Container registry security (access controls, image signing, vulnerability scanning in registry). Kubernetes GxP considerations: Pod security policies, namespace isolation between GxP and non-GxP workloads, audit logging of Kubernetes API calls (kube-apiserver audit), persistent storage validation (PVs for GxP data must use validated storage classes). We help you write container validation protocols and design GxP-compliant Kubernetes architectures.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Cloud DevOps Proxy Job Support Guide', url: site.url + '/pharma-cloud-devops-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharma Cloud DevOps Proxy Job Support Guide — AWS GxP, CI/CD Validation, Containers, GAMP 5',
+    'Complete guide to pharma cloud/DevOps proxy job support — AWS GxP compliance, CI/CD pipeline validation, container validation, Terraform IaC, Kubernetes GxP, GAMP 5 cloud systems.',
+    site.url + '/pharma-cloud-devops-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma Cloud DevOps Proxy Job Support Guide | AWS GxP, CI/CD, Containers, GAMP 5"
+  description="Complete guide to pharma cloud/DevOps proxy job support — AWS GxP compliance, CI/CD pipeline validation, container validation, Kubernetes GxP, GAMP 5 cloud. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Cloud DevOps Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Cloud & DevOps Guide</div>
+      <h1>Pharma Cloud DevOps Proxy Job Support Guide — AWS GxP, CI/CD Validation, Containers & GAMP 5</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharma cloud and DevOps proxy job support — AWS GxP compliance architecture, CI/CD pipeline validation, container validation under GAMP 5, Kubernetes GxP design, and what cloud/DevOps tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Pharma Cloud/DevOps Engineers Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>AWS GxP architecture</strong> — CloudTrail audit logging for 21 CFR Part 11, AWS Config compliance rules, GxP-qualified service selection</li>
+            <li><strong>CI/CD pipeline validation</strong> — GAMP 5 classification for the pipeline, deployment audit trail, environment promotion controls</li>
+            <li><strong>Container validation</strong> — Docker image qualification, Kubernetes namespace isolation for GxP workloads, audit log configuration</li>
+            <li><strong>Terraform/IaC validation</strong> — versioned infrastructure-as-code for GxP environments, drift detection, change control</li>
+            <li><strong>Cloud IQ/OQ protocols</strong> — writing installation and operational qualification protocols for cloud-hosted GxP systems</li>
+            <li><strong>DevSecOps in regulated environments</strong> — SAST/DAST gates in validated SDLC pipelines, security scan evidence for audit</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>GxP Cloud Platforms — What We Cover</h2>
+          <ul class="feature-list">
+            <li><strong>AWS</strong> — GxP whitepaper services, CloudTrail, Config, IAM, KMS, S3 Object Lock, CloudWatch</li>
+            <li><strong>Azure</strong> — Azure Policy for GxP compliance, Azure Monitor, Azure Active Directory for access control, Azure DevTest Labs</li>
+            <li><strong>GCP</strong> — Life Sciences API, BigQuery for clinical data, Cloud Audit Logs, Cloud KMS</li>
+            <li><strong>Salesforce/Veeva</strong> — GxP SaaS validation approach, CSP audit trail review, shared responsibility under SaaS</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharma Cloud/DevOps Proxy Job Support Now</h2>
+          <p>Stuck on a GxP cloud architecture, a CI/CD validation approach, or a container validation protocol? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your cloud platform and specific task, and we match you with a pharma cloud/DevOps specialist within hours.</p>
+          <p>Also see: <a href="/pharma-devops-cloud-proxy-job-support/">Pharma DevOps Cloud Proxy Job Support</a> | <a href="/pharma-devops-cloud-proxy-interview/">Pharma DevOps Cloud Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Cloud DevOps Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Pharma Cloud/DevOps Task?"
+          body="AWS GxP compliance, CI/CD pipeline validation, container validation, Terraform IaC, Kubernetes GxP — real-time guidance from a pharma cloud/DevOps specialist. Same-day help."
+          ctaLabel="Get Pharma Cloud DevOps Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma DevOps cloud proxy interview support"
+          secondaryHref="/pharma-devops-cloud-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

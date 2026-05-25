@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma QA/GMP proxy job support?', answer: 'Pharma QA/GMP proxy job support is real-time live guidance from a pharmaceutical quality assurance specialist who helps you complete your actual QA/GMP work tasks. When you are stuck on a GMP deviation investigation, a CAPA plan, a quality risk assessment, a batch record review, a change control impact assessment, or an FDA 483 observation response — a pharma QA expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the QA/GMP deliverable you need to complete right now.' },
+  { question: 'What pharma QA/GMP tasks do you provide proxy support for?', answer: 'All pharma QA/GMP tasks: GMP deviation classification and investigation (minor/major/critical), CAPA plan writing (root cause analysis, corrective actions, effectiveness criteria), quality risk management (ICH Q9 risk assessment, FMEA for manufacturing processes), change control documentation (impact assessment, implementation plan, validation requirements), batch record review and technical queries, FDA 483 observation responses and Warning Letter response strategy, SOP and work instruction writing for GMP processes, validation protocol support (process validation PPQ, cleaning validation, analytical method validation), stability study review, and QA audit support (internal GMP audits, supplier audits).' },
+  { question: 'What is the ICH Q9 quality risk management process?', answer: 'ICH Q9 (Quality Risk Management) is the pharmaceutical industry framework for systematic risk management. Process steps: Risk Assessment — (1) Risk identification: what could go wrong? (2) Risk analysis: how likely, how detectable, how severe? (3) Risk evaluation: is the risk acceptable compared to defined criteria? Risk Control — Risk reduction: implement controls to reduce probability or severity. Risk acceptance: formally accept residual risk. Risk Communication — document risk decisions and communicate to appropriate levels. Risk Review — periodic review as new information becomes available. Common tools: FMEA (Failure Mode and Effects Analysis) — most common in manufacturing, calculates Risk Priority Number (RPN = Severity × Occurrence × Detectability). HACCP (Hazard Analysis and Critical Control Points) — used in sterile manufacturing. FTA (Fault Tree Analysis) — used for complex system failure analysis. We help you apply ICH Q9 methodology to your specific manufacturing process or quality event.' },
+  { question: 'How do I write a GMP CAPA investigation report?', answer: 'A GMP CAPA (Corrective and Preventive Action) under 21 CFR 211.192 (manufacturing) or ICH Q10 requires: Problem description — what deviated from specification, when detected, which batches or products are affected, immediate impact assessment. Containment — quarantine of affected materials, recall assessment if product released, hold on related batches. Root cause investigation — use structured RCA tools (5-Why, Fishbone/Ishikawa, fault tree). Identify contributing factors vs. root cause — the root cause is the deepest systemic issue that, if corrected, prevents recurrence. Corrective action plan — specific process or system changes with assigned owners and completion dates. Preventive action — identify if the same root cause exists elsewhere in the manufacturing process and address proactively. Effectiveness check — defined criteria to verify the corrective action is working (typically 3–6 months post-implementation, monitoring the same process parameter). We help you write all sections for your specific GMP event.' },
+  { question: 'How do I respond to an FDA 483 observation?', answer: 'FDA Form 483 responses must be submitted within 15 business days of the inspection close. Response strategy: For each 483 observation, your response must include: (1) Acknowledgement — acknowledge the observation without admitting to a regulatory violation. (2) Immediate corrections — what you have already done since the inspection to address the issue (shows responsiveness). (3) Root cause — your root cause analysis conclusion for the observation. (4) CAPA — your corrective and preventive action plan with specific commitments and dates. (5) Supporting evidence — attach evidence of completed corrections (updated SOPs, training records, test results). Response tone: factual, systematic, non-defensive. Regulators evaluate responses on credibility and completeness — a short vague response invites a Warning Letter; a thorough response with evidence of correction demonstrates GMP commitment. If you received multiple related observations, address them together with a systemic CAPA rather than separately. We help you structure and write your 483 response for each observation.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma QA GMP Proxy Job Support Guide', url: site.url + '/pharma-qa-gmp-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharma QA GMP Proxy Job Support Guide — CAPA, ICH Q9, FDA 483, Deviation Investigation',
+    'Complete guide to pharma QA/GMP proxy job support — GMP deviation investigation, CAPA writing, ICH Q9 risk management, FDA 483 responses, change control, batch record review.',
+    site.url + '/pharma-qa-gmp-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma QA GMP Proxy Job Support Guide | CAPA, ICH Q9, FDA 483, Deviation"
+  description="Complete guide to pharma QA/GMP proxy job support — deviation investigations, CAPA plans, ICH Q9 risk management, FDA 483 responses, change control. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma QA GMP Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma QA & GMP Guide</div>
+      <h1>Pharma QA GMP Proxy Job Support Guide — CAPA, Deviations, ICH Q9 & FDA 483</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharma QA/GMP proxy job support — GMP deviation investigations, CAPA plan writing, ICH Q9 risk management, FDA 483 observation responses, change control documentation, and what QA tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Pharma QA/GMP Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>Deviation investigations</strong> — classification (minor/major/critical), root cause analysis, impact assessment on released batches</li>
+            <li><strong>CAPA writing</strong> — root cause depth, corrective action specificity, effectiveness check criteria, CAPA closure timeline</li>
+            <li><strong>FDA 483 responses</strong> — structuring the response, acknowledgement language, immediate corrections, supporting evidence</li>
+            <li><strong>Change control</strong> — change classification, impact assessment (validation, regulatory filing, stability, customer notification)</li>
+            <li><strong>ICH Q9 risk assessments</strong> — FMEA table completion, RPN calculation, risk control documentation</li>
+            <li><strong>Batch record review</strong> — technical queries, discrepancy resolution, batch disposition recommendations</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>GMP Regulatory Frameworks — What We Cover</h2>
+          <ul class="feature-list">
+            <li><strong>EU GMP</strong> — EU GMP Part I (medicinal products), Part II (APIs), Annex 1 (sterile manufacturing), Annex 11 (computerised systems), Annex 15 (qualification and validation)</li>
+            <li><strong>FDA cGMP</strong> — 21 CFR Parts 210/211 (drug manufacturing), 21 CFR Part 820 (medical devices), FDA guidance documents</li>
+            <li><strong>ICH Guidelines</strong> — ICH Q7 (API GMP), ICH Q8/Q9/Q10 (pharmaceutical development, risk management, pharmaceutical quality system)</li>
+            <li><strong>WHO GMP</strong> — for manufacturers supplying international markets and generic drug exporters</li>
+            <li><strong>Annex 1 sterile manufacturing</strong> — contamination control strategy (CCS), environmental monitoring, aseptic process simulation</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharma QA/GMP Proxy Job Support Now</h2>
+          <p>Stuck on a deviation investigation, CAPA plan, or FDA 483 response? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your specific QA task and regulatory context, and we match you with a GMP quality specialist within hours.</p>
+          <p>Also see: <a href="/pharma-qa-gmp-proxy-job-support/">Pharma QA GMP Proxy Job Support</a> | <a href="/pharma-qa-gmp-proxy-interview/">Pharma QA GMP Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma QA GMP Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a GMP QA Task?"
+          body="Deviation investigations, CAPA plans, ICH Q9 risk assessments, FDA 483 responses, change control — real-time guidance from a pharma QA specialist with GMP inspection experience. Same-day help."
+          ctaLabel="Get Pharma QA GMP Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma QA GMP proxy interview support"
+          secondaryHref="/pharma-qa-gmp-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

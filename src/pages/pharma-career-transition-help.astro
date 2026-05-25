@@ -1,0 +1,85 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I am switching from IT to pharma. Where do I start?', answer: 'The most successful IT-to-pharma transitions are into roles that leverage your existing IT skills in a pharma context: Clinical SAS Programming (if you have any programming/statistical background), Computer System Validation / CSV (if you have IT testing, quality assurance, or SDLC experience), Pharma RPA Development (if you have robotic process automation experience), Pharma Cloud/DevOps (if you have AWS, Azure, or DevOps experience), Pharma Data Analytics / BI (if you have Power BI, Tableau, or SQL experience), and Pharma Business Analysis (if you have BA or product owner experience). We assess your current IT skills and map them to the most accessible pharma domain for your background — then build your transition strategy from there.' },
+  { question: 'Which pharma certifications actually help for a career transition?', answer: 'Certifications that genuinely help pharma career transitions: SAS 9.4 Base/Advanced or SAS Clinical Trials Programming (for clinical SAS roles), ACRP or SOCRA certifications (for clinical research roles — CRC, CRA), RAC (Regulatory Affairs Certification from RAPS — for regulatory affairs), GAMP 5 training or CSV-specific courses from ISPE (for CSV validation roles), Six Sigma Green Belt or ISO 13485 Lead Auditor (for pharma QA roles), Veeva certifications (for Veeva Vault admin roles). We advise on which certification gives you the most career leverage based on your target pharma domain and current experience level — not all certifications are equal in recruiter impact.' },
+  { question: 'I have a science degree but no pharma experience. Can I get a pharma job?', answer: 'Yes — science graduates transition into pharma more successfully than most people think, but the path requires strategic positioning. Pharmacy degrees open QA, regulatory, and hospital pharmacovigilance roles. Biology and chemistry degrees open QC, R&D, and laboratory roles. Biochemistry and molecular biology degrees open clinical research and CDM roles. Life sciences degrees open regulatory affairs and medical writing roles. The key is: identify which pharma domain your degree most naturally connects to, get a domain-specific qualification (one targeted certification is better than none), and position your degree\'s scientific knowledge in pharma industry language. We help you build this profile and start generating pharma interview calls.' },
+  { question: 'I want to transition from one pharma domain to another. Can you help?', answer: 'Yes. Lateral pharma domain transitions are common: clinical SAS programmers moving into pharma AI/ML, CSV validation engineers moving into IT project management, pharmacovigilance case processors moving into signal detection or aggregate reporting, regulatory affairs specialists moving into pharma business analysis. We help you: identify the transferable knowledge between your current domain and target domain, identify the gaps you need to fill (and the fastest way to fill them), position your current pharma experience effectively for the target role, and prepare for the specific interview questions about why you are transitioning and why you are qualified for the new domain.' },
+  { question: 'I am relocating internationally for pharma work. How do I transition?', answer: 'International pharma career transitions require: understanding the regulatory environment in the new country (FDA for USA, EMA/national CAs for EU, MHRA for UK post-Brexit, HPRA for Ireland, TGA for Australia), understanding which pharma companies and CROs are major employers in that market (we have specific knowledge of all major pharma markets), knowing how to position your experience for the new market\'s hiring norms (German pharma hiring is more credential-focused; Irish CRO hiring values flexibility and speed; US pharma hiring is very LinkedIn-driven), and understanding work visa and right-to-work requirements. We have helped pharma professionals relocate to USA, UK, Ireland, Germany, Switzerland, Singapore, and Australia.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Career Transition Help', url: site.url + '/pharma-career-transition-help/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Pharma Career Transition Help | Switch to Pharma from IT or Science"
+  description="Switching from IT to pharma? Transitioning between pharma domains? Relocating internationally for pharma work? Real-time pharma career transition support. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Career Transition Help' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma Career Transition Support</div>
+      <h1>Pharma Career Transition Help — Switching to Pharma, Between Domains, or Internationally</h1>
+      <p class="hero-tagline">IT professional wanting to move into pharma but not knowing how. Science graduate trying to break into clinical research or regulatory. Experienced pharma professional switching domains. Relocating to a new country and needing to restart your pharma career. We build your transition strategy and your profile — then get your interview pipeline moving.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Career Transitions We Support</h2>
+          <ul class="feature-list">
+            <li><strong>IT to Pharma</strong> — Software testers → CSV validation, Developers → Pharma RPA or AI, DBAs → CDM, BAs → Pharma BA, DevOps → Pharma Cloud</li>
+            <li><strong>Science to Pharma</strong> — Pharmacy → QA/RA/PV, Biology/Chemistry → QC/CDM/CRA, Life Sciences → Medical Writing/Regulatory</li>
+            <li><strong>Between Pharma Domains</strong> — Clinical SAS → Pharma AI, CSV → IT PM, PV → Signal Detection, RA → Pharma BA</li>
+            <li><strong>International Relocation</strong> — India → UK/Ireland/USA/Germany, Philippines → Australia, emerging markets → Singapore</li>
+            <li><strong>Return to Pharma after a gap</strong> — Repositioning after a career break or industry gap</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>What We Provide for Career Transitions</h2>
+          <ul class="feature-list">
+            <li>Domain selection strategy — which pharma domain fits your background best</li>
+            <li>Certification advice — which certifications give you the most recruiter impact for your target role</li>
+            <li>Profile engineering — positioning your current skills in pharma language</li>
+            <li>Resume and LinkedIn optimisation for the target pharma domain</li>
+            <li>Country-specific pharma hiring strategy</li>
+            <li>Interview preparation for pharma entry-level and junior technical rounds</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong> with your background and target pharma domain. We build your transition strategy.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/pharma-profile-engineering/">Pharma Profile Engineering — Get Interview Scheduled</a> | <a href="/not-getting-pharma-interview-calls/">Not Getting Pharma Interview Calls?</a> | <a href="/pharma-freshers-career-support/">Pharma Freshers Career Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma Career Transition — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Transitioning to a Pharma Career?"
+          body="IT to pharma, science to pharma, domain switching, international relocation — we build your transition strategy and get your profile generating pharma interview calls."
+          ctaLabel="Get Pharma Career Transition Help"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma profile engineering"
+          secondaryHref="/pharma-profile-engineering/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

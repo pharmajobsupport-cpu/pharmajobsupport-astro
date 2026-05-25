@@ -1,0 +1,95 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What CSV validation interview questions should I prepare for?', answer: 'CSV validation technical interviews test: GAMP 5 system categories (1, 3, 4, 5 — know which systems fall into each category and why), IQ/OQ/PQ definitions and what each must demonstrate, the difference between User Requirements Specification (URS) and Functional Specification (FS), 21 CFR Part 11 requirements (audit trail, electronic signatures, access control), EU Annex 11 requirements (validation plan, risk assessment, change control), and the full validation lifecycle from risk assessment through periodic review. Be ready for scenario questions: "How would you validate a LIMS system?", "What GAMP 5 category is an Excel spreadsheet with macros?"' },
+  { question: 'What is the difference between IQ, OQ, and PQ in CSV validation interviews?', answer: 'IQ (Installation Qualification): demonstrates that the system is installed correctly and as specified. Tests: correct software version installed, hardware meets specification, correct environment configuration, security settings applied. OQ (Operational Qualification): demonstrates that the system operates within defined operational limits. Tests: all functions work as specified in the FS, workflows route correctly, user permissions enforce correctly, audit trail captures required entries, error messages appear as designed. PQ (Performance Qualification): demonstrates the system consistently performs for its intended use in the actual production environment with real users. Tests: end-to-end business process execution by representative users, realistic data volumes, integration points functioning. In interviews: be able to give specific test script examples for each phase for the system type you are interviewing for.' },
+  { question: 'How do I answer "what GAMP 5 category is X?" in a CSV validation interview?', answer: 'GAMP 5 (5th edition) category framework: Category 1 — infrastructure software (OS, network, utilities) — minimal qualification. Category 3 — non-configured COTS (off-the-shelf, no configuration, used as designed) — moderate testing. Category 4 — configured COTS (configurable off-the-shelf: LIMS, EDC, ERP with custom config, Veeva Vault, Argus Safety) — comprehensive IQ/OQ, risk-based PQ. Category 5 — custom software (bespoke code, customised COTS beyond the vendor\'s configuration intent, RPA bots) — full SDLC validation. Common interview traps: "Is an Excel spreadsheet with macros Category 4 or 5?" — typically Category 4 (COTS = Excel, configured = macros). "Is a SAS script Category 3 or 5?" — typically Category 5 (custom code). "Is Medidata Rave Category 4?" — Yes, configured COTS.' },
+  { question: 'What 21 CFR Part 11 questions come up in CSV validation interviews?', answer: '21 CFR Part 11 requirements interviewers test: audit trail requirements (must be computer-generated, must capture user ID, timestamp, and record of all changes including old and new value — cannot be turned off by operators), electronic signature requirements (linked to their respective record, must include printed name, date/time, meaning of signature), access controls (individual accounts, no shared logins, password policies), system validation (must be validated before use in a regulated process), data backup and recovery (must have defined procedures). Common interview question: "How do you test that a system meets 21 CFR Part 11 audit trail requirements?" — Answer: in OQ test scripts, create a record, modify it, delete it (if permitted), and verify that the audit trail captured the original value, new value, user ID, and timestamp for each action. Verify that system administrators cannot delete or modify audit trail entries.' },
+  { question: 'How do I prepare for a CSV validation proxy interview?', answer: 'Focus on: GAMP 5 (5th edition) category framework and validation approach for each category, IQ/OQ/PQ definitions and test script structure, 21 CFR Part 11 requirements and how to test them, EU Annex 11 requirements and differences from 21 CFR Part 11, URS/FS/DS content and how they flow, change control for validated systems, periodic review documentation, system validation for specific systems mentioned in the JD (LIMS, EDC, ERP/SAP, Veeva Vault). Our CSV validation proxy interview support provides real-time preparation from a validation specialist who has written IQ/OQ/PQ protocols and been through FDA inspections. WhatsApp: +91-9660834611' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'CSV Validation Proxy Interview Guide', url: site.url + '/csv-validation-proxy-interview-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'CSV Validation Proxy Interview Guide — GAMP 5, IQ/OQ/PQ, 21 CFR Part 11',
+    'Complete guide to CSV validation proxy interview preparation — GAMP 5 categories, IQ/OQ/PQ definitions, 21 CFR Part 11, EU Annex 11, URS/FS, and validation lifecycle questions.',
+    site.url + '/csv-validation-proxy-interview-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="CSV Validation Proxy Interview Guide | GAMP 5, IQ/OQ/PQ, 21 CFR Part 11"
+  description="Complete CSV validation proxy interview preparation guide — GAMP 5 categories, IQ/OQ/PQ, 21 CFR Part 11 audit trail, EU Annex 11, URS/FS. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'CSV Validation Proxy Interview Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">CSV Validation Interview Guide</div>
+      <h1>CSV Validation Proxy Interview Guide — GAMP 5, IQ/OQ/PQ, 21 CFR Part 11</h1>
+      <p class="hero-tagline">Everything you need to know to pass a CSV validation technical interview — GAMP 5 system categories, IQ/OQ/PQ definitions, 21 CFR Part 11 requirements, EU Annex 11, URS and FS content, and the scenario questions that trip up most candidates.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What CSV Validation Interviewers Test</h2>
+          <ul class="feature-list">
+            <li>GAMP 5 category classification — which systems fall into which category and why</li>
+            <li>IQ/OQ/PQ — definitions, what each must demonstrate, specific test examples</li>
+            <li>URS vs. FS vs. DS — content differences, who owns each, regulatory requirements</li>
+            <li>21 CFR Part 11 — audit trail requirements, electronic signatures, access controls</li>
+            <li>EU Annex 11 — validation plan, risk assessment, change control requirements</li>
+            <li>Validation lifecycle — risk assessment through periodic review</li>
+            <li>System-specific validation — LIMS, EDC, ERP/SAP, Veeva Vault, MES, UiPath</li>
+            <li>Scenario questions — "How would you validate System X?" under GAMP 5</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>GAMP 5 Category Quick Reference</h2>
+          <ul class="feature-list">
+            <li><strong>Category 1</strong> — OS, network utilities, firmware — minimal IQ only</li>
+            <li><strong>Category 3</strong> — Non-configured COTS (e.g., COTS printer driver) — supplier assessment + moderate OQ</li>
+            <li><strong>Category 4</strong> — Configured COTS (LIMS, EDC, ERP, Veeva Vault, Argus Safety, LIMS) — risk-based IQ/OQ/PQ</li>
+            <li><strong>Category 5</strong> — Custom software (bespoke code, Excel macros, SAS scripts, RPA bots) — full SDLC validation</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get CSV Validation Proxy Interview Support</h2>
+          <p>Need preparation for a CSV validation interview? Our <a href="/csv-validation-proxy-interview/">CSV Validation Proxy Interview Support</a> gives you real-time mock sessions and technical Q&A preparation. WhatsApp: <strong>{site.whatsapp}</strong></p>
+          <p>Also see: <a href="/csv-validation-proxy-job-support/">CSV Validation Proxy Job Support</a> | <a href="/stuck-in-csv-validation-project/">Stuck in CSV Validation Project?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="CSV Validation Interview Preparation — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="CSV Validation Interview Coming Up?"
+          body="Real-time mock sessions and technical Q&A preparation from a CSV validation specialist. GAMP 5, IQ/OQ/PQ, 21 CFR Part 11 — same-day support available."
+          ctaLabel="Get CSV Validation Proxy Interview Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="CSV validation proxy job support"
+          secondaryHref="/csv-validation-proxy-job-support/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

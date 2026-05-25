@@ -1,0 +1,22 @@
+/* TEAM */
+Organisation: PharmaCDM
+Site: pharmajobsupport.com
+Contact: support@pharmajobsupport.com
+WhatsApp: +91-9660834611
+
+/* EXPERTISE */
+Clinical SAS Programming
+Clinical Data Management
+Pharmacovigilance
+Computer System Validation
+Regulatory Affairs
+Quality Assurance / GMP
+Medical Device QA
+Veeva Vault
+Pharma AI / ML
+
+/* SITE */
+Language: English
+Technology: Astro, Cloudflare Pages
+Standards: HTML5, CSS3, Schema.org, CDISC, ICH, GxP
+Last update: 2025/01/01

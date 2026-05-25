@@ -1,0 +1,80 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I have never written a URS for a CSV validation project before. Can you help?', answer: 'Yes. A User Requirements Specification (URS) for a GxP computer system validation project is a controlled document that must capture all business, functional, and regulatory requirements. We walk you through the URS structure: system overview and intended use, user requirements (what the system must do for each user group), regulatory requirements (21 CFR Part 11 or EU Annex 11), data integrity requirements (ALCOA+), performance requirements, security requirements, and interface requirements. We help you draft the actual content based on the system you are validating.' },
+  { question: 'I am stuck on an IQ/OQ/PQ protocol that is due this week. Can you help?', answer: 'Yes. Installation Qualification (IQ), Operational Qualification (OQ), and Performance Qualification (PQ) protocols are core CSV validation deliverables. We help you: understand what each protocol must demonstrate (IQ = correctly installed as designed, OQ = operates within defined operational limits, PQ = consistently performs in the actual use environment), write test scripts for each phase, define acceptance criteria, complete the protocol summary with test results, and write the qualification report. We also help with re-qualification after system changes.' },
+  { question: 'How does GAMP 5 Category classification affect my validation approach?', answer: 'GAMP 5 (5th edition) classifies software into categories: Category 1 (infrastructure software — OS, middleware) requires minimal validation. Category 3 (non-configured COTS — commercial off-the-shelf with no configuration) requires moderate testing. Category 4 (configured COTS — spreadsheets configured with macros, LIMS, EDC with custom configuration, ERP modules) requires comprehensive IQ/OQ testing, risk-based PQ. Category 5 (custom software — bespoke code, custom scripts, RPA bots) requires full SDLC validation including design review and code review. Most pharma validation projects involve Category 4 systems. We help you make the correct category determination and design the validation scope accordingly.' },
+  { question: 'I am validating a system under 21 CFR Part 11. What does the audit trail need to contain?', answer: '21 CFR Part 11 requires computer systems used for regulated electronic records to have: audit trails that independently record date and time of operator entries and actions that create, modify, or delete electronic records; audit trails must be computer-generated, not operator-controlled; must capture the original value, the new value, who made the change, and when. Audit trails must be retained as long as the electronic records they relate to. Key audit trail fields: user ID (individual — no shared logins), timestamp (server time, UTC), action type (create/modify/delete/approve), field or record identifier, old value, new value. We help you write the audit trail test scripts for OQ that verify all these elements.' },
+  { question: 'What CSV validation tasks can you help me with right now?', answer: 'All CSV validation tasks: URS, Functional Specification (FS), Design Specification (DS), Validation Plan, Risk Assessment (FMEA-style), IQ/OQ/PQ protocols and test scripts, Validation Summary Report, traceability matrix, GAMP 5 system category determination, 21 CFR Part 11 compliance gap assessment, EU Annex 11 compliance review, periodic review documentation, change control impact assessment for validated systems, CSV validation for specific systems (LIMS, EDC, ERP/SAP, MES, Veeva Vault, UiPath).' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Stuck in CSV Validation Project', url: site.url + '/stuck-in-csv-validation-project/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Stuck in CSV Validation Project? Get Real-Time CSV Validation Proxy Job Support"
+  description="Stuck on URS, IQ/OQ/PQ protocols, GAMP 5 classification, or 21 CFR Part 11 audit trail? Real-time CSV validation proxy job support. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Stuck in CSV Validation Project' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">CSV Validation Proxy Job Support</div>
+      <h1>Stuck in Your CSV Validation Project? Get Live Expert Guidance Now.</h1>
+      <p class="hero-tagline">URS you have never written before. IQ/OQ/PQ protocols due this week. GAMP 5 category classification decisions you are unsure about. 21 CFR Part 11 audit trail test scripts. These are the exact CSV validation situations our experts walk you through in real time via WhatsApp.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>CSV Validation Proxy Job Support — What We Help With Right Now</h2>
+          <ul class="feature-list">
+            <li>User Requirements Specification (URS) — content, structure, regulatory requirements</li>
+            <li>Functional Specification (FS) and Design Specification (DS) — writing and reviewing</li>
+            <li>IQ/OQ/PQ protocols — test script development, acceptance criteria, execution guidance</li>
+            <li>GAMP 5 system category determination (Category 1, 3, 4, 5)</li>
+            <li>Validation Summary Report and Validation Master Plan (VMP)</li>
+            <li>Traceability matrix — URS to FS to test scripts</li>
+            <li>21 CFR Part 11 audit trail verification test scripts</li>
+            <li>EU Annex 11 compliance gap assessment</li>
+            <li>Periodic review documentation for validated systems</li>
+            <li>Change control impact assessment — when a validated system is modified</li>
+            <li>Validation approach for LIMS, EDC, ERP/SAP, MES, Veeva Vault, UiPath RPA</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong>. Tell us your task. We start within hours.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/csv-validation-proxy-job-support/">CSV Validation Proxy Job Support</a> | <a href="/csv-validation-proxy-interview/">CSV Validation Proxy Interview Support</a> | <a href="/what-is-csv-validation/">What is CSV Validation?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="CSV Validation Project Help — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in CSV Validation Right Now?"
+          body="URS, IQ/OQ/PQ, GAMP 5, 21 CFR Part 11 — real-time guidance from a CSV validation specialist with GxP system qualification experience. Same-day help available."
+          ctaLabel="Get CSV Validation Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="CSV validation proxy interview support"
+          secondaryHref="/csv-validation-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

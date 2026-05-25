@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What does pharma interview preparation cover?', answer: 'Our preparation covers domain-specific technical questions, behavioral and situational interview questions, regulatory scenario walkthroughs, tool-based scenarios (Medidata Rave, Argus Safety, Veeva Vault, SAS), and career narrative coaching. We tailor every session to the specific role and company.' },
+  { question: 'How is this different from generic interview coaching?', answer: 'Our coaches are active or recently retired pharma industry professionals — not career coaches who work generically across industries. They know the actual questions your interviewers will ask, the depth expected at each seniority level, and the regulatory nuances that matter in real pharma roles.' },
+  { question: 'How many sessions do I need?', answer: 'Most clients book 2-4 sessions. A single intensive session (2-3 hours) works for those with strong domain knowledge who need interview mechanics and narrative coaching. Multiple sessions are recommended when reskilling into a new domain or returning after a gap.' },
+  { question: 'Can you prepare me for a specific company?', answer: 'Yes. We research the company\'s pipeline, regulatory history, technology stack, and published interview experiences to tailor your preparation for specific employers including Pfizer, J&J, Roche, AstraZeneca, IQVIA, Syneos, Covance, PPD, and others.' },
+  { question: 'Do you offer mock interviews?', answer: 'Yes. Every preparation package includes at least one full mock interview conducted by a domain expert, with detailed feedback on technical accuracy, communication, pacing, and how to handle difficult or unknown questions.' },
+  { question: 'What seniority levels do you prepare?', answer: 'We prepare candidates at all levels: entry-level through senior director. The question depth, expected answer complexity, and behavioral anchors differ significantly by level, and we calibrate your preparation accordingly.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Interview Preparation', url: site.url + '/pharma-interview-support/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma Interview Preparation | Domain Expert Coaching | pharmajobsupport.com"
+  description="Expert pharma interview preparation for SAS, CDM, PV, CSV, regulatory affairs, and QA roles. Mock interviews, technical Q&A, and scenario coaching by active industry professionals."
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Interview Preparation' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Interview Preparation</div>
+      <h1>Pharma Interview Preparation</h1>
+      <p class="hero-tagline">Domain Expert Coaching — Technical, Behavioral, and Scenario-Based Preparation for Every Pharma Role</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>Why Pharma Interviews Are Different</h2>
+          <p>
+            Pharmaceutical industry interviews combine deep technical domain knowledge with regulatory scenario reasoning and behavioral competencies. An interviewer asking about SDTM mapping is not looking for a textbook definition — they want to know if you can make mapping decisions under CDISC constraints, handle edge cases, and defend your choices against FDA reviewer expectations.
+          </p>
+          <p>
+            Generic interview coaches cannot prepare you for that. Our specialists are people who have sat on both sides of these interviews — as candidates who got the role, and as hiring managers who have evaluated dozens of applicants.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What We Prepare You For</h2>
+          <div class="prep-grid">
+            <div class="prep-card">
+              <h3>Technical Domain Questions</h3>
+              <p>Domain-specific questions at the depth expected for your target role and seniority. We cover the questions most commonly asked in real pharma interviews, including edge cases and regulatory nuances.</p>
+            </div>
+            <div class="prep-card">
+              <h3>Regulatory Scenario Walkthroughs</h3>
+              <p>Case study scenarios involving FDA warning letters, EMA inspection findings, CAPA investigations, protocol deviations, or drug safety events — with guidance on how to structure your response.</p>
+            </div>
+            <div class="prep-card">
+              <h3>Tool-Based Questions</h3>
+              <p>Hands-on tool questions for Medidata Rave, Argus Safety, Veeva Vault, SAS EG, Pinnacle 21, Oracle AERS, and other common pharma platforms. We explain what interviewers expect to hear beyond surface-level familiarity.</p>
+            </div>
+            <div class="prep-card">
+              <h3>Behavioral & STAR Responses</h3>
+              <p>Structured preparation for competency-based questions — problem-solving, stakeholder management, working under regulatory pressure, handling conflicting priorities in a GxP environment.</p>
+            </div>
+            <div class="prep-card">
+              <h3>Company-Specific Research</h3>
+              <p>We research your target company's pipeline, regulatory submissions, technology stack, and culture to tailor preparation for that specific employer and role.</p>
+            </div>
+            <div class="prep-card">
+              <h3>Full Mock Interviews</h3>
+              <p>Realistic mock interviews conducted by domain specialists, followed by detailed written feedback on technical accuracy, depth, communication style, and areas to strengthen.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Domains We Prepare</h2>
+          <ul class="domain-list">
+            <li>Clinical SAS Programming — SDTM, ADaM, TLF, Pinnacle 21, FDA submission SAS</li>
+            <li>Clinical Data Management — Medidata Rave, Oracle InForm, CDASH, CDISC, DMP</li>
+            <li>Pharmacovigilance — Argus Safety, ICSR, MedDRA, EudraVigilance, aggregate reporting</li>
+            <li>Computer System Validation — 21 CFR Part 11, GAMP 5, IQ/OQ/PQ, EU Annex 11</li>
+            <li>Regulatory Affairs — eCTD, NDA/BLA/MAA, Veeva Vault RIM, FDA/EMA strategy</li>
+            <li>Quality Assurance / GMP — CAPA, deviations, audit readiness, ICH Q10, GMP SOP</li>
+            <li>Medical Device QA — ISO 13485, EU MDR, FDA 510(k), ISO 14971, PMA</li>
+            <li>Veeva Vault — QMS, eTMF, RIM, Safety, EDC configuration and validation</li>
+            <li>Pharma AI / ML — drug discovery, PV automation, clinical NLP applications</li>
+            <li>RPA / Automation — UiPath, Automation Anywhere, Blue Prism in pharma context</li>
+            <li>Medical Writing — clinical study reports, regulatory submissions, publications</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>How Preparation Works</h2>
+          <ol class="process-list">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <strong>Initial Assessment</strong>
+                <p>We review your background, the target role and JD, and your current knowledge gaps. This informs which areas need the most preparation time.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <strong>Technical Deep Dive</strong>
+                <p>We work through the domain-specific technical questions in depth — not just answers, but the reasoning behind them and how to handle follow-up probing questions.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <strong>Scenario Practice</strong>
+                <p>Regulatory and operational scenarios relevant to your target role. You practice structuring responses that demonstrate both domain knowledge and professional judgment.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <div>
+                <strong>Mock Interview</strong>
+                <p>A full simulated interview conducted by a domain expert. Recorded feedback covering technical accuracy, completeness, communication, and confidence.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} />
+        </section>
+
+        <section class="content-section">
+          <h2>Related Services</h2>
+          <div class="related-links">
+            <a href="/pharma-interview-proxy-support/">Interview Proxy Support</a>
+            <a href="/pharma-profile-engineering/">Profile Engineering</a>
+            <a href="/pharma-proxy-job-support/">Proxy Job Support</a>
+            <a href="/contact/">Book a Session</a>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="page-sidebar">
+        <div class="sidebar-card sidebar-card--cta">
+          <h3>Book Preparation Session</h3>
+          <p>Interview coming up? Contact us now — sessions available same-day.</p>
+          <a href={site.whatsappUrl} class="sidebar-btn" target="_blank" rel="noopener noreferrer">
+            WhatsApp: {site.whatsapp}
+          </a>
+        </div>
+        <div class="sidebar-card">
+          <h3>What's Included</h3>
+          <ul>
+            <li>Technical Q&A preparation</li>
+            <li>Regulatory scenario practice</li>
+            <li>Behavioral STAR coaching</li>
+            <li>Company-specific research</li>
+            <li>Full mock interview</li>
+            <li>Written feedback report</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Seniority Levels</h3>
+          <ul>
+            <li>Entry-level / Associate</li>
+            <li>Specialist / Senior Specialist</li>
+            <li>Manager / Senior Manager</li>
+            <li>Director / Senior Director</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Contact</h3>
+          <ul>
+            <li>WhatsApp (fastest)</li>
+            <li>Email within 24 hours</li>
+            <li>Global timezones</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-14);
+  }
+  .page-hero {
+    padding: var(--space-10) 0 var(--space-8);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-8);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: var(--space-4);
+  }
+  .page-hero h1 {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+  }
+  .hero-tagline { font-size: 1.1rem; color: var(--color-muted); font-style: italic; }
+
+  .page-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  .content-section { margin-bottom: var(--space-10); }
+  .content-section h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-5); color: var(--color-text); }
+  .content-section p { font-size: 0.9375rem; color: var(--color-muted); line-height: 1.75; }
+  .content-section p + p { margin-top: var(--space-3); }
+
+  .prep-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-4);
+  }
+  .prep-card {
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+  .prep-card h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-2); color: var(--color-primary); }
+  .prep-card p { font-size: 0.8125rem; color: var(--color-muted); line-height: 1.6; }
+
+  .domain-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  .domain-list li {
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-primary);
+    font-size: 0.875rem;
+    color: var(--color-text);
+  }
+
+  .process-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-5); }
+  .process-list li {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .process-list li strong { display: block; font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-1); }
+  .process-list li p { font-size: 0.875rem; color: var(--color-muted); line-height: 1.6; margin: 0; }
+
+  .related-links { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .related-links a {
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .related-links a:hover { background: var(--color-primary); color: #fff; }
+
+  .page-sidebar { position: sticky; top: 5rem; display: flex; flex-direction: column; gap: var(--space-4); }
+  .sidebar-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+  }
+  .sidebar-card--cta { background: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+  .sidebar-card--cta h3 { color: #fff; }
+  .sidebar-card--cta p { color: rgba(255,255,255,0.85); font-size: 0.875rem; margin-bottom: var(--space-4); }
+  .sidebar-card h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-3); }
+  .sidebar-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-1); }
+  .sidebar-card li { font-size: 0.8125rem; color: var(--color-muted); }
+  .sidebar-card li::before { content: '✓ '; color: var(--color-primary); font-weight: 700; }
+  .sidebar-card--cta li::before { color: rgba(255,255,255,0.7); }
+  .sidebar-card--cta li { color: rgba(255,255,255,0.9); }
+  .sidebar-btn {
+    display: block;
+    background: #fff;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .page-layout { grid-template-columns: 1fr; }
+    .page-sidebar { position: static; }
+  }
+</style>

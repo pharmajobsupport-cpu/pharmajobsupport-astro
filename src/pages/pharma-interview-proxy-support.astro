@@ -1,0 +1,394 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma interview proxy support?', answer: 'Interview proxy support means one of our domain experts joins your technical interview alongside you — or in some models, handles the technical portions while you manage rapport and company-specific responses. Our expert answers domain questions in real time using Teams, Zoom, or any video platform.' },
+  { question: 'Which pharma domains do you cover for interview proxy?', answer: 'We cover all major pharma domains: Clinical SAS, CDM, Pharmacovigilance, CSV/Computer System Validation, Regulatory Affairs, QA/GMP, Medical Device, Veeva Vault, Pharma AI/ML, RPA/Automation, and Medical Writing.' },
+  { question: 'How do you handle technical screeners and coding assessments?', answer: 'For SAS programming screeners, our SAS expert can guide you live through SDTM/ADaM code, PROC steps, and TLF logic. For validation or regulatory assessments, we have specialists for each domain who can walk you through answers in real time via a private audio channel.' },
+  { question: 'Is interview proxy support confidential?', answer: 'Completely. We do not contact your employer, do not retain any session details, and all communications are covered by strict NDAs. Our experts have no affiliation with any pharma employer or recruiting firm.' },
+  { question: 'How quickly can I book a session?', answer: 'We can typically confirm a specialist within 2-4 hours of your WhatsApp message. For interviews scheduled same-day, contact us immediately — we prioritize urgent requests.' },
+  { question: 'What platforms do you support?', answer: 'Microsoft Teams, Zoom, Webex, Google Meet, HireVue, and most other video interview platforms. We also support phone-based technical interviews.' },
+  { question: 'Do you support multiple interview rounds?', answer: 'Yes. We can support initial screeners, technical panels, case study rounds, and final interviews. Many clients book us for all rounds of a hiring process.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma Interview Proxy Support', url: site.url + '/pharma-interview-proxy-support/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma Interview Proxy Support | Real-Time Expert Assistance | pharmajobsupport.com"
+  description="Expert pharma interview proxy support for SAS programmers, CDM, PV, CSV, regulatory affairs, and QA professionals. Real-time specialist guidance on Teams, Zoom, and all platforms."
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma Interview Proxy Support' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Interview Proxy Support</div>
+      <h1>Pharma Interview Proxy Support</h1>
+      <p class="hero-tagline">Domain Expert Joins Your Interview — Real-Time Technical Guidance for Every Pharma Discipline</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+
+        <section class="content-section">
+          <h2>What Is Pharma Interview Proxy Support?</h2>
+          <p>
+            Interview proxy support means a PharmaCDM domain expert joins your interview session in real time — providing technical answers, domain-specific explanations, and regulatory context through a secure private audio channel while you participate in the video interview.
+          </p>
+          <p>
+            Our specialists have held senior roles at CROs, large pharma companies, and regulatory consulting firms. They speak the same language as your interviewers and can accurately represent your capabilities across every major pharmaceutical discipline.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Domains We Cover</h2>
+          <div class="domain-grid">
+            <div class="domain-card">
+              <h3>Clinical SAS Programming</h3>
+              <p>SDTM mapping, ADaM dataset derivations, TLF generation, Pinnacle 21 validation, FDA submission programming, PROC SQL, PROC REPORT, ODS output, macro development.</p>
+            </div>
+            <div class="domain-card">
+              <h3>Clinical Data Management</h3>
+              <p>Medidata Rave, Oracle InForm, CDASH standards, edit check programming, database lock procedures, discrepancy management, eCRF design, DMP creation.</p>
+            </div>
+            <div class="domain-card">
+              <h3>Pharmacovigilance</h3>
+              <p>ICSR processing, Argus Safety, Oracle AERS, MedDRA coding, SUSAR/PSUR/PBRER reporting, EudraVigilance, FDA MedWatch, signal detection, aggregate reporting.</p>
+            </div>
+            <div class="domain-card">
+              <h3>Computer System Validation</h3>
+              <p>21 CFR Part 11, EU Annex 11, GAMP 5 risk classification, IQ/OQ/PQ protocol writing, URS/FS/DS documentation, validation master plan, change control.</p>
+            </div>
+            <div class="domain-card">
+              <h3>Regulatory Affairs</h3>
+              <p>eCTD submissions, NDA/BLA/MAA preparation, FDA/EMA strategy, Veeva Vault RIM, Module 2-5 dossier, CTD format, regulatory intelligence, labelling.</p>
+            </div>
+            <div class="domain-card">
+              <h3>Quality Assurance / GMP</h3>
+              <p>CAPA management, deviation handling, GMP audit readiness, ICH Q10, SOP writing, supplier qualification, GMP training programmes, audit response preparation.</p>
+            </div>
+            <div class="domain-card">
+              <h3>Medical Device QA</h3>
+              <p>ISO 13485, EU MDR 2017/745, FDA 510(k), PMA submissions, ISO 14971 risk management, FMEA, design controls, post-market surveillance, UDI compliance.</p>
+            </div>
+            <div class="domain-card">
+              <h3>Veeva Vault</h3>
+              <p>QMS, eTMF, RIM, Safety, and EDC modules. Configuration, workflow design, validation, user acceptance testing, lifecycle management, and Vault migration.</p>
+            </div>
+            <div class="domain-card">
+              <h3>Pharma AI / ML & RPA</h3>
+              <p>Drug discovery AI, pharmacovigilance automation, clinical NLP, RPA tools (UiPath, Automation Anywhere, Blue Prism), regulatory AI applications.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>How It Works</h2>
+          <ol class="process-list">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <strong>Book via WhatsApp</strong>
+                <p>Message us on WhatsApp with your interview time, domain, and job description. We confirm a specialist within 2-4 hours.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <strong>Pre-Interview Briefing</strong>
+                <p>30-60 minutes before your interview, we review the JD, likely question areas, and your background together. We align on how we will coordinate during the call.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <strong>Real-Time Interview Support</strong>
+                <p>During the interview, our expert listens and provides answers through a private channel. You relay responses naturally. For technical assessments, we guide you step by step.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <div>
+                <strong>Post-Interview Debrief</strong>
+                <p>After the interview, we debrief on what went well, what to expect next, and how to prepare for follow-up rounds.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Technical Screener Support</h2>
+          <p>
+            Many pharma roles include coding assessments, case studies, or written technical exercises. We provide support for:
+          </p>
+          <ul class="feature-list">
+            <li>SAS programming screeners — SDTM/ADaM code, data step logic, macro development</li>
+            <li>Validation documentation exercises — IQ/OQ/PQ protocol drafts, risk assessments</li>
+            <li>Regulatory writing tasks — CTD module summaries, label reviews</li>
+            <li>PV case scenarios — ICSR narrative writing, reportability assessments</li>
+            <li>QA case studies — CAPA investigation, deviation root cause analysis</li>
+            <li>CDM scenarios — database design, edit check logic, discrepancy resolution</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>Supported Platforms</h2>
+          <div class="platform-grid">
+            <div class="platform-pill">Microsoft Teams</div>
+            <div class="platform-pill">Zoom</div>
+            <div class="platform-pill">Cisco Webex</div>
+            <div class="platform-pill">Google Meet</div>
+            <div class="platform-pill">HireVue</div>
+            <div class="platform-pill">Skype</div>
+            <div class="platform-pill">Phone / Audio Only</div>
+            <div class="platform-pill">BlueJeans</div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Confidentiality Guarantee</h2>
+          <p>
+            Every session is covered by a strict NDA. We never retain interview content, never contact your employer, and have no affiliation with any recruiting firm or pharma company. Our specialists operate independently with complete client confidentiality as a core principle.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} />
+        </section>
+
+        <section class="content-section">
+          <h2>Related Services</h2>
+          <div class="related-links">
+            <a href="/pharma-interview-support/">Interview Preparation Coaching</a>
+            <a href="/pharma-profile-engineering/">Profile Engineering</a>
+            <a href="/pharma-proxy-job-support/">Proxy Job Support</a>
+            <a href="/contact/">Contact Us</a>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="page-sidebar">
+        <div class="sidebar-card sidebar-card--cta">
+          <h3>Book Interview Proxy</h3>
+          <p>Specialist available within 2-4 hours. Message us now.</p>
+          <a href={site.whatsappUrl} class="sidebar-btn" target="_blank" rel="noopener noreferrer">
+            WhatsApp: {site.whatsapp}
+          </a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Domains Supported</h3>
+          <ul>
+            <li>Clinical SAS</li>
+            <li>CDM / EDC</li>
+            <li>Pharmacovigilance</li>
+            <li>CSV / 21 CFR Part 11</li>
+            <li>Regulatory Affairs</li>
+            <li>QA / GMP</li>
+            <li>Medical Device</li>
+            <li>Veeva Vault</li>
+            <li>Pharma AI / RPA</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Platforms</h3>
+          <ul>
+            <li>Microsoft Teams</li>
+            <li>Zoom</li>
+            <li>Webex / Google Meet</li>
+            <li>HireVue</li>
+            <li>Phone / Audio</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Response Times</h3>
+          <ul>
+            <li>WhatsApp — within hours</li>
+            <li>Same-day urgent — available</li>
+            <li>Pre-session briefing — 30-60 min</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <CTABanner />
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-14);
+  }
+  .page-hero {
+    padding: var(--space-10) 0 var(--space-8);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-8);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: var(--space-4);
+  }
+  .page-hero h1 {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+  }
+  .hero-tagline { font-size: 1.1rem; color: var(--color-muted); font-style: italic; }
+
+  .page-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  .content-section { margin-bottom: var(--space-10); }
+  .content-section h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--space-5);
+    color: var(--color-text);
+  }
+  .content-section p {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.75;
+  }
+  .content-section p + p { margin-top: var(--space-3); }
+
+  .domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-4);
+  }
+  .domain-card {
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+  .domain-card h3 {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+  }
+  .domain-card p { font-size: 0.8125rem; color: var(--color-muted); line-height: 1.6; }
+
+  .process-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-5); }
+  .process-list li {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .process-list li strong { display: block; font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-1); }
+  .process-list li p { font-size: 0.875rem; color: var(--color-muted); line-height: 1.6; margin: 0; }
+
+  .feature-list { margin: var(--space-4) 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+  .feature-list li {
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-primary);
+    font-size: 0.875rem;
+    color: var(--color-text);
+  }
+
+  .platform-grid { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+  .platform-pill {
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  .related-links { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .related-links a {
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .related-links a:hover { background: var(--color-primary); color: #fff; }
+
+  .page-sidebar { position: sticky; top: 5rem; display: flex; flex-direction: column; gap: var(--space-4); }
+  .sidebar-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+  }
+  .sidebar-card--cta { background: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+  .sidebar-card--cta h3 { color: #fff; }
+  .sidebar-card--cta p { color: rgba(255,255,255,0.85); font-size: 0.875rem; margin-bottom: var(--space-4); }
+  .sidebar-card h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: var(--space-3); }
+  .sidebar-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-1); }
+  .sidebar-card li { font-size: 0.8125rem; color: var(--color-muted); }
+  .sidebar-card li::before { content: '✓ '; color: var(--color-primary); font-weight: 700; }
+  .sidebar-card--cta li::before { color: rgba(255,255,255,0.7); }
+  .sidebar-card--cta li { color: rgba(255,255,255,0.9); }
+  .sidebar-btn {
+    display: block;
+    background: #fff;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .page-layout { grid-template-columns: 1fr; }
+    .page-sidebar { position: static; }
+  }
+</style>

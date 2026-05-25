@@ -1,0 +1,104 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is regulatory affairs proxy job support?', answer: 'Regulatory affairs proxy job support is real-time live guidance from a regulatory affairs specialist who helps you complete your actual RA work tasks. When you are stuck on an eCTD sequence structure, a Module 2 CTD summary, a variation type classification, a CTA/IND amendment, or an FDA/EMA query response — a regulatory affairs expert walks you through the solution step by step via WhatsApp. It is not training. It is direct, task-specific help for the RA deliverable you need to complete right now.' },
+  { question: 'What regulatory affairs tasks do you provide proxy support for?', answer: 'All regulatory affairs tasks: eCTD submission package structure (Module 1 through 5), CTD Module 2 summaries (2.3 QOS, 2.4 nonclinical overview, 2.5 clinical overview, 2.7 clinical summaries), IND/CTA preparation and amendments, NDA/MAA/BLA dossier sections, variation management (Type IA/IB/II for EMA, CBE-30/Prior Approval for FDA), lifecycle management submissions, IMPD preparation, paediatric investigation plans (PIP), orphan designation applications, response to agency queries (FDA RTF, EMA Day 70/120/150), and pre-submission meeting preparation.' },
+  { question: 'What is the eCTD format and how does it work?', answer: 'eCTD (electronic Common Technical Document) is the standard electronic format required by FDA (from 2017), EMA, Health Canada, and most major regulators for all marketing authorisation submissions. Structure: Module 1 (regional administrative documents — specific to each market), Module 2 (CTD summaries — QOS, nonclinical overview, clinical overview, summaries), Module 3 (quality — drug substance, drug product, analytical methods), Module 4 (nonclinical study reports), Module 5 (clinical study reports and bioavailability data). Each eCTD sequence has a lifecycle — new, replace, delete operations for each document node. Validation: Lorenz docuBridge, Extedo EURS, or FDA eSUB gateway for FDA submissions. We help you structure sequences, manage leaf operations, validate backbones, and resolve gateway rejections.' },
+  { question: 'What is the difference between Type IA, Type IB, and Type II variations?', answer: 'EMA variation classification for post-marketing changes: Type IA (Minor variation, immediate notification) — administrative changes that have minimal risk to quality, safety, efficacy. Examples: change of manufacturer name with no change to site, change in packaging material not in contact with product. Type IA-IN: notification after implementation. Type IB (Minor variation, 30-day review) — changes with minor impact on quality, safety, efficacy. Examples: change in batch size within validated range, extension of re-test period within shelf life. Requires 30-day review; can implement on Day 31 if no objection. Type II (Major variation, full review) — changes with significant impact or new data to support. Examples: new indication, change in manufacturing process with potential impact on quality, new patient population. Full scientific review — similar to initial MAA but scoped to the change. We help you classify your change correctly and prepare the full variation application dossier.' },
+  { question: 'How do I prepare a response to an FDA complete response letter?', answer: 'FDA Complete Response Letter (CRL) response strategy: First, categorise every deficiency by type — clinical (safety, efficacy, label), chemistry/manufacturing/controls (CMC), nonclinical. Second, for each deficiency, determine whether you are providing: new data (requires a new study or updated analysis), clarification of existing data, revised labelling, or commitments/post-approval studies (PMC/PMR). Third, structure the response as a new eCTD sequence with a cover letter that addresses each CRL item by number and cross-references the supporting modules. Fourth, for clinical deficiencies, new Phase 3 data or a Type B pre-NDA meeting with FDA may be needed. Timeline: FDA has 6 months for a standard CRL response review, 2 months for a Class 1 response (only labelling or minor issues). We help you draft the CRL response strategy, prepare the cover letter, and structure the supporting dossier sections.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Regulatory Affairs Proxy Job Support Guide', url: site.url + '/regulatory-affairs-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Regulatory Affairs Proxy Job Support Guide — eCTD, CTD, Variations, FDA/EMA',
+    'Complete guide to regulatory affairs proxy job support — eCTD submission structure, CTD Module 2 summaries, EMA variation types, FDA CRL responses, IND/NDA/MAA dossier preparation.',
+    site.url + '/regulatory-affairs-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Regulatory Affairs Proxy Job Support Guide | eCTD, CTD, Variations, FDA/EMA"
+  description="Complete guide to regulatory affairs proxy job support — eCTD structure, CTD summaries, EMA variations, FDA CRL responses, IND/NDA/MAA submissions. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Regulatory Affairs Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Regulatory Affairs Guide</div>
+      <h1>Regulatory Affairs Proxy Job Support Guide — eCTD, CTD, FDA/EMA Submissions</h1>
+      <p class="hero-tagline">Everything you need to know about real-time regulatory affairs proxy job support — eCTD sequence structure, CTD Module 2 summaries, variation management, FDA/EMA query responses, and what RA tasks our specialists help you complete right now.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Regulatory Affairs Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>eCTD sequence structure</strong> — leaf operations (new/replace/delete), backbone validation, Module 1 regional documents, gateway submission failures</li>
+            <li><strong>CTD Module 2 summaries</strong> — QOS (2.3), nonclinical overview (2.4), clinical overview (2.5), clinical summaries (2.7.1–2.7.6)</li>
+            <li><strong>Variation classification</strong> — EMA Type IA/IB/II vs. FDA CBE-30/Prior Approval — which category applies to your specific change</li>
+            <li><strong>Agency query responses</strong> — FDA Information Request (IR), EMA Day 70/120/150 questions, List of Outstanding Issues (LOI)</li>
+            <li><strong>IND/CTA amendments</strong> — protocol amendment, safety amendment, general correspondence, annual reports</li>
+            <li><strong>Lifecycle management</strong> — post-approval commitments, label negotiations, PSUR/PBRER submission windows</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>eCTD Submission Structure — Module by Module</h2>
+          <ul class="feature-list">
+            <li><strong>Module 1</strong> — Regional: FDA cover letter + Form FDA 356h + 1.14 SPL; EMA Form + regional labelling + 1.3 SPC/PIL</li>
+            <li><strong>Module 2</strong> — CTD summaries: 2.3 QOS (quality overall summary), 2.4 nonclinical overview, 2.5 clinical overview, 2.6 nonclinical summaries, 2.7 clinical summaries</li>
+            <li><strong>Module 3</strong> — Quality: 3.2.S drug substance (manufacture, characterisation, specifications, stability), 3.2.P drug product (development, manufacture, excipients, specs, container closure, stability)</li>
+            <li><strong>Module 4</strong> — Nonclinical: pharmacology, pharmacokinetics, toxicology study reports</li>
+            <li><strong>Module 5</strong> — Clinical: 5.3 CSRs, 5.3.1 biopharmaceutic studies, 5.3.3 efficacy studies, 5.3.4 safety studies, 5.3.5 post-marketing reports</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>EMA Variation Types — Quick Reference</h2>
+          <ul class="feature-list">
+            <li><strong>Type IA-IN</strong> — Administrative changes — notify after implementation (no pre-approval needed)</li>
+            <li><strong>Type IA</strong> — Minor, minimal risk — notify within 12 months (annual grouping permitted)</li>
+            <li><strong>Type IB</strong> — Minor, 30-day review — implement on Day 31 if no objection raised</li>
+            <li><strong>Type II</strong> — Major change — full scientific assessment, typically 60-day (standard) review clock</li>
+            <li><strong>Extension application</strong> — new indication, new route, new strength — treated as new MAA scope</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Regulatory Affairs Proxy Job Support Now</h2>
+          <p>Stuck on an RA submission, agency query, or variation application? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us the submission type and market, and we match you with a regulatory affairs specialist within hours.</p>
+          <p>Also see: <a href="/regulatory-affairs-proxy-job-support/">Regulatory Affairs Proxy Job Support</a> | <a href="/regulatory-affairs-proxy-interview/">Regulatory Affairs Proxy Interview Support</a> | <a href="/stuck-in-regulatory-submissions/">Stuck in Regulatory Submissions?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Regulatory Affairs Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Regulatory Submission?"
+          body="eCTD structure, CTD summaries, EMA variations, FDA CRL responses, agency query answers — real-time guidance from a regulatory affairs specialist. Same-day help available."
+          ctaLabel="Get Regulatory Affairs Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Regulatory affairs proxy interview support"
+          secondaryHref="/regulatory-affairs-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

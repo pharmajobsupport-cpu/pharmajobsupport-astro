@@ -1,0 +1,51 @@
+---
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<div class={`disclaimer ${compact ? 'disclaimer--compact' : ''}`} role="note" aria-label="Service disclaimer">
+  {compact ? (
+    <p>
+      <strong>Disclaimer:</strong> PharmaCDM provides professional educational and domain mentoring services. We do not guarantee employment outcomes, impersonate individuals, or misrepresent credentials to employers.
+    </p>
+  ) : (
+    <>
+      <h3 class="disclaimer-heading">Important Disclaimer</h3>
+      <p>
+        PharmaCDM (pharmajobsupport.com) provides professional domain mentoring, educational support, and guidance services for pharmaceutical industry professionals. Our services are designed to help professionals understand domain-specific workflows, regulatory requirements, and technical tasks within their roles.
+      </p>
+      <p>
+        We do not guarantee employment outcomes, job placement, or interview success. We do not impersonate individuals, misrepresent credentials to employers, or facilitate deceptive practices. All support provided is educational in nature, comparable to professional consulting or tutoring services.
+      </p>
+      <p>
+        Use of our services is at the user's own discretion. PharmaCDM is not responsible for employer policies regarding external professional development services.
+      </p>
+    </>
+  )}
+</div>
+
+<style>
+  .disclaimer {
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    border-radius: var(--radius-sm);
+    padding: var(--space-5) var(--space-6);
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+  }
+  .disclaimer p + p { margin-top: var(--space-3); }
+  .disclaimer-heading {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-3);
+  }
+  .disclaimer--compact {
+    padding: var(--space-3) var(--space-4);
+    font-size: 0.75rem;
+  }
+</style>

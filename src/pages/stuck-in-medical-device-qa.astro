@@ -1,0 +1,80 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'I need to write an NCR (Non-Conformance Report) for a medical device QA issue. Can you help?', answer: 'Yes. A Non-Conformance Report (NCR) in a medical device QMS (ISO 13485) must document: the non-conforming product or process, the detection date and who detected it, the nature of the non-conformance (product specification, process deviation, raw material deficiency, etc.), disposition decision (use-as-is, rework, scrap, return to supplier), any containment actions, and the CAPA trigger (if the non-conformance is significant enough to warrant investigation). We walk you through the NCR content for your specific situation and help you structure the CAPA investigation.' },
+  { question: 'I have an EU MDR Article 10 compliance task I do not understand. Can you help?', answer: 'Yes. EU MDR (Medical Device Regulation 2017/745) Article 10 sets out the general obligations of manufacturers. We help with: understanding which Article 10 obligations apply to your specific role and organisation, QMS requirements under Article 10(9) including the MDR-required QMS elements that go beyond ISO 13485, technical documentation requirements under Article 10(4) and Annex II/III, clinical evaluation requirements under Article 10(3) and Annex XIV, vigilance and post-market surveillance obligations under Article 10(13). We explain what each obligation means in practical terms for your day-to-day work.' },
+  { question: 'I need help with a Design History File (DHF) for a medical device. Can you help?', answer: 'Yes. The Design History File (DHF) is the FDA 21 CFR Part 820 requirement equivalent to EU MDR Technical Documentation. It must contain: design inputs (user needs, intended use, design requirements), design outputs (specifications, drawings, software documents), design review records, design verification (testing evidence), design validation (clinical evaluation, usability testing), design changes (documented and controlled), and the complete design transfer record. We help you understand what must be in your DHF, how to organise it, and what reviewers and inspectors expect to find.' },
+  { question: 'What medical device QA tasks can you help me with right now?', answer: 'All medical device QA and regulatory tasks: ISO 13485 QMS documentation (quality manual, procedures, work instructions, forms), Non-Conformance Reports (NCR) and CAPA procedures, Design History File (DHF) structure and content, Technical Documentation (EU MDR Annex II/III), Clinical Evaluation Reports (CER) and Clinical Evaluation Plans (CEP), Risk Management documentation (ISO 14971 — FMEA, risk control measures, benefit-risk analysis), 510(k) premarket notification preparation, EU MDR conformity assessment process, IEC 62304 software lifecycle documentation, SaMD classification and requirements, supplier qualification and audit, IVDR compliance for in vitro diagnostics.' },
+  { question: 'I have an ISO 13485 audit next week and I am not ready. Can you help?', answer: 'Yes — and urgently if needed. For ISO 13485 audit preparation we help with: understanding which clauses the auditor is likely to focus on based on your scope, reviewing your quality manual and procedure documents for gaps, understanding the evidence you need to present for each clause (Clause 4 QMS, Clause 7 Product Realisation, Clause 8 Measurement Analysis Improvement), identifying common non-conformances that ISO 13485 auditors find and how to address them proactively, and mock audit walk-through of your QMS documentation. Message us immediately if your audit is this week.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Stuck in Medical Device QA', url: site.url + '/stuck-in-medical-device-qa/' },
+];
+
+const schemas = [buildBreadcrumbSchema(breadcrumbItems), buildFAQSchema(faqs)];
+---
+
+<BaseLayout
+  title="Stuck in Medical Device QA? Get Real-Time Medical Device Proxy Job Support"
+  description="Stuck on NCR, ISO 13485 audit, EU MDR compliance, DHF, or CAPA in medical device QA? Real-time medical device proxy job support. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Stuck in Medical Device QA' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Medical Device QA Proxy Job Support</div>
+      <h1>Stuck in Medical Device QA? Get Live Expert Guidance Now.</h1>
+      <p class="hero-tagline">ISO 13485 audit next week and not ready. NCR you do not know how to write. EU MDR Article 10 obligations you cannot decipher. Design History File gaps. CAPA root cause analysis you have never done. Our medical device QA experts guide you through each task in real time via WhatsApp.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>Medical Device QA Proxy Job Support — What We Help With Right Now</h2>
+          <ul class="feature-list">
+            <li>Non-Conformance Reports (NCR) — structure, content, disposition, CAPA trigger</li>
+            <li>CAPA — root cause analysis, corrective action, preventive action, effectiveness check</li>
+            <li>ISO 13485 QMS documentation — quality manual, SOPs, work instructions</li>
+            <li>EU MDR Article 10 compliance — QMS requirements, technical documentation, clinical evaluation</li>
+            <li>Design History File (DHF) — structure, content, design controls per FDA 21 CFR Part 820</li>
+            <li>Technical Documentation (EU MDR Annex II/III) — content and organisation</li>
+            <li>Clinical Evaluation Report (CER) and Clinical Evaluation Plan (CEP)</li>
+            <li>ISO 14971 Risk Management — FMEA, risk control, benefit-risk analysis</li>
+            <li>510(k) premarket notification preparation</li>
+            <li>IEC 62304 software lifecycle documentation for medical device software</li>
+            <li>ISO 13485 audit preparation — clause-by-clause readiness review</li>
+          </ul>
+          <p>Message us at <strong>{site.whatsapp}</strong>. Tell us your device type and your task.</p>
+        </section>
+        <section class="content-section">
+          <h2>Related Support</h2>
+          <p><a href="/medical-device-proxy-job-support/">Medical Device Proxy Job Support</a> | <a href="/medical-device-proxy-interview/">Medical Device Proxy Interview Support</a> | <a href="/what-is-iso-13485/">What is ISO 13485?</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Medical Device QA Help — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck in Medical Device QA?"
+          body="NCR, CAPA, ISO 13485 audit, EU MDR, DHF — real-time guidance from a medical device QA specialist. Same-day help available. Message us now."
+          ctaLabel="Get Medical Device QA Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Medical device proxy interview support"
+          secondaryHref="/medical-device-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>

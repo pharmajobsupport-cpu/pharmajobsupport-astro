@@ -1,0 +1,94 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../data/site';
+import { buildBreadcrumbSchema, buildFAQSchema, buildArticleSchema } from '../utils/schema';
+
+const faqs = [
+  { question: 'What is pharma BI and data analytics proxy job support?', answer: 'Pharma BI and data analytics proxy job support is real-time live guidance from a pharma data and analytics specialist who helps you complete your actual BI and analytics work tasks in a pharmaceutical or life sciences context. When you are stuck on a Power BI dashboard for clinical trial enrollment tracking, a Tableau visualisation for pharmacovigilance signal data, a SQL query for safety data warehouse extraction, a Python pandas data transformation for regulatory reporting, or a DAX measure that is not calculating correctly — a pharma data analytics expert walks you through the solution step by step via WhatsApp.' },
+  { question: 'What pharma BI/analytics tasks do you provide proxy support for?', answer: 'All pharma BI and data analytics tasks: Power BI report and dashboard development (DAX measures, Power Query M, dataflow configuration, gateway setup, row-level security), Tableau workbook development (calculated fields, LOD expressions, data blending, Tableau Server publishing), SQL for pharma data warehouses (clinical operations data, safety data, regulatory intelligence), Python data analytics (pandas, NumPy, matplotlib for clinical data processing, Jupyter notebook analysis), clinical trial performance dashboards (enrollment vs. target, site performance, query rate KPIs), pharmacovigilance analytics (ICSR volume trends, MedDRA SOC distribution, country-specific reporting), and GxP reporting system validation (validation of BI tools used for regulated decision-making under GAMP 5).' },
+  { question: 'What pharma-specific BI dashboards are most commonly built?', answer: 'Most common pharma BI dashboards we help build: Clinical Trial Operations Dashboard — enrollment rate vs. plan by site and country, screen failure rate, randomisation funnel, query aging, protocol deviation rate. Pharmacovigilance KPI Dashboard — ICSR intake volume by source (spontaneous, literature, clinical trial), case processing throughput vs. target, on-time expedited reporting rate (7-day/15-day compliance), MedDRA SOC distribution of reported events. Regulatory Intelligence Dashboard — submission activity tracker, variation application timelines, agency interaction log, approval timeline benchmarking. Quality Management Dashboard — deviation and CAPA aging, overdue CAPA rate, change control cycle time, audit finding trend by system/site. Manufacturing Quality Dashboard — OOS rate by product/batch, batch release cycle time, deviation by process step, CPV (Continued Process Verification) trend charts. We help you design the data model, write the DAX or calculated fields, and structure the dashboard for the pharma stakeholders.' },
+  { question: 'How does DAX work for pharma clinical trial metrics in Power BI?', answer: 'DAX (Data Analysis Expressions) is the formula language for Power BI. For pharma clinical trial metrics: Enrollment Rate measure — DIVIDE([Enrolled Subjects], [Target Enrollment]) — use DIVIDE to handle zero denominator gracefully. Running enrollment over time — use CALCULATE([Enrolled], DATESINPERIOD(\'Calendar\'[Date], MAX(\'Calendar\'[Date]), -30, DAY)) for rolling 30-day view. Site performance ranking — RANKX(ALL(\'Site\'[SiteName]), [Enrolled Subjects]) for site ranking within a visual. Screen failure rate — DIVIDE([Screen Failures], [Screen Failures] + [Enrolled]). Query aging — DATEDIFF(\'Query\'[OpenDate], TODAY(), DAY) for open query age. Common DAX issues in pharma data: date table relationship problems (clinical data often has multiple date fields — enrollment date, randomisation date, last visit date — all need relationships to the calendar table), many-to-many relationships between sites and countries requiring bridge tables, and row-level security for site staff to see only their own site data. We debug your specific DAX and data model.' },
+  { question: 'Do pharma BI tools need to be validated under GxP?', answer: 'Whether a pharma BI tool requires GxP validation depends on how the output is used. Decision rule: if the BI report or dashboard is used to make GxP decisions — batch release, safety signal reporting, regulatory submission decisions, clinical trial site closure — it is a GxP system and requires validation under GAMP 5. GAMP 5 category for BI tools: Power BI / Tableau / Qlik = Category 4 (configured COTS). Custom SQL reports or Python scripts = Category 5. Validation approach for a GxP BI dashboard: document the intended use and GxP impact in a validation plan, write OQ test cases that verify the calculations are correct (test against known data), verify that access control restricts report modification to authorised users, verify that the data source connection is read-only (cannot modify source data from the BI tool), document the data lineage from source system to dashboard metric. If the dashboard is for internal operational decision-making only (e.g., enrollment tracking for site management), GxP validation may not be required, but data quality assurance is still good practice. We help you determine the validation requirement and write the protocols if needed.' },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', url: site.url + '/' },
+  { name: 'Pharma BI Data Analytics Proxy Job Support Guide', url: site.url + '/pharma-bi-data-analytics-proxy-job-support-guide/' },
+];
+
+const schemas = [
+  buildArticleSchema(
+    'Pharma BI Data Analytics Proxy Job Support Guide — Power BI, Tableau, DAX, GxP Reporting',
+    'Complete guide to pharma BI and data analytics proxy job support — Power BI dashboards, Tableau, DAX measures, SQL for pharma data, clinical trial KPIs, PV analytics, GxP report validation.',
+    site.url + '/pharma-bi-data-analytics-proxy-job-support-guide/',
+    '2026-01-01',
+  ),
+  buildBreadcrumbSchema(breadcrumbItems),
+  buildFAQSchema(faqs),
+];
+---
+
+<BaseLayout
+  title="Pharma BI Data Analytics Proxy Job Support Guide | Power BI, Tableau, DAX, GxP"
+  description="Complete guide to pharma BI/analytics proxy job support — Power BI, Tableau, DAX measures, SQL pharma data, clinical trial dashboards, PV analytics, GxP report validation. WhatsApp: +91-9660834611"
+  schema={schemas}
+>
+  <div class="page-container">
+    <Breadcrumbs crumbs={[{ label: 'Pharma BI Data Analytics Proxy Job Support Guide' }]} />
+
+    <header class="page-hero">
+      <div class="hero-badge">Pharma BI & Data Analytics Guide</div>
+      <h1>Pharma BI Data Analytics Proxy Job Support Guide — Power BI, Tableau, DAX & GxP Reporting</h1>
+      <p class="hero-tagline">Everything you need to know about real-time pharma BI and data analytics proxy job support — Power BI clinical trial dashboards, Tableau PV analytics, DAX measure debugging, SQL pharma data queries, and GxP report validation support.</p>
+    </header>
+
+    <div class="page-layout">
+      <main class="page-main">
+        <section class="content-section">
+          <h2>What Pharma BI/Analytics Professionals Get Stuck On</h2>
+          <ul class="feature-list">
+            <li><strong>DAX measure errors</strong> — incorrect enrollment rate calculations, context transition issues, blank handling, CALCULATE filter conflicts</li>
+            <li><strong>Power Query / M language</strong> — data source transformation errors, merge query join type issues, date format normalisation</li>
+            <li><strong>Tableau LOD expressions</strong> — fixed vs. include vs. exclude, context filter interaction, aggregation errors</li>
+            <li><strong>SQL for pharma data</strong> — multi-join queries across clinical, safety, and regulatory tables, window functions for trend analysis</li>
+            <li><strong>GxP report validation</strong> — determining if the dashboard requires validation, writing OQ test cases for BI calculations</li>
+            <li><strong>Data model design</strong> — star schema for pharma operations data, date table relationships, row-level security for site access</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Pharma Analytics Use Cases — What We Support</h2>
+          <ul class="feature-list">
+            <li><strong>Clinical trial operations</strong> — enrollment tracking, site performance, query aging, randomisation funnel, protocol deviation rate</li>
+            <li><strong>Pharmacovigilance analytics</strong> — ICSR volume, case processing throughput, on-time reporting compliance, MedDRA SOC trends</li>
+            <li><strong>Regulatory intelligence</strong> — submission timelines, variation application tracking, approval rate benchmarking</li>
+            <li><strong>Quality management</strong> — CAPA aging, OOS rate trending, batch release cycle time, audit finding analysis</li>
+            <li><strong>Manufacturing CPV</strong> — process parameter trending, OOT detection, batch-to-batch variability tracking</li>
+          </ul>
+        </section>
+        <section class="content-section">
+          <h2>Get Pharma BI/Analytics Proxy Job Support Now</h2>
+          <p>Stuck on a Power BI DAX measure, a Tableau LOD expression, or a SQL query for pharma data? Message us on WhatsApp at <strong>{site.whatsapp}</strong>. Tell us your BI tool and specific task, and we match you with a pharma data analytics specialist within hours.</p>
+          <p>Also see: <a href="/pharma-bi-analytics-proxy-job-support/">Pharma BI Analytics Proxy Job Support</a> | <a href="/pharma-bi-analytics-proxy-interview/">Pharma BI Analytics Proxy Interview Support</a></p>
+        </section>
+        <FAQ faqs={faqs.map(f => ({ q: f.question, a: f.answer }))} heading="Pharma BI Data Analytics Proxy Job Support — FAQ" />
+      </main>
+      <aside class="page-sidebar">
+        <CTABanner
+          heading="Stuck on a Pharma Analytics Task?"
+          body="Power BI dashboards, Tableau, DAX measures, SQL pharma data, clinical trial KPIs, GxP report validation — real-time guidance from a pharma data analytics specialist. Same-day help."
+          ctaLabel="Get Pharma BI Analytics Proxy Job Support"
+          ctaHref={site.whatsappUrl}
+          secondaryLabel="Pharma BI analytics proxy interview support"
+          secondaryHref="/pharma-bi-analytics-proxy-interview/"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.feature-list li { font-size: 0.95rem; line-height: 1.7; }
+</style>
