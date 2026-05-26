@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const europe4Locations: LocationEntry[] = [
   {
@@ -54,7 +54,7 @@ export const europe4Locations: LocationEntry[] = [
     topEmployers: ['Recordati (Bologna operations)', 'Alfa Wassermann', 'Galenica Senese', 'University of Bologna Pharmacy Faculty', 'AOU Sant\'Orsola-Malpighi (clinical research)'],
     dominantDomains: ['pharma-manufacturing', 'regulatory-affairs', 'pharma-qa', 'clinical-research'],
     faqs: [
-      { q: 'What is Recordati and what rare disease opportunities does it offer?', a: 'Recordati is Italy\'s leading specialty pharmaceutical company with a strong rare disease (orphan drugs) portfolio. Products include treatments for cystinosis (Cystadane), metabolic diseases, and rare endocrine disorders. Recordati\'s Bologna area operations support manufacturing, QA, and regulatory affairs for orphan drug submissions in EU (EMA COMP designation) and US (FDA ODD). The rare disease regulatory pathway, including EU 10-year market exclusivity for orphan drugs, creates specialized regulatory career expertise.' },
+      { q: 'What is Recordati and what rare disease opportunities does it offer?', a: 'Recordati is Italy\'s leading specialty pharmaceutical company with a strong rare disease (orphan drugs) portfolio. Products include treatments for cystinosis (Cystadane), metabolic diseases, and rare endocrine disorders. Recordati\'s Bologna area operations support manufacturing, QA, and regulatory affairs for orphan drug submissions in EU (EMA COMP designation) and USA (FDA ODD). The rare disease regulatory pathway, including EU 10-year market exclusivity for orphan drugs, creates specialized regulatory career expertise.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-milan', 'pharma-proxy-job-support-rome', 'pharma-manufacturing-proxy-job-support'],
   },
@@ -106,33 +106,14 @@ export const europe4Locations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Darmstadt | Merck KGaA Germany Life Science Help',
     metaDesc: 'Pharma proxy job support for Darmstadt professionals. Merck KGaA global HQ, EMD Serono, MilliporeSigma — expert guidance for Darmstadt pharma and life science roles.',
     h1: 'Pharma Proxy Job Support in Darmstadt (Merck KGaA)',
-    heroIntro: 'Darmstadt is the global headquarters of Merck KGaA — one of the world\'s oldest and largest science and technology companies. Note: Merck KGaA (Darmstadt) is distinct from Merck & Co (US). The Darmstadt site hosts Merck\'s Healthcare division (oncology, neurology, immunology), Life Science division (reagents, lab tools under Sigma-Aldrich, MilliporeSigma, Supelco), and Electronics division. Merck employs over 15,000 people at the Darmstadt campus.',
+    heroIntro: 'Darmstadt is the global headquarters of Merck KGaA — one of the world\'s oldest and largest science and technology companies. Note: Merck KGaA (Darmstadt) is distinct from Merck & Co (USA). The Darmstadt site hosts Merck\'s Healthcare division (oncology, neurology, immunology), Life Science division (reagents, lab tools under Sigma-Aldrich, MilliporeSigma, Supelco), and Electronics division. Merck employs over 15,000 people at the Darmstadt campus.',
     pharmaContext: 'Darmstadt pharma and life science roles involve pharmaceutical R&D (Merck Healthcare — MS, thyroid cancer, immuno-oncology), GMP bioprocessing and laboratory reagents, BfArM/EMA regulatory submissions, and pharmaceutical process development. German language is an advantage for operational roles; English is used for international functions.',
     topEmployers: ['Merck KGaA (global HQ)', 'Merck Healthcare', 'Sigma-Aldrich/MilliporeSigma', 'TU Darmstadt (research)', 'Various Merck ecosystem companies'],
     dominantDomains: ['pharma-manufacturing', 'csv-validation', 'regulatory-affairs', 'clinical-research', 'pharma-qa'],
     faqs: [
-      { q: 'What is the difference between Merck KGaA in Darmstadt and Merck & Co in the US?', a: 'Merck KGaA (Darmstadt) and Merck & Co (USA) were once the same company but split after WWI. In Europe, "Merck" refers to Merck KGaA (founded 1668 in Darmstadt, one of world\'s oldest pharma companies). The US entity operates as Merck & Co in America and MSD (Merck Sharp & Dohme) in Europe. Merck KGaA\'s healthcare portfolio includes avelumab (Bavencio immuno-oncology, co-developed with Pfizer), cladribine (Mavenclad for MS), and levothyroxine. Darmstadt professionals work under Merck KGaA brand.' },
+      { q: 'What is the difference between Merck KGaA in Darmstadt and Merck & Co in the USA?', a: 'Merck KGaA (Darmstadt) and Merck & Co (USA) were once the same company but split after WWI. In Europe, "Merck" refers to Merck KGaA (founded 1668 in Darmstadt, one of world\'s oldest pharma companies). The USA entity operates as Merck & Co in America and MSD (Merck Sharp & Dohme) in Europe. Merck KGaA\'s healthcare portfolio includes avelumab (Bavencio immuno-oncology, co-developed with Pfizer), cladribine (Mavenclad for MS), and levothyroxine. Darmstadt professionals work under Merck KGaA brand.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-germany', 'pharma-proxy-job-support-frankfurt', 'pharma-proxy-job-support-biberach'],
-  },
-  {
-    slug: 'pharma-proxy-job-support-luxembourg',
-    city: 'Luxembourg City',
-    state: '',
-    country: 'Luxembourg',
-    countryCode: 'LU',
-    region: 'Western Europe',
-    metaTitle: 'Pharma Proxy Job Support Luxembourg | EMA ECDC Pharma Regulatory Career Help',
-    metaDesc: 'Pharma proxy job support for Luxembourg professionals. Ferring HQ, Eurobio Scientific, Luxembourg regulatory hub — expert guidance for Luxembourg EU pharma regulatory roles.',
-    h1: 'Pharma Proxy Job Support in Luxembourg City',
-    heroIntro: 'Luxembourg City hosts several EU regulatory and health institutions alongside multinational pharma company European operations. The European Investment Bank funds pharma innovation. Ferring Pharmaceuticals (women\'s health, reproductive medicine) has its global headquarters in Luxembourg. Luxembourg\'s favorable business environment attracts pharma holding companies and European headquarters.',
-    pharmaContext: 'Luxembourg pharma roles involve EU regulatory frameworks (COMP/EMA centralized procedure awareness), pharmaceutical holding company finance and compliance, and health institution procurement for EU-funded programs. Luxembourg\'s multilingual environment (Luxembourgish, French, German, English) supports pan-European regulatory and business functions.',
-    topEmployers: ['Ferring Pharmaceuticals (global HQ)', 'IEE SA (pharmaceutical-adjacent tech)', 'European Investment Bank (health funding)', 'Various EU pharma holding companies', 'Intertrust (pharma fund admin)'],
-    dominantDomains: ['regulatory-affairs', 'pharmacovigilance', 'pharma-compliance', 'pharma-ba'],
-    faqs: [
-      { q: 'What pharma career roles are based in Luxembourg vs moving to Brussels or Basel?', a: 'Luxembourg hosts mainly European headquarters functions (holding company management, pan-European regulatory affairs coordination, pharmacovigilance QPPV for EU, health economics/market access coordination), rather than manufacturing or clinical research. For operational pharma manufacturing and research roles, professionals typically base themselves in Basel, Brussels, or Paris. Ferring Pharmaceuticals is the most significant operational pharma employer with roles in reproductive medicine, gastroenterology, and oncology.' },
-    ],
-    relatedSlugs: ['pharma-proxy-job-support-brussels', 'pharma-proxy-job-support-paris', 'regulatory-affairs-proxy-job-support'],
   },
   {
     slug: 'pharma-proxy-job-support-thessaloniki',

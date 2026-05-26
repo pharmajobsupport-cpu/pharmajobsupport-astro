@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai'
+﻿import type { ServiceEntry } from './services-ai'
 
 export const baServices: ServiceEntry[] = [
   {
@@ -106,7 +106,7 @@ export const baServices: ServiceEntry[] = [
     faqs: [
       {
         q: 'What FHIR knowledge does a healthcare BA need?',
-        a: 'Healthcare BAs need working knowledge of: FHIR resources (Patient, Encounter, Observation, Medication, etc.), FHIR API operations (GET, POST, SEARCH), FHIR IG (Implementation Guides like US Core, Da Vinci), SMART on FHIR for app authorization, and FHIR bulk data for population-level data exchange. We provide practical FHIR context for BA roles.',
+        a: 'Healthcare BAs need working knowledge of: FHIR resources (Patient, Encounter, Observation, Medication, etc.), FHIR API operations (GET, POST, SEARCH), FHIR IG (Implementation Guides like USA Core, Da Vinci), SMART on FHIR for app authorization, and FHIR bulk data for population-level data exchange. We provide practical FHIR context for BA roles.',
       },
       {
         q: 'How do you document requirements for an EHR implementation?',

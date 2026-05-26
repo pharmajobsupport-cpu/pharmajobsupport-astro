@@ -1,44 +1,44 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const profileCountriesServices1: ServiceEntry[] = [
   {
     slug: 'pharma-profile-engineering-usa',
     title: 'Pharma Profile Engineering — USA',
     h1: 'Pharma Profile Engineering for USA Jobs',
-    metaTitle: 'Pharma Profile Engineering USA | LinkedIn Resume Optimization for US Pharma Jobs',
-    metaDesc: 'Pharma profile engineering for US pharma jobs. ATS-optimized resume, LinkedIn optimization for FDA, CRO, Big Pharma, and biotech roles in New Jersey, Boston, RTP, San Diego.',
+    metaTitle: 'Pharma Profile Engineering USA | LinkedIn Resume Optimization for USA Pharma Jobs',
+    metaDesc: 'Pharma profile engineering for USA pharma jobs. ATS-optimized resume, LinkedIn optimization for FDA, CRO, Big Pharma, and biotech roles in New Jersey, Boston, RTP, San Diego.',
     category: 'Profile Engineering',
-    heroIntro: 'The US pharma job market — New Jersey\'s Route 1 corridor, Boston\'s Kendall Square, Research Triangle Park, and San Diego — is the most competitive in the world. Your profile needs to be positioned precisely for ATS systems and US pharma recruiter expectations. We profile-engineer pharma professionals for the US market specifically.',
-    problemSection: 'US pharma ATS systems filter 70-80% of applications before human review. Without exact keyword matching for FDA-specific terminology (21 CFR, eCTD, PDUFA), US pharma companies (Pfizer, Merck, J&J, AbbVie), and US CRO hiring patterns (ICON, PPD, Syneos), your profile is invisible.',
+    heroIntro: 'The USA pharma job market — New Jersey\'s Route 1 corridor, Boston\'s Kendall Square, Research Triangle Park, and San Diego — is the most competitive in the world. Your profile needs to be positioned precisely for ATS systems and USA pharma recruiter expectations. We profile-engineer pharma professionals for the USA market specifically.',
+    problemSection: 'USA pharma ATS systems filter 70-80% of applications before human review. Without exact keyword matching for FDA-specific terminology (21 CFR, eCTD, PDUFA), USA pharma companies (Pfizer, Merck, J&J, AbbVie), and USA CRO hiring patterns (ICON, PPD, Syneos), your profile is invisible.',
     whatCovered: [
-      'ATS optimization for US pharma — FDA terminology, CDISC standards, US regulatory language',
-      'LinkedIn optimization for US pharma recruiters — headline, summary, experience, skills',
-      'Resume engineering for US pharma ATS — format, keyword density, achievement quantification',
-      'US Big Pharma targeting — Pfizer, Merck, J&J, AbbVie, BMS, Lilly positioning',
-      'US CRO targeting — ICON, PPD/Thermo Fisher, Syneos, IQVIA, Covance profile positioning',
+      'ATS optimization for USA pharma — FDA terminology, CDISC standards, USA regulatory language',
+      'LinkedIn optimization for USA pharma recruiters — headline, summary, experience, skills',
+      'Resume engineering for USA pharma ATS — format, keyword density, achievement quantification',
+      'USA Big Pharma targeting — Pfizer, Merck, J&J, AbbVie, BMS, Lilly positioning',
+      'USA CRO targeting — ICON, PPD/Thermo Fisher, Syneos, IQVIA, Covance profile positioning',
       'Biotech sector profiling — Boston and San Diego biotech recruiter expectations',
-      'US salary benchmarking and negotiation strategy for pharma roles',
-      'LinkedIn connections strategy for US pharma recruiters and hiring managers',
-      'Cover letter engineering for US pharma company culture and values alignment',
-      'US pharma job board strategy — LinkedIn, Biospace, Indeed, company career pages'
+      'USA salary benchmarking and negotiation strategy for pharma roles',
+      'LinkedIn connections strategy for USA pharma recruiters and hiring managers',
+      'Cover letter engineering for USA pharma company culture and values alignment',
+      'USA pharma job board strategy — LinkedIn, Biospace, Indeed, company career pages'
     ],
     roleExamples: [
-      'Clinical SAS Programmer (US pharma/CRO)',
+      'Clinical SAS Programmer (USA pharma/CRO)',
       'Regulatory Affairs Specialist (FDA submissions)',
-      'Pharmacovigilance Associate (US-based)',
-      'QA Specialist (US GMP manufacturing)',
-      'Clinical Data Manager (US CRO)',
-      'Medical Device QA Engineer (US)'
+      'Pharmacovigilance Associate (USA-based)',
+      'QA Specialist (USA GMP manufacturing)',
+      'Clinical Data Manager (USA CRO)',
+      'Medical Device QA Engineer (USA)'
     ],
     tools: ['LinkedIn', 'Jobscan', 'Resume Worded', 'Glassdoor', 'Biospace.com'],
     faqs: [
       {
-        q: 'How do you optimize a pharma resume for US ATS systems specifically?',
-        a: 'US pharma ATS systems look for exact term matches — "21 CFR Part 11" not just "Part 11", "NDA" not just "drug application", "Medidata Rave" not just "EDC". We analyze job descriptions from US pharma companies you\'re targeting, identify required vs. preferred keywords, and ensure your resume includes exact phrase matches throughout.'
+        q: 'How do you optimize a pharma resume for USA ATS systems specifically?',
+        a: 'USA pharma ATS systems look for exact term matches — "21 CFR Part 11" not just "Part 11", "NDA" not just "drug application", "Medidata Rave" not just "EDC". We analyze job descriptions from USA pharma companies you\'re targeting, identify required vs. preferred keywords, and ensure your resume includes exact phrase matches throughout.'
       },
       {
-        q: 'What LinkedIn settings matter most for US pharma recruiter visibility?',
-        a: 'Open to Work visibility (set to recruiters only if currently employed), your primary location set to a US pharma hub (NJ, Boston, RTP, San Diego, Chicago), "Open to Relocate" toggle, and Skills with 99+ endorsements in your primary pharma domain. We optimize all of these for maximum US recruiter search visibility.'
+        q: 'What LinkedIn settings matter most for USA pharma recruiter visibility?',
+        a: 'Open to Work visibility (set to recruiters only if currently employed), your primary location set to a USA pharma hub (NJ, Boston, RTP, San Diego, Chicago), "Open to Relocate" toggle, and Skills with 99+ endorsements in your primary pharma domain. We optimize all of these for maximum USA recruiter search visibility.'
       }
     ],
     relatedSlugs: ['pharma-profile-engineering', 'pharma-proxy-interview-usa', 'pharma-proxy-job-support-usa', 'clinical-sas-profile-engineering']
@@ -75,7 +75,7 @@ export const profileCountriesServices1: ServiceEntry[] = [
     tools: ['LinkedIn', 'Workopolis', 'Indeed Canada', 'Glassdoor Canada'],
     faqs: [
       {
-        q: 'How does pharma profile engineering differ for Canada vs. the US?',
+        q: 'How does pharma profile engineering differ for Canada vs. the USA?',
         a: 'Canadian pharma roles often require Health Canada regulatory knowledge (NDS, ANDS, CTA), provincial pharmacy regulation awareness, and sometimes French proficiency for Quebec roles. We position your profile to address these Canada-specific requirements while maintaining international ATS optimization.'
       },
       {
@@ -93,7 +93,7 @@ export const profileCountriesServices1: ServiceEntry[] = [
     metaDesc: 'Pharma profile engineering for UK pharma jobs. CV optimization, LinkedIn for MHRA, AstraZeneca, GSK, CRO roles in London, Cambridge, Oxford, Manchester pharma.',
     category: 'Profile Engineering',
     heroIntro: 'The UK pharma market — AstraZeneca in Cambridge, GSK in Brentford, the Oxford biotech corridor, and London\'s clinical and regulatory hub — has specific CV and LinkedIn requirements. UK pharma recruiters look for MHRA knowledge, NHS clinical experience, and UK pharma company cultural fit.',
-    problemSection: 'UK pharma CVs differ significantly from US resumes — format, length, and content expectations are different. UK pharma recruiters expect MHRA regulatory terminology, NHS experience for clinical roles, and right-to-work documentation positioning. Without UK-specific optimization, international candidates are consistently screened out.',
+    problemSection: 'UK pharma CVs differ significantly from USA resumes — format, length, and content expectations are different. UK pharma recruiters expect MHRA regulatory terminology, NHS experience for clinical roles, and right-to-work documentation positioning. Without UK-specific optimization, international candidates are consistently screened out.',
     whatCovered: [
       'UK CV format — 2-page standard, UK conventions, personal statement optimization',
       'LinkedIn optimization for UK pharma recruiters — MHRA, clinical trials, Genomics',
@@ -135,7 +135,7 @@ export const profileCountriesServices1: ServiceEntry[] = [
     metaDesc: 'Pharma profile engineering for Ireland pharma jobs. CV LinkedIn for Pfizer, Eli Lilly, AbbVie, MSD Ireland, Novartis Ireland, HPRA regulatory roles in Dublin, Cork, Galway.',
     category: 'Profile Engineering',
     heroIntro: 'Ireland is one of the world\'s most concentrated pharma markets — Pfizer, Eli Lilly, AbbVie, MSD, Novartis, BMS, J&J, Baxter, and dozens more have significant operations in Cork, Dublin, Galway, and Limerick. Our Ireland-specific profile engineering positions you for this uniquely competitive market.',
-    problemSection: 'Ireland\'s pharma market is dominated by US multinational operations, creating intense competition for roles. Candidates need profiles that demonstrate GMP manufacturing excellence, HPRA regulatory knowledge, and the technical depth that multinational pharma operations demand. Generic profiles do not get calls in this market.',
+    problemSection: 'Ireland\'s pharma market is dominated by USA multinational operations, creating intense competition for roles. Candidates need profiles that demonstrate GMP manufacturing excellence, HPRA regulatory knowledge, and the technical depth that multinational pharma operations demand. Generic profiles do not get calls in this market.',
     whatCovered: [
       'LinkedIn optimization for Ireland pharma recruiters and HR at multinational sites',
       'CV engineering for Irish pharma company portals (Pfizer, Lilly, AbbVie Ireland portals)',
@@ -159,8 +159,8 @@ export const profileCountriesServices1: ServiceEntry[] = [
     tools: ['LinkedIn', 'IrishJobs.ie', 'Jobs.ie', 'Sigmar Recruitment', 'Glassdoor Ireland'],
     faqs: [
       {
-        q: 'Why is Ireland pharma profile engineering different from UK or US?',
-        a: 'Ireland has a unique pharma market — dominated by US multinational manufacturing sites (oral solid dosage, biologics, sterile), with a distinct hiring culture blending US corporate standards with Irish work culture expectations. HPRA regulatory knowledge, QP pathway, and GMP manufacturing depth are particularly valued by Irish pharma hiring managers.'
+        q: 'Why is Ireland pharma profile engineering different from UK or USA?',
+        a: 'Ireland has a unique pharma market — dominated by USA multinational manufacturing sites (oral solid dosage, biologics, sterile), with a distinct hiring culture blending USA corporate standards with Irish work culture expectations. HPRA regulatory knowledge, QP pathway, and GMP manufacturing depth are particularly valued by Irish pharma hiring managers.'
       },
       {
         q: 'Is Irish pharma a good market for overseas pharma professionals?',
@@ -206,7 +206,7 @@ export const profileCountriesServices1: ServiceEntry[] = [
       },
       {
         q: 'Should I use a German CV format or an international resume format for Germany?',
-        a: 'For German-headquartered pharma companies, a traditional tabellarischer Lebenslauf with a professional photo is expected. For US/Swiss multinational German offices, an international format is usually acceptable. We produce the right format for each target company type.'
+        a: 'For German-headquartered pharma companies, a traditional tabellarischer Lebenslauf with a professional photo is expected. For USA/Swiss multinational German offices, an international format is usually acceptable. We produce the right format for each target company type.'
       }
     ],
     relatedSlugs: ['pharma-profile-engineering', 'pharma-proxy-interview-germany', 'pharma-proxy-job-support-germany', 'regulatory-affairs-profile-engineering']
@@ -252,48 +252,6 @@ export const profileCountriesServices1: ServiceEntry[] = [
       }
     ],
     relatedSlugs: ['pharma-profile-engineering', 'pharma-proxy-interview-switzerland', 'pharma-proxy-job-support-switzerland', 'regulatory-affairs-profile-engineering']
-  },
-  {
-    slug: 'pharma-profile-engineering-india',
-    title: 'Pharma Profile Engineering — India',
-    h1: 'Pharma Profile Engineering for India Jobs',
-    metaTitle: 'Pharma Profile Engineering India | LinkedIn Resume for Indian Pharma Jobs Hyderabad Bangalore',
-    metaDesc: 'Pharma profile engineering for India pharma jobs. LinkedIn resume for Sun Pharma, Dr. Reddy\'s, Cipla, Divis, CROs in Hyderabad, Bangalore, Mumbai, Pune pharma clusters.',
-    category: 'Profile Engineering',
-    heroIntro: 'India\'s pharma market — Hyderabad\'s Genome Valley, Bangalore\'s pharma IT cluster, Mumbai\'s regulatory hub, and Pune\'s clinical research ecosystem — is the world\'s largest generics market and a growing clinical and regulatory talent pool. Our India-specific profile engineering positions you for both Indian pharma companies and multinational India operations.',
-    problemSection: 'India\'s pharma job market is intensely competitive. Without differentiated positioning, profiles disappear among hundreds of similarly qualified candidates applying to Sun Pharma, Dr. Reddy\'s, Aurobindo, Cipla, Divi\'s, and multinationals like Novartis NIBR, AstraZeneca India, and Sanofi India.',
-    whatCovered: [
-      'LinkedIn optimization for India pharma recruiters and hiring managers',
-      'Resume engineering for Indian pharma ATS (Naukri, LinkedIn, company portals)',
-      'Naukri profile optimization — title, keywords, salary, education for pharma roles',
-      'Hyderabad pharma targeting — Dr. Reddy\'s, Aurobindo, Hetero, Divi\'s, NATCO',
-      'Bangalore pharma IT targeting — Accenture Life Sciences, Cognizant pharma, TCS pharma',
-      'Mumbai regulatory targeting — Sun Pharma, Wockhardt, Abbott India regulatory roles',
-      'Clinical SAS positioning for Indian CROs — Synchrony Research, Veeda Clinical',
-      'CDSCO regulatory knowledge positioning for India-specific regulatory roles',
-      'Global pharma India operations targeting — Pfizer India, Novartis India, AZ India',
-      'Indian pharma salary negotiation — CTC structure, variable pay, ESOP positioning'
-    ],
-    roleExamples: [
-      'Clinical SAS Programmer (Indian CRO)',
-      'Regulatory Affairs Specialist (CDSCO/WHO)',
-      'Pharmacovigilance Associate (Indian pharma)',
-      'QA Specialist (Indian GMP manufacturing)',
-      'Clinical Research Associate (India)',
-      'Medical Writer (Indian pharma)'
-    ],
-    tools: ['LinkedIn', 'Naukri', 'Shine.com', 'Monster India', 'IIMJobs'],
-    faqs: [
-      {
-        q: 'How important is Naukri vs. LinkedIn for pharma jobs in India?',
-        a: 'Both are essential for India pharma. Naukri dominates for Indian-headquartered pharma companies (Sun Pharma, Dr. Reddy\'s, Cipla). LinkedIn is critical for multinational pharma India operations and CROs with international clients. We optimize both profiles with India-specific keyword strategies.'
-      },
-      {
-        q: 'How do you differentiate a pharma profile for international opportunities from India?',
-        a: 'For international opportunities, we emphasize ICH guideline knowledge, US FDA/EMA submission experience (even if in supporting roles), international GMP standards exposure, and English language capability. Many Indian pharma professionals successfully transition to UK, Ireland, and US roles — we help position that pathway.'
-      }
-    ],
-    relatedSlugs: ['pharma-profile-engineering', 'pharma-proxy-interview-india', 'pharma-proxy-job-support-india', 'clinical-sas-profile-engineering']
   },
   {
     slug: 'pharma-profile-engineering-singapore',

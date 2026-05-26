@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const interviewCitiesServices1: ServiceEntry[] = [
   {
@@ -32,7 +32,7 @@ export const interviewCitiesServices1: ServiceEntry[] = [
     tools: ['FDA regulatory portals', 'Argus Safety', 'Medidata Rave', 'Pinnacle 21', 'Veeva Vault'],
     faqs: [
       { q: 'What makes Boston biotech interviews different from pharma company interviews?', a: 'Boston biotech interviews are scientifically intensive. Companies like Vertex (cystic fibrosis focus), Biogen (neuroscience), and Moderna (mRNA platform) expect candidates to discuss disease biology, mechanism of action, and clinical trial design at a deep level. Regulatory interviews at these companies test FDA-specific submission strategy for innovative drugs, not just generic regulatory knowledge. Written case studies are common at mid-senior levels.' },
-      { q: 'What is Kendall Square and why does it matter for pharma careers?', a: 'Kendall Square in Cambridge MA is the most concentrated life sciences cluster globally, with a density of pharma, biotech, and research organisations within walking distance of MIT. The area hosts Biogen, Moderna, Vertex, Novartis US R&D, Pfizer Cambridge, and hundreds of clinical-stage biotechs. For pharma careers, having a Boston/Cambridge role on your CV is a significant credential.' },
+      { q: 'What is Kendall Square and why does it matter for pharma careers?', a: 'Kendall Square in Cambridge MA is the most concentrated life sciences cluster globally, with a density of pharma, biotech, and research organisations within walking distance of MIT. The area hosts Biogen, Moderna, Vertex, Novartis USA R&D, Pfizer Cambridge, and hundreds of clinical-stage biotechs. For pharma careers, having a Boston/Cambridge role on your CV is a significant credential.' },
       { q: 'Can you support same-day Boston pharma interview preparation?', a: 'Yes. Contact us via WhatsApp (+91-9660834611) with details about your company, role, and scheduled interview time. Our expert network includes professionals with FDA submission experience at Boston biotech companies. Same-day preparation sessions are available for technical domain coaching and real-time interview support.' }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'pharma-proxy-interview-usa', 'clinical-sas-proxy-interview', 'regulatory-affairs-proxy-interview']
@@ -51,7 +51,7 @@ export const interviewCitiesServices1: ServiceEntry[] = [
       'Pfizer NJ — vaccine regulatory, antiviral, rare disease interview context',
       'Roche Parsippany — personalised medicine, diagnostics, regulatory strategy',
       'Merck Kenilworth — infectious disease, oncology (Keytruda) interview context',
-      'FDA regulatory affairs — NDA/BLA, US regulatory strategy for NJ pharma',
+      'FDA regulatory affairs — NDA/BLA, USA regulatory strategy for NJ pharma',
       'Clinical SAS programming — SDTM/ADaM for major NJ sponsor roles',
       'Pharmacovigilance — Argus Safety, FAERS, FDA reporting for NJ companies',
       'CSV validation — GAMP 5 at NJ pharma companies',
@@ -68,7 +68,7 @@ export const interviewCitiesServices1: ServiceEntry[] = [
     tools: ['FDA regulatory portals', 'Argus Safety', 'Veeva Vault', 'Pinnacle 21', 'Medidata Rave'],
     faqs: [
       { q: 'What J&J-specific knowledge matters for Janssen interviews?', a: 'J&J Janssen interviews combine technical pharma knowledge with the J&J Credo values assessment. Technical questions test therapeutic area depth (Janssen focuses on oncology, immunology, neuroscience, and infectious diseases). The Credo assessment evaluates alignment with J&J\'s patient-first values. Interview formats include competency-based behavioural interviews, technical panels, and for senior roles, presentations to hiring teams.' },
-      { q: 'Why is New Jersey called "Pharmaceutical Alley"?', a: 'New Jersey hosts more FDA-regulated pharmaceutical facilities and more pharma company headquarters per square mile than any other US state. The density of J&J (Titusville), Merck (Kenilworth), Pfizer (East Hanover), Roche (Parsippany), Novartis (East Hanover), Bayer (Whippany), and AstraZeneca (Madison) within a 30-mile radius creates a pharma talent market unlike anywhere in the world.' },
+      { q: 'Why is New Jersey called "Pharmaceutical Alley"?', a: 'New Jersey hosts more FDA-regulated pharmaceutical facilities and more pharma company headquarters per square mile than any other USA state. The density of J&J (Titusville), Merck (Kenilworth), Pfizer (East Hanover), Roche (Parsippany), Novartis (East Hanover), Bayer (Whippany), and AstraZeneca (Madison) within a 30-mile radius creates a pharma talent market unlike anywhere in the world.' },
       { q: 'What NJ pharma interview formats are most common?', a: 'Major NJ pharma companies typically run: 1) recruiter phone screen (30 min), 2) hiring manager video interview (45-60 min), 3) technical panel (2-3 hours with 3-5 domain experts), 4) final round (executive or cross-functional team). Some companies include written case studies or technical exercises. Preparation time is typically 1-3 weeks between rounds.' }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'pharma-proxy-interview-usa', 'regulatory-affairs-proxy-interview', 'clinical-sas-proxy-interview']
@@ -80,7 +80,7 @@ export const interviewCitiesServices1: ServiceEntry[] = [
     metaTitle: 'Pharma Proxy Interview Support San Diego | San Diego Biotech Pharma Interview Prep',
     metaDesc: 'Proxy interview support for San Diego pharma and biotech jobs. Illumina, Dexcom, Gilead San Diego, Pfizer San Diego interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
-    heroIntro: 'San Diego is the US\'s second largest biotech cluster after Boston. BIOCOM San Diego (a life sciences trade association) represents more than 1,100 member companies. Illumina, Dexcom, Neurocrine Biosciences, Turning Point Therapeutics (acquired by BMS), and Pfizer San Diego are major employers. La Jolla and Torrey Pines are the primary biotech/pharma submarkets. FDA-regulated biologics manufacturing is also significant.',
+    heroIntro: 'San Diego is the USA\'s second largest biotech cluster after Boston. BIOCOM San Diego (a life sciences trade association) represents more than 1,100 member companies. Illumina, Dexcom, Neurocrine Biosciences, Turning Point Therapeutics (acquired by BMS), and Pfizer San Diego are major employers. La Jolla and Torrey Pines are the primary biotech/pharma submarkets. FDA-regulated biologics manufacturing is also significant.',
     problemSection: 'San Diego biotech interviews are scientifically oriented, similar to Boston. Companies like Illumina (genomics technology), Neurocrine (CNS), and Dexcom (medical device/continuous glucose monitoring) require deep domain knowledge alongside standard regulatory and clinical competencies. The medical device regulatory framework (FDA 21 CFR Part 820) overlaps with pharma regulatory knowledge here.',
     whatCovered: [
       'Illumina interview preparation — genomics regulatory, IVD, CLIA context',
@@ -103,7 +103,7 @@ export const interviewCitiesServices1: ServiceEntry[] = [
     ],
     tools: ['FDA regulatory portals (CDRH, CDER)', 'Argus Safety', 'Medidata Rave', 'Pinnacle 21', 'Veeva Vault'],
     faqs: [
-      { q: 'What makes San Diego a major life sciences hub?', a: 'San Diego\'s life sciences cluster is anchored by the Salk Institute, Scripps Research, UCSD School of Medicine, and the Sanford Burnham Prebys Medical Discovery Institute — a world-class research ecosystem that spins out biotech companies continuously. The Torrey Pines and La Jolla areas have the highest concentration of life sciences companies. BIOCOM San Diego is one of the most active life sciences trade organisations in the US.' },
+      { q: 'What makes San Diego a major life sciences hub?', a: 'San Diego\'s life sciences cluster is anchored by the Salk Institute, Scripps Research, UCSD School of Medicine, and the Sanford Burnham Prebys Medical Discovery Institute — a world-class research ecosystem that spins out biotech companies continuously. The Torrey Pines and La Jolla areas have the highest concentration of life sciences companies. BIOCOM San Diego is one of the most active life sciences trade organisations in the USA.' },
       { q: 'What is unique about Illumina\'s interview process?', a: 'Illumina sits at the intersection of genomics technology, clinical diagnostics, and bioinformatics. Regulatory interviews at Illumina test IVD (in vitro diagnostics) regulation — FDA CLIA waiver, PMA processes for NGS-based diagnostics, CE-IVD marking in Europe, and bioinformatics software validation. This differs significantly from standard pharma regulatory knowledge.' },
       { q: 'What combination product knowledge is tested in San Diego pharma interviews?', a: 'San Diego has a significant presence of combination products (drug-device combinations). Companies developing drug delivery devices, combination biologics-device systems, or digital health tools with pharmaceutical components test FDA\'s combination product regulatory pathway (Office of Combination Products) in interviews. This requires understanding both FDA CDER/CBER and FDA CDRH review requirements.' }
     ],
@@ -420,7 +420,7 @@ export const interviewCitiesServices1: ServiceEntry[] = [
     ],
     roleExamples: [
       'Clinical Development Scientist — Galapagos or argenx Leiden',
-      'Regulatory Affairs Specialist — Leiden biotech EU/US submissions',
+      'Regulatory Affairs Specialist — Leiden biotech EU/USA submissions',
       'Clinical Research Associate — LUMC or Leiden CRO',
       'Pharmacovigilance Specialist — Leiden biotech',
       'Medical Affairs Manager — Leiden-based biotech'

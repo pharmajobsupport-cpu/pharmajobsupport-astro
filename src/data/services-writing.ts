@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const writingServices: ServiceEntry[] = [
   {
@@ -106,7 +106,7 @@ export const writingServices: ServiceEntry[] = [
       'eCTD Module 2 — clinical overview, clinical summary, nonclinical overview',
       'Integrated Summary of Efficacy (ISE) — FDA 21 CFR 314.50 requirements',
       'Integrated Summary of Safety (ISS) — FDA safety database analysis structure',
-      'Risk Management Plans — ICH E2E, EU RMP, US REMS strategies',
+      'Risk Management Plans — ICH E2E, EU RMP, USA REMS strategies',
       'Common Technical Document (CTD) — ICH M4 format, eCTD sequence structure',
       'Marketing Authorization Application (MAA) — EMA requirements, CHMP guidelines',
       'Biologics License Application (BLA) — CMC, clinical, safety sections',

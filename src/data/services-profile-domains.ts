@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const profileDomainServices: ServiceEntry[] = [
   {
@@ -397,7 +397,7 @@ export const profileDomainServices: ServiceEntry[] = [
       'Process validation experience — FDA 2011 guidance Stage 1/2/3 positioning',
       'GMP manufacturing process expertise — aseptic, oral solid, biologics, injectables',
       'Environmental monitoring program experience — cleanroom classification, EM data trending',
-      'Serialization and track-and-trace expertise — DSCSA (US), FMD (EU), aggregation',
+      'Serialization and track-and-trace expertise — DSCSA (USA), FMD (EU), aggregation',
       'SAP PP/PI experience for manufacturing — production orders, batch traceability',
       'Technology transfer experience positioning — scale-up, site transfer protocols',
       'Batch record review and disposition expertise',
@@ -420,7 +420,7 @@ export const profileDomainServices: ServiceEntry[] = [
       },
       {
         q: 'Is serialization experience valuable for pharma manufacturing roles?',
-        a: 'Very much so. DSCSA compliance (US) and FMD/EU FMD compliance have created significant demand for serialization specialists in pharma packaging and supply chain. With the 2023 DSCSA full enforcement, serialization expertise is a hiring priority at US pharma manufacturers. European FMD implementation also drives ongoing demand.'
+        a: 'Very much so. DSCSA compliance (USA) and FMD/EU FMD compliance have created significant demand for serialization specialists in pharma packaging and supply chain. With the 2023 DSCSA full enforcement, serialization expertise is a hiring priority at USA pharma manufacturers. European FMD implementation also drives ongoing demand.'
       }
     ],
     relatedSlugs: ['pharma-profile-engineering', 'pharma-manufacturing-proxy-interview', 'pharma-manufacturing-proxy-job-support', 'pharma-sap-profile-engineering']

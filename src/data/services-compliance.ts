@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const complianceServices: ServiceEntry[] = [
   {
@@ -272,7 +272,7 @@ export const complianceServices: ServiceEntry[] = [
       },
       {
         q: 'What is the difference between 21 CFR Part 11 and EU Annex 11?',
-        a: 'Both require audit trails for GxP electronic records, but Annex 11 is broader in scope and takes a risk-based approach. Part 11 applies to FDA-regulated activities in the US. Annex 11 applies to EU GMP activities. We cover the key requirements and differences between both.'
+        a: 'Both require audit trails for GxP electronic records, but Annex 11 is broader in scope and takes a risk-based approach. Part 11 applies to FDA-regulated activities in the USA. Annex 11 applies to EU GMP activities. We cover the key requirements and differences between both.'
       }
     ],
     relatedSlugs: ['gmp-compliance-proxy-job-support', '21-cfr-part-11-proxy-job-support', 'csv-validation-proxy-job-support', 'pharma-qa-proxy-job-support', 'data-privacy-pharma-proxy-job-support']

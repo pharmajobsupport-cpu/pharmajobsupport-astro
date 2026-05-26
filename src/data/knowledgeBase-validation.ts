@@ -1,4 +1,4 @@
-import type { KBEntry } from './knowledgeBase-clinical';
+﻿import type { KBEntry } from './knowledgeBase-clinical';
 
 export const validationKB: KBEntry[] = [
   {
@@ -232,7 +232,7 @@ export const validationKB: KBEntry[] = [
       { q: 'Does 21 CFR Part 11 apply to Microsoft Excel spreadsheets used in GxP activities?', a: 'Yes, if the spreadsheet is used to create or store records required by a predicate rule (e.g., batch calculations, QC test results). Standard Excel does not have a compliant audit trail, so either: the spreadsheet must be controlled (locked, version-controlled, printed and signed in paper), or a validated spreadsheet application with audit trail must be used (e.g., Spreadsheet Validation Kit with add-ins that create Part 11-compliant audit trails).' },
       { q: 'What is the Part 11 requirement for password controls?', a: 'Part 11 does not specify exact password complexity rules, but FDA expects: unique IDs (no shared accounts), passwords periodically recalled or revised, account lockout after failed attempts (typically 3-5), automatic session timeout, and procedures for lost credentials. These controls ensure that electronic signatures remain attributable to a unique individual.' },
       { q: 'Is cloud software (SaaS) subject to 21 CFR Part 11?', a: 'Yes. If a SaaS application stores FDA-required records, Part 11 applies. The SaaS vendor is responsible for the technical controls (audit trail, access controls), but the regulated company retains accountability for compliance. The vendor\'s Part 11 compliance must be verified through supplier qualification, technical agreements, and review of vendor validation documentation.' },
-      { q: 'What is the difference between Part 11 and EU Annex 11?', a: 'Both govern electronic systems in GxP environments but differ in scope. 21 CFR Part 11 (US FDA) focuses specifically on electronic records and signatures. EU Annex 11 (EMA) covers the entire computerised system lifecycle — validation, data integrity, change control, disaster recovery, and supplier management — making it broader in scope. Companies operating in both US and EU markets must comply with both regulations.' },
+      { q: 'What is the difference between Part 11 and EU Annex 11?', a: 'Both govern electronic systems in GxP environments but differ in scope. 21 CFR Part 11 (USA FDA) focuses specifically on electronic records and signatures. EU Annex 11 (EMA) covers the entire computerised system lifecycle — validation, data integrity, change control, disaster recovery, and supplier management — making it broader in scope. Companies operating in both USA and EU markets must comply with both regulations.' },
     ],
     relatedSlugs: ['computer-system-validation-guide', 'eu-annex-11-guide', 'data-integrity-alcoa-guide', 'gamp5-risk-assessment'],
   },

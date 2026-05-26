@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const jobSupportCountriesServices2: ServiceEntry[] = [
   {
@@ -290,7 +290,7 @@ export const jobSupportCountriesServices2: ServiceEntry[] = [
       },
       {
         q: 'What is Grifols and what makes it unique in Spain?',
-        a: 'Grifols is a Barcelona-based global leader in plasma-derived medicines — IV immunoglobulins, albumin, coagulation factors, and plasma protein therapies. With multiple US manufacturing facilities (post-Talecris acquisition) and an extensive plasma collection network, Grifols careers span plasma operations, QA/manufacturing, regulatory (biologics BLA), and clinical development in a highly specialized niche.'
+        a: 'Grifols is a Barcelona-based global leader in plasma-derived medicines — IV immunoglobulins, albumin, coagulation factors, and plasma protein therapies. With multiple USA manufacturing facilities (post-Talecris acquisition) and an extensive plasma collection network, Grifols careers span plasma operations, QA/manufacturing, regulatory (biologics BLA), and clinical development in a highly specialized niche.'
       }
     ],
     relatedSlugs: ['pharma-proxy-job-support-italy', 'pharma-proxy-job-support-portugal', 'regulatory-affairs-proxy-job-support', 'clinical-research-proxy-job-support']

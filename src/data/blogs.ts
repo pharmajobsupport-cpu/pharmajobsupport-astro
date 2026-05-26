@@ -1,4 +1,4 @@
-export interface BlogEntry {
+﻿export interface BlogEntry {
   slug: string;
   title: string;
   metaTitle: string;
@@ -45,7 +45,7 @@ export const blogs: BlogEntry[] = [
       },
       {
         heading: 'Who Uses Proxy Support?',
-        body: 'Proxy support is used by several groups: professionals transitioning into a new pharma role with a gap between their current knowledge and the job requirements; experienced professionals who have accepted a role in a new system or tool they have not yet used (e.g., switching from Oracle Clinical to Medidata Rave); consultants placed in roles that require deeper expertise than they currently have; international pharma professionals adapting from their home regulatory environment (e.g., EU to US submissions); and professionals returning to the industry after a career gap who need rapid knowledge updates.',
+        body: 'Proxy support is used by several groups: professionals transitioning into a new pharma role with a gap between their current knowledge and the job requirements; experienced professionals who have accepted a role in a new system or tool they have not yet used (e.g., switching from Oracle Clinical to Medidata Rave); consultants placed in roles that require deeper expertise than they currently have; international pharma professionals adapting from their home regulatory environment (e.g., EU to USA submissions); and professionals returning to the industry after a career gap who need rapid knowledge updates.',
       },
     ],
     faqs: [
@@ -159,11 +159,11 @@ export const blogs: BlogEntry[] = [
       },
       {
         heading: 'Required Technical Skills for PV Roles',
-        body: 'Core technical skills: MedDRA coding proficiency (PT, SOC, LLT hierarchy, coding conventions, MSSO browser tools), E2B(R3) format understanding (ICSR XML structure, electronic transmission), Oracle Argus Safety or Veeva Vault Safety (case management systems), EudraVigilance gateway experience (EU submission), FAERS MedWatch reporting (US submission), signal detection methods (Proportional Reporting Ratio, Reporting Odds Ratio, disproportionality analysis), PSUR/PBRER structure and authoring (per ICH E2C(R2)), WHO Drug coding (concomitant medication coding). Strong medical/scientific writing for narratives and aggregate reports.',
+        body: 'Core technical skills: MedDRA coding proficiency (PT, SOC, LLT hierarchy, coding conventions, MSSO browser tools), E2B(R3) format understanding (ICSR XML structure, electronic transmission), Oracle Argus Safety or Veeva Vault Safety (case management systems), EudraVigilance gateway experience (EU submission), FAERS MedWatch reporting (USA submission), signal detection methods (Proportional Reporting Ratio, Reporting Odds Ratio, disproportionality analysis), PSUR/PBRER structure and authoring (per ICH E2C(R2)), WHO Drug coding (concomitant medication coding). Strong medical/scientific writing for narratives and aggregate reports.',
       },
       {
         heading: 'PV Salary Expectations',
-        body: 'US PV salary ranges: Drug Safety Associate (entry): $55,000-$80,000. PV Specialist/Senior Associate: $75,000-$110,000. PV Manager/Senior Manager: $110,000-$150,000. PV Director: $150,000-$210,000. QPPV/VP: $200,000-$350,000+. CRO PV roles run 10-20% lower than pharma. India PV salaries: Associate (₹4-8 LPA), Senior Associate (₹8-15 LPA), Manager (₹15-30 LPA), Director (₹30-60 LPA). European salaries vary by country — UK/Switzerland are highest, Eastern Europe significantly lower. Contract PV professionals in the US earn $40-$80/hour for associate-level and $80-$150/hour for senior/director-level.',
+        body: 'USA PV salary ranges: Drug Safety Associate (entry): $55,000-$80,000. PV Specialist/Senior Associate: $75,000-$110,000. PV Manager/Senior Manager: $110,000-$150,000. PV Director: $150,000-$210,000. QPPV/VP: $200,000-$350,000+. CRO PV roles run 10-20% lower than pharma. India PV salaries: Associate (₹4-8 LPA), Senior Associate (₹8-15 LPA), Manager (₹15-30 LPA), Director (₹30-60 LPA). European salaries vary by country — UK/Switzerland are highest, Eastern Europe significantly lower. Contract PV professionals in the USA earn $40-$80/hour for associate-level and $80-$150/hour for senior/director-level.',
       },
     ],
     faqs: [
@@ -229,7 +229,7 @@ export const blogs: BlogEntry[] = [
       },
       {
         heading: 'Salary and Job Market',
-        body: 'Both offer excellent compensation: RA Specialist (mid-level US): $90,000-$130,000; CDM Specialist: $80,000-$120,000. Director-level salaries are comparable ($150,000-$200,000). RA has more roles at large pharma headquarters (New Jersey, San Francisco, Basel); CDM has more roles at CROs (which often have distributed global teams). Both have strong remote and hybrid work options post-COVID. The CDM/programming market has slightly more entry-level opportunities; RA often requires scientific postgraduate education for mid-senior roles. PV (pharmacovigilance) fits between the two — more data-processing than RA, more medical knowledge than typical CDM.',
+        body: 'Both offer excellent compensation: RA Specialist (mid-level USA): $90,000-$130,000; CDM Specialist: $80,000-$120,000. Director-level salaries are comparable ($150,000-$200,000). RA has more roles at large pharma headquarters (New Jersey, San Francisco, Basel); CDM has more roles at CROs (which often have distributed global teams). Both have strong remote and hybrid work options post-COVID. The CDM/programming market has slightly more entry-level opportunities; RA often requires scientific postgraduate education for mid-senior roles. PV (pharmacovigilance) fits between the two — more data-processing than RA, more medical knowledge than typical CDM.',
       },
     ],
     faqs: [
@@ -268,7 +268,7 @@ export const blogs: BlogEntry[] = [
       },
     ],
     faqs: [
-      { q: 'How far in advance does FDA notify sites of a GCP inspection?', a: 'For domestic (US) clinical sites, FDA can inspect with minimal notice — typically 1-3 business days. For foreign sites, FDA typically provides 2-4 weeks advance notice to allow logistical arrangements. FDA inspections that occur during NDA review are most common 6-18 months after submission when review is active. Sites should maintain inspection readiness perpetually rather than responding to inspection notification.' },
+      { q: 'How far in advance does FDA notify sites of a GCP inspection?', a: 'For domestic (USA) clinical sites, FDA can inspect with minimal notice — typically 1-3 business days. For foreign sites, FDA typically provides 2-4 weeks advance notice to allow logistical arrangements. FDA inspections that occur during NDA review are most common 6-18 months after submission when review is active. Sites should maintain inspection readiness perpetually rather than responding to inspection notification.' },
       { q: 'What happens if a GCP inspection finds data integrity issues at a clinical site?', a: 'If FDA BIMO investigators find significant data integrity issues at a site (falsified records, backdated consents, unreported SAEs), the consequences can include: disqualification of data from that site from the NDA analysis, publication of a 483 or warning letter to the investigator, referral to FDA\'s Office of Criminal Investigations (OCI) for fraud, and investigator disqualification (banned from future FDA-regulated research under 21 CFR 312.70). The sponsor may be required to conduct additional data auditing or provide statistical analysis demonstrating that results are not affected by the site\'s data.' },
     ],
     relatedSlugs: ['clinical-trial-quality-guide', 'pharmaceutical-qa-guide', 'audit-readiness-guide', 'ich-guidelines-overview'],
@@ -357,7 +357,7 @@ export const blogs: BlogEntry[] = [
     sections: [
       {
         heading: 'GMP Manufacturing Career Landscape',
-        body: 'Pharmaceutical manufacturing employs tens of thousands of professionals globally — producing the drugs that reach patients. Manufacturing sites range from small specialty pharma operations (50-200 employees) to large API manufacturing sites and fill-finish facilities (500-2,000+ employees). Key manufacturing hubs: New Jersey and Pennsylvania (US), Ireland (Pfizer, Eli Lilly, MSD), Singapore (Novartis, GSK), India (active pharmaceutical ingredients — largest global API producer), Germany and Switzerland (large pharma headquarters with manufacturing). GMP manufacturing professionals benefit from geographic stability — manufacturing sites do not move as easily as desk-based functions.',
+        body: 'Pharmaceutical manufacturing employs tens of thousands of professionals globally — producing the drugs that reach patients. Manufacturing sites range from small specialty pharma operations (50-200 employees) to large API manufacturing sites and fill-finish facilities (500-2,000+ employees). Key manufacturing hubs: New Jersey and Pennsylvania (USA), Ireland (Pfizer, Eli Lilly, MSD), Singapore (Novartis, GSK), India (active pharmaceutical ingredients — largest global API producer), Germany and Switzerland (large pharma headquarters with manufacturing). GMP manufacturing professionals benefit from geographic stability — manufacturing sites do not move as easily as desk-based functions.',
       },
       {
         heading: 'Manufacturing Job Roles',
@@ -365,7 +365,7 @@ export const blogs: BlogEntry[] = [
       },
       {
         heading: 'Essential GMP Skills and Systems Knowledge',
-        body: 'GMP regulatory knowledge: 21 CFR Parts 210/211 (US), EU GMP Volume 4 (EU), WHO GMP (for emerging markets). Batch record documentation: MBR (Master Batch Record) execution, GMP documentation practices (GDP — no pencil, single line corrections, contemporaneous recording). Manufacturing execution systems (MES): Rockwell PharmaSuite, Werum PAS-X, SAP ME — digital batch record execution replacing paper. ERP systems: SAP S/4HANA for material management, inventory, work orders, and batch traceability. LIMS (Laboratory Information Management Systems): LabWare, STARLIMS for laboratory data management interfacing with manufacturing. Process analytical technology (PAT): in-line/at-line monitoring for continuous manufacturing.',
+        body: 'GMP regulatory knowledge: 21 CFR Parts 210/211 (USA), EU GMP Volume 4 (EU), WHO GMP (for emerging markets). Batch record documentation: MBR (Master Batch Record) execution, GMP documentation practices (GDP — no pencil, single line corrections, contemporaneous recording). Manufacturing execution systems (MES): Rockwell PharmaSuite, Werum PAS-X, SAP ME — digital batch record execution replacing paper. ERP systems: SAP S/4HANA for material management, inventory, work orders, and batch traceability. LIMS (Laboratory Information Management Systems): LabWare, STARLIMS for laboratory data management interfacing with manufacturing. Process analytical technology (PAT): in-line/at-line monitoring for continuous manufacturing.',
       },
       {
         heading: 'Sterile Manufacturing: High Demand, Premium Compensation',
@@ -373,7 +373,7 @@ export const blogs: BlogEntry[] = [
       },
     ],
     faqs: [
-      { q: 'What is the starting salary for GMP manufacturing roles?', a: 'US entry-level GMP manufacturing operator/technician roles: $45,000-$65,000. Manufacturing Specialist (3-5 years): $65,000-$90,000. Manufacturing Engineer: $75,000-$110,000. Manufacturing Manager: $100,000-$140,000. Production Director: $140,000-$190,000. VP Operations: $200,000-$350,000. These figures vary significantly by company size, location (New Jersey/Pennsylvania higher than rural sites), and product complexity (biologics/sterile manufacturing higher than solid oral dose). Shift differentials (night/weekend premiums) are common for production operators.' },
+      { q: 'What is the starting salary for GMP manufacturing roles?', a: 'USA entry-level GMP manufacturing operator/technician roles: $45,000-$65,000. Manufacturing Specialist (3-5 years): $65,000-$90,000. Manufacturing Engineer: $75,000-$110,000. Manufacturing Manager: $100,000-$140,000. Production Director: $140,000-$190,000. VP Operations: $200,000-$350,000. These figures vary significantly by company size, location (New Jersey/Pennsylvania higher than rural sites), and product complexity (biologics/sterile manufacturing higher than solid oral dose). Shift differentials (night/weekend premiums) are common for production operators.' },
       { q: 'What is SAP and why is it important for pharma manufacturing?', a: 'SAP (Systems Applications and Products in Data Processing) is the enterprise resource planning (ERP) software used by most large pharmaceutical manufacturers for: materials management (inventory, procurement, batch management), production planning (work orders, batch scheduling), quality management (inspection lots, usage decision, CAPA), equipment management (calibration and PM schedules), and financial accounting. SAP S/4HANA is the current version. GxP-validated SAP is configured with serialization, batch traceability, and electronic batch records. Manufacturing managers and engineers with SAP-PM or SAP-QM proficiency are significantly more marketable.' },
     ],
     relatedSlugs: ['gmp-manufacturing-compliance-guide', 'pharmaceutical-qa-guide', 'computer-system-validation-guide', 'data-integrity-alcoa-guide'],
@@ -404,7 +404,7 @@ export const blogs: BlogEntry[] = [
       },
       {
         heading: 'CRA Compensation and Travel',
-        body: 'CRA compensation combines base salary and substantial travel expense reimbursement. US base salary: Junior CRA: $60,000-$80,000. CRA II: $80,000-$110,000. Senior CRA: $100,000-$140,000. Clinical Team Lead: $120,000-$160,000. Travel: Traditional CRAs travel 60-80% of working time — site visits require local travel, some sites require air travel. Travel is compensated (all expenses reimbursed) but contributes to burnout. Home-based CRA roles (remote monitoring predominant, 30-40% travel) are highly sought after and command premium salary. CROs are the primary employer of CRAs — Covance, ICON, PPD, Syneos, PRA employ the largest CRA workforces.',
+        body: 'CRA compensation combines base salary and substantial travel expense reimbursement. USA base salary: Junior CRA: $60,000-$80,000. CRA II: $80,000-$110,000. Senior CRA: $100,000-$140,000. Clinical Team Lead: $120,000-$160,000. Travel: Traditional CRAs travel 60-80% of working time — site visits require local travel, some sites require air travel. Travel is compensated (all expenses reimbursed) but contributes to burnout. Home-based CRA roles (remote monitoring predominant, 30-40% travel) are highly sought after and command premium salary. CROs are the primary employer of CRAs — Covance, ICON, PPD, Syneos, PRA employ the largest CRA workforces.',
       },
     ],
     faqs: [
@@ -431,7 +431,7 @@ export const blogs: BlogEntry[] = [
       },
       {
         heading: 'CSV Validation Specialist Roles',
-        body: 'Computer System Validation (CSV) specialists focus exclusively on validating GxP computerised systems. Daily activities: writing and executing IQ/OQ/PQ protocols for EDC systems, LIMS, MES, ERP, HPLC data systems; performing GAMP 5 risk assessments; conducting supplier assessments; maintaining system master files; supporting change control impact assessments for software updates; and coordinating with IT, vendors, and QA. In-demand CSV skills: Veeva Vault validation (configuration testing), SAP GxP validation (SAP Qualified configuration), Empower CDS validation (for lab instruments), and cloud system validation (AWS GxP, Azure GxP). CSV contractors earn $60-$100/hour in the US market.',
+        body: 'Computer System Validation (CSV) specialists focus exclusively on validating GxP computerised systems. Daily activities: writing and executing IQ/OQ/PQ protocols for EDC systems, LIMS, MES, ERP, HPLC data systems; performing GAMP 5 risk assessments; conducting supplier assessments; maintaining system master files; supporting change control impact assessments for software updates; and coordinating with IT, vendors, and QA. In-demand CSV skills: Veeva Vault validation (configuration testing), SAP GxP validation (SAP Qualified configuration), Empower CDS validation (for lab instruments), and cloud system validation (AWS GxP, Azure GxP). CSV contractors earn $60-$100/hour in the USA market.',
       },
       {
         heading: 'Equipment and Process Validation',
@@ -439,7 +439,7 @@ export const blogs: BlogEntry[] = [
       },
       {
         heading: 'Validation Career Progression and Salary',
-        body: 'Career levels: Validation Specialist I (0-2 years): Protocol execution and documentation. Validation Specialist II (3-5 years): Protocol authoring for assigned systems. Senior Validation Specialist (5-8 years): Complex protocol authoring, GAMP 5 risk assessments, project lead. Validation Manager (8-12 years): Managing validation team, site validation program, inspection readiness lead. Validation Director: Site or business unit accountability. VP Validation/Quality Systems: Enterprise validation strategy. US salaries: Specialist I ($55,000-$75,000), Specialist II ($75,000-$100,000), Senior ($95,000-$130,000), Manager ($120,000-$160,000), Director ($150,000-$210,000). Validation contractors are in extremely high demand — rates of $65-$120/hour for experienced specialists.',
+        body: 'Career levels: Validation Specialist I (0-2 years): Protocol execution and documentation. Validation Specialist II (3-5 years): Protocol authoring for assigned systems. Senior Validation Specialist (5-8 years): Complex protocol authoring, GAMP 5 risk assessments, project lead. Validation Manager (8-12 years): Managing validation team, site validation program, inspection readiness lead. Validation Director: Site or business unit accountability. VP Validation/Quality Systems: Enterprise validation strategy. USA salaries: Specialist I ($55,000-$75,000), Specialist II ($75,000-$100,000), Senior ($95,000-$130,000), Manager ($120,000-$160,000), Director ($150,000-$210,000). Validation contractors are in extremely high demand — rates of $65-$120/hour for experienced specialists.',
       },
     ],
     faqs: [
@@ -548,7 +548,7 @@ export const blogs: BlogEntry[] = [
       },
       {
         heading: 'Medical Writing Career Progression and Salary',
-        body: 'Career levels: Medical Writer I (0-2 years): Drafting sections of CSRs, assisting with data interpretation, learning regulatory guideline requirements. Medical Writer II (2-5 years): Full document ownership (complete CSRs for Phase 2 studies, protocols, IBs). Senior Medical Writer (5-10 years): Complex documents (NDA Module 2 summaries, MAA overviews), mentoring, quality oversight. Principal/Lead Medical Writer (10+ years): Strategic document planning, author templates and standards, complex regulatory strategy documents. US medical writer salaries: Junior ($70,000-$95,000), Mid ($90,000-$130,000), Senior ($125,000-$170,000), Principal ($160,000-$220,000). Freelance medical writers charge $80-$200/hour depending on specialty and seniority.',
+        body: 'Career levels: Medical Writer I (0-2 years): Drafting sections of CSRs, assisting with data interpretation, learning regulatory guideline requirements. Medical Writer II (2-5 years): Full document ownership (complete CSRs for Phase 2 studies, protocols, IBs). Senior Medical Writer (5-10 years): Complex documents (NDA Module 2 summaries, MAA overviews), mentoring, quality oversight. Principal/Lead Medical Writer (10+ years): Strategic document planning, author templates and standards, complex regulatory strategy documents. USA medical writer salaries: Junior ($70,000-$95,000), Mid ($90,000-$130,000), Senior ($125,000-$170,000), Principal ($160,000-$220,000). Freelance medical writers charge $80-$200/hour depending on specialty and seniority.',
       },
     ],
     faqs: [

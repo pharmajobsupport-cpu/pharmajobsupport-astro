@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const irelandLocations: LocationEntry[] = [
   {
@@ -32,12 +32,12 @@ export const irelandLocations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Cork professionals. Pfizer Ringaskiddy, Bristol-Myers Squibb, Eli Lilly Kinsale — real-time pharma expert guidance for Cork roles.',
     h1: 'Pharma Proxy Job Support in Cork',
     heroIntro: 'Cork is a major pharmaceutical manufacturing hub in Ireland. Pfizer\'s Ringaskiddy facility (one of the world\'s largest sterile injectables sites), Bristol-Myers Squibb\'s large campus, Eli Lilly\'s Kinsale API facility, and AbbVie\'s manufacturing operations make Cork a premier pharma manufacturing destination.',
-    pharmaContext: 'Cork pharma manufacturing roles require EU GMP (Eudralex Volume 4), FDA 21 CFR 210/211 (for US export products), HPRA inspection readiness, API manufacturing expertise, and QP batch release knowledge. Sterile manufacturing (aseptic processing, lyophilization) is a specialized skill set in high demand at Cork sites.',
+    pharmaContext: 'Cork pharma manufacturing roles require EU GMP (Eudralex Volume 4), FDA 21 CFR 210/211 (for USA export products), HPRA inspection readiness, API manufacturing expertise, and QP batch release knowledge. Sterile manufacturing (aseptic processing, lyophilization) is a specialized skill set in high demand at Cork sites.',
     topEmployers: ['Pfizer Ringaskiddy', 'Bristol-Myers Squibb', 'Eli Lilly Kinsale', 'AbbVie', 'Bausch Health', 'Janssen (J&J)', 'MSD Brinny', 'Novartis Ringaskiddy'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'csv-validation', 'regulatory-affairs', 'pharma-compliance'],
     faqs: [
       { q: 'What manufacturing specialties are most in demand in Cork pharma?', a: 'Sterile injectables manufacturing, aseptic processing, lyophilization (freeze-drying), API synthesis, and large-scale biopharmaceutical production are the key Cork specialties. Pfizer Ringaskiddy is one of the world\'s largest sterile injectable fill/finish facilities, creating strong demand for sterile manufacturing specialists, process validation engineers, and QA professionals with aseptic filling experience.' },
-      { q: 'What GMP standards apply to Cork pharmaceutical manufacturing?', a: 'EU GMP (Eudralex Volume 4) is the primary standard for EU market products. Since most Cork sites export to the US, FDA 21 CFR 210/211 GMP requirements also apply. EU Annex 1 (sterile manufacturing) is particularly critical at Pfizer Ringaskiddy and other aseptic facilities. HPRA performs routine GMP inspections and is the National Competent Authority (NCA) for Irish manufacturing sites.' },
+      { q: 'What GMP standards apply to Cork pharmaceutical manufacturing?', a: 'EU GMP (Eudralex Volume 4) is the primary standard for EU market products. Since most Cork sites export to the USA, FDA 21 CFR 210/211 GMP requirements also apply. EU Annex 1 (sterile manufacturing) is particularly critical at Pfizer Ringaskiddy and other aseptic facilities. HPRA performs routine GMP inspections and is the National Competent Authority (NCA) for Irish manufacturing sites.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-ireland', 'pharma-proxy-job-support-dublin', 'pharma-manufacturing-proxy-job-support', 'pharma-qa-gmp-proxy-job-support-guide'],
   },
@@ -57,7 +57,7 @@ export const irelandLocations: LocationEntry[] = [
     dominantDomains: ['medical-device', 'pharma-qa', 'csv-validation', 'clinical-research', 'pharma-compliance'],
     faqs: [
       { q: 'What makes Galway special for medical device careers?', a: 'Galway has the highest density of medical device manufacturing in Europe. The cluster includes cardiovascular devices (Medtronic, Abbott Vascular), orthopedics (Stryker, DePuy), minimally invasive devices (Boston Scientific, Creganna), and wound care (Hollister). This concentration means strong career pathways in medical device QA, regulatory affairs, process engineering, and clinical affairs.' },
-      { q: 'What regulations govern Galway medical device manufacturing?', a: 'EU MDR 2017/745 (Medical Device Regulation) is the primary regulatory framework for EU market products. US products also require FDA 21 CFR Part 820 QSR/QMSR compliance. ISO 13485 QMS certification is required for all CE-marked devices. IEC 62304 applies to software-containing devices. MDSAP (Medical Device Single Audit Program) is accepted by FDA as a substitute for FDA inspections for some manufacturers.' },
+      { q: 'What regulations govern Galway medical device manufacturing?', a: 'EU MDR 2017/745 (Medical Device Regulation) is the primary regulatory framework for EU market products. USA products also require FDA 21 CFR Part 820 QSR/QMSR compliance. ISO 13485 QMS certification is required for all CE-marked devices. IEC 62304 applies to software-containing devices. MDSAP (Medical Device Single Audit Program) is accepted by FDA as a substitute for FDA inspections for some manufacturers.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-ireland', 'pharma-proxy-job-support-dublin', 'medical-device-proxy-job-support', 'what-is-iso-13485'],
   },
@@ -148,7 +148,7 @@ export const irelandLocations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Sligo professionals. Abbott Diagnostics, Allergan Sligo — real-time expert guidance for Sligo medical device and pharma roles.',
     h1: 'Pharma Proxy Job Support in Sligo',
     heroIntro: 'Sligo is home to Abbott Diagnostics — one of the county\'s largest employers with a major diagnostics device manufacturing facility — and Allergan\'s medical aesthetics manufacturing. Sligo\'s pharma/medtech cluster benefits from IT Sligo\'s STEM graduates and IDA Ireland investment.',
-    pharmaContext: 'Sligo medical device and diagnostic manufacturing requires ISO 13485, EU IVD Regulation (EU IVDR 2017/746 for diagnostics), and FDA 21 CFR Part 820 compliance for US market products. Abbott Diagnostics produces immunoassay systems and point-of-care diagnostic devices.',
+    pharmaContext: 'Sligo medical device and diagnostic manufacturing requires ISO 13485, EU IVD Regulation (EU IVDR 2017/746 for diagnostics), and FDA 21 CFR Part 820 compliance for USA market products. Abbott Diagnostics produces immunoassay systems and point-of-care diagnostic devices.',
     topEmployers: ['Abbott Diagnostics', 'Allergan (AbbVie)', 'Hollister', 'Gaeltec Utilities'],
     dominantDomains: ['medical-device', 'pharma-qa', 'csv-validation', 'pharma-manufacturing'],
     faqs: [
@@ -166,7 +166,7 @@ export const irelandLocations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Remote Ireland | Irish Pharma Work From Home Help',
     metaDesc: 'Pharma proxy job support for remote Irish pharma professionals. Regulatory affairs, pharmacovigilance, CSV validation support for work-from-home pharma roles in Ireland.',
     h1: 'Pharma Proxy Job Support for Remote Ireland Pharma Roles',
-    heroIntro: 'Remote working transformed Irish pharma employment post-2020. Many pharma professionals in Ireland now work remotely for Dublin-based pharma companies, US pharma companies with Irish legal entities, or pan-European roles that don\'t require daily commuting. Proxy job support is perfectly suited for remote workers who need real-time guidance without visiting a physical support centre.',
+    heroIntro: 'Remote working transformed Irish pharma employment post-2020. Many pharma professionals in Ireland now work remotely for Dublin-based pharma companies, USA pharma companies with Irish legal entities, or pan-European roles that don\'t require daily commuting. Proxy job support is perfectly suited for remote workers who need real-time guidance without visiting a physical support centre.',
     pharmaContext: 'Remote Irish pharma roles often involve EMA regulatory submissions, EU pharmacovigilance reporting, GxP documentation, Veeva Vault configuration, eCTD publishing, and IDMP implementation — all work-from-home compatible functions. The Irish Qualified Person (QP) role is increasingly performed remotely for batch release oversight.',
     topEmployers: ['Various multinational pharma with Irish legal entities', 'CROs with Irish offices', 'Pharma consultancies'],
     dominantDomains: ['regulatory-affairs', 'pharmacovigilance', 'csv-validation', 'clinical-data', 'pharma-compliance'],

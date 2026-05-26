@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const itServices: ServiceEntry[] = [
   {
@@ -84,7 +84,7 @@ export const itServices: ServiceEntry[] = [
       },
       {
         q: 'Do you cover HL7 FHIR for healthcare IT interviews?',
-        a: 'Yes. We cover FHIR R4 resource types, RESTful API interactions, SMART on FHIR authentication, US Core Implementation Guide, and common FHIR-based integration patterns.'
+        a: 'Yes. We cover FHIR R4 resource types, RESTful API interactions, SMART on FHIR authentication, USA Core Implementation Guide, and common FHIR-based integration patterns.'
       },
       {
         q: 'Can you help with HIPAA security interview questions?',

@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const interviewServices: ServiceEntry[] = [
   {
@@ -732,7 +732,7 @@ export const interviewServices: ServiceEntry[] = [
       },
       {
         q: 'How do you approach a GRC framework selection question in a pharma compliance interview?',
-        a: 'We walk through how to match a GRC framework to the organization\'s profile — ISO 27001 for formal ISMS certification, NIST CSF for US-based pharma with FDA-related technology risk, SOC2 for cloud service providers in the pharma supply chain, and COSO for enterprise risk management. The key is explaining why a framework fits the organization\'s regulatory profile and maturity level.'
+        a: 'We walk through how to match a GRC framework to the organization\'s profile — ISO 27001 for formal ISMS certification, NIST CSF for USA-based pharma with FDA-related technology risk, SOC2 for cloud service providers in the pharma supply chain, and COSO for enterprise risk management. The key is explaining why a framework fits the organization\'s regulatory profile and maturity level.'
       }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'pharma-compliance-proxy-job-support', 'csv-validation-proxy-interview', 'pharma-qa-proxy-interview']
@@ -797,7 +797,7 @@ export const interviewServices: ServiceEntry[] = [
       'Process validation — Stage 1 (process design), Stage 2 (PPQ), Stage 3 (continued verification)',
       'Environmental monitoring — cleanroom classification, EM program design, out-of-trend investigations',
       'Batch manufacturing record (BMR) review — critical process parameters, in-process controls',
-      'Serialization and track-and-trace — DSCSA (US), FMD/FMD (EU), aggregation, commissioning',
+      'Serialization and track-and-trace — DSCSA (USA), FMD/FMD (EU), aggregation, commissioning',
       'SAP PP for manufacturing — production orders, goods movements, batch traceability in SAP',
       'Supply chain compliance — GDP, cold chain management, qualified person (QP) release',
       'Technology transfer — tech transfer protocols, comparability studies, analytical method transfer',
@@ -820,7 +820,7 @@ export const interviewServices: ServiceEntry[] = [
       },
       {
         q: 'What serialization questions are most common in pharma manufacturing interviews?',
-        a: 'Common topics: DSCSA transaction data requirements, FMD delegated act for EU serialization, aggregation levels (item → bundle → case → pallet), commission/decommission/recommission operations, and interface between the serialization system and ERP for goods movement. We walk through end-to-end serialization workflows for US and EU compliance.'
+        a: 'Common topics: DSCSA transaction data requirements, FMD delegated act for EU serialization, aggregation levels (item → bundle → case → pallet), commission/decommission/recommission operations, and interface between the serialization system and ERP for goods movement. We walk through end-to-end serialization workflows for USA and EU compliance.'
       },
       {
         q: 'How do you explain process validation in a manufacturing interview?',

@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const interviewCountriesServices3: ServiceEntry[] = [
   {
@@ -150,10 +150,10 @@ export const interviewCountriesServices3: ServiceEntry[] = [
     title: 'Pharma Proxy Interview Support — Ukraine',
     h1: 'Pharma Proxy Interview Support for Ukrainian Pharma Professionals',
     metaTitle: 'Pharma Proxy Interview Support Ukraine | International Pharma Interviews for Ukrainian Professionals',
-    metaDesc: 'Proxy interview support for Ukrainian pharma professionals seeking international roles. Translate MOH Ukraine experience for EU/US pharma interviews. WhatsApp: +91-9660834611',
+    metaDesc: 'Proxy interview support for Ukrainian pharma professionals seeking international roles. Translate MOH Ukraine experience for EU/USA pharma interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
-    heroIntro: 'Ukrainian pharmaceutical professionals — clinical researchers, regulatory affairs specialists, QA experts, and pharmacovigilance officers — have strong technical foundations and are increasingly seeking international positions with EU and US pharma companies. Our proxy interview support helps Ukrainian pharma professionals navigate international interview processes, bridging their domestic MOH Ukraine and GxP experience with EU/US interview requirements.',
-    problemSection: 'Ukrainian pharma professionals face a specific challenge in international interviews: their strong domestic experience needs to be translated into EU/US pharma terminology and frameworks. Interviewers at EU CROs and sponsors test EMA and ICH knowledge, which differs from MOH Ukraine regulatory processes. Our expert bridging helps close this gap.',
+    heroIntro: 'Ukrainian pharmaceutical professionals — clinical researchers, regulatory affairs specialists, QA experts, and pharmacovigilance officers — have strong technical foundations and are increasingly seeking international positions with EU and USA pharma companies. Our proxy interview support helps Ukrainian pharma professionals navigate international interview processes, bridging their domestic MOH Ukraine and GxP experience with EU/USA interview requirements.',
+    problemSection: 'Ukrainian pharma professionals face a specific challenge in international interviews: their strong domestic experience needs to be translated into EU/USA pharma terminology and frameworks. Interviewers at EU CROs and sponsors test EMA and ICH knowledge, which differs from MOH Ukraine regulatory processes. Our expert bridging helps close this gap.',
     whatCovered: [
       'International pharma interview preparation — EU CRO and sponsor interview formats',
       'Experience translation — MOH Ukraine regulatory to EMA regulatory framework',
@@ -163,7 +163,7 @@ export const interviewCountriesServices3: ServiceEntry[] = [
       'Pharmacovigilance — EudraVigilance, SUSAR, ICH E2E from EU perspective',
       'Clinical SAS — SDTM/ADaM for EU submissions, FDA and EMA alignment',
       'Remote/hybrid work positioning — for Ukrainian professionals in international roles',
-      'Real-time support during EU/US pharma video interviews',
+      'Real-time support during EU/USA pharma video interviews',
       'Farmak, Darnitsa, Arterium — translating domestic company experience for EU employers'
     ],
     roleExamples: [
@@ -171,7 +171,7 @@ export const interviewCountriesServices3: ServiceEntry[] = [
       'Regulatory Affairs Specialist — EU pharma company bridge position',
       'QA Specialist — EU GMP manufacturing role',
       'Pharmacovigilance Officer — EU QPPV support or remote PV role',
-      'Clinical Data Manager — EDC role at EU or US CRO'
+      'Clinical Data Manager — EDC role at EU or USA CRO'
     ],
     tools: ['EMA regulatory portals', 'ICH GCP documentation', 'EU GMP guidance', 'EudraVigilance', 'Pinnacle 21'],
     faqs: [
@@ -186,12 +186,12 @@ export const interviewCountriesServices3: ServiceEntry[] = [
     title: 'Pharma Proxy Interview Support — Russia',
     h1: 'Pharma Proxy Interview Support for Russian Pharma Professionals Seeking International Roles',
     metaTitle: 'Pharma Proxy Interview Support Russia | International Pharma Interviews for Russian Pharma Professionals',
-    metaDesc: 'Proxy interview support for Russian pharma professionals targeting international pharma roles. Translate domestic pharma experience for EU/US interviews. WhatsApp: +91-9660834611',
+    metaDesc: 'Proxy interview support for Russian pharma professionals targeting international pharma roles. Translate domestic pharma experience for EU/USA interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Russian pharmaceutical professionals with backgrounds in R&D, clinical research, regulatory affairs (Roszdravnadzor), manufacturing QA (GMP Russia), and pharmacovigilance are increasingly seeking international roles with global pharma companies and CROs operating outside Russia. Our proxy interview support helps bridge Russian pharma expertise with international interview requirements.',
     problemSection: 'Russian pharma professionals face the challenge of translating experience in the Russian regulatory system (Roszdravnadzor, Russian GMP, Russian pharmacopoeia) into international terminology (EMA, FDA, ICH). International interviewers often underestimate Russian pharma expertise or do not understand domestic equivalences.',
     whatCovered: [
-      'International pharma interview preparation — EU and US interview formats',
+      'International pharma interview preparation — EU and USA interview formats',
       'Russian regulatory to international bridge — Roszdravnadzor to EMA/FDA translation',
       'ICH GCP for clinical research roles — international GCP standard application',
       'WHO GMP to EU GMP translation — for manufacturing and QA roles',
@@ -205,7 +205,7 @@ export const interviewCountriesServices3: ServiceEntry[] = [
     roleExamples: [
       'Clinical Research Associate — international CRO (remote or relocated)',
       'Regulatory Affairs Specialist — international pharma bridge position',
-      'Clinical SAS Programmer — remote role for EU/US pharma',
+      'Clinical SAS Programmer — remote role for EU/USA pharma',
       'Pharmacovigilance Specialist — EU remote PV role',
       'QA/GMP Specialist — international manufacturing position'
     ],
@@ -225,7 +225,7 @@ export const interviewCountriesServices3: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Georgian pharma professionals targeting international roles. Tbilisi pharma sector, GxP experience translation for EU interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Georgia has a growing pharmaceutical manufacturing and clinical research sector in Tbilisi. GPC (Georgian Pharma Company) and several international pharma companies operate in Georgia. Georgia is an active clinical trial site for CIS and Middle Eastern patient populations. Georgian pharma professionals seeking international roles benefit from our proxy interview support to bridge their domestic experience.',
-    problemSection: 'Georgian pharma professionals need support translating their domestic regulatory (Georgian Medicines Agency), clinical research, and GMP experience into the language of international pharma interviews. EU and US interviewers may not be familiar with Georgian regulatory frameworks, creating an explanation gap that candidates need to bridge.',
+    problemSection: 'Georgian pharma professionals need support translating their domestic regulatory (Georgian Medicines Agency), clinical research, and GMP experience into the language of international pharma interviews. EU and USA interviewers may not be familiar with Georgian regulatory frameworks, creating an explanation gap that candidates need to bridge.',
     whatCovered: [
       'International pharma interview preparation — EU and international CRO formats',
       'Georgian Medicines Agency to EMA/FDA regulatory bridge',
@@ -261,9 +261,9 @@ export const interviewCountriesServices3: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Armenian pharma professionals targeting international roles. Yerevan pharma sector, SAKEN regulatory, international interview preparation. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Armenia has a growing pharmaceutical manufacturing and clinical research sector in Yerevan. SAKEN (Scientific Centre of Drug and Medical Technology Expertise) is the national regulatory authority. Armenian pharma professionals with GxP, regulatory, and clinical research backgrounds are seeking international opportunities. Our proxy interview support helps bridge Armenian pharma experience with international interview standards.',
-    problemSection: 'Armenian pharma professionals seeking international roles need support connecting their SAKEN regulatory and GMP experience to EU/US international frameworks. Technical terminology, dossier formats, and regulatory process language need to be bridged to international standards for successful EU CRO and sponsor interviews.',
+    problemSection: 'Armenian pharma professionals seeking international roles need support connecting their SAKEN regulatory and GMP experience to EU/USA international frameworks. Technical terminology, dossier formats, and regulatory process language need to be bridged to international standards for successful EU CRO and sponsor interviews.',
     whatCovered: [
-      'International pharma interview preparation — EU and US CRO interview formats',
+      'International pharma interview preparation — EU and USA CRO interview formats',
       'SAKEN to EMA/FDA regulatory bridge — translating Armenian regulatory experience',
       'ICH GCP — international clinical research standards for CRA roles',
       'GMP equivalence — Armenian GMP to EU GMP translation',

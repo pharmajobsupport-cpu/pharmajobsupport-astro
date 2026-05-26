@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const canada2Locations: LocationEntry[] = [
   {
@@ -12,7 +12,7 @@ export const canada2Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Laval professionals. Sanofi Pasteur Canada (vaccine HQ), Merck Canada — expert guidance for Laval Quebec pharma manufacturing and vaccine roles.',
     h1: 'Pharma Proxy Job Support in Laval, Quebec',
     heroIntro: 'Laval, just north of Montreal, is Canada\'s pharmaceutical manufacturing powerhouse. Sanofi Pasteur Canada\'s national headquarters and vaccine manufacturing facility is in Laval — Canada\'s largest vaccine production site. AstraZeneca Canada, Merck Canada, and Pfizer Canada have major Laval operations. The city\'s Biopharma Cluster (Laval Life Sciences Cluster) is Canada\'s most concentrated pharmaceutical manufacturing zone.',
-    pharmaContext: 'Laval pharma roles require Health Canada regulatory knowledge (especially biologics and vaccine regulatory submissions), EU GMP and US FDA awareness for export-qualified vaccine manufacturing, and French/English bilingual capability (Quebec language requirements). Health Canada\'s Division 8 (biologically derived drugs) expertise is essential for Sanofi Pasteur roles.',
+    pharmaContext: 'Laval pharma roles require Health Canada regulatory knowledge (especially biologics and vaccine regulatory submissions), EU GMP and USA FDA awareness for export-qualified vaccine manufacturing, and French/English bilingual capability (Quebec language requirements). Health Canada\'s Division 8 (biologically derived drugs) expertise is essential for Sanofi Pasteur roles.',
     topEmployers: ['Sanofi Pasteur Canada (vaccine manufacturing HQ)', 'AstraZeneca Canada', 'Merck Canada (manufacturing)', 'Pfizer Canada', 'BioVectra (CDMO)', 'Various Laval Life Sciences Cluster companies'],
     dominantDomains: ['pharma-manufacturing', 'regulatory-affairs', 'pharmacovigilance', 'pharma-qa', 'csv-validation'],
     faqs: [

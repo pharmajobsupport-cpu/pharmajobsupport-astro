@@ -1,4 +1,4 @@
-import type { KBEntry } from './knowledgeBase-clinical';
+﻿import type { KBEntry } from './knowledgeBase-clinical';
 
 export const pvKB: KBEntry[] = [
   {
@@ -20,7 +20,7 @@ export const pvKB: KBEntry[] = [
       },
       {
         heading: 'EudraVigilance and FAERS Databases',
-        body: 'EudraVigilance is the EMA\'s European database for adverse reaction reports of authorized medicines, accessible at eudravigilance.ema.europa.eu. Marketing Authorization Holders (MAHs) must submit ICSRs to EudraVigilance in E2B(R3) format using the EudraVigilance Gateway. FAERS (FDA Adverse Event Reporting System) is the US equivalent, receiving ICSRs via the FDA Electronic Submissions Gateway. Both databases are publicly accessible for signal detection. VigiBase (WHO Uppsala Monitoring Centre) is the global ICSR database containing over 30 million reports from 150+ countries.',
+        body: 'EudraVigilance is the EMA\'s European database for adverse reaction reports of authorized medicines, accessible at eudravigilance.ema.europa.eu. Marketing Authorization Holders (MAHs) must submit ICSRs to EudraVigilance in E2B(R3) format using the EudraVigilance Gateway. FAERS (FDA Adverse Event Reporting System) is the USA equivalent, receiving ICSRs via the FDA Electronic Submissions Gateway. Both databases are publicly accessible for signal detection. VigiBase (WHO Uppsala Monitoring Centre) is the global ICSR database containing over 30 million reports from 150+ countries.',
       },
       {
         heading: 'Periodic Safety Update Reports (PSURs / PBRERs)',
@@ -37,7 +37,7 @@ export const pvKB: KBEntry[] = [
       { term: 'E2B(R3)', definition: 'ICH standard for ICSR data elements and XML format for electronic transmission' },
       { term: 'EudraVigilance', definition: 'EMA\'s European database for adverse reaction reports; MAHs must submit ICSRs here' },
       { term: 'PSUR/PBRER', definition: 'Periodic Safety Update/Benefit-Risk Evaluation Report — comprehensive post-approval safety assessment' },
-      { term: 'FAERS', definition: 'FDA Adverse Event Reporting System — US pharmacovigilance database' },
+      { term: 'FAERS', definition: 'FDA Adverse Event Reporting System — USA pharmacovigilance database' },
       { term: 'Signal detection', definition: 'Systematic analysis to identify new or changed safety signals in pharmacovigilance data' },
     ],
     faqs: [
@@ -67,7 +67,7 @@ export const pvKB: KBEntry[] = [
       },
       {
         heading: 'Risk Minimization Measures',
-        body: 'Risk minimization measures are interventions that reduce the probability or severity of adverse reactions. Routine measures: labeling (SmPC, package leaflet), healthcare professional communications, regulated pack size. Additional risk minimization measures (aRMMs) are required for drugs with serious known risks: REMS (Risk Evaluation and Mitigation Strategy) in the US — required programs including Medication Guides, communication plans, and Elements to Assure Safe Use (ETASU). EU: DHPC (Direct Healthcare Professional Communication), patient reminder cards, controlled distribution. Effectiveness of aRMMs must be assessed periodically.',
+        body: 'Risk minimization measures are interventions that reduce the probability or severity of adverse reactions. Routine measures: labeling (SmPC, package leaflet), healthcare professional communications, regulated pack size. Additional risk minimization measures (aRMMs) are required for drugs with serious known risks: REMS (Risk Evaluation and Mitigation Strategy) in the USA — required programs including Medication Guides, communication plans, and Elements to Assure Safe Use (ETASU). EU: DHPC (Direct Healthcare Professional Communication), patient reminder cards, controlled distribution. Effectiveness of aRMMs must be assessed periodically.',
       },
       {
         heading: 'Pharmacovigilance System Master File (PSMF)',

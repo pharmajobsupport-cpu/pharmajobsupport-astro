@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const sapServices: ServiceEntry[] = [
   {
@@ -333,14 +333,14 @@ export const sapServices: ServiceEntry[] = [
     heroIntro: 'Pharmaceutical serialization and track-and-trace systems protect patients from counterfeit drugs while creating complex regulatory compliance requirements. Serialization roles require specialized knowledge of DSCSA, EU FMD, and global serialization regulations. Our proxy support provides real-time expert guidance.',
     problemSection: 'Serialization interviews test your knowledge of SGTIN standards, EPCIS event types, line commissioning, aggregation hierarchy, and trading partner integration. These are highly technical roles combining IT, manufacturing, and regulatory expertise. Our specialists guide you through all aspects.',
     whatCovered: [
-      'DSCSA (US) — Drug Supply Chain Security Act, serialization requirements, EPCIS',
+      'DSCSA (USA) — Drug Supply Chain Security Act, serialization requirements, EPCIS',
       'EU Falsified Medicines Directive (FMD) — Delegated Regulation 2016/161, national repositories',
       'Global regulations — Saudi Arabia SFDA, Russia MDLP, Brazil ANVISA, China CFDA',
       'SGTIN standards — GS1 SGTIN-96/198, NDC encoding, lot and expiry encoding',
       'EPCIS events — ObjectEvent, AggregationEvent, TransactionEvent, TransformationEvent',
       'Line commissioning — camera systems, reject mechanisms, line performance monitoring',
       'Aggregation — item to case to pallet hierarchy, aggregation algorithms',
-      'Repository integration — EMVS, US DSCSA repository, national EMVSs',
+      'Repository integration — EMVS, USA DSCSA repository, national EMVSs',
       'Serialization platforms — TraceLink, SAP TAO, Antares Vision, rfxcel',
       'Serialization validation — IQ/OQ/PQ for serialization lines, GxP compliance'
     ],

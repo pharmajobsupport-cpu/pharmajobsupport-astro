@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const jobSupportCountriesServices1: ServiceEntry[] = [
   {
@@ -6,10 +6,10 @@ export const jobSupportCountriesServices1: ServiceEntry[] = [
     title: 'Pharma Proxy Job Support USA',
     h1: 'Pharma Proxy Job Support for USA Professionals',
     metaTitle: 'Pharma Proxy Job Support USA | Real-Time Pharma Job Help United States',
-    metaDesc: 'Pharma proxy job support for US-based professionals. Clinical SAS, regulatory affairs, PV, QA, Veeva — real-time expert guidance for pharma and biotech roles across the United States.',
+    metaDesc: 'Pharma proxy job support for USA-based professionals. Clinical SAS, regulatory affairs, PV, QA, Veeva — real-time expert guidance for pharma and biotech roles across the United States.',
     category: 'Proxy Job Support',
     heroIntro: 'The United States is the world\'s largest pharmaceutical market — home to Pfizer, Johnson & Johnson, Merck, AbbVie, Eli Lilly, Bristol-Myers Squibb, and thousands of CROs, biotech companies, and healthcare systems. Demand for pharma professionals is intense and technically demanding. Our proxy job support connects you with domain experts who provide real-time guidance through your daily work deliverables.',
-    problemSection: 'US pharma roles demand deep CDISC standards knowledge, FDA submission experience, ICH guideline compliance, and proficiency in tools like Veeva Vault, Medidata Rave, and Argus Safety. Whether you\'re navigating SDTM submissions to the FDA, managing IND safety reports, or handling 21 CFR Part 11 compliance — our US pharma experts provide real-time support.',
+    problemSection: 'USA pharma roles demand deep CDISC standards knowledge, FDA submission experience, ICH guideline compliance, and proficiency in tools like Veeva Vault, Medidata Rave, and Argus Safety. Whether you\'re navigating SDTM submissions to the FDA, managing IND safety reports, or handling 21 CFR Part 11 compliance — our USA pharma experts provide real-time support.',
     whatCovered: [
       'FDA regulatory submissions — NDA, BLA, ANDA, IND, 510(k), PMA strategies',
       'CDISC standards — SDTM, ADaM, SEND, define.xml for FDA submissions',
@@ -33,12 +33,12 @@ export const jobSupportCountriesServices1: ServiceEntry[] = [
     tools: ['SAS 9.4', 'Veeva Vault', 'Medidata Rave', 'Argus Safety', 'Pinnacle 21', 'IQVIA MedDRA Browser'],
     faqs: [
       {
-        q: 'What US pharma domains have the highest demand for proxy job support?',
-        a: 'Clinical SAS programming, regulatory affairs (FDA submissions), pharmacovigilance, clinical data management, and CSV validation are consistently the highest-demand areas for proxy support among US pharma professionals. These roles involve high-stakes deliverables where real-time expert guidance provides significant value.'
+        q: 'What USA pharma domains have the highest demand for proxy job support?',
+        a: 'Clinical SAS programming, regulatory affairs (FDA submissions), pharmacovigilance, clinical data management, and CSV validation are consistently the highest-demand areas for proxy support among USA pharma professionals. These roles involve high-stakes deliverables where real-time expert guidance provides significant value.'
       },
       {
-        q: 'Do you cover FDA-specific regulatory requirements in your US proxy support?',
-        a: 'Yes. Our US regulatory experts have hands-on experience with FDA submission formats (eCTD, NDA/BLA/IND), FDA guidance documents, 21 CFR regulations, and FDA inspection preparation — all tailored to the specific demands of US pharma roles.'
+        q: 'Do you cover FDA-specific regulatory requirements in your USA proxy support?',
+        a: 'Yes. Our USA regulatory experts have hands-on experience with FDA submission formats (eCTD, NDA/BLA/IND), FDA guidance documents, 21 CFR regulations, and FDA inspection preparation — all tailored to the specific demands of USA pharma roles.'
       }
     ],
     relatedSlugs: ['pharma-proxy-job-support-canada', 'pharma-proxy-job-support-uk', 'clinical-sas-proxy-job-support', 'regulatory-affairs-proxy-job-support']
@@ -51,7 +51,7 @@ export const jobSupportCountriesServices1: ServiceEntry[] = [
     metaDesc: 'Pharma proxy job support for Canadian professionals. Health Canada regulatory, clinical trials, PV — real-time expert guidance for pharma roles across Canada.',
     category: 'Proxy Job Support',
     heroIntro: 'Canada\'s pharmaceutical sector spans Health Canada regulatory affairs, major CRO operations in Toronto and Montreal, and a thriving biotech sector in Vancouver and Quebec. Our proxy job support helps Canadian pharma professionals navigate Health Canada submissions, clinical operations, and all pharma technical domains.',
-    problemSection: 'Canadian pharma roles require Health Canada-specific regulatory expertise (NDS, SNDS, ANDS), bilingual (English-French) capabilities for Quebec market roles, and proficiency with both US FDA and EU EMA standards for companies with cross-border operations.',
+    problemSection: 'Canadian pharma roles require Health Canada-specific regulatory expertise (NDS, SNDS, ANDS), bilingual (English-French) capabilities for Quebec market roles, and proficiency with both USA FDA and EU EMA standards for companies with cross-border operations.',
     whatCovered: [
       'Health Canada regulatory submissions — NDS, SNDS, ANDS, CTA strategies',
       'Clinical trials — ICH GCP compliance, REB submissions, CTA amendments',
@@ -206,7 +206,7 @@ export const jobSupportCountriesServices1: ServiceEntry[] = [
       },
       {
         q: 'Is Dublin important for pharma regulatory and commercial roles?',
-        a: 'Yes. Dublin hosts regional headquarters for many pharma companies (operations, regulatory, medical affairs, finance) alongside CRO offices and HPRA. Post-Brexit, Dublin has grown as a strategic EU regulatory base for UK and US companies needing an EU presence.'
+        a: 'Yes. Dublin hosts regional headquarters for many pharma companies (operations, regulatory, medical affairs, finance) alongside CRO offices and HPRA. Post-Brexit, Dublin has grown as a strategic EU regulatory base for UK and USA companies needing an EU presence.'
       }
     ],
     relatedSlugs: ['pharma-proxy-job-support-uk', 'pharma-proxy-job-support-germany', 'pharma-manufacturing-proxy-job-support', 'regulatory-affairs-proxy-job-support']

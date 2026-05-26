@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const interviewCountriesServices4: ServiceEntry[] = [
   {
@@ -117,12 +117,12 @@ export const interviewCountriesServices4: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Israeli pharma jobs. MOH Israel regulatory, Teva Pharmaceutical, Israeli biotech interviews. Tel Aviv pharma interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Israel has one of the world\'s most innovative pharmaceutical and biotech sectors. Teva Pharmaceutical — the world\'s largest generic drug manufacturer — is headquartered in Tel Aviv. The Israeli biotech cluster is globally recognised. The MOH (Ministry of Health) Pharmaceutical Division regulates the market. Israeli pharma interviews, especially at Teva, are technically rigorous and demand depth in both generic drug development and FDA/EMA regulatory knowledge.',
-    problemSection: 'Teva\'s regulatory affairs interviews are notably demanding — covering both ANDA (abbreviated NDA for generics in the US) and EU generic dossier requirements simultaneously. Israeli biotech company interviews test early-stage clinical development knowledge. Candidates without FDA ANDA knowledge underperform at Teva regulatory interviews.',
+    problemSection: 'Teva\'s regulatory affairs interviews are notably demanding — covering both ANDA (abbreviated NDA for generics in the USA) and EU generic dossier requirements simultaneously. Israeli biotech company interviews test early-stage clinical development knowledge. Candidates without FDA ANDA knowledge underperform at Teva regulatory interviews.',
     whatCovered: [
       'Teva Pharmaceutical interview preparation — ANDA, generic drug development, global regulatory',
       'MOH Israel regulatory interviews — Israeli marketing authorisation procedures',
       'Israeli biotech cluster — early-stage clinical development interview context',
-      'FDA ANDA knowledge — US generic drug regulatory pathway critical for Teva',
+      'FDA ANDA knowledge — USA generic drug regulatory pathway critical for Teva',
       'EMA generic dossier — EU generic marketing authorisation procedures',
       'Clinical SAS programming — SDTM/ADaM for Israeli CRO and global submissions',
       'Pharmacovigilance — Israeli national PV, Teva global safety database',
@@ -133,13 +133,13 @@ export const interviewCountriesServices4: ServiceEntry[] = [
     roleExamples: [
       'Global Regulatory Affairs — Teva Pharmaceutical (generics, specialty)',
       'Regulatory Affairs Specialist — MOH Israel submissions',
-      'ANDA Regulatory Specialist — Teva US generics regulatory',
+      'ANDA Regulatory Specialist — Teva USA generics regulatory',
       'Clinical Development Scientist — Israeli biotech company',
       'Pharmacovigilance Specialist — Teva global safety or Israeli company'
     ],
     tools: ['MOH Israel regulatory portal', 'FDA regulatory resources (ANDA)', 'EMA regulatory portals', 'Veeva Vault (Teva)', 'Pinnacle 21'],
     faqs: [
-      { q: 'What makes Teva\'s regulatory interview process unique?', a: 'Teva is a global generic and specialty pharma leader with submissions to FDA (ANDA, NDA), EMA, and 60+ other regulatory authorities. Teva regulatory interviews are simultaneously global — testing US generic drug regulatory (ANDA process, paragraph IV certification, Hatch-Waxman), EU generic regulatory (marketing authorisation via MRP/DCP), and complex multi-country regulatory strategy. This breadth makes Teva interviews more comprehensive than most pharma company regulatory interviews.' },
+      { q: 'What makes Teva\'s regulatory interview process unique?', a: 'Teva is a global generic and specialty pharma leader with submissions to FDA (ANDA, NDA), EMA, and 60+ other regulatory authorities. Teva regulatory interviews are simultaneously global — testing USA generic drug regulatory (ANDA process, paragraph IV certification, Hatch-Waxman), EU generic regulatory (marketing authorisation via MRP/DCP), and complex multi-country regulatory strategy. This breadth makes Teva interviews more comprehensive than most pharma company regulatory interviews.' },
       { q: 'What is the ANDA process tested in Teva interviews?', a: 'ANDA (Abbreviated New Drug Application) is the FDA pathway for generic drug approval. Key Teva interview topics include: ANDA components (formulation, bioequivalence study, process validation, stability), paragraph IV patent certification and litigation exposure, bioequivalence study design and dissolution testing, FDA ANDA review process and Complete Response Letters (CRL), and the distinction between 505(j) ANDAs and 505(b)(2) NDAs.' },
       { q: 'What is the Israeli biotech interview landscape?', a: 'Israel has hundreds of clinical-stage biotech companies, particularly strong in oncology, CNS, and medical devices. Israeli biotech interviews for clinical development roles focus on Phase I-II trial design, investigational new drug (IND) strategy, translational research capabilities, and FDA/EMA regulatory strategy for innovative products. The culture is typically informal and direct by pharma standards.' }
     ],
@@ -153,10 +153,10 @@ export const interviewCountriesServices4: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Jordan pharma jobs. JFDA regulatory, Hikma Pharmaceuticals, Dar Al Dawa interviews. Amman pharma interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Jordan is a significant pharmaceutical producer in the Arab world. Hikma Pharmaceuticals (FTSE 100 listed, London/Amman) is one of the largest Arab pharmaceutical companies globally. Dar Al Dawa, PharmaPrime, and other Jordanian manufacturers export across the MENA region. JFDA (Jordan Food and Drug Administration) regulates medicines. Amman is a regional pharma hub.',
-    problemSection: 'Hikma Pharmaceutical interviews are internationally recognised for their rigor — the company has operations in the US, MENA, and Europe. Hikma regulatory interviews test FDA ANDA knowledge (for the US division), EMA knowledge (for the European division), and MENA-specific regulatory knowledge (for the Arab world division). This multi-regional scope is challenging.',
+    problemSection: 'Hikma Pharmaceutical interviews are internationally recognised for their rigor — the company has operations in the USA, MENA, and Europe. Hikma regulatory interviews test FDA ANDA knowledge (for the USA division), EMA knowledge (for the European division), and MENA-specific regulatory knowledge (for the Arab world division). This multi-regional scope is challenging.',
     whatCovered: [
       'JFDA regulatory interviews — Jordanian national authorisation procedures',
-      'Hikma Pharmaceuticals interview preparation — US ANDA, EU generics, MENA registration',
+      'Hikma Pharmaceuticals interview preparation — USA ANDA, EU generics, MENA registration',
       'Dar Al Dawa and Jordanian pharma manufacturers — manufacturing QA interview',
       'MENA regional regulatory knowledge — Arab world multi-country registration',
       'Pharmacovigilance — JFDA PV requirements, MENA PV landscape',
@@ -168,54 +168,18 @@ export const interviewCountriesServices4: ServiceEntry[] = [
     ],
     roleExamples: [
       'Regulatory Affairs Specialist — JFDA submissions (Hikma, Dar Al Dawa)',
-      'ANDA Regulatory Specialist — Hikma US generics regulatory',
+      'ANDA Regulatory Specialist — Hikma USA generics regulatory',
       'MENA Regional Medical Affairs — Jordan hub',
       'QA/GMP Specialist — Jordanian pharma manufacturer',
       'Pharmacovigilance Officer — JFDA PV reporting'
     ],
     tools: ['JFDA regulatory portal', 'FDA resources (ANDA)', 'EMA portals', 'MENA pharma regulatory databases', 'Bayt.com'],
     faqs: [
-      { q: 'What makes Hikma Pharmaceuticals unique as a pharma employer?', a: 'Hikma is one of the few Arab pharma companies with a genuinely global regulatory and commercial presence. Hikma has three divisions: US (generic injectables, ANDA filings), MENA (branded generics across 30+ Arab countries), and International/Europe (branded and generic in 50+ countries). This means Hikma regulatory professionals work simultaneously with FDA, EMA, and multiple national regulatory authorities in the Arab world.' },
+      { q: 'What makes Hikma Pharmaceuticals unique as a pharma employer?', a: 'Hikma is one of the few Arab pharma companies with a genuinely global regulatory and commercial presence. Hikma has three divisions: USA (generic injectables, ANDA filings), MENA (branded generics across 30+ Arab countries), and International/Europe (branded and generic in 50+ countries). This means Hikma regulatory professionals work simultaneously with FDA, EMA, and multiple national regulatory authorities in the Arab world.' },
       { q: 'What is JFDA\'s significance in Jordanian pharma?', a: 'JFDA (Jordan Food and Drug Administration) is one of the more respected regulatory authorities in the Arab world. JFDA\'s drug registration process is used as a model by some other Arab regulatory agencies. JFDA GMP certificates are recognised by many importing countries. Jordan\'s pharma regulatory framework aligns with ICH and WHO standards.' },
       { q: 'Is Jordan a major pharma export hub?', a: 'Yes. Jordan is the Arab world\'s largest pharmaceutical exporter as a percentage of GDP. Jordanian pharmaceutical exports reach 60+ countries in the Arab world, Africa, and Central Asia. Hikma, Dar Al Dawa, PharmaPrime, and other Jordanian manufacturers have extensive international registration portfolios.' }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'pharma-proxy-interview-uae', 'pharma-proxy-interview-saudi-arabia', 'regulatory-affairs-proxy-interview']
-  },
-  {
-    slug: 'pharma-proxy-interview-india',
-    title: 'Pharma Proxy Interview Support — India',
-    h1: 'Pharma Proxy Interview Support for Indian Pharma Jobs',
-    metaTitle: 'Pharma Proxy Interview Support India | CDSCO Pharma Interview Hyderabad Bangalore Mumbai',
-    metaDesc: 'Proxy interview support for Indian pharma jobs. CDSCO regulatory, Cipla, Dr Reddy\'s, Sun Pharma, MNC pharma. Hyderabad, Bangalore, Mumbai pharma interviews. WhatsApp: +91-9660834611',
-    category: 'Interview Proxy Support',
-    heroIntro: 'India is the world\'s third largest pharmaceutical producer by volume and a major global supplier of generic medicines and APIs. Hyderabad (pharma cluster), Bangalore (biotech and IT pharma), and Mumbai (commercial and regulatory headquarters) are the main hubs. Dr Reddy\'s, Cipla, Sun Pharma, Aurobindo, and Lupin are major Indian pharma companies alongside MNC pharma subsidiaries and CROs.',
-    problemSection: 'Indian pharma interviews are highly competitive. For MNC pharma roles (AstraZeneca India, Pfizer India, Novartis India), international regulatory and GxP standards are tested. For domestic companies (Dr Reddy\'s, Cipla), both CDSCO domestic knowledge and FDA/EMA export market regulatory knowledge are required. The competition is dense.',
-    whatCovered: [
-      'CDSCO regulatory interviews — Indian drug regulatory procedures, Schedule M, SUGAM portal',
-      'FDA ANDA and NDA knowledge — for Indian companies with US export filings',
-      'Dr Reddy\'s, Cipla, Sun Pharma — domestic company interview preparation',
-      'MNC pharma India — AstraZeneca, Novartis, Pfizer India interview formats',
-      'Clinical SAS programming — SDTM/ADaM for Indian CRO roles',
-      'Pharmacovigilance — India PvPI, CDSCO ADR reporting, ICH E2E',
-      'CSV validation — GAMP 5 in Indian GxP pharma environments',
-      'Veeva Vault — Indian pharma and CRO implementations',
-      'Hyderabad, Bangalore, Mumbai pharma cluster targeting',
-      'Real-time interview support during Indian pharma video or in-person interviews'
-    ],
-    roleExamples: [
-      'Regulatory Affairs Specialist — CDSCO submissions and FDA/EMA export regulatory',
-      'Clinical SAS Programmer — Indian CRO (Cognizant, TCS Life Sciences, Syneos India)',
-      'Pharmacovigilance Analyst — Dr Reddy\'s, Cipla, or MNC PV India',
-      'CSV Validation Specialist — Indian pharma or CRO',
-      'CDM Specialist — Medidata Rave or Veeva Vault EDC at Indian CRO'
-    ],
-    tools: ['CDSCO SUGAM portal', 'FDA regulatory resources', 'EMA portals', 'Pinnacle 21', 'Argus Safety', 'Medidata Rave'],
-    faqs: [
-      { q: 'What is Schedule M and why does it matter for Indian pharma interviews?', a: 'Schedule M of the Drugs and Cosmetics Act 1940 defines GMP requirements for pharmaceutical manufacturers in India. It is the domestic equivalent of EU GMP for Indian-market production. Knowledge of Schedule M is required for QA/manufacturing roles in India. For export-oriented Indian manufacturers, EU GMP and WHO GMP compliance is also tested as these standards govern export market authorisations.' },
-      { q: 'What makes Indian pharma interviews for MNC subsidiaries unique?', a: 'MNC pharma subsidiaries in India (AstraZeneca India, Pfizer India, Novartis India) run standardised global interview processes adapted for the Indian regulatory context. They test ICH GCP and GMP knowledge (global standards) alongside CDSCO regulatory knowledge (India-specific). The interview process is typically structured — HR screen, technical panel, hiring manager — similar to the parent company\'s global format.' },
-      { q: 'How does the Indian CRO sector differ from global CROs?', a: 'India has a large domestic CRO sector — Lambda Therapeutic Research, SIRO Clinpharm, Veeda Clinical Research — alongside international CRO India offices (ICON India, Parexel India, Covance India). Indian CRO interviews focus on ICH GCP, EDC platform knowledge (Medidata Rave, Oracle InForm, Veeva), and Phase I-III clinical trial support competencies. CDSCO clinical trial regulations (New Drugs and Clinical Trials Rules 2019) are tested for domestic-facing roles.' }
-    ],
-    relatedSlugs: ['pharma-proxy-interview', 'pharma-proxy-interview-singapore', 'pharma-proxy-interview-uae', 'clinical-sas-proxy-interview']
   },
   {
     slug: 'pharma-proxy-interview-pakistan',
@@ -248,7 +212,7 @@ export const interviewCountriesServices4: ServiceEntry[] = [
     tools: ['DRAP regulatory portal', 'WHO GMP guidance', 'Gulf pharma job portals (Bayt, Naukrigulf)', 'EMA portals', 'Veeva Vault'],
     faqs: [
       { q: 'What international markets are most accessible for Pakistani pharma professionals?', a: 'Gulf countries (UAE, Saudi Arabia, Qatar) are the most accessible destinations due to established visa pathways, large Pakistani communities, and active demand for pharma professionals. UK and Canada are popular for longer-term career development. Remote pharma roles (PV, regulatory writing, CDM) at international companies are also accessible.' },
-      { q: 'What is DRAP and how does its regulatory framework compare internationally?', a: 'DRAP (Drug Regulatory Authority of Pakistan) regulates medicines, medical devices, and biological products in Pakistan. DRAP\'s registration process has been modernising towards international standards. Pakistani GMP facilities that export to regulated markets (EU, US) operate under EU GMP or WHO GMP standards, providing internationally transferable manufacturing experience.' },
+      { q: 'What is DRAP and how does its regulatory framework compare internationally?', a: 'DRAP (Drug Regulatory Authority of Pakistan) regulates medicines, medical devices, and biological products in Pakistan. DRAP\'s registration process has been modernising towards international standards. Pakistani GMP facilities that export to regulated markets (EU, USA) operate under EU GMP or WHO GMP standards, providing internationally transferable manufacturing experience.' },
       { q: 'Which Pakistani pharma companies are internationally recognised?', a: 'Getz Pharma, Sami Pharmaceuticals, Hilton Pharma, and Ferozsons Laboratories are among the larger domestic companies. Some Pakistani manufacturers have WHO pre-qualified products and DRAP-certified GMP facilities recognised by international health agencies (UNICEF, USAID procurement).' }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'pharma-proxy-interview-india', 'pharma-proxy-interview-uae', 'regulatory-affairs-proxy-interview']
@@ -369,7 +333,7 @@ export const interviewCountriesServices4: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for South Korea pharma jobs. MFDS regulatory, Samsung Biologics, Celltrion, Hanmi interviews. Seoul pharma interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'South Korea has become a global biopharmaceutical powerhouse, with Samsung Biologics and Celltrion leading the world\'s biosimilar manufacturing sector. Hanmi Pharmaceutical, Boryung Pharmaceutical, and other Korean companies have global pipelines. The MFDS (Ministry of Food and Drug Safety) regulates medicines with a rigorous internationally aligned process. Korean pharma interviews are highly technical.',
-    problemSection: 'Samsung Biologics interviews for QA and manufacturing roles are exceptionally demanding — the company operates world-class biologics fill-finish facilities and maintains simultaneous US FDA, EMA, and Japanese PMDA approvals for the same products. Candidates must demonstrate competency across multiple international GMP standards simultaneously.',
+    problemSection: 'Samsung Biologics interviews for QA and manufacturing roles are exceptionally demanding — the company operates world-class biologics fill-finish facilities and maintains simultaneous USA FDA, EMA, and Japanese PMDA approvals for the same products. Candidates must demonstrate competency across multiple international GMP standards simultaneously.',
     whatCovered: [
       'MFDS regulatory interviews — Korean NDA/BLA, MFDS review process',
       'Samsung Biologics interview preparation — biologics manufacturing, multi-regulatory approval',
@@ -385,7 +349,7 @@ export const interviewCountriesServices4: ServiceEntry[] = [
     roleExamples: [
       'Regulatory Affairs Specialist — MFDS submissions',
       'QA/Manufacturing Specialist — Samsung Biologics or Celltrion biologics',
-      'Biosimilar Regulatory — EU/US biosimilar dossier for Korean manufacturers',
+      'Biosimilar Regulatory — EU/USA biosimilar dossier for Korean manufacturers',
       'Clinical Development Manager — Korean Phase III with MFDS interaction',
       'Pharmacovigilance Specialist — Korean MFDS ADR reporting'
     ],
@@ -405,7 +369,7 @@ export const interviewCountriesServices4: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Taiwan pharma jobs. TFDA regulatory, Roche Taiwan, AbbVie Taiwan, biotech cluster. Taipei pharma interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Taiwan has a growing pharmaceutical and biotech sector in Taipei and the Hsinchu Science Park area. The TFDA (Taiwan Food and Drug Administration) regulates medicines. Taiwan is an active clinical trial site with a well-developed hospital infrastructure. International pharma companies including Roche, AbbVie, Pfizer, and Novartis have significant Taiwan operations. Local biotech companies are emerging.',
-    problemSection: 'Taiwan pharma interviews for regulatory affairs roles test TFDA-specific knowledge — Taiwan\'s drug approval process, which accepts reference country approvals (US FDA, EMA) but has specific local requirements. Interviewers probe whether candidates understand Taiwan\'s distinct regulatory pathway and its position relative to mainland China\'s NMPA.',
+    problemSection: 'Taiwan pharma interviews for regulatory affairs roles test TFDA-specific knowledge — Taiwan\'s drug approval process, which accepts reference country approvals (USA FDA, EMA) but has specific local requirements. Interviewers probe whether candidates understand Taiwan\'s distinct regulatory pathway and its position relative to mainland China\'s NMPA.',
     whatCovered: [
       'TFDA regulatory interviews — Taiwan drug registration, TFDA procedures',
       'TFDA reference country system — FDA/EMA-approved drug expedited pathway in Taiwan',
@@ -427,7 +391,7 @@ export const interviewCountriesServices4: ServiceEntry[] = [
     ],
     tools: ['TFDA regulatory portal', 'FDA/EMA portals (reference agencies)', 'Veeva Vault', 'EudraVigilance', 'ClinicalTrials.gov (Taiwan sites)'],
     faqs: [
-      { q: 'How does TFDA\'s drug approval process work?', a: 'TFDA (Taiwan Food and Drug Administration) uses a reference country system that accepts prior approval by the US FDA, EMA, UK MHRA, or Japanese PMDA to streamline Taiwan approval. However, TFDA still requires a Taiwan-specific application with local data verification and may request additional bridging data for certain drug types. TFDA has been streamlining its processes to attract earlier access of innovative drugs.' },
+      { q: 'How does TFDA\'s drug approval process work?', a: 'TFDA (Taiwan Food and Drug Administration) uses a reference country system that accepts prior approval by the USA FDA, EMA, UK MHRA, or Japanese PMDA to streamline Taiwan approval. However, TFDA still requires a Taiwan-specific application with local data verification and may request additional bridging data for certain drug types. TFDA has been streamlining its processes to attract earlier access of innovative drugs.' },
       { q: 'Is Taiwan a significant clinical trial site?', a: 'Taiwan has a strong clinical trial infrastructure with research hospitals including National Taiwan University Hospital, Taipei Veterans General Hospital, and Linkou Chang Gung Memorial Hospital conducting major clinical trials. Taiwan has high clinical trial literacy among physicians and good patient retention rates. TFDA has streamlined clinical trial authorisation to encourage more Phase I and Phase II trials in Taiwan.' },
       { q: 'What is the relationship between TFDA and China\'s NMPA for pharma?', a: 'Taiwan (TFDA) and mainland China (NMPA/CFDA) are completely separate regulatory jurisdictions despite shared language. A TFDA-approved drug still requires a separate NMPA application for the mainland China market. For Greater China regulatory roles, understanding both TFDA and NMPA as independent systems is essential.' }
     ],

@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const india3Locations: LocationEntry[] = [
   {
@@ -11,8 +11,8 @@ export const india3Locations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Goa | Cipla Goa Sun Pharma Manufacturing India Help',
     metaDesc: 'Pharma proxy job support for Goa professionals. Cipla Goa, Sun Pharma Goa, Zuventus — expert guidance for Goa India pharma manufacturing and regulatory roles.',
     h1: 'Pharma Proxy Job Support in Goa',
-    heroIntro: 'Goa is one of India\'s most important pharmaceutical manufacturing states despite its small size. Major companies including Cipla, Sun Pharmaceutical, Zuventus Healthcare, and Macleods Pharmaceuticals have significant manufacturing plants in Goa — particularly in Verna Industrial Estate and Kundaim Industrial Estate. Goa\'s pharma manufacturing is strongly export-oriented, with many plants holding US FDA and EU GMP compliance.',
-    pharmaContext: 'Goa pharma manufacturing roles require CDSCO regulatory knowledge, US FDA 21 CFR 210/211 awareness (for export-qualified plants), EU GMP compliance, and expertise in oral solid dose or API manufacturing. The state\'s smaller size means faster CDSCO state-level regulatory interactions.',
+    heroIntro: 'Goa is one of India\'s most important pharmaceutical manufacturing states despite its small size. Major companies including Cipla, Sun Pharmaceutical, Zuventus Healthcare, and Macleods Pharmaceuticals have significant manufacturing plants in Goa — particularly in Verna Industrial Estate and Kundaim Industrial Estate. Goa\'s pharma manufacturing is strongly export-oriented, with many plants holding USA FDA and EU GMP compliance.',
+    pharmaContext: 'Goa pharma manufacturing roles require CDSCO regulatory knowledge, USA FDA 21 CFR 210/211 awareness (for export-qualified plants), EU GMP compliance, and expertise in oral solid dose or API manufacturing. The state\'s smaller size means faster CDSCO state-level regulatory interactions.',
     topEmployers: ['Cipla (Goa manufacturing)', 'Sun Pharmaceutical (Goa)', 'Zuventus Healthcare', 'Macleods Pharmaceuticals', 'Agena Pharma', 'BDR Pharmaceuticals'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'regulatory-affairs', 'csv-validation'],
     faqs: [
@@ -35,7 +35,7 @@ export const india3Locations: LocationEntry[] = [
     topEmployers: ['Jubilant Biosys (pharma services)', 'Piramal Pharma (commercial)', 'Dabur India (pharma adjacent)', 'Max Healthcare (clinical research)', 'Various pharma CRO and IT firms'],
     dominantDomains: ['pharma-ba', 'csv-validation', 'clinical-data', 'regulatory-affairs', 'pharma-ai'],
     faqs: [
-      { q: 'What pharma IT roles are growing in Noida?', a: 'Noida\'s position in India\'s tech corridor (alongside Gurugram and Delhi) makes it a growing hub for pharma IT roles: Veeva Vault configuration and administration, CTMS (Clinical Trial Management Systems) implementation, clinical data management using Medidata Rave and Oracle CDMS, pharmacovigilance system (Argus Safety, Oracle ARISg) support, and SAP pharmaceutical module implementation. US Eastern time zone support roles (approx. 12 hours offset) from India are clustered in NCR cities including Noida.' },
+      { q: 'What pharma IT roles are growing in Noida?', a: 'Noida\'s position in India\'s tech corridor (alongside Gurugram and Delhi) makes it a growing hub for pharma IT roles: Veeva Vault configuration and administration, CTMS (Clinical Trial Management Systems) implementation, clinical data management using Medidata Rave and Oracle CDMS, pharmacovigilance system (Argus Safety, Oracle ARISg) support, and SAP pharmaceutical module implementation. USA Eastern time zone support roles (approx. 12 hours offset) from India are clustered in NCR cities including Noida.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-delhi-ncr', 'pharma-proxy-job-support-bangalore-india', 'csv-validation-proxy-job-support'],
   },
@@ -50,7 +50,7 @@ export const india3Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Aurangabad professionals. Wockhardt, Glenmark, Lupin Aurangabad — expert guidance for Maharashtra Aurangabad pharma manufacturing roles.',
     h1: 'Pharma Proxy Job Support in Aurangabad',
     heroIntro: 'Aurangabad (now officially Chhatrapati Sambhajinagar) is Maharashtra\'s pharmaceutical manufacturing hub outside Mumbai-Pune. Wockhardt, Glenmark Pharmaceuticals, Lupin, and many domestic manufacturers have significant plant operations in Aurangabad\'s MIDC industrial areas. The city\'s manufacturing focus is strongly export-oriented.',
-    pharmaContext: 'Aurangabad pharma manufacturing roles require WHO GMP, US FDA (21 CFR 210/211), and EU GMP competencies — most major plants here are export-qualified. CDSCO state licensing, good documentation practices (GDP/GMP), and pharmaceutical process validation are core skills.',
+    pharmaContext: 'Aurangabad pharma manufacturing roles require WHO GMP, USA FDA (21 CFR 210/211), and EU GMP competencies — most major plants here are export-qualified. CDSCO state licensing, good documentation practices (GDP/GMP), and pharmaceutical process validation are core skills.',
     topEmployers: ['Wockhardt (Aurangabad plants)', 'Glenmark Pharmaceuticals (manufacturing)', 'Lupin Aurangabad', 'Sun Pharma (Aurangabad)', 'Biocon (API)', 'Torrent Pharma (Aurangabad)'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'regulatory-affairs', 'csv-validation'],
     faqs: [
@@ -88,11 +88,11 @@ export const india3Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Nashik professionals. Alembic Pharma, Merck India, Sai Lifesciences — expert guidance for Nashik Maharashtra pharma manufacturing and API roles.',
     h1: 'Pharma Proxy Job Support in Nashik',
     heroIntro: 'Nashik is Maharashtra\'s pharmaceutical and chemical manufacturing hub. Alembic Pharmaceuticals\' significant manufacturing operations, Merck India\'s API plant, and numerous bulk drug and formulation manufacturers are based in Nashik\'s MIDC industrial zones. Nashik\'s location between Mumbai and Pune on the pharmaceutical corridor makes it strategically important.',
-    pharmaContext: 'Nashik pharma roles span API manufacturing (bulk drug synthesis, process chemistry), formulation manufacturing (tablets, capsules), and quality control/assurance. CDSCO state licensing, US FDA API Drug Master File (DMF) submissions, and EU ASMF (Active Substance Master File) expertise are career differentiators.',
+    pharmaContext: 'Nashik pharma roles span API manufacturing (bulk drug synthesis, process chemistry), formulation manufacturing (tablets, capsules), and quality control/assurance. CDSCO state licensing, USA FDA API Drug Master File (DMF) submissions, and EU ASMF (Active Substance Master File) expertise are career differentiators.',
     topEmployers: ['Alembic Pharmaceuticals (Nashik)', 'Merck India (API plant)', 'Sai Lifesciences', 'Gufic Biosciences', 'Various bulk drug manufacturers'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'regulatory-affairs', 'pharma-compliance'],
     faqs: [
-      { q: 'What API manufacturing opportunities are available in Nashik?', a: 'Nashik has a significant concentration of API (Active Pharmaceutical Ingredient) manufacturers serving both domestic formulation companies and export markets. US FDA DMF (Drug Master File) preparation and maintenance, EU CEP (Certificate of Suitability), and Japanese PMDA DMF experience are sought-after skills. API quality control (analytical chemistry — HPLC, GC, dissolution, spectroscopy) and process development chemistry for step yield optimization are common career paths in Nashik\'s pharma manufacturing cluster.' },
+      { q: 'What API manufacturing opportunities are available in Nashik?', a: 'Nashik has a significant concentration of API (Active Pharmaceutical Ingredient) manufacturers serving both domestic formulation companies and export markets. USA FDA DMF (Drug Master File) preparation and maintenance, EU CEP (Certificate of Suitability), and Japanese PMDA DMF experience are sought-after skills. API quality control (analytical chemistry — HPLC, GC, dissolution, spectroscopy) and process development chemistry for step yield optimization are common career paths in Nashik\'s pharma manufacturing cluster.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-mumbai-india', 'pharma-proxy-job-support-pune-india', 'pharma-manufacturing-proxy-job-support'],
   },
@@ -145,11 +145,11 @@ export const india3Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Indore professionals. Cipla Indore, Torrent Pharma MP, Emcure — expert guidance for Madhya Pradesh Indore pharma manufacturing and quality roles.',
     h1: 'Pharma Proxy Job Support in Indore',
     heroIntro: 'Indore is Madhya Pradesh\'s pharmaceutical manufacturing hub. Several major Indian pharma companies have manufacturing plants in Indore\'s Pithampur Industrial Area (also called "Detroit of Madhya Pradesh" for its industrial density). Cipla, Torrent Pharmaceuticals, Emcure, and Ipca Laboratories have significant Indore manufacturing operations.',
-    pharmaContext: 'Indore pharma manufacturing follows the standard Indian GMP (Schedule M of Drugs and Cosmetics Act) and export markets require WHO GMP, US FDA, or EU GMP. Pithampur\'s SEZ status creates some additional regulatory considerations. English and Hindi language capability is standard.',
+    pharmaContext: 'Indore pharma manufacturing follows the standard Indian GMP (Schedule M of Drugs and Cosmetics Act) and export markets require WHO GMP, USA FDA, or EU GMP. Pithampur\'s SEZ status creates some additional regulatory considerations. English and Hindi language capability is standard.',
     topEmployers: ['Cipla (Indore plant)', 'Torrent Pharmaceuticals (MP plant)', 'Emcure Pharmaceuticals (Indore)', 'Ipca Laboratories', 'Lupin Indore', 'Various Pithampur manufacturers'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'regulatory-affairs', 'csv-validation'],
     faqs: [
-      { q: 'What role does Pithampur play in Indore\'s pharma sector?', a: 'Pithampur Special Economic Zone (SEZ) and Industrial Area, located 25km from Indore, is a major pharmaceutical and auto manufacturing cluster. The SEZ provides export-oriented manufacturing incentives, bonded warehouse facilities, and customs duty benefits for pharma exporters. Several WHO-GMP and US FDA compliant plants operate here for formulation export. Infrastructure development by AKVN (Apex Industrial Infrastructure Development Corporation) has made Pithampur a key destination for pharma greenfield investments in Central India.' },
+      { q: 'What role does Pithampur play in Indore\'s pharma sector?', a: 'Pithampur Special Economic Zone (SEZ) and Industrial Area, located 25km from Indore, is a major pharmaceutical and auto manufacturing cluster. The SEZ provides export-oriented manufacturing incentives, bonded warehouse facilities, and customs duty benefits for pharma exporters. Several WHO-GMP and USA FDA compliant plants operate here for formulation export. Infrastructure development by AKVN (Apex Industrial Infrastructure Development Corporation) has made Pithampur a key destination for pharma greenfield investments in Central India.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-ahmedabad-india', 'pharma-proxy-job-support-bhopal', 'pharma-manufacturing-proxy-job-support'],
   },
@@ -164,7 +164,7 @@ export const india3Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Mohali professionals. Intas Pharma Mohali, Emcure, PGIMER Chandigarh proximity — expert guidance for Punjab Mohali pharma manufacturing roles.',
     h1: 'Pharma Proxy Job Support in Mohali',
     heroIntro: 'Mohali (Sahibzada Ajit Singh Nagar) is part of the Chandigarh tricity area (Chandigarh-Mohali-Panchkula) and is emerging as a significant pharmaceutical manufacturing location. Several major pharma companies including Intas Pharmaceuticals and Emcure have facilities in Mohali\'s industrial zones. The proximity to PGIMER Chandigarh (one of India\'s premier medical institutions) creates clinical research pathways.',
-    pharmaContext: 'Mohali pharma manufacturing operates under Punjab state CDSCO licensing, with export plants meeting WHO GMP or US FDA standards. The Chandigarh tricity area\'s educated workforce, planned urban infrastructure, and government support for industrial development make Mohali attractive for pharma investment.',
+    pharmaContext: 'Mohali pharma manufacturing operates under Punjab state CDSCO licensing, with export plants meeting WHO GMP or USA FDA standards. The Chandigarh tricity area\'s educated workforce, planned urban infrastructure, and government support for industrial development make Mohali attractive for pharma investment.',
     topEmployers: ['Intas Pharmaceuticals (Mohali)', 'Emcure Pharmaceuticals (Mohali)', 'Panacea Biotec', 'PGIMER Chandigarh (clinical research)', 'Various pharma manufacturers in Mohali Industrial Area'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'regulatory-affairs', 'clinical-research'],
     faqs: [

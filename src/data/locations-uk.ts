@@ -211,8 +211,8 @@ export const ukLocations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Dublin Ireland | EMA Pharma Proxy Support',
     metaDesc: 'Pharma proxy job support for Dublin professionals. Pfizer Ireland, AbbVie, EMA European headquarters — expert guidance for Dublin pharma regulatory and manufacturing roles.',
     h1: 'Pharma Proxy Job Support in Dublin, Ireland',
-    heroIntro: 'Dublin is Europe\'s most important pharma city for US multinational operations — hosting European headquarters for Pfizer, AbbVie, Bristol-Myers Squibb, Amgen, Allergan, and dozens more. The European Medicines Agency relocated from London to Amsterdam post-Brexit, but Dublin remains a critical EMA-adjacent European regulatory hub.',
-    pharmaContext: 'Dublin\'s pharma market is dominated by US multinational European headquarters functions — regulatory affairs (EMA submissions), medical affairs, European safety operations, and large-scale pharmaceutical manufacturing (Ireland manufactures 50% of US pharmaceutical exports by value).',
+    heroIntro: 'Dublin is Europe\'s most important pharma city for USA multinational operations — hosting European headquarters for Pfizer, AbbVie, Bristol-Myers Squibb, Amgen, Allergan, and dozens more. The European Medicines Agency relocated from London to Amsterdam post-Brexit, but Dublin remains a critical EMA-adjacent European regulatory hub.',
+    pharmaContext: 'Dublin\'s pharma market is dominated by USA multinational European headquarters functions — regulatory affairs (EMA submissions), medical affairs, European safety operations, and large-scale pharmaceutical manufacturing (Ireland manufactures 50% of USA pharmaceutical exports by value).',
     topEmployers: ['Pfizer (European operations)', 'AbbVie (European HQ)', 'Bristol-Myers Squibb (Dublin)', 'Amgen (Dublin)', 'Allergan/AbbVie', 'MSD (Merck) Ireland', 'Jazz Pharmaceuticals (HQ)', 'Horizon Therapeutics', 'Prothena'],
     dominantDomains: ['Regulatory Affairs (EMA)', 'European Drug Safety', 'Pharmaceutical Manufacturing (API)', 'Medical Affairs (Europe)', 'Clinical Operations (EU)', 'Quality Systems (EU GMP)'],
     faqs: [

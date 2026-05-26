@@ -24,6 +24,7 @@ const {
 const phone = site.whatsapp.replace(/[^+\d]/g, '');
 ---
 
+<div class="cta-wrap">
 <section class={`cta-card cta-card--${variant}`} aria-label="Call to action">
   <div class="cta-badge">EXPERT HELP AVAILABLE</div>
   <h2 class="cta-heading">{heading}</h2>
@@ -51,12 +52,18 @@ const phone = site.whatsapp.replace(/[^+\d]/g, '');
     <a href={secondaryHref} class="cta-secondary">{secondaryLabel}</a>
   )}
 </section>
+</div>
 
 <style>
+  .cta-wrap {
+    max-width: var(--max-w, clamp(1380px, 80vw, 1900px));
+    margin: 0 auto;
+    padding: 0 5% 2rem;
+  }
   .cta-card {
     border-radius: 14px;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
   }
   .cta-card--dark {
     background: #062E1E;
@@ -111,7 +118,7 @@ const phone = site.whatsapp.replace(/[^+\d]/g, '');
   .cta-btn--wa {
     background: #1DAA61;
     color: #fff;
-    flex: 1;
+    flex: 0 0 auto;
     justify-content: center;
   }
   .cta-btn--call {

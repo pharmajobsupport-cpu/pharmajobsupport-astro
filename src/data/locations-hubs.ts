@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const hubLocations: LocationEntry[] = [
   {
@@ -8,7 +8,7 @@ export const hubLocations: LocationEntry[] = [
     country: 'United States',
     countryCode: 'US',
     region: 'North America',
-    metaTitle: 'Pharma Job Support USA | Proxy Job Support for US Pharma Professionals',
+    metaTitle: 'Pharma Job Support USA | Proxy Job Support for USA Pharma Professionals',
     metaDesc: 'Pharma proxy job support for USA-based professionals — NJ, Boston, San Diego, Chicago, RTP. Clinical SAS, FDA regulatory, PV, Veeva Vault, CSV validation support.',
     h1: 'Pharma Proxy Job Support — United States',
     heroIntro: 'The United States is the world\'s largest pharmaceutical market, home to Pfizer, Johnson & Johnson, Merck, AbbVie, Bristol-Myers Squibb, Eli Lilly, Amgen, and hundreds of CROs and biotech companies. Major pharma hubs include New Jersey, Boston, San Diego, Chicago, and Research Triangle Park (RTP).',
@@ -60,26 +60,6 @@ export const hubLocations: LocationEntry[] = [
       { q: 'Do you support pharma professionals outside the UK in Europe?', a: 'Yes — our experts provide real-time support for pharma professionals across all EU countries including Germany, Switzerland, Netherlands, Belgium, France, Denmark, Sweden, and more. Support is available 24/7 via WhatsApp for all EMA-regulated domains.' }
     ],
     relatedSlugs: ['pharma-proxy-job-support-zurich', 'pharma-proxy-job-support-amsterdam', 'pharma-proxy-job-support-frankfurt', 'regulatory-affairs-proxy-job-support']
-  },
-  {
-    slug: 'pharma-job-support-india',
-    city: 'India',
-    state: 'Multiple States',
-    country: 'India',
-    countryCode: 'IN',
-    region: 'South Asia',
-    metaTitle: 'Pharma Job Support India | Proxy Job Support for Indian Pharma Professionals',
-    metaDesc: 'Pharma proxy job support for India-based professionals — Hyderabad, Mumbai, Bangalore, Chennai, Pune. Regulatory, clinical SAS, pharmacovigilance, validation support.',
-    h1: 'Pharma Proxy Job Support — India',
-    heroIntro: 'India is the world\'s largest generic pharmaceutical manufacturer, home to Sun Pharma, Dr. Reddy\'s, Cipla, Lupin, Aurobindo, Biocon, and hundreds of API manufacturers and CROs. Hyderabad (Genome Valley), Mumbai (Bandra-Kurla Complex), Bangalore, Chennai, and Pune are the major pharma employment hubs.',
-    pharmaContext: 'Indian pharma professionals support global regulatory filings (USFDA, EMA, MHRA, TGA, Health Canada) from India-based CROs and pharma companies. Key roles include US/EU regulatory affairs, clinical SAS programming for global trials, pharmacovigilance, biostatistics, and quality assurance at WHO-GMP certified facilities. The Indian pharma IT sector also provides strong demand for Veeva Vault and validated systems expertise.',
-    topEmployers: ['Sun Pharmaceutical', 'Dr. Reddy\'s Laboratories', 'Cipla', 'Lupin Pharmaceuticals', 'Aurobindo Pharma', 'Biocon', 'Divi\'s Laboratories', 'Wockhardt', 'Ipca Laboratories', 'Glenmark Pharmaceuticals'],
-    dominantDomains: ['US/EU Regulatory Affairs', 'Clinical SAS / CDISC', 'Pharmacovigilance', 'Biostatistics', 'QA / WHO-GMP', 'CSV Validation'],
-    faqs: [
-      { q: 'What are the most in-demand pharma skills in India?', a: 'US FDA regulatory affairs (ANDA/NDA), clinical SAS programming, pharmacovigilance, biostatistics, and Veeva Vault are consistently high-demand across Indian CROs and pharma companies. Freshers with certified training in these domains can get interview calls faster with proper profile positioning.' },
-      { q: 'Do you support freshers looking for pharma jobs in India?', a: 'Yes — pharma freshers in India are a core audience for our services. We provide profile engineering to get interview calls, technical interview preparation for your specific domain, and real-time support once you land the role. Most pharma freshers need help positioning their certifications for HR screening.' }
-    ],
-    relatedSlugs: ['pharma-proxy-job-support-hyderabad', 'pharma-proxy-job-support-mumbai', 'pharma-proxy-job-support-bangalore', 'pharma-profile-engineering']
   },
   {
     slug: 'pharma-job-support-australia',

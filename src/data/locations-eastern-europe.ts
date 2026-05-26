@@ -52,7 +52,7 @@ export const easternEuropeLocations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Sofia professionals. BDA regulatory, Sopharma, clinical trials Bulgaria — expert guidance for Sofia pharma and regulatory roles.',
     h1: 'Pharma Proxy Job Support in Sofia',
     heroIntro: 'Sofia hosts Bulgaria\'s Balgarska Agentsia po Lekarstvata (Bulgarian Drug Agency / BDA) and Sopharma — one of Eastern Europe\'s most respected generic pharmaceutical manufacturers. Bulgaria\'s EU membership and cost-competitive clinical research environment create career opportunities.',
-    pharmaContext: 'Bulgaria\'s pharma market features domestic generic manufacturing, cost-competitive clinical research for EU market clients, and BDA regulatory interactions. Bulgarian pharma professionals increasingly target Western European and US remote roles.',
+    pharmaContext: 'Bulgaria\'s pharma market features domestic generic manufacturing, cost-competitive clinical research for EU market clients, and BDA regulatory interactions. Bulgarian pharma professionals increasingly target Western European and USA remote roles.',
     topEmployers: ['Sopharma (HQ, Sofia)', 'Balgarska Agentsia po Lekarstvata (BDA)', 'Actavis Bulgaria (Teva subsidiary)', 'Biovet (veterinary pharma)', 'Pharmachim', 'ICON Bulgaria (limited)', 'Military Medical Academy (clinical research)'],
     dominantDomains: ['Regulatory Affairs (BDA/EMA)', 'Generic Pharmaceutical Manufacturing', 'Clinical Research (Bulgarian sites)', 'Quality Systems (EU GMP)', 'Drug Safety (EU reporting)', 'Market Access (NCPR)'],
     faqs: [
@@ -112,7 +112,7 @@ export const easternEuropeLocations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Riga professionals. Grindeks, Olainfarm, Baltic pharma — expert guidance for Riga pharma and regulatory roles.',
     h1: 'Pharma Proxy Job Support in Riga',
     heroIntro: 'Riga hosts Latvia\'s pharmaceutical industry — Grindeks (Latvia\'s largest pharmaceutical company, manufacturer of meldonium/Mildronate) and Olainfarm (Olaine Industrial Pharma Park). The Baltic States share regulatory frameworks and create a mini-cluster for pharma career development.',
-    pharmaContext: 'Latvia\'s pharma market features domestic manufacturing (Grindeks, Olainfarm), ZAVA (State Agency of Medicines Latvia) regulatory interactions, and EU-aligned clinical trial operations. Baltic States pharma professionals increasingly pursue remote EU and US roles.',
+    pharmaContext: 'Latvia\'s pharma market features domestic manufacturing (Grindeks, Olainfarm), ZAVA (State Agency of Medicines Latvia) regulatory interactions, and EU-aligned clinical trial operations. Baltic States pharma professionals increasingly pursue remote EU and USA roles.',
     topEmployers: ['Grindeks (HQ, Riga)', 'Olainfarm (Olaine)', 'ZAVA (State Agency of Medicines Latvia)', 'STADA Baltic', 'Latvian Institute of Organic Synthesis (research)', 'RSU (clinical research)', 'P. Stradins Clinical University Hospital'],
     dominantDomains: ['Pharmaceutical Manufacturing', 'Regulatory Affairs (ZAVA/EMA)', 'Medicinal Chemistry (Organic Synthesis)', 'Clinical Research (Latvian sites)', 'Medical Affairs (Baltics)', 'Quality Systems (EU GMP)'],
     faqs: [
@@ -137,7 +137,7 @@ export const easternEuropeLocations: LocationEntry[] = [
     dominantDomains: ['Regulatory Affairs (VVKT/EMA)', 'Generic Manufacturing', 'Clinical Research (Lithuanian sites)', 'Medical Affairs (Baltics)', 'Quality Systems (EU GMP)', 'Pharmaceutical IT/Services'],
     faqs: [
       { q: 'What opportunities does Lithuania offer for pharma IT and technology roles?', a: 'Vilnius has a thriving tech startup ecosystem that increasingly overlaps with digital health and pharma IT. Pharmaceutical company IT services, clinical trial data management, and regulatory IT roles are growing as multinational pharma companies consider Baltic shared services centers.' },
-      { q: 'Are Baltic pharma professionals competitive internationally?', a: 'Yes. Baltic States professionals combine EU education standards, typically strong English proficiency, and pharmaceutical sciences training aligned with EU GMP and EMA regulatory standards — making them competitive candidates for EU and US pharma roles, particularly remote positions.' }
+      { q: 'Are Baltic pharma professionals competitive internationally?', a: 'Yes. Baltic States professionals combine EU education standards, typically strong English proficiency, and pharmaceutical sciences training aligned with EU GMP and EMA regulatory standards — making them competitive candidates for EU and USA pharma roles, particularly remote positions.' }
     ],
     relatedSlugs: ['pharma-proxy-job-support-riga', 'pharma-proxy-job-support-warsaw', 'regulatory-affairs-proxy-job-support', 'clinical-research-proxy-job-support']
   },

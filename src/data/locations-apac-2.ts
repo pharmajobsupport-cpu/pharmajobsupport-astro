@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const apac2Locations: LocationEntry[] = [
   {
@@ -183,11 +183,11 @@ export const apac2Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Dhaka professionals. DGDA regulatory, Square Pharmaceuticals, Incepta — expert guidance for Bangladesh pharma manufacturing and export roles.',
     h1: 'Pharma Proxy Job Support in Dhaka',
     heroIntro: 'Dhaka is the center of Bangladesh\'s rapidly growing pharmaceutical industry. Bangladesh is the world\'s second-largest exporter of generic pharmaceuticals after India, and Dhaka is home to Square Pharmaceuticals, Incepta Pharmaceuticals, Beximco Pharmaceuticals, and over 200 pharmaceutical manufacturers. DGDA (Directorate General of Drug Administration) is headquartered here.',
-    pharmaContext: 'Dhaka pharma roles require DGDA regulatory knowledge, Bangladesh National Drug Policy, WHO GMP standards (many Bangladesh manufacturers are WHO prequalified), and US FDA ANDA (for US export) knowledge for US-market-focused companies. English is the business language for export-oriented pharma.',
+    pharmaContext: 'Dhaka pharma roles require DGDA regulatory knowledge, Bangladesh National Drug Policy, WHO GMP standards (many Bangladesh manufacturers are WHO prequalified), and USA FDA ANDA (for USA export) knowledge for USA-market-focused companies. English is the business language for export-oriented pharma.',
     topEmployers: ['Square Pharmaceuticals', 'Incepta Pharmaceuticals', 'Beximco Pharmaceuticals', 'Renata Limited', 'ACI Pharma', 'DGDA'],
     dominantDomains: ['pharma-manufacturing', 'regulatory-affairs', 'pharma-qa', 'pharmacovigilance'],
     faqs: [
-      { q: 'Why is Bangladesh\'s pharmaceutical industry significant globally?', a: 'Bangladesh is eligible for WHO\'s TRIPs (Trade-Related Aspects of Intellectual Property Rights) waiver as a Least Developed Country, allowing it to manufacture generic drugs without patent restrictions until 2033. This drives Bangladesh\'s large generic pharmaceutical export industry. Beximco, Incepta, and Square export APIs and finished doses to over 100 countries. Several companies have achieved US FDA ANDA approval and WHO prequalification. This creates demand for regulatory affairs professionals with ANDA, PIC/S GMP, and WHO prequalification expertise.' },
+      { q: 'Why is Bangladesh\'s pharmaceutical industry significant globally?', a: 'Bangladesh is eligible for WHO\'s TRIPs (Trade-Related Aspects of Intellectual Property Rights) waiver as a Least Developed Country, allowing it to manufacture generic drugs without patent restrictions until 2033. This drives Bangladesh\'s large generic pharmaceutical export industry. Beximco, Incepta, and Square export APIs and finished doses to over 100 countries. Several companies have achieved USA FDA ANDA approval and WHO prequalification. This creates demand for regulatory affairs professionals with ANDA, PIC/S GMP, and WHO prequalification expertise.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-bangladesh', 'pharma-proxy-job-support-mumbai', 'pharma-proxy-job-support-hyderabad'],
   },

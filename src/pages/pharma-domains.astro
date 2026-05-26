@@ -96,17 +96,65 @@ const domains = [
   {
     title: 'Medical Writing',
     slug: 'medical-writing-support',
-    description: 'Regulatory medical writing for clinical study reports, investigator brochures, IMPDs, NDA/BLA modules, labelling, and scientific publications. GCP-compliant, ICH E3-aligned.',
-    tools: ['Adobe FrameMaker', 'Microsoft Word', 'eCTD authoring tools', 'Reference Manager', 'EndNote'],
+    description: 'Regulatory medical writing for clinical study reports, investigator brochures, IMPDs, NDA/BLA modules, labelling, and scientific publications. GCP-compliant, ICH E3-aligned. AI-assisted drafting tools require careful GxP validation in 2026.',
+    tools: ['Adobe FrameMaker', 'Microsoft Word', 'eCTD authoring tools', 'Reference Manager', 'AI Writing Assistants'],
     roles: ['Medical Writer', 'Senior Medical Writer', 'Regulatory Medical Writer', 'Publications Manager'],
     regs: ['ICH E3 (CSR)', 'ICH E6 (GCP)', 'ICH M4 (CTD)', 'GPP3 (Good Publication Practice)'],
+  },
+  {
+    title: 'Clinical Operations / eTMF / CTMS',
+    slug: 'clinical-operations-support',
+    description: 'Clinical trial management, site feasibility, remote monitoring, TMF management, and CRO oversight. Veeva Vault CTMS and eTMF consolidate operations in 2026. ICH E6 R3 GCP requires updated risk-based monitoring frameworks.',
+    tools: ['Veeva Vault CTMS', 'Veeva Vault eTMF', 'Oracle Siebel CTMS', 'Medidata Rave CTMS', 'Florence eBinders'],
+    roles: ['Clinical Operations Manager', 'CRA / Monitor', 'eTMF Manager', 'Clinical Project Manager', 'Site Manager'],
+    regs: ['ICH E6 R3 (GCP)', 'TMF Reference Model', '21 CFR Part 312', 'EMA GCP Annex', 'EU CT Regulation 536/2014'],
+  },
+  {
+    title: 'Regulatory CMC',
+    slug: 'regulatory-cmc-support',
+    description: 'CMC section preparation for NDA, BLA, MAA, and IND submissions. Drug substance/product specifications, manufacturing process descriptions, stability data, and control strategy under ICH Q8–Q14. eCTD 4.0 requires CMC teams to own electronic submission quality.',
+    tools: ['Veeva Vault RIM', 'LORENZ docuBridge', 'Documentum', 'Stability LIMS', 'eCTD authoring tools'],
+    roles: ['CMC Regulatory Affairs Specialist', 'CMC Manager', 'Pharmaceutical Scientist', 'Formulation Specialist'],
+    regs: ['ICH Q8–Q14', 'ICH Q1A(R2) Stability', 'FDA 21 CFR Parts 210/211', 'EMA CMC Guideline', 'eCTD 4.0'],
+  },
+  {
+    title: 'Decentralized Clinical Trials / Digital Health',
+    slug: 'decentralized-clinical-trials-support',
+    description: 'Remote patient monitoring, eConsent, wearable data integration, and digital biomarker collection. FDA/EMA DCT guidance is fully established in 2026 — DCT platform GxP validation and digital biomarker regulatory acceptance are now core requirements.',
+    tools: ['Medidata Rave eDCT', 'Veeva SiteVault', 'Signant Health', 'THREAD', 'BYOD / eCOA platforms'],
+    roles: ['DCT Specialist', 'Digital Health Manager', 'eConsent Lead', 'Remote Monitoring Coordinator', 'Digital Biomarker Scientist'],
+    regs: ['FDA DCT Guidance (2023)', 'EMA DCT Reflection Paper', '21 CFR Part 11', 'ICH E6 R3', 'HIPAA / GDPR'],
+  },
+  {
+    title: 'Bioinformatics / NGS / Precision Medicine',
+    slug: 'bioinformatics-support',
+    description: 'NGS pipelines, genomic data analysis, companion diagnostic development, and bioinformatics workflows for oncology and rare disease trials. AlphaFold 3 and AI-protein design are accelerating drug discovery. GxP bioinformatics validation is an emerging compliance area.',
+    tools: ['GATK', 'Nextflow / Snakemake', 'Python / R / Bioconductor', 'AlphaFold 3', 'AWS Genomics / DNAnexus'],
+    roles: ['Bioinformatician', 'Genomics Data Scientist', 'Computational Biologist', 'NGS Analyst', 'CDx Regulatory Specialist'],
+    regs: ['FDA CDx Guidance', 'ISO 18113 (IVD)', 'GxP Bioinformatics Principles', 'GDPR / NIH dbGaP', 'ICH E16'],
+  },
+  {
+    title: 'HEOR & Real-World Evidence',
+    slug: 'heor-real-world-evidence-support',
+    description: 'Health economics and outcomes research, RWE study design, payer evidence generation, and HTA dossier preparation for market access. Synthetic control arms from RWD and AI-driven RWE are transforming specialty drug and biologics market access in 2026.',
+    tools: ['R / Python (RWE)', 'SAS (HEOR)', 'TreeAge / Excel CEA models', 'Flatiron / IQVIA / Optum RWD', 'Medidata RWD Platform'],
+    roles: ['HEOR Analyst', 'RWE Scientist', 'Market Access Manager', 'Health Economist', 'Outcomes Researcher'],
+    regs: ['ISPOR RWE Guidelines', 'FDA RWE Framework', 'EUnetHTA Methodology', 'NICE DSU Guidelines', 'STROBE / RECORD Checklists'],
+  },
+  {
+    title: 'Clinical Pharmacology / PK/PD',
+    slug: 'clinical-pharmacology-support',
+    description: 'PK/PD modelling, population PK/PD, PBPK simulation, dose optimisation, and NDA clinical pharmacology packages. Model-informed drug development (MIDD) is a regulatory expectation — FDA and EMA encourage PBPK early in development planning.',
+    tools: ['NONMEM', 'Monolix', 'Phoenix WinNonlin', 'R (mrgsolve / nlmixr2)', 'Simcyp / GastroPlus (PBPK)'],
+    roles: ['Clinical Pharmacologist', 'PK/PD Modeller', 'Quantitative Pharmacologist', 'DMPK Scientist', 'Pharmacometrician'],
+    regs: ['ICH E4 / E5 / E7', 'FDA PK/PD Guidance', 'EMA Modelling & Simulation Guideline', 'ICH M12 (DDI)', 'Module 2.7.2'],
   },
 ];
 ---
 
 <BaseLayout
   title="Pharma Domains | All Pharmaceutical Job Support Areas | pharmajobsupport.com"
-  description="All pharma domains covered by PharmaCDM job support — Clinical SAS, CDM, Pharmacovigilance, CSV, Regulatory Affairs, QA, Medical Device, Veeva Vault, AI/ML, and Medical Writing."
+  description="20+ pharma domains covered — Clinical SAS, CDM, Pharmacovigilance, CSV, Regulatory Affairs, QA/GMP, Medical Device, Veeva Vault, AI/GenAI, Medical Writing, Clinical Ops, CMC, DCT, Bioinformatics, HEOR, PK/PD and more."
   schema={schema}
 >
   <div class="page-container">
@@ -173,7 +221,7 @@ const domains = [
   .page-container {
     max-width: var(--max-w);
     margin: 0 auto;
-    padding: 0 var(--space-4) var(--space-14);
+    padding: 0 5% var(--space-14);
   }
   .page-hero {
     padding: var(--space-10) 0 var(--space-6);

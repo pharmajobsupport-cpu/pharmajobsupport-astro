@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const profileCountriesServices2: ServiceEntry[] = [
   {
@@ -164,7 +164,7 @@ export const profileCountriesServices2: ServiceEntry[] = [
       },
       {
         q: 'What makes AstraZeneca Gothenburg different from AstraZeneca globally?',
-        a: 'AstraZeneca Mölndal is one of AZ\'s three global R&D powerhouses (alongside Cambridge UK and Gaithersburg US). It focuses particularly on cardiovascular, renal & metabolism, and respiratory/immunology. Early and mid-stage clinical development, regulatory strategy, and discovery research roles are concentrated here.'
+        a: 'AstraZeneca Mölndal is one of AZ\'s three global R&D powerhouses (alongside Cambridge UK and Gaithersburg USA). It focuses particularly on cardiovascular, renal & metabolism, and respiratory/immunology. Early and mid-stage clinical development, regulatory strategy, and discovery research roles are concentrated here.'
       }
     ],
     relatedSlugs: ['pharma-profile-engineering', 'pharma-proxy-interview-sweden', 'pharma-proxy-job-support-sweden', 'clinical-research-profile-engineering']

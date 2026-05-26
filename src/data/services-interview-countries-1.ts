@@ -1,15 +1,15 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const interviewCountriesServices1: ServiceEntry[] = [
   {
     slug: 'pharma-proxy-interview-usa',
     title: 'Pharma Proxy Interview Support — USA',
-    h1: 'Pharma Proxy Interview Support for US Pharma Jobs',
-    metaTitle: 'Pharma Proxy Interview Support USA | FDA Pharma Interview Prep US',
-    metaDesc: 'Proxy interview support for US pharma jobs. FDA regulatory, clinical SAS, pharmacovigilance, Veeva Vault, CSV validation — real-time support for US CRO and sponsor interviews. WhatsApp: +91-9660834611',
+    h1: 'Pharma Proxy Interview Support for USA Pharma Jobs',
+    metaTitle: 'Pharma Proxy Interview Support USA | FDA Pharma Interview Prep USA',
+    metaDesc: 'Proxy interview support for USA pharma jobs. FDA regulatory, clinical SAS, pharmacovigilance, Veeva Vault, CSV validation — real-time support for USA CRO and sponsor interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
-    heroIntro: 'The US is the world\'s largest pharmaceutical market and the most demanding for interviews. FDA regulatory affairs, clinical SAS programming, pharmacovigilance, Veeva Vault administration, and CSV validation roles at major sponsors and CROs require deep technical knowledge. Our proxy interview support connects you with pharma professionals who have worked in US FDA-regulated environments and can guide you through technical panels in real time.',
-    problemSection: 'US pharma interviews at companies like Pfizer, J&J, Merck, Abbott, and CROs like IQVIA and Covance are rigorous. Technical screening rounds test FDA regulatory knowledge (21 CFR, ICH guidelines), SAS ADaM/SDTM derivation, GAMP 5 CSV processes, and Veeva Vault configuration. Without live expert support, candidates freeze on specific technical questions.',
+    heroIntro: 'The USA is the world\'s largest pharmaceutical market and the most demanding for interviews. FDA regulatory affairs, clinical SAS programming, pharmacovigilance, Veeva Vault administration, and CSV validation roles at major sponsors and CROs require deep technical knowledge. Our proxy interview support connects you with pharma professionals who have worked in USA FDA-regulated environments and can guide you through technical panels in real time.',
+    problemSection: 'USA pharma interviews at companies like Pfizer, J&J, Merck, Abbott, and CROs like IQVIA and Covance are rigorous. Technical screening rounds test FDA regulatory knowledge (21 CFR, ICH guidelines), SAS ADaM/SDTM derivation, GAMP 5 CSV processes, and Veeva Vault configuration. Without live expert support, candidates freeze on specific technical questions.',
     whatCovered: [
       'FDA regulatory interviews — 21 CFR Part 11, eCTD, NDA/BLA submissions, IND process',
       'Clinical SAS programming — SDTM mapping, ADaM derivation, TLF production, Pinnacle 21',
@@ -19,7 +19,7 @@ export const interviewCountriesServices1: ServiceEntry[] = [
       'Medical device QA — 21 CFR Part 820, ISO 13485, FDA 510(k), PMA process',
       'CDM — Medidata Rave, Oracle InForm, EDC validation, data cleaning',
       'Real-time interview support — listening and responding during your live interview call',
-      'US pharma terminology — FDA-specific language and acronyms used by interviewers',
+      'USA pharma terminology — FDA-specific language and acronyms used by interviewers',
       'Visa and work authorisation context — H-1B, OPT, TN positioning awareness'
     ],
     roleExamples: [
@@ -31,9 +31,9 @@ export const interviewCountriesServices1: ServiceEntry[] = [
     ],
     tools: ['FDA regulatory portals', 'Argus Safety', 'Medidata Rave', 'Pinnacle 21', 'Veeva Vault'],
     faqs: [
-      { q: 'What types of US pharma interviews do you support?', a: 'We support all US pharma and CRO technical interviews: clinical SAS programming (SDTM/ADaM), regulatory affairs (FDA 21 CFR, eCTD), pharmacovigilance (Argus, FAERS), CSV validation (GAMP 5), Veeva Vault administration, CDM (Medidata Rave, Oracle InForm), and medical device QA (21 CFR 820). Both phone screen and video panel rounds.' },
+      { q: 'What types of USA pharma interviews do you support?', a: 'We support all USA pharma and CRO technical interviews: clinical SAS programming (SDTM/ADaM), regulatory affairs (FDA 21 CFR, eCTD), pharmacovigilance (Argus, FAERS), CSV validation (GAMP 5), Veeva Vault administration, CDM (Medidata Rave, Oracle InForm), and medical device QA (21 CFR 820). Both phone screen and video panel rounds.' },
       { q: 'Can you help with FDA regulatory interview questions specifically?', a: 'Yes. Our regulatory affairs support covers FDA NDA/BLA submission questions, eCTD structure, 21 CFR Part 11 compliance, ICH M4 CTD format, FDA Study Data Technical Conformance Guide, CDER and CBER interactions, and PDUFA timelines. We have professionals with FDA submission experience.' },
-      { q: 'How does real-time proxy interview support work for US interviews?', a: 'You join the interview call and have our expert on a separate line via earpiece or phone. As the interviewer asks questions, you relay the question to us (via text or audio) and we provide the answer which you then communicate. All support is via WhatsApp voice/text: +91-9660834611.' }
+      { q: 'How does real-time proxy interview support work for USA interviews?', a: 'You join the interview call and have our expert on a separate line via earpiece or phone. As the interviewer asks questions, you relay the question to us (via text or audio) and we provide the answer which you then communicate. All support is via WhatsApp voice/text: +91-9660834611.' }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'clinical-sas-proxy-interview', 'regulatory-affairs-proxy-interview', 'pharma-proxy-interview-canada']
   },
@@ -45,7 +45,7 @@ export const interviewCountriesServices1: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Canadian pharma jobs. Health Canada regulatory, clinical SAS, PV, Veeva Vault. Toronto, Montreal, Vancouver pharma interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Canada\'s pharmaceutical market centres on Toronto (Mississauga), Montreal, and Vancouver, with a strong mix of global pharma subsidiaries and domestic CROs. Health Canada regulates medicines. Canadian pharma interviews test ICH regulatory knowledge (aligned with Health Canada guidance), clinical SAS programming, and pharmacovigilance expertise. Our proxy interview support covers Canadian pharma interview formats.',
-    problemSection: 'Canadian pharma interviews at Sanofi Canada, Novartis Canada, and CROs like ICON Canada test technical competency in the same ICH/GCP framework as the US and EU but with Health Canada-specific nuances — Common Drug Review (CDR) for reimbursement, notice of compliance (NOC) pathway, and Canadian clinical trial authorisation. Candidates need guidance on these distinctions.',
+    problemSection: 'Canadian pharma interviews at Sanofi Canada, Novartis Canada, and CROs like ICON Canada test technical competency in the same ICH/GCP framework as the USA and EU but with Health Canada-specific nuances — Common Drug Review (CDR) for reimbursement, notice of compliance (NOC) pathway, and Canadian clinical trial authorisation. Candidates need guidance on these distinctions.',
     whatCovered: [
       'Health Canada regulatory interviews — NOC, SNDS, CDR, clinical trial authorisation',
       'ICH GCP and GMP — Canadian regulatory alignment',
@@ -67,7 +67,7 @@ export const interviewCountriesServices1: ServiceEntry[] = [
     ],
     tools: ['Health Canada regulatory portals', 'MedEffect Canada', 'Pinnacle 21', 'Veeva Vault', 'CIOMS forms'],
     faqs: [
-      { q: 'How do Canadian pharma interviews differ from US interviews?', a: 'Canadian pharma interviews follow the same ICH/GCP technical framework as US interviews. The key Canadian-specific differences are: Health Canada\'s Notice of Compliance (NOC) pathway instead of FDA approval, the Common Drug Review (CDR) for reimbursement decisions, Canadian adverse drug reaction (ADR) reporting to MedEffect Canada, and Canadian clinical trial application (CTA) process.' },
+      { q: 'How do Canadian pharma interviews differ from USA interviews?', a: 'Canadian pharma interviews follow the same ICH/GCP technical framework as USA interviews. The key Canadian-specific differences are: Health Canada\'s Notice of Compliance (NOC) pathway instead of FDA approval, the Common Drug Review (CDR) for reimbursement decisions, Canadian adverse drug reaction (ADR) reporting to MedEffect Canada, and Canadian clinical trial application (CTA) process.' },
       { q: 'Which cities in Canada have the most pharma jobs?', a: 'Toronto and the Mississauga corridor (where Sanofi, Novartis, Roche Canada are headquartered) is the largest Canadian pharma hub. Montreal is strong in biotech and clinical research. Vancouver has a growing biotech sector. Our support covers interviews for jobs at pharma companies across all three cities.' },
       { q: 'Can you support French-language pharma interviews in Quebec?', a: 'We can provide content support for technical pharma questions regardless of language. For French-language interviews with Montreal-based pharmaceutical companies or Quebec government agencies, we focus on the technical content you need to communicate.' }
     ],

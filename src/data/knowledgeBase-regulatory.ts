@@ -1,4 +1,4 @@
-import type { KBEntry } from './knowledgeBase-clinical';
+﻿import type { KBEntry } from './knowledgeBase-clinical';
 
 export const regulatoryKB: KBEntry[] = [
   {
@@ -71,7 +71,7 @@ export const regulatoryKB: KBEntry[] = [
       },
       {
         heading: 'EU Product Information: SmPC and PIL',
-        body: 'The Summary of Product Characteristics (SmPC) is the core EU product information document — equivalent to US Prescribing Information (PI). SmPC sections: Sections 1-2 (name, qualitative composition), Section 4 (clinical particulars — indications, dosing, contraindications, special warnings, interactions, pregnancy, effects on driving, undesirable effects, overdose), Section 5 (pharmacological properties), Section 6 (pharmaceutical particulars — excipients, shelf life, storage, packaging). The Patient Information Leaflet (PIL) mirrors the SmPC for patients. Both are subject to EMA readability testing and review.',
+        body: 'The Summary of Product Characteristics (SmPC) is the core EU product information document — equivalent to USA Prescribing Information (PI). SmPC sections: Sections 1-2 (name, qualitative composition), Section 4 (clinical particulars — indications, dosing, contraindications, special warnings, interactions, pregnancy, effects on driving, undesirable effects, overdose), Section 5 (pharmacological properties), Section 6 (pharmaceutical particulars — excipients, shelf life, storage, packaging). The Patient Information Leaflet (PIL) mirrors the SmPC for patients. Both are subject to EMA readability testing and review.',
       },
       {
         heading: 'Post-Marketing Obligations in the EU',
@@ -81,7 +81,7 @@ export const regulatoryKB: KBEntry[] = [
     keyTerms: [
       { term: 'EMA', definition: 'European Medicines Agency — EU agency for scientific evaluation of medicines' },
       { term: 'CHMP', definition: 'Committee for Medicinal Products for Human Use — EMA committee conducting MAA reviews' },
-      { term: 'MAA', definition: 'Marketing Authorisation Application — EU equivalent of the US NDA/BLA' },
+      { term: 'MAA', definition: 'Marketing Authorisation Application — EU equivalent of the USA NDA/BLA' },
       { term: 'SmPC', definition: 'Summary of Product Characteristics — EU approved product information document' },
       { term: 'Centralised Procedure', definition: 'Single EMA application resulting in EU-wide marketing authorisation' },
       { term: 'PRIME', definition: 'PRIority MEdicines — EMA scheme for early dialogue on promising medicines' },
@@ -110,7 +110,7 @@ export const regulatoryKB: KBEntry[] = [
       },
       {
         heading: 'Required Skills for Regulatory Affairs',
-        body: 'Technical skills: Knowledge of eCTD/CTD structure and Module requirements, FDA/EMA/ICH guidelines, regulatory strategy development, labeling principles (US PI, EU SmPC), Veeva Vault RIM (most widely used regulatory information management system), eCTD publishing tools (Extedo, DocuBridge, Lorenz), regulatory intelligence platforms (Citeline), scientific writing. Soft skills: Attention to detail (regulatory submissions must be error-free), cross-functional collaboration (working with clinical, CMC, safety, legal), deadline management (PDUFA dates are fixed), communication (representing the company to regulators).',
+        body: 'Technical skills: Knowledge of eCTD/CTD structure and Module requirements, FDA/EMA/ICH guidelines, regulatory strategy development, labeling principles (USA PI, EU SmPC), Veeva Vault RIM (most widely used regulatory information management system), eCTD publishing tools (Extedo, DocuBridge, Lorenz), regulatory intelligence platforms (Citeline), scientific writing. Soft skills: Attention to detail (regulatory submissions must be error-free), cross-functional collaboration (working with clinical, CMC, safety, legal), deadline management (PDUFA dates are fixed), communication (representing the company to regulators).',
       },
       {
         heading: 'Veeva Vault RIM for Regulatory Professionals',
@@ -118,7 +118,7 @@ export const regulatoryKB: KBEntry[] = [
       },
       {
         heading: 'Salary Ranges in Regulatory Affairs',
-        body: 'US salaries by level: Regulatory Affairs Associate (0-3 years): $65,000-$95,000. Regulatory Affairs Specialist (3-6 years): $90,000-$130,000. Regulatory Affairs Manager (6-10 years): $120,000-$160,000. Senior Manager/Associate Director (8-15 years): $150,000-$200,000. Director (12+ years): $180,000-$250,000. VP/SVP: $250,000-$400,000+. Total compensation at large pharma includes 15-25% bonuses and stock options. Contractors/consultants earn $75-$150/hour depending on expertise. European salaries are typically 20-30% lower in absolute terms but purchasing power-adjusted comparably.',
+        body: 'USA salaries by level: Regulatory Affairs Associate (0-3 years): $65,000-$95,000. Regulatory Affairs Specialist (3-6 years): $90,000-$130,000. Regulatory Affairs Manager (6-10 years): $120,000-$160,000. Senior Manager/Associate Director (8-15 years): $150,000-$200,000. Director (12+ years): $180,000-$250,000. VP/SVP: $250,000-$400,000+. Total compensation at large pharma includes 15-25% bonuses and stock options. Contractors/consultants earn $75-$150/hour depending on expertise. European salaries are typically 20-30% lower in absolute terms but purchasing power-adjusted comparably.',
       },
       {
         heading: 'Career Progression Path',
@@ -149,7 +149,7 @@ export const regulatoryKB: KBEntry[] = [
     metaTitle: 'GMP Manufacturing Compliance Guide: 21 CFR 211, EU GMP, Batch Release',
     metaDesc: 'Complete GMP compliance guide for pharmaceutical manufacturing — 21 CFR Part 211, EU GMP Annex 1, batch release, OOS investigations, CAPA, and GMP inspection preparation.',
     h1: 'GMP Manufacturing Compliance: 21 CFR Part 211 and EU GMP Complete Guide',
-    intro: 'Good Manufacturing Practice (GMP) regulations govern the production of pharmaceutical products to ensure they meet safety, identity, strength, quality, and purity requirements. In the US, GMP is regulated under 21 CFR Parts 210 and 211 (Current GMP — cGMP). In the EU, GMP is governed by EU GMP Guidelines (EudraLex Volume 4). GMP compliance is a condition of FDA and EMA approval and is verified through routine and for-cause inspections.',
+    intro: 'Good Manufacturing Practice (GMP) regulations govern the production of pharmaceutical products to ensure they meet safety, identity, strength, quality, and purity requirements. In the USA, GMP is regulated under 21 CFR Parts 210 and 211 (Current GMP — cGMP). In the EU, GMP is governed by EU GMP Guidelines (EudraLex Volume 4). GMP compliance is a condition of FDA and EMA approval and is verified through routine and for-cause inspections.',
     sections: [
       {
         heading: '21 CFR Part 211: Current GMP Requirements',
@@ -157,7 +157,7 @@ export const regulatoryKB: KBEntry[] = [
       },
       {
         heading: 'Batch Record and Batch Release',
-        body: 'The Master Batch Record (MBR) is the approved manufacturing instruction for each product — defining every step, quantity, time, temperature, and in-process control. The Batch Production Record (BPR) is the executed record for a specific batch — documenting every step as performed, with operator initials and timestamps. Batch release requires review and approval of: BPR completeness, in-process test results, finished product analytical testing (against CoA specifications), deviation review and closure, environmental monitoring data (for sterile products), and QP (Qualified Person) certification (EU) or QA batch disposition (US).',
+        body: 'The Master Batch Record (MBR) is the approved manufacturing instruction for each product — defining every step, quantity, time, temperature, and in-process control. The Batch Production Record (BPR) is the executed record for a specific batch — documenting every step as performed, with operator initials and timestamps. Batch release requires review and approval of: BPR completeness, in-process test results, finished product analytical testing (against CoA specifications), deviation review and closure, environmental monitoring data (for sterile products), and QP (Qualified Person) certification (EU) or QA batch disposition (USA).',
       },
       {
         heading: 'Out-of-Specification (OOS) Investigations',
@@ -182,7 +182,7 @@ export const regulatoryKB: KBEntry[] = [
       { term: 'PAI', definition: 'Pre-Approval Inspection — FDA facility inspection before granting NDA/BLA approval' },
     ],
     faqs: [
-      { q: 'What is the difference between GMP and cGMP?', a: 'GMP (Good Manufacturing Practice) refers to the general concept of manufacturing quality. cGMP (Current GMP) specifically refers to the FDA\'s 21 CFR Parts 210/211 regulations — the "current" emphasizes that manufacturers must keep up with evolving technology and standards, not just follow the literal text of the regulation as written. In practice, the terms are used interchangeably in the US. EU GMP (EudraLex Volume 4) is the European equivalent.' },
+      { q: 'What is the difference between GMP and cGMP?', a: 'GMP (Good Manufacturing Practice) refers to the general concept of manufacturing quality. cGMP (Current GMP) specifically refers to the FDA\'s 21 CFR Parts 210/211 regulations — the "current" emphasizes that manufacturers must keep up with evolving technology and standards, not just follow the literal text of the regulation as written. In practice, the terms are used interchangeably in the USA. EU GMP (EudraLex Volume 4) is the European equivalent.' },
       { q: 'What is a Form 483 and how should it be responded to?', a: 'FDA Form 483 is issued at the conclusion of an inspection to list inspectional observations — conditions the investigator considers objectionable. The 483 is not a Warning Letter but a request for response. Sponsors should: respond within 15 working days (or requested timeframe), address every observation with specific corrective actions and timelines, provide evidence of completed actions where possible, and demonstrate systemic understanding of root causes. A good 483 response can prevent escalation to a Warning Letter.' },
       { q: 'What are GMP requirements for analytical laboratory equipment?', a: '21 CFR 211.68 requires that automatic, mechanical, and electronic equipment used in manufacturing and testing is routinely calibrated, inspected, or checked according to written programs. For analytical instruments (HPLC, GC, dissolution apparatus, balances, Karl Fischer titrators): calibration must be performed at defined intervals, using traceable standards, with calibration records maintained. Instruments must be qualified (IQ/OQ/PQ) if used to generate GxP data. Part 11-compliant software is required if electronic data is the official record.' },
       { q: 'What is a pharmaceutical product recall and how is it classified?', a: 'A product recall removes a product from commerce due to safety, efficacy, or quality failures. FDA classifies recalls: Class I (serious adverse health consequences or death), Class II (may cause temporary adverse health consequences, or serious consequences are remote), Class III (not likely to cause adverse health consequences but violates regulations). Recalls may be voluntary (sponsor-initiated) or FDA-requested. Market withdrawal and stock recovery are less severe actions for minor violations not constituting a health hazard.' },

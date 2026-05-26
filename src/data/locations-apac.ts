@@ -2,26 +2,6 @@
 
 export const apacLocations: LocationEntry[] = [
   {
-    slug: 'pharma-proxy-job-support-singapore',
-    city: 'Singapore',
-    state: 'Singapore',
-    country: 'Singapore',
-    countryCode: 'SG',
-    region: 'Southeast Asia',
-    metaTitle: 'Pharma Proxy Job Support Singapore | APAC Pharma Hub Expert Help',
-    metaDesc: 'Pharma proxy job support for Singapore professionals. GSK, AstraZeneca APAC, HSA — expert guidance for Singapore pharma and biotech roles.',
-    h1: 'Pharma Proxy Job Support in Singapore',
-    heroIntro: 'Singapore is Asia\'s premier pharmaceutical hub — home to GSK\'s Asia Pacific headquarters, AstraZeneca\'s APAC operations, Novartis APAC, and a world-class biopharma manufacturing corridor along Tuas and Woodlands. HSA\'s (Health Sciences Authority) regulatory framework is Singapore\'s unique asset.',
-    pharmaContext: 'Singapore\'s pharma market requires knowledge of HSA regulatory submissions (Drug Product Application), APAC regulatory strategy, and Singapore\'s role as a clinical research hub for Southeast Asian patient populations. English-language business environment makes it accessible to international professionals.',
-    topEmployers: ['GSK Asia Pacific (HQ)', 'AstraZeneca APAC', 'Novartis Asia Pacific', 'Roche Singapore', 'Pfizer Singapore', 'MSD Singapore', 'Lonza Singapore (manufacturing)', 'Amgen Singapore (manufacturing)'],
-    dominantDomains: ['Regulatory Affairs (HSA/APAC)', 'Clinical Research (APAC)', 'Biologics Manufacturing', 'Medical Affairs (SEA)', 'Drug Safety (APAC)', 'Market Access (Singapore/SEA)'],
-    faqs: [
-      { q: 'What makes Singapore the top APAC pharma hub?', a: 'Singapore offers business-friendly regulation, English-language environment, political stability, excellent intellectual property protection, tax incentives for pharma R&D, and proximity to Southeast Asian patient populations for clinical research. HSA is also one of Asia\'s most sophisticated and efficient regulatory agencies.' },
-      { q: 'Is Singapore pharma industry accessible to Indian pharma professionals?', a: 'Yes. Singapore actively recruits pharma talent from India, particularly for SAS programming, regulatory affairs, clinical data management, pharmacovigilance, and manufacturing quality roles. Indian pharma professionals with strong English and technical skills are competitive candidates for Singapore roles.' }
-    ],
-    relatedSlugs: ['pharma-proxy-job-support-bangalore', 'pharma-proxy-job-support-tokyo', 'regulatory-affairs-proxy-job-support', 'pharma-manufacturing-proxy-job-support']
-  },
-  {
     slug: 'pharma-proxy-job-support-tokyo',
     city: 'Tokyo',
     state: 'Tokyo',
@@ -140,86 +120,6 @@ export const apacLocations: LocationEntry[] = [
       { q: 'Is Zhangjiang Pharmaceutical Park important for Shanghai pharma careers?', a: 'Very much so. Zhangjiang in Pudong hosts over 400 life sciences companies including multinational R&D centers (Roche, Novartis, BeiGene) and hundreds of domestic Chinese biotech companies. It\'s often called China\'s Kendall Square — the most innovative pharma cluster in Asia.' }
     ],
     relatedSlugs: ['pharma-proxy-job-support-beijing', 'pharma-proxy-job-support-singapore', 'clinical-research-proxy-job-support', 'pharma-manufacturing-proxy-job-support']
-  },
-  {
-    slug: 'pharma-proxy-job-support-bangalore',
-    city: 'Bangalore',
-    state: 'Karnataka',
-    country: 'India',
-    countryCode: 'IN',
-    region: 'South Asia',
-    metaTitle: 'Pharma Proxy Job Support Bangalore | India Clinical SAS CRO Pharma Help',
-    metaDesc: 'Pharma proxy job support for Bangalore professionals. ICON, Syneos, Biocon, clinical SAS — expert guidance for Bangalore pharma and CRO roles.',
-    h1: 'Pharma Proxy Job Support in Bangalore',
-    heroIntro: 'Bangalore is India\'s technology and pharmaceutical services capital — home to ICON, Syneos Health, Biocon, and hundreds of CRO/pharma IT companies. Clinical SAS programming, clinical data management, pharmacovigilance, and regulatory operations are Bangalore\'s strongest pharma career domains.',
-    pharmaContext: 'Bangalore\'s pharma market is dominated by CRO service delivery, pharmaceutical IT support, and Biocon\'s biosimilar manufacturing and development operations. The city\'s engineering talent pool makes it a global hub for clinical SAS programming, regulatory IT, and pharma software development.',
-    topEmployers: ['Biocon (HQ)', 'ICON India (Bangalore)', 'Syneos Health India', 'IQVIA India (Bangalore)', 'Parexel India', 'PRA Health Sciences (Bangalore)', 'Quintiles India', 'Covance India', 'Syngene International (Biocon subsidiary)'],
-    dominantDomains: ['Clinical SAS Programming', 'Clinical Data Management', 'Pharmacovigilance (ICSR processing)', 'Regulatory Operations', 'Biosimilar Development (Biocon)', 'Pharma IT/Software'],
-    faqs: [
-      { q: 'What pharma career opportunities are strongest in Bangalore?', a: 'Clinical SAS programming, clinical data management, pharmacovigilance case processing, regulatory operations, biostatistics, and pharma IT roles are Bangalore\'s strongest domains. CRO companies (ICON, Syneos, IQVIA, Parexel) employ thousands of pharma professionals in the city.' },
-      { q: 'How does proxy job support help Bangalore pharma professionals get international roles?', a: 'Bangalore-based pharma professionals applying to US, UK, and APAC companies face interviews testing Western clinical trial practices, FDA/EMA regulatory knowledge, and global CRO methodology. Our proxy support bridges the gap between India\'s pharma delivery environment and global hiring standards.' }
-    ],
-    relatedSlugs: ['pharma-proxy-job-support-hyderabad', 'pharma-proxy-job-support-mumbai', 'clinical-sas-proxy-job-support', 'pharmacovigilance-proxy-job-support']
-  },
-  {
-    slug: 'pharma-proxy-job-support-mumbai',
-    city: 'Mumbai',
-    state: 'Maharashtra',
-    country: 'India',
-    countryCode: 'IN',
-    region: 'South Asia',
-    metaTitle: 'Pharma Proxy Job Support Mumbai | India CDSCO Regulatory Pharma Help',
-    metaDesc: 'Pharma proxy job support for Mumbai professionals. Sun Pharma, Dr. Reddy\'s, CDSCO regulatory — expert guidance for Mumbai pharma and regulatory roles.',
-    h1: 'Pharma Proxy Job Support in Mumbai',
-    heroIntro: 'Mumbai is India\'s pharmaceutical regulatory and commercial capital — home to Sun Pharmaceuticals, Lupin, Cipla\'s headquarters, CDSCO (Central Drugs Standard Control Organisation) regional offices, and the commercial headquarters of dozens of domestic and multinational pharma companies.',
-    pharmaContext: 'Mumbai\'s pharma market spans Indian domestic regulatory affairs (CDSCO), generic drug export compliance (FDA inspection response, ANDA submissions), manufacturing quality, and large-scale pharmacovigilance operations. Indian pharma companies\' global expansion creates international regulatory roles based in Mumbai.',
-    topEmployers: ['Sun Pharmaceutical Industries (HQ)', 'Lupin Pharmaceuticals (HQ)', 'Cipla (HQ)', 'Wockhardt', 'Cadila Healthcare (Zydus)', 'Abbott India', 'Novartis India', 'GSK India (Mumbai)', 'MSD India'],
-    dominantDomains: ['Regulatory Affairs (CDSCO/USFDA/EMA)', 'Generic Drug Development', 'Pharmacovigilance', 'Manufacturing Quality (GMP)', 'Medical Affairs (India)', 'Market Access (NPPA)'],
-    faqs: [
-      { q: 'Is Mumbai good for USFDA-facing regulatory careers at Indian pharma companies?', a: 'Yes. Indian generic pharma companies (Sun, Lupin, Cipla) are major ANDA filers with the FDA. Mumbai-based regulatory professionals handle FDA responses to observations (483s, Warning Letters), CMC supplements, and ANDA amendments — creating career opportunities with global regulatory exposure from India.' },
-      { q: 'What CDSCO expertise is needed for Mumbai regulatory roles?', a: 'CDSCO NDA/ANDA filing for India, Schedule M (GMP) compliance, clinical trial permission (CTP) applications, import licenses, pharmacovigilance under the PhvPI programme, and CDSCO-DTAB interaction are key expertise areas for India-facing regulatory roles in Mumbai.' }
-    ],
-    relatedSlugs: ['pharma-proxy-job-support-hyderabad', 'pharma-proxy-job-support-bangalore', 'regulatory-affairs-proxy-job-support', 'pharma-manufacturing-proxy-job-support']
-  },
-  {
-    slug: 'pharma-proxy-job-support-hyderabad',
-    city: 'Hyderabad',
-    state: 'Telangana',
-    country: 'India',
-    countryCode: 'IN',
-    region: 'South Asia',
-    metaTitle: 'Pharma Proxy Job Support Hyderabad | India API Manufacturing Pharma Help',
-    metaDesc: 'Pharma proxy job support for Hyderabad professionals. Dr. Reddy\'s, Aurobindo, Hetero — expert guidance for Hyderabad API pharma and clinical research roles.',
-    h1: 'Pharma Proxy Job Support in Hyderabad',
-    heroIntro: 'Hyderabad is India\'s API manufacturing capital — home to Dr. Reddy\'s Laboratories, Aurobindo Pharma, Hetero Drugs, and dozens of active pharmaceutical ingredient manufacturers. The Genome Valley cluster also drives biopharmaceutical and vaccine development activity.',
-    pharmaContext: 'Hyderabad\'s pharma market blends API chemistry and manufacturing expertise (the world\'s most concentrated API manufacturing region), biopharmaceutical development (Bharat Biotech, Biological E), and a growing CRO sector. USFDA inspection experience is particularly valued for manufacturing quality roles.',
-    topEmployers: ['Dr. Reddy\'s Laboratories (HQ)', 'Aurobindo Pharma (HQ)', 'Hetero Drugs (HQ)', 'Bharat Biotech (vaccines)', 'Biological E (vaccines)', 'Laurus Labs', 'Divi\'s Laboratories', 'NATCO Pharma', 'MSN Laboratories'],
-    dominantDomains: ['API Development & Manufacturing', 'Pharmaceutical Quality (GMP)', 'Regulatory Affairs (CDSCO/FDA/WHO)', 'Vaccine Manufacturing', 'Clinical SAS Programming (CRO)', 'Generic Drug Development'],
-    faqs: [
-      { q: 'What API and manufacturing career opportunities are in Hyderabad?', a: 'Hyderabad has the world\'s most concentrated API manufacturing ecosystem. Process chemistry, analytical development, manufacturing quality (cGMP compliance), USFDA inspection response, API regulatory affairs (DMF filing), and process validation are all abundant career specialties.' },
-      { q: 'Is the Genome Valley cluster important for Hyderabad pharma careers?', a: 'Yes. Genome Valley in Turkapally hosts Bharat Biotech (COVID vaccine Covaxin maker), Biological E (vaccine manufacturers), and dozens of biotech and pharma companies — creating biopharmaceutical research, vaccine manufacturing, and regulatory affairs opportunities distinct from API chemistry.' }
-    ],
-    relatedSlugs: ['pharma-proxy-job-support-bangalore', 'pharma-proxy-job-support-mumbai', 'pharma-manufacturing-proxy-job-support', 'regulatory-affairs-proxy-job-support']
-  },
-  {
-    slug: 'pharma-proxy-job-support-hong-kong',
-    city: 'Hong Kong',
-    state: 'Hong Kong SAR',
-    country: 'China',
-    countryCode: 'HK',
-    region: 'East Asia',
-    metaTitle: 'Pharma Proxy Job Support Hong Kong | HK APAC Pharma Medical Device Help',
-    metaDesc: 'Pharma proxy job support for Hong Kong professionals. HUTCHMED, PharmaCyte, APAC regulatory — expert guidance for Hong Kong pharma and biotech roles.',
-    h1: 'Pharma Proxy Job Support in Hong Kong',
-    heroIntro: 'Hong Kong is a gateway between Western pharmaceutical standards and Chinese regulatory systems — hosting international pharma company APAC commercial operations, clinical research at HKU and CUHK hospitals, and an increasingly vibrant biotech sector supported by Innovation and Technology Fund incentives.',
-    pharmaContext: 'Hong Kong\'s pharma market benefits from common law business environment (familiar to Western pharma companies), English-Chinese bilingual capability, and proximity to mainland China markets. The Department of Health\'s (DH) regulatory framework and Hong Kong\'s special regulatory status create unique career opportunities.',
-    topEmployers: ['HUTCHMED (HK HQ)', 'Takeda HK', 'Novartis HK', 'AstraZeneca HK', 'Hong Kong University Medical Centre (clinical research)', 'Prince of Wales Hospital (CUHK)', 'Sinodata Pharma'],
-    dominantDomains: ['Regulatory Affairs (HK DH + China bridge)', 'Clinical Research (Hong Kong)', 'Medical Affairs (HK/Asia)', 'APAC Market Access', 'Drug Safety (HK/Asia)', 'Commercial Analytics'],
-    faqs: [
-      { q: 'What is unique about regulatory affairs in Hong Kong?', a: 'Hong Kong\'s DH accepts registrations based on reference country approvals (US, UK, EU, Australia) under its established regulatory process — creating unique regulatory roles bridging Western approvals with Hong Kong and Greater China market access.' },
-      { q: 'Is Hong Kong a good base for China-facing pharma careers?', a: 'Yes. Hong Kong\'s unique position — international financial and legal environment, proximity to mainland China, Cantonese-Mandarin-English trilingual professionals — makes it an attractive base for companies managing China commercial, regulatory, or medical affairs strategies.' }
-    ],
-    relatedSlugs: ['pharma-proxy-job-support-singapore', 'pharma-proxy-job-support-shanghai', 'regulatory-affairs-proxy-job-support', 'clinical-research-proxy-job-support']
   },
   {
     slug: 'pharma-proxy-job-support-kuala-lumpur',

@@ -23,16 +23,20 @@ export function getStaticPaths() {
 const { pageType } = Astro.props;
 const entry = Astro.props.entry as any;
 const isService = pageType === 'service';
+const isProfileEngineering = isService && entry.category === 'Profile Engineering';
+const isInterviewProxy = isService && entry.category === 'Interview Proxy Support';
 
 const pageTitle = isService ? entry.title : entry.h1;
-const badgeText = isService ? entry.category : entry.region;
 const faqHeading = isService
   ? `${entry.title} — FAQ`
   : `Pharma Proxy Job Support in ${entry.city} — FAQ`;
 
+const breadcrumbParentLabel = isInterviewProxy ? 'Pharma Proxy Interview' : 'Pharma Proxy Job Support';
+const breadcrumbParentHref = isInterviewProxy ? '/pharma-proxy-interview/' : '/pharma-proxy-job-support/';
+
 const breadcrumbItems = [
   { name: 'Home', url: site.url + '/' },
-  { name: 'Pharma Proxy Job Support', url: site.url + '/pharma-proxy-job-support/' },
+  { name: breadcrumbParentLabel, url: site.url + breadcrumbParentHref },
   { name: pageTitle, url: site.url + '/' + entry.slug + '/' },
 ];
 
@@ -46,6 +50,51 @@ const schemas = [
   buildBreadcrumbSchema(breadcrumbItems),
   buildFAQSchema(entry.faqs.map((f: any) => ({ question: f.q, answer: f.a }))),
 ];
+
+// ── Hook copy — Fear → Dream → Urgency structure ──────────────────────────
+
+// Eyebrow
+const eyebrow = isProfileEngineering
+  ? 'Profile Engineering & Recruiter Visibility'
+  : isService
+  ? `${entry.category} · Pharma Job Support`
+  : `Pharma Proxy Job Support · ${entry.region} · ${entry.country}`;
+
+// Short tagline (what's covered — one line)
+const tagline = isProfileEngineering
+  ? `Get pharma interview calls for competitive pharma and clinical roles — strategic profile positioning, not basic resume writing.`
+  : isInterviewProxy
+  ? `Live expert guidance during your ${entry.category.replace('Interview Proxy Support', 'pharma technical interview')} — real-time answers for every domain question.`
+  : isService
+  ? `Real-time expert guidance for ${entry.category} professionals — live job tasks, regulated processes, tool walkthroughs, and interview prep covered.`
+  : `Real-time pharma proxy support for ${(entry.dominantDomains as string[]).slice(0, 3).join(', ')} and more — covering all ${entry.city}-based pharma and life sciences roles.`;
+
+// Fear hook (question-based, validates the user's pain)
+const fearHook = isProfileEngineering
+  ? `Not getting pharma interview calls even after applying to dozens of roles? Your domain expertise may be strong — Regulatory Affairs, Clinical Research, Pharmacovigilance, Veeva, CSV, or QA. But if your profile is not aligned with how pharma recruiters search and ATS systems filter candidates, you will not get shortlisted. Your profile is working against you.`
+  : isInterviewProxy
+  ? `Facing a high-stakes pharma technical interview and not sure you can handle every domain question? One wrong answer on a live regulatory scenario or a coding assessment can cost you the role — and there is rarely a second chance at the same company. The pressure is real.`
+  : isService
+  ? `Struggling with your ${entry.category} responsibilities? Whether you are stuck on a complex regulated deliverable, facing a technical interview you were not prepared for, or navigating a new system for the first time — getting it wrong in front of a hiring manager or stakeholder can put your role at risk.`
+  : `Struggling with your ${entry.city} pharma role or facing an upcoming interview? Whether you are missing deadlines on a regulated project, stuck on a ${(entry.dominantDomains as string[])[0] || 'clinical data'} task, or facing a technical round at ${(entry.topEmployers as string[])[0] || 'a leading pharma company'} — you do not have to handle it alone.`;
+
+// Context / dream (uses entry.heroIntro only — body sections use problemSection, pharmaContext etc.)
+const contextDream = isProfileEngineering
+  ? `${entry.heroIntro} This is not resume writing. This is Profile Engineering — rebuilding how your pharma professional profile communicates domain expertise, regulated project history, compliance credentials, and business impact. We align every section — headline, summary, experience, skills — with real pharma recruiter search behavior and ATS filtering logic so your profile starts showing up in the right searches at Big Pharma, CROs, and biotech companies.`
+  : isInterviewProxy
+  ? `${entry.heroIntro} Our in-house experts cover every technical scenario the interviewer may throw at you for ${entry.category.replace(' Proxy Support', '')} roles — with real-time, discreet support via WhatsApp or screen share so you perform at your best from the first question to the last.`
+  : isService
+  ? `${entry.heroIntro} Our in-house ${entry.category} experts are available on demand — providing discreet, professional guidance for live job tasks and technical interviews so you perform at your absolute best.`
+  : `${entry.heroIntro} The ${entry.region} pharma market demands deep domain expertise and regulatory precision from day one. Our in-house pharma experts are available across all time zones — providing real-time proxy support and live interview guidance the moment you need it.`;
+
+// Urgency line
+const urgencyLine = isProfileEngineering
+  ? `Ready to start getting pharma interview calls? Profile engineering available same-day. Confidential — NDA on request.`
+  : isInterviewProxy
+  ? `Interview today or this week? Same-day sessions available. Direct expert assignment — fully confidential.`
+  : isService
+  ? `Session needed today? ${entry.category} experts available same-day. Fully confidential — NDA available on request.`
+  : `Interview this week? Behind on a regulated task? Same-day expert assignment — no middlemen, fully confidential.`;
 ---
 
 <BaseLayout
@@ -53,18 +102,122 @@ const schemas = [
   description={entry.metaDesc}
   schema={schemas}
 >
+
+  <!-- ── BREADCRUMB STRIP (white, above hero) ──────────────────────────── -->
+  <div class="ph-breadcrumb-strip">
+    <div class="ph-breadcrumb-strip-inner">
+      <Breadcrumbs crumbs={[
+        { label: breadcrumbParentLabel, href: breadcrumbParentHref },
+        { label: pageTitle }
+      ]} />
+    </div>
+  </div>
+
+  <!-- ── DARK HERO BANNER ─────────────────────────────────────────────── -->
+  <section class="ph-hero" aria-labelledby="ph-h1">
+    <div class="ph-glow-tr" aria-hidden="true"></div>
+    <div class="ph-glow-bl" aria-hidden="true"></div>
+    <div class="ph-grid" aria-hidden="true"></div>
+
+    <div class="ph-hero-inner ph-hero-inner--split">
+
+      <!-- Copy column -->
+      <div class="ph-copy">
+
+        <!-- Eyebrow -->
+        <p class="ph-eyebrow">
+          <span aria-hidden="true">✦</span>
+          {eyebrow}
+        </p>
+
+        <!-- H1 -->
+        <h1 id="ph-h1" class="ph-h1">{entry.h1}</h1>
+
+        <!-- Tagline: short, specific, what's covered -->
+        <p class="ph-tagline">{tagline}</p>
+
+        <!-- Fear hook: question-based, validates the pain -->
+        <p class="ph-fear">{fearHook}</p>
+
+        <!-- Context / dream: why this matters + our solution -->
+        <p class="ph-context">{contextDream}</p>
+
+        <!-- Urgency line with pulse dot -->
+        <p class="ph-urgency">
+          <span class="ph-urgency-dot" aria-hidden="true"></span>
+          {urgencyLine}
+        </p>
+
+        <!-- CTAs -->
+        <div class="ph-cta-row">
+          <a
+            href={site.whatsappUrl}
+            class="ph-btn-wa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Get Instant Help Now
+          </a>
+          <a href={`tel:${site.whatsapp}`} class="ph-btn-ghost">Talk to Expert Now</a>
+        </div>
+
+        <!-- Hero footer trust line -->
+        <p class="ph-hero-foot">
+          <strong>Confidential</strong> &nbsp;·&nbsp; <strong>Available 24/7</strong> &nbsp;·&nbsp; <strong>All pharma domains</strong> &nbsp;·&nbsp; <strong>Global support</strong>
+        </p>
+
+        <!-- Trust strip: mobile only — metrics card takes over on desktop for all pages -->
+        <div class="ph-trust-strip ph-trust-strip--hide-desktop" aria-label="Trust indicators">
+          <div class="ph-trust-item">
+            <span class="ph-trust-stat">1000<sup>+</sup></span>
+            <span class="ph-trust-label">Pharma Pros Helped</span>
+          </div>
+          <div class="ph-trust-sep" aria-hidden="true"></div>
+          <div class="ph-trust-item">
+            <span class="ph-trust-stat">24/7</span>
+            <span class="ph-trust-label">Available</span>
+          </div>
+          <div class="ph-trust-sep" aria-hidden="true"></div>
+          <div class="ph-trust-item">
+            <span class="ph-trust-stat">18<sup>+</sup></span>
+            <span class="ph-trust-label">Pharma Domains</span>
+          </div>
+          <div class="ph-trust-sep" aria-hidden="true"></div>
+          <div class="ph-trust-item">
+            <span class="ph-trust-stat">65<sup>+</sup></span>
+            <span class="ph-trust-label">Countries Served</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metrics card: all pages, desktop right column -->
+      <aside class="ph-metrics-card" aria-label="Key metrics">
+        <div class="ph-metric-cell">
+          <span class="ph-metric-stat">1000<sup>+</sup></span>
+          <span class="ph-metric-label">Pharma Pros Helped</span>
+        </div>
+        <div class="ph-metric-cell">
+          <span class="ph-metric-stat">24/7</span>
+          <span class="ph-metric-label">Availability</span>
+        </div>
+        <div class="ph-metric-cell">
+          <span class="ph-metric-stat">18<sup>+</sup></span>
+          <span class="ph-metric-label">Pharma Domains</span>
+        </div>
+        <div class="ph-metric-cell">
+          <span class="ph-metric-stat">65<sup>+</sup></span>
+          <span class="ph-metric-label">Countries Served</span>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ── BODY ─────────────────────────────────────────────────────────── -->
   <div class="page-container">
-    <Breadcrumbs crumbs={[
-      { label: 'Pharma Proxy Job Support', href: '/pharma-proxy-job-support/' },
-      { label: pageTitle }
-    ]} />
-
-    <header class="page-hero">
-      <div class="hero-badge">{badgeText}</div>
-      <h1>{entry.h1}</h1>
-      <p class="hero-tagline">{entry.heroIntro}</p>
-    </header>
-
     <div class="page-layout">
       <main class="page-main">
 
@@ -162,10 +315,285 @@ const schemas = [
 </BaseLayout>
 
 <style>
-.feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
-.feature-list li { font-size: 0.95rem; line-height: 1.7; }
-.related-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-.related-link { display: inline-block; background: var(--surface-50, #f0f4f8); color: var(--text-700, #1e3448); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; text-decoration: none; }
-.related-link:hover { background: var(--teal-50, #e0f2f1); }
-.page-disclaimer { margin-top: 40px; padding: 16px; background: var(--surface-50, #f8fafc); border-radius: 8px; font-size: 0.8rem; color: var(--text-400, #666); }
+  /* ── DARK HERO ────────────────────────────────────────────────────────── */
+  .ph-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(148deg, #040E1C 0%, #071829 18%, #0A2540 36%, #0D3B5E 55%, #0E6E8C 75%, #0B9BAA 100%);
+    padding: clamp(3rem, 6vw, 5.5rem) 0 clamp(2.5rem, 5vw, 4.5rem);
+  }
+  .ph-glow-tr {
+    position: absolute;
+    width: 900px; height: 900px;
+    top: -200px; right: -250px;
+    background: radial-gradient(circle, rgba(0,191,179,0.12) 0%, transparent 65%);
+    pointer-events: none; z-index: 0;
+  }
+  .ph-glow-bl {
+    position: absolute;
+    width: 600px; height: 600px;
+    bottom: -100px; left: -120px;
+    background: radial-gradient(circle, rgba(11,154,170,0.16) 0%, transparent 62%);
+    pointer-events: none; z-index: 0;
+  }
+  .ph-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,191,179,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,191,179,0.03) 1px, transparent 1px);
+    background-size: 52px 52px;
+    pointer-events: none; z-index: 0;
+  }
+
+  /* Hero inner layout — identical container to .page-container for pixel-perfect alignment */
+  .ph-hero-inner {
+    position: relative; z-index: 1;
+    max-width: var(--max-w, clamp(1380px, 90vw, 1900px));
+    margin: 0 auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  @media (min-width: 1024px) {
+    .ph-hero-inner--split {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+      gap: clamp(2rem, 3vw, 3.5rem);
+    }
+  }
+
+  /* Eyebrow */
+  .ph-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.71rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #00BFB3;
+    margin-bottom: 1rem;
+  }
+
+  /* H1 */
+  .ph-h1 {
+    font-size: clamp(1.7rem, 3.5vw, 2.75rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.18 !important;
+    color: #ffffff !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 1rem;
+    max-width: 760px;
+  }
+
+  /* Tagline (short — what's covered) */
+  .ph-tagline {
+    font-size: clamp(0.95rem, 1.5vw, 1.06rem);
+    color: rgba(255,255,255,0.92);
+    line-height: 1.7;
+    max-width: 680px;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+
+  /* Fear hook (question-based) */
+  .ph-fear {
+    font-size: 0.97rem;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.78;
+    max-width: 680px;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+
+  /* Context / dream paragraph */
+  .ph-context {
+    font-size: 0.93rem;
+    color: rgba(255,255,255,0.80);
+    line-height: 1.8;
+    max-width: 680px;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+
+  /* Urgency line */
+  .ph-urgency {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.5;
+    max-width: 620px;
+    margin-bottom: 1.75rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+  }
+  .ph-urgency-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #00BFB3;
+    flex-shrink: 0;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.55; transform: scale(1.4); }
+  }
+
+  /* CTA buttons */
+  .ph-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 1.1rem;
+  }
+  .ph-btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #1DAA61;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.85rem 1.6rem;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(29,170,97,0.45);
+    white-space: nowrap;
+  }
+  .ph-btn-wa:hover {
+    background: #18954f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(29,170,97,0.55);
+    color: #ffffff;
+  }
+  .ph-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.85rem 1.6rem;
+    border-radius: 7px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+  .ph-btn-ghost:hover {
+    border-color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.07);
+    color: #fff;
+  }
+
+  /* Hero footer trust line */
+  .ph-hero-foot {
+    font-size: 0.73rem;
+    color: rgba(255,255,255,0.62);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+  }
+  .ph-hero-foot strong {
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+  }
+
+  /* Trust strip */
+  .ph-trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem 1.5rem;
+    padding: 0.9rem 1.1rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 100%;
+  }
+  @media (min-width: 1024px) {
+    .ph-trust-strip--hide-desktop { display: none; }
+  }
+  .ph-trust-item { display: flex; flex-direction: column; gap: 0.1rem; }
+  .ph-trust-stat {
+    font-size: 1.3rem; font-weight: 800;
+    color: #00BFB3; line-height: 1; letter-spacing: -0.03em;
+  }
+  .ph-trust-stat sup { font-size: 0.67rem; color: #00BFB3; font-weight: 700; }
+  .ph-trust-label { font-size: 0.69rem; color: rgba(255,255,255,0.80); font-weight: 500; letter-spacing: 0.03em; }
+  .ph-trust-sep { width: 1px; height: 2rem; background: rgba(255,255,255,0.2); flex-shrink: 0; }
+
+  /* Metrics card: all pages, desktop right column */
+  .ph-metrics-card { display: none; }
+  @media (min-width: 1024px) {
+    .ph-metrics-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      padding: 1.75rem 1.5rem;
+      border-radius: 20px;
+      border: 1px solid rgba(0,191,179,0.35);
+      background: linear-gradient(145deg, rgba(4,14,28,0.82) 0%, rgba(13,59,94,0.65) 60%, rgba(11,154,170,0.25) 100%);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08), 0 0 0 1px rgba(0,191,179,0.12);
+      align-self: start;
+      margin-top: 0.5rem;
+    }
+  }
+  .ph-metric-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.4rem 0.75rem;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.38);
+    border: 1px solid rgba(0,191,179,0.2);
+    min-height: 7rem;
+    gap: 0.4rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .ph-metric-cell:hover {
+    border-color: rgba(0,191,179,0.45);
+    background: rgba(0,0,0,0.48);
+  }
+  .ph-metric-stat {
+    font-size: 1.9rem; font-weight: 800;
+    color: #00BFB3; line-height: 1; letter-spacing: -0.04em;
+  }
+  .ph-metric-stat sup { font-size: 0.8rem; color: #00BFB3; font-weight: 700; vertical-align: super; }
+  .ph-metric-label {
+    font-size: 0.76rem; color: rgba(255,255,255,0.85);
+    font-weight: 600; line-height: 1.35;
+    letter-spacing: 0.03em; text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* ── BODY ──────────────────────────────────────────────────────────────── */
+  .feature-list { margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+  .feature-list li { font-size: 0.95rem; line-height: 1.7; }
+  .related-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .related-link { display: inline-block; background: var(--surface-50, #f0f4f8); color: var(--text-700, #1e3448); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; text-decoration: none; }
+  .related-link:hover { background: var(--teal-50, #e0f2f1); }
+  .page-disclaimer { margin-top: 40px; padding: 16px; background: var(--surface-50, #f8fafc); border-radius: 8px; font-size: 0.8rem; color: var(--text-400, #666); }
+
+  /* ── Mobile ──────────────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .ph-hero { padding: 2rem 0 2.5rem; }
+    .ph-hero-inner { padding: 0 1.25rem; }
+    .ph-cta-row { flex-direction: column; gap: 0.6rem; }
+    .ph-btn-wa, .ph-btn-ghost {
+      width: 100%; justify-content: center;
+      min-height: 52px; font-size: 1rem; border-radius: 10px;
+    }
+    .ph-h1 { max-width: none !important; }
+    .ph-tagline, .ph-fear, .ph-context { max-width: none; }
+    .ph-trust-strip { width: 100%; }
+  }
 </style>

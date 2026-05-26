@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const interviewCountriesServices5: ServiceEntry[] = [
   {
@@ -153,7 +153,7 @@ export const interviewCountriesServices5: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Philippines pharma jobs. FDA Philippines regulatory, Unilab, Zuellig Pharma interviews. Manila pharma interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'The Philippines has a significant pharmaceutical market in Manila and the Metro Manila area. Unilab (United Laboratories) is the Philippines\' largest domestic pharma company. Zuellig Pharma is the leading pharma distributor across Asia. The FDA Philippines (Food and Drug Administration) regulates medicines. English-proficiency of the Filipino workforce makes the Philippines attractive for pharma shared services and clinical operations roles.',
-    problemSection: 'Philippine pharma interviews test FDA Philippines-specific regulatory knowledge alongside the ASEAN regulatory framework. For shared services roles (increasingly located in Metro Manila), pharma domain knowledge in English is tested. Filipino pharma professionals also actively seek international roles, particularly in the US, Australia, and Middle East.',
+    problemSection: 'Philippine pharma interviews test FDA Philippines-specific regulatory knowledge alongside the ASEAN regulatory framework. For shared services roles (increasingly located in Metro Manila), pharma domain knowledge in English is tested. Filipino pharma professionals also actively seek international roles, particularly in the USA, Australia, and Middle East.',
     whatCovered: [
       'FDA Philippines regulatory interviews — Philippine drug registration procedures',
       'Unilab — Philippine domestic pharma company interview context',
@@ -163,7 +163,7 @@ export const interviewCountriesServices5: ServiceEntry[] = [
       'Clinical SAS programming — SDTM/ADaM for Philippine pharma roles',
       'Pharmacovigilance — FDA Philippines ADR reporting, national PV',
       'Metro Manila pharma cluster targeting',
-      'Philippine international career targeting — US, Australia, Middle East',
+      'Philippine international career targeting — USA, Australia, Middle East',
       'Real-time interview support during Manila pharma interviews'
     ],
     roleExamples: [
@@ -175,8 +175,8 @@ export const interviewCountriesServices5: ServiceEntry[] = [
     ],
     tools: ['FDA Philippines regulatory portal', 'ASEAN ACTD resources', 'EMA/FDA portals', 'Veeva Vault', 'Pinnacle 21'],
     faqs: [
-      { q: 'What is FDA Philippines and how does it differ from US FDA?', a: 'FDA Philippines (Food and Drug Administration Philippines) under the Department of Health is the national medicines regulator — unrelated to the US FDA despite the same acronym. FDA Philippines manages product registration (Certificate of Product Registration — CPR), GMP inspection, and pharmacovigilance. The Philippine drug registration process uses ASEAN ACTD format with Philippine-specific requirements.' },
-      { q: 'Why are Philippines pharma professionals attractive for international roles?', a: 'Filipino pharma professionals have English as a primary professional language, strong educational backgrounds in pharmacy, nursing, and life sciences, high work ethic, and cultural adaptability. These factors make Filipino pharma professionals competitive for international roles at CROs, pharma shared services, and hospitals particularly in the US, Middle East, and Australia.' },
+      { q: 'What is FDA Philippines and how does it differ from USA FDA?', a: 'FDA Philippines (Food and Drug Administration Philippines) under the Department of Health is the national medicines regulator — unrelated to the USA FDA despite the same acronym. FDA Philippines manages product registration (Certificate of Product Registration — CPR), GMP inspection, and pharmacovigilance. The Philippine drug registration process uses ASEAN ACTD format with Philippine-specific requirements.' },
+      { q: 'Why are Philippines pharma professionals attractive for international roles?', a: 'Filipino pharma professionals have English as a primary professional language, strong educational backgrounds in pharmacy, nursing, and life sciences, high work ethic, and cultural adaptability. These factors make Filipino pharma professionals competitive for international roles at CROs, pharma shared services, and hospitals particularly in the USA, Middle East, and Australia.' },
       { q: 'What is Unilab and how significant is it?', a: 'United Laboratories Inc. (Unilab) is the largest pharmaceutical company in the Philippines and one of the largest in Southeast Asia by volume. Unilab has manufacturing in the Philippines, Vietnam, and Cambodia, with products registered across ASEAN. It is the dominant employer in Philippine pharma manufacturing and commercial operations.' }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'pharma-proxy-interview-malaysia', 'pharma-proxy-interview-indonesia', 'regulatory-affairs-proxy-interview']
@@ -248,7 +248,7 @@ export const interviewCountriesServices5: ServiceEntry[] = [
     tools: ['TGA regulatory portal (eBS, eSubmissions)', 'EMA/FDA portals (global regulatory)', 'Pinnacle 21', 'Argus Safety', 'Veeva Vault'],
     faqs: [
       { q: 'What TGA-specific knowledge is tested in Australian regulatory interviews?', a: 'TGA regulatory interviews test: Australian Register of Therapeutic Goods (ARTG) — understanding what requires registration and different entry types (registered, listed, notified), TGA full evaluation pathway for new chemical entities and biologicals, TGA abbreviated evaluation for products already approved by reference agencies (EMA, FDA, MHRA, Health Canada, SwissMedic), TGA\'s Prescription Medicine Assessment Branch procedures, and TGA\'s Medicines Shortages reporting framework.' },
-      { q: 'What makes CSL Behring unique as an employer?', a: 'CSL Behring is one of the world\'s largest plasma-derived products companies and the developer of multiple licensed vaccines (including Pfizer\'s COVID-19 adjuvant partner). CSL operates plasma collection centres across the US, plasma fractionation plants in Melbourne and Marburg (Germany), and a major R&D centre in King of Prussia (US). CSL interviews for manufacturing and regulatory roles are technically deep on plasma-derived biologics regulation — distinct from small molecule pharma.' },
+      { q: 'What makes CSL Behring unique as an employer?', a: 'CSL Behring is one of the world\'s largest plasma-derived products companies and the developer of multiple licensed vaccines (including Pfizer\'s COVID-19 adjuvant partner). CSL operates plasma collection centres across the USA, plasma fractionation plants in Melbourne and Marburg (Germany), and a major R&D centre in King of Prussia (USA). CSL interviews for manufacturing and regulatory roles are technically deep on plasma-derived biologics regulation — distinct from small molecule pharma.' },
       { q: 'What is Novotech and how significant is it?', a: 'Novotech is the largest Asia-Pacific CRO, headquartered in Sydney with operations across 11 APAC countries. Novotech specialises in Phase I-III clinical trials and regulatory submissions in the APAC region. For clinical research careers in the Asia-Pacific, Novotech is a major employer of CRAs, CDMs, project managers, and regulatory affairs specialists.' }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'pharma-proxy-interview-new-zealand', 'pharma-proxy-interview-singapore', 'pharma-proxy-interview-uk']

@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const india2Locations: LocationEntry[] = [
   {
@@ -12,11 +12,11 @@ export const india2Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Vadodara professionals. Alembic Pharmaceuticals, Baroda pharma cluster — real-time expert guidance for Gujarat pharma manufacturing roles.',
     h1: 'Pharma Proxy Job Support in Vadodara (Baroda)',
     heroIntro: 'Vadodara (Baroda) in Gujarat is a major pharmaceutical manufacturing hub. Alembic Pharmaceuticals — one of India\'s top generic drug manufacturers and API producers — has its main manufacturing complex in Vadodara. The city is part of Gujarat\'s broader pharma corridor that includes Ahmedabad and Ankleshwar.',
-    pharmaContext: 'Vadodara pharma manufacturing roles require CDSCO (Central Drugs Standard Control Organisation) GMP compliance, US FDA ANDA manufacturing requirements (many Vadodara facilities are FDA-inspected), EU GMP for European exports, and knowledge of API manufacturing standards (ICH Q7). USFDA inspection readiness is a critical skill for Vadodara pharma professionals.',
+    pharmaContext: 'Vadodara pharma manufacturing roles require CDSCO (Central Drugs Standard Control Organisation) GMP compliance, USA FDA ANDA manufacturing requirements (many Vadodara facilities are FDA-inspected), EU GMP for European exports, and knowledge of API manufacturing standards (ICH Q7). USFDA inspection readiness is a critical skill for Vadodara pharma professionals.',
     topEmployers: ['Alembic Pharmaceuticals', 'Alembic Ltd', 'Troikaa Pharmaceuticals', 'BDH Industries', 'Various API manufacturers'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'regulatory-affairs', 'csv-validation', 'pharma-compliance'],
     faqs: [
-      { q: 'What makes Alembic Pharmaceuticals significant and what roles does it offer in Vadodara?', a: 'Alembic Pharmaceuticals is among India\'s top API and formulations manufacturers, with significant US FDA ANDA approvals. Its Vadodara manufacturing complex produces APIs and formulations for regulated markets (US, EU). Roles include API process development chemists, manufacturing supervisors, QA/QC analysts, regulatory affairs specialists for ANDA filings, and validation engineers for GAMP 5/21 CFR Part 11 compliance. Alembic has consistently invested in WHO and US FDA compliant manufacturing infrastructure.' },
+      { q: 'What makes Alembic Pharmaceuticals significant and what roles does it offer in Vadodara?', a: 'Alembic Pharmaceuticals is among India\'s top API and formulations manufacturers, with significant USA FDA ANDA approvals. Its Vadodara manufacturing complex produces APIs and formulations for regulated markets (USA, EU). Roles include API process development chemists, manufacturing supervisors, QA/QC analysts, regulatory affairs specialists for ANDA filings, and validation engineers for GAMP 5/21 CFR Part 11 compliance. Alembic has consistently invested in WHO and USA FDA compliant manufacturing infrastructure.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-ahmedabad-india', 'pharma-proxy-job-support-india', 'pharma-proxy-job-support-hyderabad-india', 'pharma-manufacturing-proxy-job-support'],
   },
@@ -31,11 +31,11 @@ export const india2Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Visakhapatnam professionals. Aurobindo Pharma, Hetero Group, MSN Laboratories — expert guidance for Vizag pharma manufacturing roles.',
     h1: 'Pharma Proxy Job Support in Visakhapatnam (Vizag)',
     heroIntro: 'Visakhapatnam (Vizag) is a major pharmaceutical manufacturing center in Andhra Pradesh. Aurobindo Pharma has several manufacturing units in Vizag. Hetero Group, MSN Laboratories, and other Hyderabad-headquartered companies have Vizag operations. The Jawaharlal Nehru Pharma City (JNPC) at Parawada is one of India\'s largest pharma SEZs.',
-    pharmaContext: 'Vizag pharma manufacturing roles require CDSCO compliance, US FDA inspection readiness (many Vizag facilities are FDA-inspected), EU GMP, and WHO GMP for export markets. The JNPC Pharma SEZ has specific regulatory requirements for SEZ-based export-oriented units.',
+    pharmaContext: 'Vizag pharma manufacturing roles require CDSCO compliance, USA FDA inspection readiness (many Vizag facilities are FDA-inspected), EU GMP, and WHO GMP for export markets. The JNPC Pharma SEZ has specific regulatory requirements for SEZ-based export-oriented units.',
     topEmployers: ['Aurobindo Pharma (Vizag units)', 'Hetero Group', 'MSN Laboratories', 'Divi\'s Laboratories (nearby Nellore)', 'Virchow Biotech'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'regulatory-affairs', 'csv-validation'],
     faqs: [
-      { q: 'What is JNPC Pharma City and what career opportunities does it offer?', a: 'Jawaharlal Nehru Pharma City (JNPC) at Parawada near Vizag is one of India\'s largest dedicated pharmaceutical SEZs. The SEZ has dedicated common effluent treatment, utilities, and infrastructure for pharmaceutical manufacturing. Multiple API and formulation manufacturers operate there. Export-oriented units in JNPC primarily manufacture for US and EU regulated markets, requiring FDA/EMA compliance expertise. The concentration of manufacturers creates strong career opportunities in GMP manufacturing, QA, and regulatory affairs.' },
+      { q: 'What is JNPC Pharma City and what career opportunities does it offer?', a: 'Jawaharlal Nehru Pharma City (JNPC) at Parawada near Vizag is one of India\'s largest dedicated pharmaceutical SEZs. The SEZ has dedicated common effluent treatment, utilities, and infrastructure for pharmaceutical manufacturing. Multiple API and formulation manufacturers operate there. Export-oriented units in JNPC primarily manufacture for USA and EU regulated markets, requiring FDA/EMA compliance expertise. The concentration of manufacturers creates strong career opportunities in GMP manufacturing, QA, and regulatory affairs.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-hyderabad-india', 'pharma-proxy-job-support-india', 'pharma-manufacturing-proxy-job-support'],
   },
@@ -50,7 +50,7 @@ export const india2Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Surat professionals. Gujarat pharma API manufacturing, textile and pharma cluster — real-time guidance for Surat pharmaceutical roles.',
     h1: 'Pharma Proxy Job Support in Surat',
     heroIntro: 'Surat is an important pharmaceutical raw material and API manufacturing center in South Gujarat. The city\'s chemical manufacturing infrastructure (historically textile chemicals) has expanded into pharmaceutical intermediates and API production. Several pharmaceutical manufacturers operate in and around Surat.',
-    pharmaContext: 'Surat pharma and API manufacturing follows CDSCO GMP, WHO GMP for export products, and increasingly US FDA/EU GMP for regulated market API supply. The Gujarat pharma cluster connects Surat with Ankleshwar, Vapi, and Ahmedabad as key manufacturing nodes.',
+    pharmaContext: 'Surat pharma and API manufacturing follows CDSCO GMP, WHO GMP for export products, and increasingly USA FDA/EU GMP for regulated market API supply. The Gujarat pharma cluster connects Surat with Ankleshwar, Vapi, and Ahmedabad as key manufacturing nodes.',
     topEmployers: ['Lincoln Pharmaceuticals', 'Stelis Biopharma', 'Various API and pharmaceutical manufacturers in the South Gujarat chemical cluster'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'pharma-compliance', 'regulatory-affairs'],
     faqs: [

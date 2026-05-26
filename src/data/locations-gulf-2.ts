@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const gulf2Locations: LocationEntry[] = [
   {
@@ -68,12 +68,12 @@ export const gulf2Locations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Amman | Jordan Pharma JFDA Hikma Pharma Career Help',
     metaDesc: 'Pharma proxy job support for Amman professionals. Hikma Pharmaceuticals Jordan, JFDA regulatory — expert guidance for Jordan Amman pharma manufacturing and export roles.',
     h1: 'Pharma Proxy Job Support in Amman',
-    heroIntro: 'Amman is the center of Jordan\'s pharmaceutical industry — one of the Middle East\'s most developed. Jordan has the highest density of pharmaceutical manufacturers per capita in the Arab world. Hikma Pharmaceuticals (FTSE 100 company, London-listed) was founded in Amman and has its roots here. JFDA (Jordan Food and Drug Administration) regulates pharmaceutical products. Jordan pharmaceutical companies export to over 60 countries including the US and EU.',
-    pharmaContext: 'Amman pharma roles require JFDA regulatory knowledge, WHO GMP (many Jordanian companies are WHO prequalified), FDA ANDA knowledge (for US export-qualified companies like Hikma), and Arabic/English bilingual capability. Jordan\'s free trade agreements (US-Jordan FTA) support pharma exports.',
+    heroIntro: 'Amman is the center of Jordan\'s pharmaceutical industry — one of the Middle East\'s most developed. Jordan has the highest density of pharmaceutical manufacturers per capita in the Arab world. Hikma Pharmaceuticals (FTSE 100 company, London-listed) was founded in Amman and has its roots here. JFDA (Jordan Food and Drug Administration) regulates pharmaceutical products. Jordan pharmaceutical companies export to over 60 countries including the USA and EU.',
+    pharmaContext: 'Amman pharma roles require JFDA regulatory knowledge, WHO GMP (many Jordanian companies are WHO prequalified), FDA ANDA knowledge (for USA export-qualified companies like Hikma), and Arabic/English bilingual capability. Jordan\'s free trade agreements (USA-Jordan FTA) support pharma exports.',
     topEmployers: ['Hikma Pharmaceuticals (Jordan founding operations)', 'Dar Al Dawa', 'Arab Pharmaceutical Manufacturing (APM)', 'Jordan Valley Pharmaceuticals', 'JFDA', 'Novartis Jordan'],
     dominantDomains: ['pharma-manufacturing', 'regulatory-affairs', 'pharma-qa', 'pharmacovigilance'],
     faqs: [
-      { q: 'Why is Jordan\'s pharmaceutical industry internationally significant?', a: 'Jordan has one of the most export-oriented pharmaceutical industries in the Middle East. Companies like Hikma have achieved FDA approval for generic injectables (manufactured in Jordan), WHO prequalification for essential medicines, and EMA authorizations. The US-Jordan Free Trade Agreement allows 0% tariff for qualifying Jordanian pharmaceutical products entering the US market. Jordan has built pharmaceutical manufacturing capabilities including sterile injectables — historically harder for developing countries to achieve. Jordanian pharma professionals with FDA ANDA, WHO prequalification, and JFDA experience are in demand in Middle East pharma markets.' },
+      { q: 'Why is Jordan\'s pharmaceutical industry internationally significant?', a: 'Jordan has one of the most export-oriented pharmaceutical industries in the Middle East. Companies like Hikma have achieved FDA approval for generic injectables (manufactured in Jordan), WHO prequalification for essential medicines, and EMA authorizations. The USA-Jordan Free Trade Agreement allows 0% tariff for qualifying Jordanian pharmaceutical products entering the USA market. Jordan has built pharmaceutical manufacturing capabilities including sterile injectables — historically harder for developing countries to achieve. Jordanian pharma professionals with FDA ANDA, WHO prequalification, and JFDA experience are in demand in Middle East pharma markets.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-dubai', 'pharma-proxy-job-support-cairo', 'pharma-manufacturing-proxy-job-support'],
   },

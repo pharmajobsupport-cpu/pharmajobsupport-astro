@@ -1,4 +1,4 @@
-export interface FAQ {
+﻿export interface FAQ {
   question: string;
   answer: string;
 }
@@ -235,7 +235,7 @@ export const globalFAQs: FAQCategory[] = [
       {
         question: 'What is a RAC certification and who should get it?',
         answer:
-          'RAC (Regulatory Affairs Certification) from RAPS (Regulatory Affairs Professionals Society) is the premier professional credential for regulatory affairs professionals. RAC (US), RAC (EU), and RAC (Canada) demonstrate regulatory expertise in specific markets. It is valued for mid-to-senior regulatory affairs roles and accelerates career progression. RAC candidates typically need 2-3 years of regulatory experience before sitting the exam.',
+          'RAC (Regulatory Affairs Certification) from RAPS (Regulatory Affairs Professionals Society) is the premier professional credential for regulatory affairs professionals. RAC (USA), RAC (EU), and RAC (Canada) demonstrate regulatory expertise in specific markets. It is valued for mid-to-senior regulatory affairs roles and accelerates career progression. RAC candidates typically need 2-3 years of regulatory experience before sitting the exam.',
       },
     ],
   },
@@ -245,7 +245,7 @@ export const globalFAQs: FAQCategory[] = [
       {
         question: 'What is GMP and who enforces it?',
         answer:
-          'GMP (Good Manufacturing Practice) regulations ensure pharmaceutical products are consistently produced and controlled to quality standards. In the US, FDA enforces cGMP under 21 CFR Parts 210 and 211. In the EU, EMA and national authorities enforce EU GMP (EudraLex Volume 4). WHO GMP governs manufacturers supplying international markets. GMP inspections verify compliance and can result in Warning Letters, import alerts, or consent decrees.',
+          'GMP (Good Manufacturing Practice) regulations ensure pharmaceutical products are consistently produced and controlled to quality standards. In the USA, FDA enforces cGMP under 21 CFR Parts 210 and 211. In the EU, EMA and national authorities enforce EU GMP (EudraLex Volume 4). WHO GMP governs manufacturers supplying international markets. GMP inspections verify compliance and can result in Warning Letters, import alerts, or consent decrees.',
       },
       {
         question: 'What is a CAPA in pharmaceutical quality?',

@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const usa2Locations: LocationEntry[] = [
   {
@@ -49,12 +49,12 @@ export const usa2Locations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Research Triangle Park NC | GSK Novo Nordisk RTP',
     metaDesc: 'Pharma proxy job support for RTP North Carolina professionals. GSK, Novo Nordisk, ICON — real-time expert guidance for Research Triangle Park pharma roles.',
     h1: 'Pharma Proxy Job Support in Research Triangle Park (RTP), NC',
-    heroIntro: 'Research Triangle Park (RTP) in North Carolina is one of the USA\'s premier pharmaceutical and life sciences clusters. GSK has its North American headquarters in Research Triangle Park. Novo Nordisk US operations, Bayer CropScience, ICON (CRO), PPD (CRO), and hundreds of pharma/biotech companies operate here, benefiting from proximity to Duke University, NC State, and University of North Carolina.',
-    pharmaContext: 'RTP pharma roles cover the full pharmaceutical value chain. GSK\'s US headquarters creates demand for regulatory affairs, clinical operations, pharmacovigilance, manufacturing quality, and IT/digital roles. CRO offices (ICON, PPD) drive clinical research hiring. FDA District Office presence creates awareness of FDA compliance requirements.',
-    topEmployers: ['GlaxoSmithKline (US HQ)', 'Novo Nordisk US', 'Bayer RTP', 'ICON CRO', 'PPD (Thermo Fisher)', 'Syneos Health', 'Quintiles/IQVIA'],
+    heroIntro: 'Research Triangle Park (RTP) in North Carolina is one of the USA\'s premier pharmaceutical and life sciences clusters. GSK has its North American headquarters in Research Triangle Park. Novo Nordisk USA operations, Bayer CropScience, ICON (CRO), PPD (CRO), and hundreds of pharma/biotech companies operate here, benefiting from proximity to Duke University, NC State, and University of North Carolina.',
+    pharmaContext: 'RTP pharma roles cover the full pharmaceutical value chain. GSK\'s USA headquarters creates demand for regulatory affairs, clinical operations, pharmacovigilance, manufacturing quality, and IT/digital roles. CRO offices (ICON, PPD) drive clinical research hiring. FDA District Office presence creates awareness of FDA compliance requirements.',
+    topEmployers: ['GlaxoSmithKline (USA HQ)', 'Novo Nordisk USA', 'Bayer RTP', 'ICON CRO', 'PPD (Thermo Fisher)', 'Syneos Health', 'Quintiles/IQVIA'],
     dominantDomains: ['regulatory-affairs', 'pharmacovigilance', 'clinical-research', 'clinical-data', 'pharma-qa'],
     faqs: [
-      { q: 'What types of pharma roles are most common in Research Triangle Park?', a: 'RTP is particularly strong in clinical development (CRO-driven: ICON, PPD, Syneos, IQVIA all have major RTP offices), regulatory affairs (GSK US regulatory operations), pharmacovigilance (GSK global safety), and pharmaceutical manufacturing (multiple GSK manufacturing facilities in NC). Clinical data management, SAS programming, biostatistics, and regulatory submissions are the most common pharma IT/data roles in RTP.' },
+      { q: 'What types of pharma roles are most common in Research Triangle Park?', a: 'RTP is particularly strong in clinical development (CRO-driven: ICON, PPD, Syneos, IQVIA all have major RTP offices), regulatory affairs (GSK USA regulatory operations), pharmacovigilance (GSK global safety), and pharmaceutical manufacturing (multiple GSK manufacturing facilities in NC). Clinical data management, SAS programming, biostatistics, and regulatory submissions are the most common pharma IT/data roles in RTP.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-raleigh-durham', 'pharma-proxy-job-support-usa', 'clinical-research-proxy-job-support'],
   },
@@ -125,7 +125,7 @@ export const usa2Locations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Nashville | HCA Healthcare Vanderbilt CRO Help',
     metaDesc: 'Pharma proxy job support for Nashville professionals. HCA Healthcare, Vanderbilt University Medical Center, CRO offices — real-time guidance for Nashville pharma roles.',
     h1: 'Pharma Proxy Job Support in Nashville',
-    heroIntro: 'Nashville is the US capital of healthcare services — HCA Healthcare (the world\'s largest for-profit hospital operator) and numerous healthcare companies are headquartered here. While not a manufacturing hub, Nashville is growing as a clinical research and healthcare IT pharma career destination.',
+    heroIntro: 'Nashville is the USA capital of healthcare services — HCA Healthcare (the world\'s largest for-profit hospital operator) and numerous healthcare companies are headquartered here. While not a manufacturing hub, Nashville is growing as a clinical research and healthcare IT pharma career destination.',
     pharmaContext: 'Nashville healthcare and pharma roles focus on clinical research (Vanderbilt and HCA hospital networks), healthcare IT (the city has a thriving health IT startup ecosystem), and pharmaceutical market access/payer strategy (major insurance companies are nearby). Real-world evidence and health economics roles are strong.',
     topEmployers: ['HCA Healthcare', 'Vanderbilt University Medical Center', 'Premise Health', 'Change Healthcare (Nashville)', 'HealthTrust', 'Various health IT companies'],
     dominantDomains: ['clinical-research', 'pharma-data', 'pharma-compliance', 'pharmacovigilance'],
@@ -144,12 +144,12 @@ export const usa2Locations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Phoenix | Banner Health Barrow Pharma AZ Help',
     metaDesc: 'Pharma proxy job support for Phoenix professionals. Banner Health, Barrow Neurological Institute — real-time guidance for Phoenix Arizona pharma and clinical research roles.',
     h1: 'Pharma Proxy Job Support in Phoenix',
-    heroIntro: 'Phoenix and the greater Maricopa County area have a growing biomedical and clinical research sector. Banner Health is one of the largest non-profit health systems in the US, conducting significant clinical trials. The Mayo Clinic has a large Phoenix campus. Discount Drug Mart and several specialty pharmaceutical companies operate in the area.',
+    heroIntro: 'Phoenix and the greater Maricopa County area have a growing biomedical and clinical research sector. Banner Health is one of the largest non-profit health systems in the USA, conducting significant clinical trials. The Mayo Clinic has a large Phoenix campus. Discount Drug Mart and several specialty pharmaceutical companies operate in the area.',
     pharmaContext: 'Phoenix pharma career opportunities are concentrated in clinical research (Banner Health, Mayo Clinic Phoenix, Barrow Neurological Institute for neurology trials), healthcare IT, and pharmaceutical market access. Traditional manufacturing and regulatory R&D are less prominent than in Sunbelt coastal cities.',
     topEmployers: ['Banner Health', 'Mayo Clinic Phoenix', 'Barrow Neurological Institute', 'Cigna (Scottsdale)', 'Various clinical research organizations'],
     dominantDomains: ['clinical-research', 'pharmacovigilance', 'pharma-compliance', 'pharma-data'],
     faqs: [
-      { q: 'What clinical research opportunities exist in Phoenix?', a: 'Phoenix has substantial clinical trial activity through Banner Health (one of the largest US hospital systems), Mayo Clinic Phoenix, and Barrow Neurological Institute (a leading neurological research center). Neurology (Alzheimer\'s, ALS, stroke), oncology, cardiovascular, and metabolic disease trials are active. The large retirement population in Arizona makes it valuable for aging-related clinical research. Dedicated clinical research sites (non-hospital) are also common in Phoenix for Phase II-III trials.' },
+      { q: 'What clinical research opportunities exist in Phoenix?', a: 'Phoenix has substantial clinical trial activity through Banner Health (one of the largest USA hospital systems), Mayo Clinic Phoenix, and Barrow Neurological Institute (a leading neurological research center). Neurology (Alzheimer\'s, ALS, stroke), oncology, cardiovascular, and metabolic disease trials are active. The large retirement population in Arizona makes it valuable for aging-related clinical research. Dedicated clinical research sites (non-hospital) are also common in Phoenix for Phase II-III trials.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-los-angeles', 'pharma-proxy-job-support-san-diego', 'pharma-proxy-job-support-usa'],
   },
@@ -163,7 +163,7 @@ export const usa2Locations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Cleveland | Cleveland Clinic Case Western Pharma Help',
     metaDesc: 'Pharma proxy job support for Cleveland professionals. Cleveland Clinic, Case Western Reserve — real-time guidance for Cleveland pharma and clinical research roles.',
     h1: 'Pharma Proxy Job Support in Cleveland',
-    heroIntro: 'Cleveland is a major US clinical research hub, anchored by Cleveland Clinic — one of the world\'s most respected academic medical centers and a major Phase I-III clinical trial site across virtually every therapeutic area. Case Western Reserve University\'s biomedical programs drive research talent into clinical research and biotech.',
+    heroIntro: 'Cleveland is a major USA clinical research hub, anchored by Cleveland Clinic — one of the world\'s most respected academic medical centers and a major Phase I-III clinical trial site across virtually every therapeutic area. Case Western Reserve University\'s biomedical programs drive research talent into clinical research and biotech.',
     pharmaContext: 'Cleveland clinical research and pharma roles involve GCP compliance (Cleveland Clinic\'s rigorous IRB and research oversight), clinical data management for investigator-initiated and sponsored trials, and biomedical device development (Cleveland has a strong medical device cluster alongside pharma).',
     topEmployers: ['Cleveland Clinic', 'Case Western Reserve University', 'University Hospitals Cleveland', 'Invacare', 'Various biotech startups'],
     dominantDomains: ['clinical-research', 'medical-device', 'pharmacovigilance', 'pharma-data'],

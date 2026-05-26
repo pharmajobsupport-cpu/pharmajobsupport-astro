@@ -52,7 +52,7 @@ export const usaLocations: LocationEntry[] = [
     topEmployers: ['GSK', 'Spark Therapeutics (Roche)', 'West Pharmaceutical Services', 'LabCorp Drug Development', 'ICON plc', 'Pfizer (vaccine manufacturing)', 'Janssen (J&J)', 'Auxilium', 'Trevena'],
     dominantDomains: ['Clinical Research', 'Regulatory Affairs', 'Cell & Gene Therapy', 'Vaccine Development', 'Quality Systems', 'Pharmacovigilance'],
     faqs: [
-      { q: 'Is Philadelphia a good market for clinical research professionals?', a: 'Yes. Philadelphia has one of the highest concentrations of academic medical centers and CROs in the US. Strong demand exists for CRAs, CDMs, clinical operations managers, and regulatory submission specialists.' },
+      { q: 'Is Philadelphia a good market for clinical research professionals?', a: 'Yes. Philadelphia has one of the highest concentrations of academic medical centers and CROs in the USA. Strong demand exists for CRAs, CDMs, clinical operations managers, and regulatory submission specialists.' },
       { q: 'Do you cover gene therapy-specific Pharma Proxy Job Support for Philadelphia roles?', a: 'Yes. Our experts cover cell and gene therapy regulatory affairs (BLA, INTERACT meetings), GMP manufacturing for ATMPs, and quality systems specific to gene therapy — a growing specialty in the Philadelphia market.' }
     ],
     relatedSlugs: ['pharma-proxy-job-support-new-jersey', 'pharma-proxy-job-support-washington-dc', 'clinical-research-proxy-job-support', 'regulatory-affairs-proxy-job-support']
@@ -67,12 +67,12 @@ export const usaLocations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Boston | MA Biotech Pharma Proxy Support',
     metaDesc: 'Pharma proxy job support for Boston professionals. Biotech, clinical trials, bioinformatics, regulatory, AI in drug discovery — expert guidance for Greater Boston pharma.',
     h1: 'Pharma Proxy Job Support in Boston',
-    heroIntro: 'Boston and Cambridge form the world\'s #1 biotech cluster — home to Moderna, Biogen, Vertex, AstraZeneca US operations, and thousands of emerging biotechs along Kendall Square. Demand is intense and highly specialized. Our proxy support helps you compete in this elite life sciences market.',
+    heroIntro: 'Boston and Cambridge form the world\'s #1 biotech cluster — home to Moderna, Biogen, Vertex, AstraZeneca USA operations, and thousands of emerging biotechs along Kendall Square. Demand is intense and highly specialized. Our proxy support helps you compete in this elite life sciences market.',
     pharmaContext: 'Boston\'s pharma ecosystem emphasizes early-stage drug development, genomics, AI in drug discovery, and cutting-edge biologics. Roles requiring computational biology, regulatory strategy for novel modalities, and clinical trial design for rare diseases are particularly abundant.',
     topEmployers: ['Moderna', 'Biogen', 'Vertex Pharmaceuticals', 'AstraZeneca', 'Takeda', 'Sanofi Genzyme', 'Shire (Takeda)', 'Editas Medicine', 'Blueprint Medicines', 'Ironwood Pharmaceuticals'],
     dominantDomains: ['Drug Discovery (AI/ML)', 'Clinical Development', 'Regulatory Affairs (novel modalities)', 'Biostatistics/Statistical Programming', 'Manufacturing Sciences', 'Medical Affairs'],
     faqs: [
-      { q: 'What makes the Boston pharma market different from other US markets?', a: 'Boston is heavily biotech-focused with many companies in early clinical development, genomics, and precision medicine. Roles tend to require more scientific depth and comfort with novel regulatory pathways (accelerated approval, breakthrough therapy designation) than markets dominated by established pharma.' },
+      { q: 'What makes the Boston pharma market different from other USA markets?', a: 'Boston is heavily biotech-focused with many companies in early clinical development, genomics, and precision medicine. Roles tend to require more scientific depth and comfort with novel regulatory pathways (accelerated approval, breakthrough therapy designation) than markets dominated by established pharma.' },
       { q: 'Do you cover AI drug discovery roles for Boston biotech interviews?', a: 'Yes. We cover computational drug discovery, AI model validation in pharma, bioinformatics pipelines, and the regulatory landscape for AI-assisted drug development — all highly relevant to Boston-area roles.' }
     ],
     relatedSlugs: ['pharma-proxy-job-support-new-jersey', 'pharma-proxy-job-support-san-francisco', 'pharma-ai-proxy-job-support', 'clinical-development-proxy-job-support']
@@ -93,7 +93,7 @@ export const usaLocations: LocationEntry[] = [
     dominantDomains: ['Biologics Regulatory Affairs', 'Clinical Development', 'Bioinformatics', 'Precision Medicine', 'Oncology Drug Development', 'Manufacturing (Biologics)'],
     faqs: [
       { q: 'What pharma domains are most in demand in the San Francisco Bay Area?', a: 'Oncology clinical development, biologics regulatory affairs, bioinformatics/computational biology, clinical operations for complex multi-center trials, and medical affairs for specialty products are consistently high-demand in the Bay Area.' },
-      { q: 'Do Bay Area pharma companies offer remote work?', a: 'Yes. Many Bay Area biotech and pharma companies offer remote or hybrid arrangements, especially post-pandemic. Many roles at Bay Area companies can be performed from anywhere in the US.' }
+      { q: 'Do Bay Area pharma companies offer remote work?', a: 'Yes. Many Bay Area biotech and pharma companies offer remote or hybrid arrangements, especially post-pandemic. Many roles at Bay Area companies can be performed from anywhere in the USA.' }
     ],
     relatedSlugs: ['pharma-proxy-job-support-san-diego', 'pharma-proxy-job-support-boston', 'pharma-ai-proxy-job-support', 'regulatory-affairs-proxy-job-support']
   },
@@ -107,7 +107,7 @@ export const usaLocations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support San Diego | CA Biotech Pharma Proxy Support',
     metaDesc: 'Pharma proxy job support for San Diego professionals. Biogen, Pfizer San Diego, biotech corridor — expert guidance for San Diego pharma and biotech roles.',
     h1: 'Pharma Proxy Job Support in San Diego',
-    heroIntro: 'San Diego\'s Torrey Pines road is lined with biotech and pharma companies — Illumina, Pfizer\'s La Jolla campus, Biogen San Diego, and hundreds of biotechs in Sorrento Valley. The city is one of the US\'s top biotech markets, particularly strong in genomics and oncology.',
+    heroIntro: 'San Diego\'s Torrey Pines road is lined with biotech and pharma companies — Illumina, Pfizer\'s La Jolla campus, Biogen San Diego, and hundreds of biotechs in Sorrento Valley. The city is one of the USA\'s top biotech markets, particularly strong in genomics and oncology.',
     pharmaContext: 'San Diego pharma excels in genomics, next-generation sequencing, oncology drug development, and antibody therapeutics. UCSD and Scripps Research anchor a world-class research ecosystem feeding directly into the commercial biotech sector.',
     topEmployers: ['Illumina', 'Pfizer La Jolla', 'Biogen San Diego', 'Leap Therapeutics', 'Turning Point Therapeutics (BMS)', 'Gossamer Bio', 'ProQR Therapeutics', 'Asante Bio', 'Dexcom'],
     dominantDomains: ['Genomics / NGS', 'Oncology Clinical Development', 'Antibody Therapeutics', 'Regulatory Affairs (Biologics)', 'Clinical Operations', 'CMC Development'],
@@ -167,13 +167,13 @@ export const usaLocations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Raleigh Durham | NC Research Triangle Pharma Help',
     metaDesc: 'Pharma proxy job support for Raleigh-Durham Research Triangle. GSK, Biogen, Syneos Health — expert guidance for NC pharma, CRO, and biotech roles.',
     h1: 'Pharma Proxy Job Support in Raleigh-Durham Research Triangle',
-    heroIntro: 'North Carolina\'s Research Triangle Park (RTP) is one of the USA\'s largest pharma and biotech employment centers — home to GSK\'s US operations, Biogen\'s largest facility, Syneos Health\'s global headquarters, and hundreds of CROs and biotech companies.',
+    heroIntro: 'North Carolina\'s Research Triangle Park (RTP) is one of the USA\'s largest pharma and biotech employment centers — home to GSK\'s USA operations, Biogen\'s largest facility, Syneos Health\'s global headquarters, and hundreds of CROs and biotech companies.',
     pharmaContext: 'RTP\'s pharma market has exceptional strength in CRO operations, clinical data management, statistical programming, pharmacovigilance, and regulatory affairs. The concentration of CROs (Syneos, ICON, PPD/Thermo Fisher) makes it one of the best markets in the world for clinical development professionals.',
-    topEmployers: ['GSK (US Operations)', 'Biogen (NC facility)', 'Syneos Health (HQ)', 'Syngene', 'ICON plc', 'PPD (Thermo Fisher)', 'WakeMed', 'Quintiles (IQVIA)', 'Precision Medicine Group'],
+    topEmployers: ['GSK (USA Operations)', 'Biogen (NC facility)', 'Syneos Health (HQ)', 'Syngene', 'ICON plc', 'PPD (Thermo Fisher)', 'WakeMed', 'Quintiles (IQVIA)', 'Precision Medicine Group'],
     dominantDomains: ['CRO Operations', 'Clinical Data Management', 'Statistical Programming (SAS)', 'Pharmacovigilance', 'Regulatory Affairs', 'Medical Writing'],
     faqs: [
       { q: 'Is Research Triangle Park good for CRO career opportunities?', a: 'RTP is exceptional for CRO careers. Syneos Health, ICON, PPD/Thermo Fisher, IQVIA, and dozens of smaller CROs are all based or heavily staffed in RTP, creating deep clinical operations, biostatistics, data management, and regulatory talent demand.' },
-      { q: 'Are clinical SAS programming roles abundant in RTP?', a: 'Yes. RTP is one of the best US markets for clinical SAS programmers due to the CRO concentration. SDTM/ADaM expertise, TLF production, and CDISC standards knowledge are highly valued and well-compensated in this market.' }
+      { q: 'Are clinical SAS programming roles abundant in RTP?', a: 'Yes. RTP is one of the best USA markets for clinical SAS programmers due to the CRO concentration. SDTM/ADaM expertise, TLF production, and CDISC standards knowledge are highly valued and well-compensated in this market.' }
     ],
     relatedSlugs: ['pharma-proxy-job-support-washington-dc', 'pharma-proxy-job-support-atlanta', 'clinical-sas-proxy-job-support', 'clinical-data-management-proxy-job-support']
   },
@@ -247,12 +247,12 @@ export const usaLocations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Minneapolis | MN Medtronic Medical Device Help',
     metaDesc: 'Pharma proxy job support for Minneapolis professionals. Medtronic, 3M Health, medical devices — expert guidance for Minneapolis medical device and pharma roles.',
     h1: 'Pharma Proxy Job Support in Minneapolis',
-    heroIntro: 'Minneapolis is the world\'s medical device capital — anchored by Medtronic\'s global headquarters in Fridley, MN plus 3M\'s healthcare division, Boston Scientific operations, and hundreds of medical device companies. It\'s the premier US market for medical device QA, regulatory affairs, and clinical specialists.',
+    heroIntro: 'Minneapolis is the world\'s medical device capital — anchored by Medtronic\'s global headquarters in Fridley, MN plus 3M\'s healthcare division, Boston Scientific operations, and hundreds of medical device companies. It\'s the premier USA market for medical device QA, regulatory affairs, and clinical specialists.',
     pharmaContext: 'Minneapolis-Saint Paul\'s medical device ecosystem is unmatched globally. Cardiovascular devices, neuromodulation, surgical systems, and healthcare technology are the dominant product categories. ISO 13485, EU MDR, and FDA 510(k) expertise are particularly sought.',
     topEmployers: ['Medtronic (HQ)', '3M Health Care', 'Boston Scientific (operations)', 'Danaher', 'Cardiovascular Systems', 'Nuvectra', 'Integer Holdings', 'CryoLife'],
     dominantDomains: ['Medical Device QA', 'Regulatory Affairs (Medical Devices)', 'Clinical Research (Medical Devices)', 'R&D Engineering', 'Quality Systems (ISO 13485)', 'Post-Market Surveillance'],
     faqs: [
-      { q: 'Is Minneapolis the best US market for medical device careers?', a: 'Minneapolis-Saint Paul has the highest concentration of medical device companies and jobs in the world. Over 300 device companies operate in the Twin Cities area, making it exceptional for medical device QA, regulatory, R&D, and clinical roles.' },
+      { q: 'Is Minneapolis the best USA market for medical device careers?', a: 'Minneapolis-Saint Paul has the highest concentration of medical device companies and jobs in the world. Over 300 device companies operate in the Twin Cities area, making it exceptional for medical device QA, regulatory, R&D, and clinical roles.' },
       { q: 'Which medical device specialties are most in demand in Minneapolis?', a: 'Cardiovascular devices (stents, pacemakers, cardiac rhythm management), neuromodulation, robotic surgery, and implantable devices are the dominant product categories. Quality systems (ISO 13485), EU MDR compliance, and 510(k)/PMA regulatory expertise are highly valued.' }
     ],
     relatedSlugs: ['pharma-proxy-job-support-chicago', 'pharma-proxy-job-support-seattle', 'medical-device-proxy-job-support', 'iso-13485-proxy-job-support']
@@ -307,7 +307,7 @@ export const usaLocations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Dallas | TX Pharma Healthcare IT Help',
     metaDesc: 'Pharma proxy job support for Dallas professionals. McKesson, Envision Healthcare, healthcare technology — expert guidance for Dallas pharma and healthcare roles.',
     h1: 'Pharma Proxy Job Support in Dallas-Fort Worth',
-    heroIntro: 'Dallas-Fort Worth is one of the fastest-growing life sciences markets in the US — with significant pharma operations, healthcare technology companies, and a rapidly expanding biotech sector. McKesson\'s HQ, major CRO operations, and a large healthcare IT ecosystem make DFW a compelling pharma market.',
+    heroIntro: 'Dallas-Fort Worth is one of the fastest-growing life sciences markets in the USA — with significant pharma operations, healthcare technology companies, and a rapidly expanding biotech sector. McKesson\'s HQ, major CRO operations, and a large healthcare IT ecosystem make DFW a compelling pharma market.',
     pharmaContext: 'DFW pharma is characterized by pharmaceutical distribution (McKesson), healthcare services, clinical research at UT Southwestern, and a growing biotech sector. Healthcare IT and health technology companies have chosen DFW as a business-friendly alternative to coastal markets.',
     topEmployers: ['McKesson Corporation (HQ)', 'UT Southwestern Medical Center', 'Baylor Scott & White Health', 'Tenet Healthcare', 'HCA Healthcare (TX operations)', 'Envision Healthcare'],
     dominantDomains: ['Healthcare IT', 'Clinical Research', 'Pharmaceutical Distribution/Supply Chain', 'Healthcare Services', 'Health Technology', 'Drug Safety (academic)'],
@@ -365,9 +365,9 @@ export const usaLocations: LocationEntry[] = [
     countryCode: 'US',
     region: 'National Remote USA',
     metaTitle: 'Pharma Proxy Job Support Remote USA | Work From Home Pharma Help',
-    metaDesc: 'Pharma proxy job support for remote US pharma roles. CRA, regulatory, SAS programming, PV — expert guidance for remote-first pharmaceutical positions across the USA.',
+    metaDesc: 'Pharma proxy job support for remote USA pharma roles. CRA, regulatory, SAS programming, PV — expert guidance for remote-first pharmaceutical positions across the USA.',
     h1: 'Pharma Proxy Job Support for Remote USA Positions',
-    heroIntro: 'Remote pharma positions have exploded since 2020 — CRAs, regulatory affairs specialists, clinical data managers, SAS programmers, and pharmacovigilance professionals now routinely work remotely for companies headquartered anywhere in the US. Our proxy support works perfectly for remote interview formats.',
+    heroIntro: 'Remote pharma positions have exploded since 2020 — CRAs, regulatory affairs specialists, clinical data managers, SAS programmers, and pharmacovigilance professionals now routinely work remotely for companies headquartered anywhere in the USA. Our proxy support works perfectly for remote interview formats.',
     pharmaContext: 'Remote pharma roles are predominantly in clinical operations (CRA), clinical data management, statistical programming, regulatory affairs, pharmacovigilance, and medical writing — disciplines where the work is computer-based and not tied to a physical facility.',
     topEmployers: ['All major CROs (remote-first roles)', 'Virtual/remote pharma companies', 'Contract staffing firms (pharma specialists)', 'Consulting firms (remote regulatory)', 'Remote pharma headquarters functions'],
     dominantDomains: ['CRA / Clinical Monitoring (remote)', 'Clinical Data Management (remote)', 'Statistical Programming (remote)', 'Pharmacovigilance (remote)', 'Regulatory Affairs (remote)', 'Medical Writing (remote)'],

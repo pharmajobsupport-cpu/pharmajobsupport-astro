@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const latinAmericaLocations: LocationEntry[] = [
   {
@@ -89,7 +89,7 @@ export const latinAmericaLocations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Mexico City professionals. COFEPRIS regulatory, Liomont, Landsteiner Scientific — expert guidance for Mexico pharma and biotech roles.',
     h1: 'Pharma Proxy Job Support in Mexico City',
     heroIntro: 'Mexico City is the hub of Mexico\'s pharmaceutical industry. COFEPRIS (Comisión Federal para la Protección contra Riesgos Sanitarios) — Mexico\'s pharmaceutical regulatory agency — is headquartered here. Major Mexican pharma companies Liomont, Landsteiner Scientific, Laboratorios Pisa, and Chinoin (Sanofi Mexico) are based in the capital.',
-    pharmaContext: 'Mexico City pharma roles require COFEPRIS regulatory knowledge, Mexican GMP (NOM-059-SSA1-2015), pharmacovigilance reporting (Avisos de Reacciones Adversas), and clinical trial regulations (NOM-012-SSA3-2012). US FDA knowledge is also valuable given Mexico\'s large pharmaceutical export industry to the US.',
+    pharmaContext: 'Mexico City pharma roles require COFEPRIS regulatory knowledge, Mexican GMP (NOM-059-SSA1-2015), pharmacovigilance reporting (Avisos de Reacciones Adversas), and clinical trial regulations (NOM-012-SSA3-2012). USA FDA knowledge is also valuable given Mexico\'s large pharmaceutical export industry to the USA.',
     topEmployers: ['Liomont', 'Landsteiner Scientific', 'Laboratorios Pisa', 'Chinoin (Sanofi)', 'Pfizer Mexico', 'Abbott Mexico', 'Bayer Mexico'],
     dominantDomains: ['regulatory-affairs', 'pharma-manufacturing', 'pharmacovigilance', 'pharma-qa', 'clinical-research'],
     faqs: [
@@ -107,12 +107,12 @@ export const latinAmericaLocations: LocationEntry[] = [
     metaTitle: 'Pharma Proxy Job Support Monterrey | Mexico Pharma Manufacturing Help',
     metaDesc: 'Pharma proxy job support for Monterrey professionals. GlaxoSmithKline Monterrey, Bayer Mexico manufacturing — COFEPRIS expert guidance for Monterrey pharma roles.',
     h1: 'Pharma Proxy Job Support in Monterrey',
-    heroIntro: 'Monterrey in Nuevo León state is a major Mexican pharmaceutical manufacturing hub. GSK, Bayer, and several contract pharmaceutical manufacturers operate in the Monterrey industrial corridor. Proximity to the US border makes Monterrey an important location for US-export pharmaceutical manufacturing with COFEPRIS and US FDA dual compliance.',
-    pharmaContext: 'Monterrey pharma manufacturing requires COFEPRIS GMP (NOM-059-SSA1-2015) and often FDA 21 CFR 210/211 compliance for US-bound products. Many Monterrey facilities are FDA-inspected. The border proximity creates demand for bilingual regulatory professionals with knowledge of both Mexican and US pharmaceutical frameworks.',
+    heroIntro: 'Monterrey in Nuevo León state is a major Mexican pharmaceutical manufacturing hub. GSK, Bayer, and several contract pharmaceutical manufacturers operate in the Monterrey industrial corridor. Proximity to the USA border makes Monterrey an important location for USA-export pharmaceutical manufacturing with COFEPRIS and USA FDA dual compliance.',
+    pharmaContext: 'Monterrey pharma manufacturing requires COFEPRIS GMP (NOM-059-SSA1-2015) and often FDA 21 CFR 210/211 compliance for USA-bound products. Many Monterrey facilities are FDA-inspected. The border proximity creates demand for bilingual regulatory professionals with knowledge of both Mexican and USA pharmaceutical frameworks.',
     topEmployers: ['GlaxoSmithKline (Monterrey)', 'Bayer (Monterrey)', 'Randox Laboratories', 'Various CMOs'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'regulatory-affairs', 'csv-validation'],
     faqs: [
-      { q: 'Why is Monterrey important for pharma manufacturing?', a: 'Monterrey\'s industrial infrastructure, proximity to the US border (near Laredo/McAllen crossings), and established manufacturing culture make it attractive for pharmaceutical companies that serve both Mexican and US markets. FDA has inspected several Monterrey manufacturing facilities. Dual compliance with COFEPRIS GMP and FDA GMP requirements creates demand for regulatory and quality professionals with cross-border expertise.' },
+      { q: 'Why is Monterrey important for pharma manufacturing?', a: 'Monterrey\'s industrial infrastructure, proximity to the USA border (near Laredo/McAllen crossings), and established manufacturing culture make it attractive for pharmaceutical companies that serve both Mexican and USA markets. FDA has inspected several Monterrey manufacturing facilities. Dual compliance with COFEPRIS GMP and FDA GMP requirements creates demand for regulatory and quality professionals with cross-border expertise.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-mexico', 'pharma-proxy-job-support-mexico-city', 'pharma-manufacturing-proxy-job-support'],
   },
@@ -226,7 +226,7 @@ export const latinAmericaLocations: LocationEntry[] = [
     topEmployers: ['Roche Panama', 'Pfizer Panama', 'Abbott Panama', 'COFAR', 'Various regional pharmaceutical distributors'],
     dominantDomains: ['regulatory-affairs', 'pharmacovigilance', 'clinical-research', 'pharma-compliance'],
     faqs: [
-      { q: 'Why do multinational pharma companies locate regional offices in Panama City?', a: 'Panama City offers several advantages for regional pharma operations: the US dollar as currency (eliminating exchange risk), the Colón Free Trade Zone for pharmaceutical distribution, political stability, a Central American location convenient for overseeing regional markets (Costa Rica, Guatemala, Honduras, El Salvador, Nicaragua), and a high-quality international airport hub. These factors make Panama City a preferred regional headquarters location for Latin American pharmaceutical operations.' },
+      { q: 'Why do multinational pharma companies locate regional offices in Panama City?', a: 'Panama City offers several advantages for regional pharma operations: the USA dollar as currency (eliminating exchange risk), the Colón Free Trade Zone for pharmaceutical distribution, political stability, a Central American location convenient for overseeing regional markets (Costa Rica, Guatemala, Honduras, El Salvador, Nicaragua), and a high-quality international airport hub. These factors make Panama City a preferred regional headquarters location for Latin American pharmaceutical operations.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-mexico-city', 'pharma-proxy-job-support-bogota', 'regulatory-affairs-proxy-job-support'],
   },

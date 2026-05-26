@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import FAQ from '../components/FAQ.astro';
@@ -47,7 +47,7 @@ const schemas = [
           <div class="blog-meta">
             <span class="blog-category-label">{blog.category}</span>
             <time datetime={blog.publishDate} class="blog-date">
-              {new Date(blog.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              {new Date(blog.publishDate).toLocaleDateString('en-USA', { year: 'numeric', month: 'long', day: 'numeric' })}
             </time>
             <span class="blog-read">{blog.readingTime} min read</span>
           </div>
@@ -80,7 +80,7 @@ const schemas = [
 
         <!-- Author / update info -->
         <footer class="blog-article-footer">
-          <p class="blog-updated">Last updated: <time datetime={blog.lastUpdated}>{new Date(blog.lastUpdated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time></p>
+          <p class="blog-updated">Last updated: <time datetime={blog.lastUpdated}>{new Date(blog.lastUpdated).toLocaleDateString('en-USA', { year: 'numeric', month: 'long', day: 'numeric' })}</time></p>
         </footer>
       </article>
 

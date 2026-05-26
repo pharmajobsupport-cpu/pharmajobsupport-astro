@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const profileCountriesServices4: ServiceEntry[] = [
   {
@@ -15,16 +15,16 @@ export const profileCountriesServices4: ServiceEntry[] = [
       'Teva Pharmaceutical — generics sector expertise positioning and transferable skills',
       'Israeli biotech ecosystem — startup and scale-up pharma company targeting',
       'MOH Israel regulatory framework — for regulatory affairs roles',
-      'FDA and EMA bridge positioning — for Israeli professionals seeking US/EU roles',
+      'FDA and EMA bridge positioning — for Israeli professionals seeking USA/EU roles',
       'Tel Aviv and Jerusalem biotech corridor targeting',
       'Hebrew language signals — when Hebrew matters vs. English-only international roles',
       'Israeli CV conventions — typically 1-2 pages, Hebrew or English depending on target',
       'Academic medical centres — Hadassah, Tel Aviv Sourasky, Sheba — clinical context',
-      'Global pharma targeting — Israelis seeking FDA-facing roles at US companies'
+      'Global pharma targeting — Israelis seeking FDA-facing roles at USA companies'
     ],
     roleExamples: [
       'Regulatory Affairs Specialist — Israel (MOH submissions) or FDA-facing',
-      'Clinical Research Associate — Israeli CRO or US pharma Israel site',
+      'Clinical Research Associate — Israeli CRO or USA pharma Israel site',
       'Teva Generics — regulatory, QA, or manufacturing specialist',
       'Biotech R&D — clinical development and regulatory strategy',
       'Medical Affairs Manager — Israeli pharma subsidiary'

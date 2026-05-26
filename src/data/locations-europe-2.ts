@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const europe2Locations: LocationEntry[] = [
   {
@@ -88,7 +88,7 @@ export const europe2Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Kalundborg professionals. Novo Nordisk Kalundborg — world\'s largest insulin manufacturing site. Expert guidance for Danish pharma roles.',
     h1: 'Pharma Proxy Job Support in Kalundborg (Novo Nordisk)',
     heroIntro: 'Kalundborg hosts one of the world\'s largest and most advanced pharmaceutical manufacturing complexes — Novo Nordisk\'s Kalundborg site. This industrial symbiosis park produces the majority of the world\'s insulin supply alongside GLP-1 agonists including Ozempic and Wegovy. The scale of operations makes Kalundborg one of pharma\'s most important manufacturing locations.',
-    pharmaContext: 'Kalundborg pharmaceutical manufacturing roles at Novo Nordisk require EU GMP expertise, fermentation and downstream processing for biologics manufacturing, Danish Medicines Agency (DKMA) regulatory compliance, 21 CFR 210/211 for US export, and GAMP 5 validation for complex manufacturing systems.',
+    pharmaContext: 'Kalundborg pharmaceutical manufacturing roles at Novo Nordisk require EU GMP expertise, fermentation and downstream processing for biologics manufacturing, Danish Medicines Agency (DKMA) regulatory compliance, 21 CFR 210/211 for USA export, and GAMP 5 validation for complex manufacturing systems.',
     topEmployers: ['Novo Nordisk (Kalundborg site)', 'DONG Energy (industrial symbiosis)', 'Specialty contractors and service providers'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'csv-validation', 'pharma-compliance'],
     faqs: [

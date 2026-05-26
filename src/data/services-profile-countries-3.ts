@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const profileCountriesServices3: ServiceEntry[] = [
   {
@@ -333,9 +333,9 @@ export const profileCountriesServices3: ServiceEntry[] = [
     metaDesc: 'Profile engineering for Ukrainian pharma professionals seeking international roles. Kyiv pharma sector. MOH Ukraine regulatory background. Global CRO and sponsor positioning. WhatsApp: +91-9660834611',
     category: 'Profile Engineering',
     heroIntro: 'Ukraine has a significant pharmaceutical manufacturing and clinical research sector. Farmak, Darnitsa, and Arterium are major domestic pharma manufacturers. Ukraine was a major CRO hub for Phase II-III trials in Eastern Europe. Ukrainian pharma professionals with GxP, regulatory, or clinical research backgrounds are increasingly seeking international roles with EU-based pharma companies and CROs.',
-    problemSection: 'Ukrainian pharma professionals seeking international roles need profiles that translate their domestic experience — GxP manufacturing, clinical trial operations, regulatory affairs under MOH Ukraine — into the language of EU, UK, and US pharma hiring standards. Bridge positioning is essential.',
+    problemSection: 'Ukrainian pharma professionals seeking international roles need profiles that translate their domestic experience — GxP manufacturing, clinical trial operations, regulatory affairs under MOH Ukraine — into the language of EU, UK, and USA pharma hiring standards. Bridge positioning is essential.',
     whatCovered: [
-      'LinkedIn international positioning — translating Ukrainian pharma experience for EU/US recruiters',
+      'LinkedIn international positioning — translating Ukrainian pharma experience for EU/USA recruiters',
       'GxP manufacturing experience — WHO GMP, EU GMP equivalence positioning',
       'Ukrainian clinical trial experience — EU CTR and ICH GCP bridge positioning',
       'MOH Ukraine regulatory experience — translation to EMA regulatory frameworks',

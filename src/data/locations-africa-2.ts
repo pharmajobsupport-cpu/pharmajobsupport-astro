@@ -1,4 +1,4 @@
-import type { LocationEntry } from './locations-usa';
+﻿import type { LocationEntry } from './locations-usa';
 
 export const africa2Locations: LocationEntry[] = [
   {
@@ -12,7 +12,7 @@ export const africa2Locations: LocationEntry[] = [
     metaDesc: 'Pharma proxy job support for Durban professionals. Aspen Pharmacare headquarters, SAHPRA compliance, UKZN pharmacy research — expert guidance for KwaZulu-Natal pharma roles.',
     h1: 'Pharma Proxy Job Support in Durban',
     heroIntro: 'Durban is home to Aspen Pharmacare — one of the world\'s top 20 pharmaceutical companies and Africa\'s largest pharmaceutical manufacturer. Aspen\'s global headquarters and major manufacturing operations are in Durban. The University of KwaZulu-Natal (UKZN) has a School of Pharmacy and Health Sciences conducting HIV, TB, and tropical disease research. Durban\'s port is a strategic pharmaceutical import hub for Southern and East Africa.',
-    pharmaContext: 'Durban pharma manufacturing roles at Aspen require SAHPRA (South African Health Products Regulatory Authority) GMP compliance, US FDA inspection preparedness (Aspen manufactures generic drugs for US market), EU GMP for European market exports, and ARV (antiretroviral) manufacturing expertise given Aspen\'s massive HIV medicine supply.',
+    pharmaContext: 'Durban pharma manufacturing roles at Aspen require SAHPRA (South African Health Products Regulatory Authority) GMP compliance, USA FDA inspection preparedness (Aspen manufactures generic drugs for USA market), EU GMP for European market exports, and ARV (antiretroviral) manufacturing expertise given Aspen\'s massive HIV medicine supply.',
     topEmployers: ['Aspen Pharmacare (global HQ)', 'Aspen Pharmacare Manufacturing', 'UKZN (School of Pharmacy and Health Sciences)', 'Addington Hospital (clinical research)', 'Inkosi Albert Luthuli Central Hospital'],
     dominantDomains: ['pharma-manufacturing', 'pharma-qa', 'regulatory-affairs', 'csv-validation', 'clinical-research'],
     faqs: [
@@ -35,7 +35,7 @@ export const africa2Locations: LocationEntry[] = [
     topEmployers: ['SAHPRA (South African Health Products Regulatory Authority)', 'University of Pretoria (research)', 'Steve Biko Academic Hospital (clinical research)', 'Cipla South Africa', 'Adcock Ingram (Pretoria operations)', 'National Institute for Communicable Diseases (NICD)'],
     dominantDomains: ['regulatory-affairs', 'pharmacovigilance', 'clinical-research', 'pharma-compliance'],
     faqs: [
-      { q: 'What is SAHPRA and why are Pretoria pharma regulatory careers regionally significant?', a: 'SAHPRA (replacing MCC in 2018) is South Africa\'s pharmaceutical regulatory authority and Africa\'s most respected regulatory body. SAHPRA conducts GMP inspections recognized by WHO, EMA, and the US FDA as reference inspections. Pharma companies seeking access to African markets often obtain SAHPRA approval as a credible regulatory precedent. SAHPRA employs pharmaceutical evaluators, GMP inspectors, clinical trial monitors, and pharmacovigilance assessors. South African regulatory affairs professionals with SAHPRA experience are in high demand across Africa for companies seeking regulatory expertise to navigate diverse African national medicine agencies.' },
+      { q: 'What is SAHPRA and why are Pretoria pharma regulatory careers regionally significant?', a: 'SAHPRA (replacing MCC in 2018) is South Africa\'s pharmaceutical regulatory authority and Africa\'s most respected regulatory body. SAHPRA conducts GMP inspections recognized by WHO, EMA, and the USA FDA as reference inspections. Pharma companies seeking access to African markets often obtain SAHPRA approval as a credible regulatory precedent. SAHPRA employs pharmaceutical evaluators, GMP inspectors, clinical trial monitors, and pharmacovigilance assessors. South African regulatory affairs professionals with SAHPRA experience are in high demand across Africa for companies seeking regulatory expertise to navigate diverse African national medicine agencies.' },
     ],
     relatedSlugs: ['pharma-proxy-job-support-johannesburg', 'pharma-proxy-job-support-cape-town', 'regulatory-affairs-proxy-job-support'],
   },

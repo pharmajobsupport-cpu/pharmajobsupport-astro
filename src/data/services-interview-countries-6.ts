@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const interviewCountriesServices6: ServiceEntry[] = [
   {
@@ -189,7 +189,7 @@ export const interviewCountriesServices6: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Mexico pharma jobs. COFEPRIS regulatory, Grupo Liomont, Laboratorio Senosiain, MNC pharma interviews. Mexico City pharma interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Mexico is Latin America\'s second largest pharmaceutical market and the LATAM hub for North American pharma companies due to USMCA (formerly NAFTA). COFEPRIS (Comisión Federal para la Protección contra Riesgos Sanitarios) regulates medicines. Grupo Liomont, Laboratorio Senosiain, and LIOMONT are domestic manufacturers. Mexico City and Monterrey are the main pharma hubs. International companies including Pfizer, Roche, and Novartis have major Mexican operations.',
-    problemSection: 'COFEPRIS regulatory interviews are demanding — COFEPRIS has specific dossier requirements, a complex product registration database (SINAVE), and unique bioequivalence requirements for generic drugs. Mexico\'s proximity to the US creates opportunities for LATAM-wide regulatory roles covering both Mexico and broader LATAM markets.',
+    problemSection: 'COFEPRIS regulatory interviews are demanding — COFEPRIS has specific dossier requirements, a complex product registration database (SINAVE), and unique bioequivalence requirements for generic drugs. Mexico\'s proximity to the USA creates opportunities for LATAM-wide regulatory roles covering both Mexico and broader LATAM markets.',
     whatCovered: [
       'COFEPRIS regulatory interviews — Mexican drug registration procedures, NOM standards',
       'Grupo Liomont, Senosiain — domestic Mexican pharma company interview context',
@@ -212,8 +212,8 @@ export const interviewCountriesServices6: ServiceEntry[] = [
     tools: ['COFEPRIS regulatory portal', 'FDA portals (USMCA context)', 'EMA/FDA portals', 'Veeva Vault', 'Pinnacle 21'],
     faqs: [
       { q: 'What COFEPRIS-specific knowledge is tested in Mexican regulatory interviews?', a: 'COFEPRIS regulatory interviews test: Mexican drug registration categories (Innovador, Genérico, Biocomparable — Mexican term for biosimilar), COFEPRIS dossier format and the role of NOM (Normas Oficiales Mexicanas — Mexican Official Standards), bioequivalence requirements for generic medicines (NOM-177-SSA1), COFEPRIS GMP certification process, and SIVEFO (Sistema de Vigilancia Epidemiológica de las Farmacias) pharmacovigilance platform.' },
-      { q: 'What is Mexico\'s role in the LATAM pharma market?', a: 'Mexico is LATAM\'s second largest pharma market (after Brazil) and the most important for North American multinational pharma companies due to geographic proximity and USMCA trade integration. International companies often manage LATAM from both Mexico City and São Paulo in parallel. Monterrey\'s industrial base hosts pharma manufacturing and medical device companies serving both Mexico and US markets.' },
-      { q: 'Is COFEPRIS considered a strong regulator in LATAM?', a: 'COFEPRIS has historically had challenges with review timelines, but has implemented significant modernisation efforts. COFEPRIS has reference agency recognition mechanisms that allow for expedited review when a drug is already approved by the US FDA, EMA, or Canadian Health Canada. Mexico\'s regulatory framework is increasingly aligned with international ICH standards.' }
+      { q: 'What is Mexico\'s role in the LATAM pharma market?', a: 'Mexico is LATAM\'s second largest pharma market (after Brazil) and the most important for North American multinational pharma companies due to geographic proximity and USMCA trade integration. International companies often manage LATAM from both Mexico City and São Paulo in parallel. Monterrey\'s industrial base hosts pharma manufacturing and medical device companies serving both Mexico and USA markets.' },
+      { q: 'Is COFEPRIS considered a strong regulator in LATAM?', a: 'COFEPRIS has historically had challenges with review timelines, but has implemented significant modernisation efforts. COFEPRIS has reference agency recognition mechanisms that allow for expedited review when a drug is already approved by the USA FDA, EMA, or Canadian Health Canada. Mexico\'s regulatory framework is increasingly aligned with international ICH standards.' }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'pharma-proxy-interview-brazil', 'pharma-proxy-interview-colombia', 'pharma-proxy-interview-usa']
   },

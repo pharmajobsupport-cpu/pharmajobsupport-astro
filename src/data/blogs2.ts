@@ -1,4 +1,4 @@
-import type { BlogEntry } from './blogs';
+﻿import type { BlogEntry } from './blogs';
 
 export const blogs2: BlogEntry[] = [
   {
@@ -36,7 +36,7 @@ export const blogs2: BlogEntry[] = [
     ],
     faqs: [
       { q: 'Do I need a life sciences degree to transition into pharma IT?', a: 'No. Most pharma IT roles (CSV, EDC administration, Veeva Vault, eCTD publishing, SAS programming, DevOps) do not require a life sciences degree. They require technical skills plus understanding of pharma regulations and GxP requirements. A computer science, engineering, information systems, or related technical degree combined with pharma regulatory knowledge (obtained through certification or training) is sufficient for most pharma IT roles. Clinical roles (Clinical Data Manager, SAS Programmer generating clinical outputs) may require some life sciences exposure, but are accessible to IT professionals with the right regulatory training.' },
-      { q: 'What is the average salary for IT professionals who move into pharma?', a: 'Pharma IT salaries vary by role and geography. US typical ranges: CSV Analyst $70,000-$100,000, CSV Lead $100,000-$140,000; Clinical SAS Programmer $75,000-$130,000; Veeva Vault Administrator $85,000-$130,000; Pharma DevOps Engineer $110,000-$160,000; eCTD Publishing Specialist $65,000-$95,000. Most pharma IT roles pay 10-25% above equivalent IT roles outside pharma, reflecting the regulatory knowledge premium. CRO salaries are typically 10-15% lower than pharma direct hire.' },
+      { q: 'What is the average salary for IT professionals who move into pharma?', a: 'Pharma IT salaries vary by role and geography. USA typical ranges: CSV Analyst $70,000-$100,000, CSV Lead $100,000-$140,000; Clinical SAS Programmer $75,000-$130,000; Veeva Vault Administrator $85,000-$130,000; Pharma DevOps Engineer $110,000-$160,000; eCTD Publishing Specialist $65,000-$95,000. Most pharma IT roles pay 10-25% above equivalent IT roles outside pharma, reflecting the regulatory knowledge premium. CRO salaries are typically 10-15% lower than pharma direct hire.' },
     ],
     relatedSlugs: ['best-pharma-it-roles-for-next-10-years', 'what-is-csv-validation', 'what-is-veeva-vault', 'how-to-build-pharma-profile-for-interviews'],
   },
@@ -62,7 +62,7 @@ export const blogs2: BlogEntry[] = [
       },
       {
         heading: 'Role 2: Veeva Vault Platform Architect/Administrator',
-        body: 'Veeva Vault has become the dominant platform for pharmaceutical quality (QMS), regulatory (RIM), clinical (eTMF, CTMS, CDMS), and safety (Vault Safety) operations. The platform is expanding — Veeva CRM is migrating to Vault by 2025, and Vault is adding new applications annually. Vault Architects who understand the full Vault platform (not just one application) command $120,000-$180,000 in the US. The role is highly defensible: it requires both deep platform technical knowledge AND understanding of pharma regulatory processes that generic Salesforce/platform administrators do not have. 10-year outlook: Very strong. Veeva is the cloud platform of choice for life sciences and is unlikely to lose market position.',
+        body: 'Veeva Vault has become the dominant platform for pharmaceutical quality (QMS), regulatory (RIM), clinical (eTMF, CTMS, CDMS), and safety (Vault Safety) operations. The platform is expanding — Veeva CRM is migrating to Vault by 2025, and Vault is adding new applications annually. Vault Architects who understand the full Vault platform (not just one application) command $120,000-$180,000 in the USA. The role is highly defensible: it requires both deep platform technical knowledge AND understanding of pharma regulatory processes that generic Salesforce/platform administrators do not have. 10-year outlook: Very strong. Veeva is the cloud platform of choice for life sciences and is unlikely to lose market position.',
       },
       {
         heading: 'Role 3: Clinical Data Engineer',
@@ -186,7 +186,7 @@ export const blogs2: BlogEntry[] = [
       },
       {
         heading: 'Pharma BA Salary and Career Progression',
-        body: 'US salary ranges by level: Junior BA (0-3 years) $60,000-$85,000. BA (3-6 years) $80,000-$110,000. Senior BA (6-10 years) $100,000-$140,000. Lead BA/BA Manager $130,000-$170,000. Principal BA/BA Director $150,000-$200,000. CRO BA salaries are typically 10-15% lower than pharma direct hire. Contract BA rates: $65-$120/hour depending on expertise and location. Career progression paths: BA → Senior BA → Lead BA → BA Manager → Product Owner/Product Manager (for pharma SaaS products) or Functional Consultant (for system implementation firms).',
+        body: 'USA salary ranges by level: Junior BA (0-3 years) $60,000-$85,000. BA (3-6 years) $80,000-$110,000. Senior BA (6-10 years) $100,000-$140,000. Lead BA/BA Manager $130,000-$170,000. Principal BA/BA Director $150,000-$200,000. CRO BA salaries are typically 10-15% lower than pharma direct hire. Contract BA rates: $65-$120/hour depending on expertise and location. Career progression paths: BA → Senior BA → Lead BA → BA Manager → Product Owner/Product Manager (for pharma SaaS products) or Functional Consultant (for system implementation firms).',
       },
     ],
     faqs: [
@@ -216,11 +216,11 @@ export const blogs2: BlogEntry[] = [
       },
       {
         heading: 'Critical Skills for Medical Device Quality',
-        body: 'Core competencies: ISO 13485 (the global QMS standard — understanding of all key clauses), 21 CFR Part 820 / FDA QMSR (US device QMS), EU MDR 2017/745 (classification rules, conformity assessment procedures, CE marking pathways), ISO 14971 (risk management — the most universally required device standard), IEC 62304 (software lifecycle — required for any device with software), 510(k) and PMA preparation, Design History File (DHF) management, FMEA (Failure Mode and Effects Analysis). Software tools: Greenlight Guru, Propel, Arena PLM, MasterControl (QMS platforms purpose-built for medical devices), CDRH MAUDE database for adverse event research.',
+        body: 'Core competencies: ISO 13485 (the global QMS standard — understanding of all key clauses), 21 CFR Part 820 / FDA QMSR (USA device QMS), EU MDR 2017/745 (classification rules, conformity assessment procedures, CE marking pathways), ISO 14971 (risk management — the most universally required device standard), IEC 62304 (software lifecycle — required for any device with software), 510(k) and PMA preparation, Design History File (DHF) management, FMEA (Failure Mode and Effects Analysis). Software tools: Greenlight Guru, Propel, Arena PLM, MasterControl (QMS platforms purpose-built for medical devices), CDRH MAUDE database for adverse event research.',
       },
       {
         heading: 'Medical Device Quality Salary Ranges',
-        body: 'US salary ranges: Quality Engineer (0-3 years) $65,000-$90,000. Senior Quality Engineer (3-7 years) $85,000-$120,000. Quality Systems Manager $100,000-$140,000. Regulatory Affairs Specialist (devices) $80,000-$120,000. Director of Quality/RA $140,000-$200,000. Notified Body Auditor $90,000-$140,000 (plus travel). EU MDR transition specialists command premium rates — $90-$140/hour as contractors. Medical device quality salaries have increased 15-25% since EU MDR implementation began driving compliance demand (2021-2025).',
+        body: 'USA salary ranges: Quality Engineer (0-3 years) $65,000-$90,000. Senior Quality Engineer (3-7 years) $85,000-$120,000. Quality Systems Manager $100,000-$140,000. Regulatory Affairs Specialist (devices) $80,000-$120,000. Director of Quality/RA $140,000-$200,000. Notified Body Auditor $90,000-$140,000 (plus travel). EU MDR transition specialists command premium rates — $90-$140/hour as contractors. Medical device quality salaries have increased 15-25% since EU MDR implementation began driving compliance demand (2021-2025).',
       },
     ],
     faqs: [
@@ -360,7 +360,7 @@ export const blogs2: BlogEntry[] = [
       },
     ],
     faqs: [
-      { q: 'How specific should project details be on a pharma CV?', a: 'As specific as confidentiality allows. Instead of "worked on clinical data management," say "managed SDTM programming for a Phase 3 oncology study in Medidata Rave." Instead of "validated systems," say "authored and executed OQ protocols for Veeva Vault QMS implementation, Category 4 under GAMP 5, achieving zero critical deviations at QA sign-off." Specificity demonstrates real experience. Confidentiality note: avoid company names, drug names, and proprietary system details — use "a major US pharma company" or "a European biotech" rather than specific names if your current employer is confidential.' },
+      { q: 'How specific should project details be on a pharma CV?', a: 'As specific as confidentiality allows. Instead of "worked on clinical data management," say "managed SDTM programming for a Phase 3 oncology study in Medidata Rave." Instead of "validated systems," say "authored and executed OQ protocols for Veeva Vault QMS implementation, Category 4 under GAMP 5, achieving zero critical deviations at QA sign-off." Specificity demonstrates real experience. Confidentiality note: avoid company names, drug names, and proprietary system details — use "a major USA pharma company" or "a European biotech" rather than specific names if your current employer is confidential.' },
     ],
     relatedSlugs: ['how-to-switch-from-it-to-pharma-domain', 'regulatory-affairs-career-roadmap', 'pharma-business-analyst-career-guide', 'clinical-sas-proxy-interview-preparation-guide'],
   },
@@ -424,7 +424,7 @@ export const blogs2: BlogEntry[] = [
       },
       {
         heading: 'Who Uses Pharma Proxy Job Support',
-        body: 'Professionals who use proxy support: (1) Pharma career transitioners — professionals who have accepted a pharma role at the edge of their knowledge and need real-time support while they develop full competency. (2) Professionals in new tools — experienced pharma professionals who have moved to a new system (e.g., from Oracle Argus to Veeva Vault Safety) and need temporary support while mastering the new platform. (3) Consultants in stretch roles — IT consultants placed in pharma clients who need domain expertise to deliver project obligations. (4) International professionals — pharma professionals from one regulatory region (EU) navigating a new regulatory environment (US FDA, PMDA). (5) Return-to-work professionals — experienced pharma professionals returning after career breaks who need to update their knowledge of current systems and regulations.',
+        body: 'Professionals who use proxy support: (1) Pharma career transitioners — professionals who have accepted a pharma role at the edge of their knowledge and need real-time support while they develop full competency. (2) Professionals in new tools — experienced pharma professionals who have moved to a new system (e.g., from Oracle Argus to Veeva Vault Safety) and need temporary support while mastering the new platform. (3) Consultants in stretch roles — IT consultants placed in pharma clients who need domain expertise to deliver project obligations. (4) International professionals — pharma professionals from one regulatory region (EU) navigating a new regulatory environment (USA FDA, PMDA). (5) Return-to-work professionals — experienced pharma professionals returning after career breaks who need to update their knowledge of current systems and regulations.',
       },
     ],
     faqs: [

@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const jobSupportCountriesServices5: ServiceEntry[] = [
   {
@@ -34,7 +34,7 @@ export const jobSupportCountriesServices5: ServiceEntry[] = [
     faqs: [
       {
         q: 'What makes Hikma Pharmaceuticals unique as a Jordanian pharma employer?',
-        a: 'Hikma is a FTSE 100 multinational pharmaceutical company headquartered in Amman, with manufacturing operations across Jordan, MENA, USA, and Europe. Hikma specializes in injectable generics and branded generics for the US, MENA, and global markets. It offers careers spanning regulatory affairs (FDA/EMA/JFDA), manufacturing quality, clinical development, and commercial operations — unusual depth for a MENA-headquartered company.'
+        a: 'Hikma is a FTSE 100 multinational pharmaceutical company headquartered in Amman, with manufacturing operations across Jordan, MENA, USA, and Europe. Hikma specializes in injectable generics and branded generics for the USA, MENA, and global markets. It offers careers spanning regulatory affairs (FDA/EMA/JFDA), manufacturing quality, clinical development, and commercial operations — unusual depth for a MENA-headquartered company.'
       },
       {
         q: 'Is Jordan an important pharmaceutical export country?',
@@ -42,48 +42,6 @@ export const jobSupportCountriesServices5: ServiceEntry[] = [
       }
     ],
     relatedSlugs: ['pharma-proxy-job-support-uae', 'pharma-proxy-job-support-saudi-arabia', 'regulatory-affairs-proxy-job-support', 'pharma-manufacturing-proxy-job-support']
-  },
-  {
-    slug: 'pharma-proxy-job-support-india',
-    title: 'Pharma Proxy Job Support India',
-    h1: 'Pharma Proxy Job Support for India Professionals',
-    metaTitle: 'Pharma Proxy Job Support India | CDSCO Sun Pharma Dr Reddy\'s Help',
-    metaDesc: 'Pharma proxy job support for India professionals. CDSCO regulatory, clinical SAS, pharma manufacturing — real-time expert guidance for pharma roles across India.',
-    category: 'Proxy Job Support',
-    heroIntro: 'India is the world\'s largest supplier of generic medicines — home to Sun Pharma, Dr. Reddy\'s, Cipla, Lupin, Aurobindo, Glenmark, and hundreds of pharmaceutical manufacturers and CROs in Hyderabad, Bangalore, Mumbai, and Pune. India is also a global centre for clinical SAS programming, regulatory submissions, pharmacovigilance, and pharmaceutical IT. Our proxy job support is a trusted resource for India-based pharma professionals.',
-    problemSection: 'India-based pharma professionals face intense competition and demanding technical assessments — particularly in clinical SAS programming (SDTM/ADaM/TLF for US/EU submissions), CDSCO regulatory submissions, pharmacovigilance case processing, and computer system validation for global pharma companies.',
-    whatCovered: [
-      'Clinical SAS programming — SDTM, ADaM, TLF for FDA/EMA eCTD submissions',
-      'CDSCO regulatory — Indian MA applications, Schedule Y compliance, DCGI submissions',
-      'Pharmacovigilance — Vigibase reporting, Argus Safety operations, ICSR processing',
-      'Computer system validation (CSV) — GAMP5, 21 CFR Part 11, Annex 11',
-      'Clinical operations — CRO trial management for US/EU sponsor studies',
-      'Veeva Vault — RIM, QualityDocs, eTMF administration from India',
-      'Regulatory submissions — eCTD compilation, CTD module assembly, define.xml',
-      'QA/GMP — WHO GMP, EU GMP, US FDA CGMP for Indian manufacturing',
-      'Drug safety — PSUR authorship, aggregate report writing, Argus/ARISg management',
-      'Clinical data management — Medidata Rave, Oracle InForm, Veeva EDC for global studies'
-    ],
-    roleExamples: [
-      'Clinical SAS Programmer (entry to senior)',
-      'Regulatory Affairs Specialist (CDSCO/FDA/EMA)',
-      'Drug Safety Analyst / PV Specialist',
-      'CSV / Validation Engineer',
-      'Clinical Data Manager',
-      'Medical Writer'
-    ],
-    tools: ['SAS 9.4', 'Veeva Vault', 'Medidata Rave', 'Argus Safety', 'Pinnacle 21', 'CDSCO portal'],
-    faqs: [
-      {
-        q: 'What pharma domains are highest demand for proxy job support in India?',
-        a: 'Clinical SAS programming, pharmacovigilance/drug safety, computer system validation, regulatory affairs (CDSCO and FDA/EMA submissions), and clinical data management are the highest-demand domains for proxy support among Indian pharma professionals. Many Indian pharma and IT professionals work in these roles for US/EU clients and require real-time domain expert guidance.'
-      },
-      {
-        q: 'Do you cover pharma roles at Indian CROs and global pharma Indian operations?',
-        a: 'Yes. Our proxy support covers roles at all major Indian CROs (ICON India, IQVIA India, Syneos India, PPD India, Parexel India), domestic pharma companies (Sun Pharma, Dr Reddy\'s, Cipla, Lupin), and global pharma India centres (Novartis India GBS, GSK India operations, Eli Lilly India). We understand the specific deliverables and technical tools used at these organizations.'
-      }
-    ],
-    relatedSlugs: ['pharma-proxy-job-support-singapore', 'pharma-proxy-job-support-usa', 'clinical-sas-proxy-job-support', 'pharmacovigilance-proxy-job-support']
   },
   {
     slug: 'pharma-proxy-job-support-pakistan',

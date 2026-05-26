@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const interviewCountriesServices2: ServiceEntry[] = [
   {
@@ -297,7 +297,7 @@ export const interviewCountriesServices2: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Hungarian pharma jobs. OGYÉI regulatory, Richter Gedeon, Egis, Teva Hungary interviews. Budapest pharma interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Hungary has a significant pharmaceutical industry centred in Budapest. Richter Gedeon and Egis are major domestic manufacturers with international footprints. Teva operates large manufacturing plants in Hungary. OGYÉI (National Institute of Pharmacy and Nutrition) is the regulatory authority. Budapest is an active pharma R&D and manufacturing location.',
-    problemSection: 'Richter Gedeon interviews combine strong scientific depth with complex generic and specialty drug development contexts. Richter has active international submissions to FDA and EMA. Interviews for senior technical roles at Richter test both EU and US regulatory knowledge, which many candidates underestimate.',
+    problemSection: 'Richter Gedeon interviews combine strong scientific depth with complex generic and specialty drug development contexts. Richter has active international submissions to FDA and EMA. Interviews for senior technical roles at Richter test both EU and USA regulatory knowledge, which many candidates underestimate.',
     whatCovered: [
       'OGYÉI regulatory interviews — Hungarian national authorisation procedures',
       'Richter Gedeon interview preparation — generic and specialty portfolio, international submissions',
@@ -319,7 +319,7 @@ export const interviewCountriesServices2: ServiceEntry[] = [
     ],
     tools: ['OGYÉI regulatory portal', 'EMA portals', 'EudraVigilance', 'Veeva Vault', 'EU GMP guidance'],
     faqs: [
-      { q: 'What makes Richter Gedeon\'s interview process unique?', a: 'Richter Gedeon is one of Central Europe\'s most internationally active pharma companies, with products registered in 60+ countries. Richter\'s regulatory affairs interviews cover both EMA and FDA submission knowledge (they have US ANDA and NDA filings). Manufacturing QA interviews are detailed on EU GMP and Hungarian GMP inspection standards. The company culture is scientific and research-oriented.' },
+      { q: 'What makes Richter Gedeon\'s interview process unique?', a: 'Richter Gedeon is one of Central Europe\'s most internationally active pharma companies, with products registered in 60+ countries. Richter\'s regulatory affairs interviews cover both EMA and FDA submission knowledge (they have USA ANDA and NDA filings). Manufacturing QA interviews are detailed on EU GMP and Hungarian GMP inspection standards. The company culture is scientific and research-oriented.' },
       { q: 'What is OGYÉI\'s role in Hungarian pharma regulation?', a: 'OGYÉI (Országos Gyógyszerészeti és Élelmezés-egészségügyi Intézet) is Hungary\'s national medicines authority. OGYÉI manages national marketing authorisations, GMP inspections, and pharmacovigilance. Hungary participates in EMA procedures through OGYÉI, which has served as rapporteur in centralised procedure assessments.' },
       { q: 'Is Hungarian required for pharma jobs in Hungary?', a: 'For Richter Gedeon and Egis domestic-facing roles and for OGYÉI interactions, Hungarian is required. For international roles at Richter\'s global regulatory department and for Teva Hungary positions that interact with Teva global, English is the working language. Knowledge of Hungarian pharma regulatory history is a differentiator.' }
     ],

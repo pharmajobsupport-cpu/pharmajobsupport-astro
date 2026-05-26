@@ -41,7 +41,15 @@
       "PowerShell(Get-ChildItem \"D:\\\\Pharma Job Support\\\\pharmajobsupport.com\\\\src\\\\pages\\\\\" | Where-Object { $_.Name -match \"location\" } | Select-Object FullName)",
       "Bash(node hero-update.js)",
       "Bash(cp hero-update.js hero-update.cjs)",
-      "Bash(node hero-update.cjs)"
+      "Bash(node hero-update.cjs)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Select-String -Pattern \"loc-hero|location-hero|svc-hero\" -Context 2)",
+      "Bash(node --input-type=module)",
+      "PowerShell(npm run *)",
+      "PowerShell($content = Get-Content \"C:\\\\Users\\\\PC\\\\.claude\\\\projects\\\\D--Pharma-Job-Support-pharmajobsupport-com\\\\44e8bbaf-9463-4f30-8027-0372b5960bd7\\\\tool-results\\\\b1jp4m369.txt\"; $content | Where-Object { $_ -match \"warn|conflict|Could not|duplicate|brazil|dublin\" })",
+      "PowerShell($content = Get-Content \"C:\\\\Users\\\\PC\\\\.claude\\\\projects\\\\D--Pharma-Job-Support-pharmajobsupport-com\\\\44e8bbaf-9463-4f30-8027-0372b5960bd7\\\\tool-results\\\\b1jp4m369.txt\"; $content | Where-Object { $_ -match \"warn|conflict|Could not|error\" } | Select-Object -First 30)",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\Pharma Job Support\\\\pharmajobsupport.com\" -Name -Force | Where-Object { $_ -notmatch '^node_modules$|^dist$|^\\\\.git$' })",
+      "WebSearch"
     ]
   }
 }

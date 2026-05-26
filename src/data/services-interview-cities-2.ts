@@ -1,4 +1,4 @@
-import type { ServiceEntry } from './services-ai';
+﻿import type { ServiceEntry } from './services-ai';
 
 export const interviewCitiesServices2: ServiceEntry[] = [
   {
@@ -9,7 +9,7 @@ export const interviewCitiesServices2: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Hyderabad pharma jobs. Dr Reddy\'s, Aurobindo, Divi\'s Laboratories, CRO interviews. Hyderabad pharma cluster. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Hyderabad is India\'s pharmaceutical capital. Dr Reddy\'s Laboratories, Aurobindo Pharma, Divi\'s Laboratories, Hetero, Laurus Labs, and Granules India are headquartered here. The Genome Valley cluster in Hyderabad hosts biopharmaceutical and biotech companies. IDPL (Indian Drugs and Pharmaceuticals Ltd), Biologicals E, and numerous API manufacturers make Hyderabad one of the world\'s most important pharmaceutical production hubs.',
-    problemSection: 'Hyderabad pharma interviews are highly competitive with dense talent supply. For manufacturing and QA roles, EU GMP and US FDA 21 CFR 210/211 compliance knowledge is essential since most Hyderabad manufacturers export to regulated markets. For regulatory affairs roles, ANDA and EMA generic dossier knowledge is routinely tested.',
+    problemSection: 'Hyderabad pharma interviews are highly competitive with dense talent supply. For manufacturing and QA roles, EU GMP and USA FDA 21 CFR 210/211 compliance knowledge is essential since most Hyderabad manufacturers export to regulated markets. For regulatory affairs roles, ANDA and EMA generic dossier knowledge is routinely tested.',
     whatCovered: [
       'Dr Reddy\'s interview preparation — ANDA, DMF, global regulatory strategy, manufacturing QA',
       'Aurobindo Pharma — API and formulation manufacturing, global regulatory context',
@@ -23,7 +23,7 @@ export const interviewCitiesServices2: ServiceEntry[] = [
       'Real-time interview support during Hyderabad pharma interviews'
     ],
     roleExamples: [
-      'ANDA Regulatory Specialist — Dr Reddy\'s or Aurobindo US regulatory',
+      'ANDA Regulatory Specialist — Dr Reddy\'s or Aurobindo USA regulatory',
       'API Manufacturing QA — Divi\'s Laboratories or Laurus Labs',
       'Clinical SAS Programmer — Hyderabad CRO (ICON Hyderabad, Parexel India)',
       'CSV Validation Specialist — Hyderabad pharma IT or validation CRO',
@@ -31,7 +31,7 @@ export const interviewCitiesServices2: ServiceEntry[] = [
     ],
     tools: ['FDA regulatory portals (ANDA, DMF)', 'EMA portals', 'CDSCO portal', 'Pinnacle 21', 'Argus Safety'],
     faqs: [
-      { q: 'What FDA-specific knowledge is tested at Hyderabad pharma companies?', a: 'Hyderabad pharma companies that export to the US test: ANDA (Abbreviated New Drug Application) regulatory pathway, DMF (Drug Master File) Type II for APIs, FDA 483 observations and Warning Letter response, FDA cGMP requirements (21 CFR 210/211), process validation (Stage 1-2-3), and FDA PAI (Pre-Approval Inspection) preparedness. Dr Reddy\'s and Aurobindo have extensive FDA filing portfolios and their interviews reflect this depth.' },
+      { q: 'What FDA-specific knowledge is tested at Hyderabad pharma companies?', a: 'Hyderabad pharma companies that export to the USA test: ANDA (Abbreviated New Drug Application) regulatory pathway, DMF (Drug Master File) Type II for APIs, FDA 483 observations and Warning Letter response, FDA cGMP requirements (21 CFR 210/211), process validation (Stage 1-2-3), and FDA PAI (Pre-Approval Inspection) preparedness. Dr Reddy\'s and Aurobindo have extensive FDA filing portfolios and their interviews reflect this depth.' },
       { q: 'What makes Genome Valley in Hyderabad significant for biopharmaceuticals?', a: 'Genome Valley in Shameerpet, Hyderabad is India\'s dedicated life sciences cluster. It hosts Biologicals E (hepatitis B vaccine, dengue vaccine), Bharat Biotech (Covaxin, Rotavac), Indian Immunologicals, and numerous biotech companies. For biopharmaceutical manufacturing and regulatory roles, Genome Valley\'s WHO-prequalified manufacturers provide strong international regulatory exposure.' },
       { q: 'Which Hyderabad companies are most interview-intensive?', a: 'Dr Reddy\'s (DRL) runs structured 3-4 stage interview processes for senior technical roles. Aurobindo Pharma is highly competitive for API and formulation QA roles. Divi\'s Laboratories interviews extensively on API manufacturing and DMF regulatory knowledge. Hyderabad CROs (ICON India, Parexel India, Covance Hyderabad) run standard global CRO processes.' }
     ],
@@ -97,20 +97,20 @@ export const interviewCitiesServices2: ServiceEntry[] = [
     roleExamples: [
       'Global Regulatory Affairs — Sun Pharma or Cipla Mumbai HQ',
       'Medical Affairs Manager — MNC pharma India headquarters Mumbai',
-      'ANDA Regulatory Specialist — Lupin or Wockhardt US regulatory',
+      'ANDA Regulatory Specialist — Lupin or Wockhardt USA regulatory',
       'Pharmacovigilance Analyst — Mumbai pharma company global PV',
       'Clinical SAS Programmer — Mumbai CRO or sponsor'
     ],
     tools: ['FDA regulatory portals (ANDA)', 'EMA portals', 'CDSCO SUGAM portal', 'Argus Safety', 'Pinnacle 21'],
     faqs: [
-      { q: 'What Sun Pharma-specific knowledge is tested in Mumbai pharma interviews?', a: 'Sun Pharmaceutical Industries is the world\'s largest specialty generic company by revenue. Sun Pharma interviews for regulatory affairs test: ANDA and NDA filings (Sun has a large US portfolio including specialty dermatology, ophthalmology, and oncology products), FDA PAI preparedness (Sun has had FDA Warning Letters and resolved them — candidates are sometimes asked how they would handle FDA compliance challenges), global regulatory strategy for Sun\'s specialty products (Cequa, Absorica, Ilumya), and CDSCO domestic regulatory for India market.' },
+      { q: 'What Sun Pharma-specific knowledge is tested in Mumbai pharma interviews?', a: 'Sun Pharmaceutical Industries is the world\'s largest specialty generic company by revenue. Sun Pharma interviews for regulatory affairs test: ANDA and NDA filings (Sun has a large USA portfolio including specialty dermatology, ophthalmology, and oncology products), FDA PAI preparedness (Sun has had FDA Warning Letters and resolved them — candidates are sometimes asked how they would handle FDA compliance challenges), global regulatory strategy for Sun\'s specialty products (Cequa, Absorica, Ilumya), and CDSCO domestic regulatory for India market.' },
       { q: 'What is the Mumbai pharma commercial market?', a: 'Mumbai is the hub for Indian pharma commercial operations — medical representatives, key account managers, zonal managers, and national sales and marketing roles for both domestic brands and MNC India operations. Companies like Mankind Pharma (Proctors division), Abbott India, GSK Pharma India, and Sun Pharma Domestic Formulations have major Mumbai commercial teams. MNC pharma India headquarters in BKC handle national commercial strategy.' },
       { q: 'How do Cipla\'s Mumbai interviews differ from other Indian pharma companies?', a: 'Cipla has a strong mission-driven culture (historically focused on affordable medicines access) and interviews assess this dimension alongside technical pharma knowledge. Cipla\'s regulatory interviews focus on the respiratory portfolio (Cipla is a global respiratory leader), oncology biosimilar development, and global market regulatory strategies. Cipla\'s interview process for senior roles includes a business case or regulatory strategy presentation.' }
     ],
     relatedSlugs: ['pharma-proxy-interview', 'pharma-proxy-interview-india', 'pharma-proxy-interview-hyderabad', 'regulatory-affairs-proxy-interview']
   },
   {
-    slug: 'pharma-proxy-interview-singapore',
+    slug: 'pharma-proxy-interview-singapore-city',
     title: 'Pharma Proxy Interview Support — Singapore (City)',
     h1: 'Pharma Proxy Interview Support for Singapore Pharma and Biotech Jobs',
     metaTitle: 'Pharma Proxy Interview Support Singapore City | Biopolis one-north APAC Pharma Interviews',
@@ -225,7 +225,7 @@ export const interviewCitiesServices2: ServiceEntry[] = [
     metaDesc: 'Proxy interview support for Toronto pharma jobs. Sanofi Canada, Novartis Canada, Pfizer Canada. Mississauga pharma cluster. Health Canada regulatory interviews. WhatsApp: +91-9660834611',
     category: 'Interview Proxy Support',
     heroIntro: 'Greater Toronto — specifically the Mississauga pharma corridor — is Canada\'s pharmaceutical hub. Sanofi Canada, Novartis Canada, Pfizer Canada, Roche Canada, and AstraZeneca Canada have their Canadian headquarters in Mississauga. MFDS Biological Pharma is in Mississauga. Health Canada (regulatory authority) is in Ottawa (4.5 hours from Toronto) but Toronto-area pharma companies have extensive regulatory affairs teams managing Health Canada submissions.',
-    problemSection: 'Toronto/Mississauga pharma interviews test Health Canada-specific regulatory knowledge — the Notice of Compliance (NOC) pathway, Common Drug Review (CDR) for reimbursement, and Canadian clinical trial application (CTA) process. Candidates who apply only US FDA regulatory knowledge without Canada-specific awareness underperform at Canadian interviews.',
+    problemSection: 'Toronto/Mississauga pharma interviews test Health Canada-specific regulatory knowledge — the Notice of Compliance (NOC) pathway, Common Drug Review (CDR) for reimbursement, and Canadian clinical trial application (CTA) process. Candidates who apply only USA FDA regulatory knowledge without Canada-specific awareness underperform at Canadian interviews.',
     whatCovered: [
       'Health Canada regulatory — NOC, SNDS, Priority Review, CTA process',
       'Common Drug Review (CDR) — CADTH reimbursement review context',
